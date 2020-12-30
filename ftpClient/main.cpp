@@ -15,42 +15,37 @@
 
 using namespace std;
 
-char addr[16] = "127.0.0.1";
+char addr[16] = "127.0.0.1"; //по умолчанию - локальный сервер
 
-
+//идентификация. Для тестирования имена задаются прямо в ней. Потом заменить на аргументы
   bool login(int socketId, char *buf) {
     cout << "Введите имя: "; char name[64] = "testuser";// cin >> name;
-    sprintf(buf,"USER %s\r\n",name);
-    send(socketId,buf,strlen(buf),0);
-    readServ(socketId,buf);
+    sprintf(buf,"USER %s\r\n",name);                        //формируем логин для сервера
+    send(socketId,buf,strlen(buf),0);                       //отправляем логин
+    readServ(socketId,buf);                                 //читаем ответ сервера. Пока ника не используем
     cout << "Введите пароль: "; char pass[64] = "1";// cin >> pass;
-    sprintf(buf,"PASS %s\r\n",pass);
-    send(socketId,buf,strlen(buf),0);
-    readServ(socketId, buf);
+    sprintf(buf,"PASS %s\r\n",pass);                        //формируем пароль для сервера
+    send(socketId,buf,strlen(buf),0);                       //отправляем пароль
+    readServ(socketId, buf);                                //читаем ответ сервера
     
     string tmp = buf;
-    if(tmp.substr(0,3)=="230") return true;
-    return false;
+    if(tmp.substr(0,3)=="230") return true;                 //если логин/пероль прошли - возвращаем true
+    return false;                                           //если н прошли -0 возвращаем false
 }
  
 
 int main(void)
 {
-    char buf[2][BUFFER_SIZE];
-    int ctrlSoket = getSocketId(addr, 21);
-    readServ(ctrlSoket, buf[0]);
-
-    while(!login(ctrlSoket, buf[0]));
-    //int dataSocket = getSocketForData(ctrlSoket);
-    //cout<<"ctrlSoket="<<ctrlSoket<<", dataSocket="<<dataSocket<<endl;
-    string kbInput = "";
+    char buf[2][BUFFER_SIZE];                               //создаём массив строк для ответов через сокеты
+    int ctrlSoket = getSocketId(addr, 21);                  //создаём сокет управляющего канала
+    readServ(ctrlSoket, buf[0]);                            //вычитываем реакцию сервера на установление связи
     
-    
-//    list<int> sockArr = {ctrlSoket, dataSocket};
-//    list<string> msgArr = {"", ""};
-    int sockArr[2] = {ctrlSoket, -1};
-    //char msgArr[2][BUFFER_SIZE];// = {"", ""};
+    //!!! тут должна быть проверка реакции сервера
 
+    while(!login(ctrlSoket, buf[0]));                       //логинимся с сервером, пока не залогинимся - функция login должна вернуть true
+
+    string kbInput = "";                                    //заводим строку для клавиатурного ввода
+    int sockArr[2] = {ctrlSoket, -1};                       //создаём массив из двух сокетов
     do{
         if(isKbInput(kbInput)){
             if(sockArr[1] == -1) sockArr[1] = getSocketForData(ctrlSoket);
