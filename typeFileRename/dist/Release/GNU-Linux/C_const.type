@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="C_const" Kind="Struct" UUID="379379654C5E178D5FC57CA7EC594704">
+    <Fields>
+        <Field Name="DZNnd" Type="REAL" UUID="9084C6BA4B182D3F304385A859D8472D" Comment="ДЗ Nnd" />
+        <Field Name="DZNst" Type="REAL" UUID="39C6B31D43F6D4765462D79CB4A24694" Comment="ДЗ Nst" />
+        <Field Name="DZNvd" Type="REAL" UUID="B0E88683488DE6DE727F30940732C021" Comment="ДЗ Nvd" />
+        <Field Name="DZTnd" Type="REAL" UUID="9B8A07ED4D3B5C854AA9D098C1722AB7" Comment="ДЗ Tnd" />
+        <Field Name="KdiffNnd" Type="REAL" UUID="739C10014C09741395C0F6A7D6E7BE58" Comment="Кдифф Nnd" />
+        <Field Name="KdiffNst" Type="REAL" UUID="003DA52D4168095AFACDB48AB3B366A9" Comment="Кдифф Nst" />
+        <Field Name="KdiffNvd" Type="REAL" UUID="34D666B941D9312073E561A34B1019FA" Comment="Кдифф Nvd" />
+        <Field Name="KdiffTnd" Type="REAL" UUID="77F0EFFB496CF361CA6859AD7AD2607B" Comment="Кдифф Tnd" />
+        <Field Name="KintegNnd" Type="REAL" UUID="BAB3C9774255B70CC1ACB7B060144818" Comment="Кинтег(лин) Nnd" />
+        <Field Name="KintegNst" Type="REAL" UUID="48CB278844C150F89B8D6680743BDE50" Comment="Кинтег(лин) Nst" />
+        <Field Name="KintegNvd" Type="REAL" UUID="8132C9344233E44D3D9E2BADC6E67E08" Comment="Кинтег(лин) Nvd" />
+        <Field Name="KintegTnd" Type="REAL" UUID="E6DA355C4E42B85C3B6269B5A524741A" Comment="Кинтег(лин) Tnd" />
+        <Field Name="KpropNnd" Type="REAL" UUID="440D368A400E925E21654D8F99D9D67E" Comment="Кпроп Nnd" />
+        <Field Name="KpropNst" Type="REAL" UUID="028D554D4E25803A3E45A682632ADBA1" Comment="Кпроп Nst" />
+        <Field Name="KpropNvd" Type="REAL" UUID="CBFEAA30429612EB5AC29685E85F8325" Comment="Кпроп Nvd" />
+        <Field Name="KpropTnd" Type="REAL" UUID="0162D2F44DF6691FAA2AE9A015EA53D9" Comment="Кпроп Tnd" />
+        <Field Name="NndMaxAO" Type="REAL" UUID="73BA5E60436FD40B57C716A97341AED0" Comment="АО по частоте вращения КНД, об/мин" />
+        <Field Name="NndMin" Type="REAL" UUID="F44B26A443FE1CA8D632E6875E044190" Comment="Минимальная N КНД (приведённые), об/мин" />
+        <Field Name="distortNndMax" Type="REAL" UUID="E4EACEA24FD4A352058165B325A682BB" Comment="Максимальная разница отсчетов по каналам измерения N КНД, об/мин" />
+        <Field Name="dNndMax" Type="REAL" UUID="CE6948DF4B15A76DC36E119064E19C6C" Comment="Величина ускорения частоты вращения КНД при анализе неисправности, [об/мин]/c" />
+        <Field Name="NndStartTime" Type="REAL" UUID="7D4930964ED330F86B70769874074B2D" Comment="Частота вращения начала контроля выбега КНД, об/мин" />
+        <Field Name="NndStopTime" Type="REAL" UUID="8DB0960C4F63958A1BAEB4B058EE7FC0" Comment="Частота вращения окончания контроля выбега КНД, об/мин" />
+        <Field Name="timeNndHPmin" Type="REAL" UUID="ABAAC43B453D549ABC64A59735288952" Comment="Минимальное время выбега КНД после ХП, с" />
+        <Field Name="timeNndMin" Type="REAL" UUID="1A32DD9F4A12C692A2CD22AB3B8DA97F" Comment="Минимальное время выбега КНД, с" />
+        <Field Name="NvdMaxAO" Type="REAL" UUID="B7E99A2B4BA2C6107E7834A080D1A5C3" Comment="АО по частоте вращения КВД, об/мин" />
+        <Field Name="NvdMG" Type="REAL" UUID="D521D9804190B879AEDA8686ED4E24B7" Comment="N КВД малого газа, об/мин" />
+        <Field Name="distortNvdMax" Type="REAL" UUID="74124CAC4E12845B563333978743A516" Comment="Максимальная разница отсчетов по каналам измерения N КВД, об/мин" />
+        <Field Name="dNvdMax" Type="REAL" UUID="6CAE502F41055F8378AB07A448DD9336" Comment="Величина ускорения частоты вращения КВД при анализе неисправности, [об/мин]/c" />
+        <Field Name="NvdStartTime" Type="REAL" UUID="893F2CE34853087BAA6598AD53748B51" Comment="Частота вращения начала контроля выбега КВД, об/мин" />
+        <Field Name="NvdStopTime" Type="REAL" UUID="B4EF80CB4AF16FD73C2A9180FEB2CB2D" Comment="Частота вращения окончания контроля выбега КВД, об/мин" />
+        <Field Name="timeNvdHPmin" Type="REAL" UUID="78B77C4640AA0E5BBA36F59B51B6B2B9" Comment="Минимальное время выбега КВД после ХП, с" />
+        <Field Name="timeNvdMin" Type="REAL" UUID="B35ECEE343B44E8A0F832FB451E80A98" Comment="Минимальное время выбега КВД, с" />
+        <Field Name="NstMaxAO" Type="REAL" UUID="1F6CFF8F4BFBF17CBBEFD19FAC76FA87" Comment="АО по частоте вращения СТ, об/мин" />
+        <Field Name="NstMax" Type="REAL" UUID="0FF193EC48ADCAD8B4520685732E6328" Comment="Максимальная N СТ, об/мин" />
+        <Field Name="NstMin" Type="REAL" UUID="582A14A84B642C190F7654A4F7606202" Comment="Минимальная N СТ, об/мин" />
+        <Field Name="distortNstMax" Type="REAL" UUID="7A6CBBBB4D9A19E291BF1289090080B6" Comment="Максимальная разница отсчетов по каналам измерения N СТ, об/мин" />
+        <Field Name="dNstMax" Type="REAL" UUID="5479EFC94B5EEC59344140BF354B2DD2" Comment="Величина ускорения частоты вращения СТ при анализе неисправности, [об/мин]/c" />
+        <Field Name="NstStartTime" Type="REAL" UUID="05F7F0CC4126596A4392C58D0971C72A" Comment="Частота вращения начала контроля выбега СТ, об/мин" />
+        <Field Name="NstStopTime" Type="REAL" UUID="5E3E9C6E473A6E4801CE98B360DDD41A" Comment="Частота вращения окончания контроля выбега СТ, об/мин" />
+        <Field Name="timeNstHPmin" Type="REAL" UUID="22150BB84E8BEE6B3F2F4C94CCF470CF" Comment="Минимальное время выбега СТ после ХП, с" />
+        <Field Name="timeNstMin" Type="REAL" UUID="1058821046010F9823CA60B90359AD97" Comment="Минимальное время выбега СТ, с" />
+        <Field Name="TtMaxAO" Type="REAL" UUID="1CE2CA424FFC57F1151BDEB8399FA009" Comment="АО по T продуктов сгорания, °С" />
+        <Field Name="TtMaxAOstart" Type="REAL" UUID="CE176F7F4343C7AD5F5A3DAC83C00941" Comment="АО по T продуктов сгорания на запуске, °С" />
+        <Field Name="TstartMax" Type="REAL" UUID="971BCD5241319CA94FADC5A0875455BA" Comment="Максимальная Т газа за ТНД на запуске, °С" />
+        <Field Name="dTstartMax" Type="REAL" UUID="8E47AF6E4E4971D055FA92A02DD5F555" Comment="Ширина зоны торможения на запуске, °С" />
+        <Field Name="distortTmaxPr" Type="REAL" UUID="8E76E10A4C9DDE9DC143F3AC1710FEA8" Comment="Максимальная разница значений по каналам Т газа за ТНД (предупреждение), °C" />
+        <Field Name="minT" Type="REAL" UUID="25B4EC124E114988F56D148AB7C345BF" Comment="Минимальная Т газа за ТНД (для контроля), °C" />
+        <Field Name="maxT" Type="REAL" UUID="784317BF496D982E456A16B5D935729E" Comment="Максимальная Т газа за ТНД (для контроля), °C" />
+        <Field Name="PtgNorm" Type="REAL" UUID="7214CBE542BD95E51E7D14BD5433723D" Comment="Давление, для которого построена характеристика ДГ, МПа" />
+        <Field Name="TtgNorm" Type="REAL" UUID="E1FA0E0241A29DAE960598805B961973" Comment="Температура, для которой построена характеристика ДГ, °C" />
+        <Field Name="PtgMin" Type="REAL" UUID="259A5DD84C2B056F965EBFBEC4692CD1" Comment="Минимальное давление топливного газа, МПа" />
+        <Field Name="PtgMax" Type="REAL" UUID="94A8D17C448F7F56A08B53B5CECCED75" Comment="Максимальное давление топливного газа, МПа" />
+        <Field Name="rateGtStart" Type="REAL" UUID="3EDB2D654DEA9E0DF9C755BB9D19CF0A" Comment="Ограничение по скорости перекладки дозатора газа на пуске, [кг/час]/с" />
+        <Field Name="rateGt" Type="REAL" UUID="976ECD3744FAC9FA7AC7EFACEDD25639" Comment="Ограничение по скорости перекладки дозатора газа, [кг/час]/с" />
+        <Field Name="distortDG" Type="REAL" UUID="65C3CD294235C8544FCFC5BE03A58477" Comment="Максимальное рассогласование между заданием и положением ДГ, %" />
+        <Field Name="GtFire" Type="REAL" UUID="B1B923274E010A06BC4261812FEA0AF3" Comment="Раход на розжиг, кг/час" />
+        <Field Name="R_GtFire" Type="REAL" UUID="16622C1D4C60CECFAAC1DD9E7519F447" Comment="Регулировка расхода на розжиг" />
+        <Field Name="GtFireRate" Type="REAL" UUID="887A729F4F6927FF803CAF871B148E92" Comment="Темп нарастания расхода при розжиге, [кг/час]/с" />
+        <Field Name="dGtFireMax" Type="REAL" UUID="63DCE9BB4855559B72D1D0B094DB71D7" Comment="Максимальное превышение над программой розжига до появления факела, кг/час" />
+        <Field Name="GtRateStarterON" Type="REAL" UUID="E2D744DF4EDB97F97B0BC2B569441D71" Comment="Скорость нарастания рахода топлива при включённом стартёре, [кг/час]/с" />
+        <Field Name="GtRateStarterOF" Type="REAL" UUID="B8F52E6142915D9443B03698DE952063" Comment="Скорость нарастания рахода топлива при выключённом стартёре, [кг/час]/с" />
+        <Field Name="fireDelay" Type="REAL" UUID="06B7A0D94BB01215E8998B957303681C" Comment="Задержка на розжиг, с" />
+        <Field Name="fireShift" Type="REAL" UUID="65C06D09460969845C257390463A3F72" Comment="Бросок температуры, по которому фиксируется розжиг, °C" />
+        <Field Name="timeFireStart" Type="REAL" UUID="6B48FEA04A741C6835493890DCD4A479" Comment="Задержка, после которой розжиг фиксируется по Т погасания, с" />
+        <Field Name="fireNO" Type="REAL" UUID="44C8D1B444FA23EABE2F9ABC286FFD7E" Comment="Температура погасания факела, °C" />
+        <Field Name="timeHeat" Type="REAL" UUID="7972A5E840CEEA2C2320D68E37A31BF9" Comment="Время прогрева на малом газу, с" />
+        <Field Name="NndFeedBack" Type="REAL" UUID="FD34050A404F89427D2198B7389ED56B" Comment="Обороты КНД (приведённые), при котором на пуске происходит замыкание обратной связи, об/мин (Соответствует перекладке РНА), об/мин" />
+        <Field Name="timeAOst" Type="REAL" UUID="935AEE514AFCD4A96833539D8921DD31" Comment="Время срабатывания АО частоте вращения СТ, c" />
+        <Field Name="timeAOtt" Type="REAL" UUID="D4CFFA7842D06C7F7F9FEFA734E49EF2" Comment="Время срабатывания АО температуре, c" />
+        <Field Name="timeAOvd_nd" Type="REAL" UUID="D79E5672479CEAD0954B95B66101AE3A" Comment="Время срабатывания АО по НО частоте вращения ВД и НД, c" />
+        <Field Name="timeAOdistortDG" Type="REAL" UUID="DE414A9744446DD79A1577B1880723A3" Comment="Время срабатывания АО по рассоглосованию на ДУС, c" />
+        <Field Name="rateNvdBtn" Type="REAL" UUID="064D2A3047C8DDE4CC4634B1A5540862" Comment="Номинальная скорость изменения задания на N КВД, [об/мин]/c" />
+        <Field Name="rateNvdStart" Type="REAL" UUID="96DFD584404E9663974903ACF7214170" Comment="Номинальная скорость изменения задания на N КВД на пуске, [об/мин]/c" />
+        <Field Name="rateNvdNO" Type="REAL" UUID="CCE107FB49EC08A731BE3C8D8CF3CDC4" Comment="Номинальная скорость изменения задания на N КВД на НО, [об/мин]/c" />
+        <Field Name="rateNstBtn" Type="REAL" UUID="F961A28C42CEAC61C6FA7F80B7D16166" Comment="Номинальная скорость изменения задания на N СТ, [об/мин]/c" />
+        <Field Name="rateNstStart" Type="REAL" UUID="5DAE0981447B777CFFBFBBBBFA995B05" Comment="Номинальная скорость изменения задания на N СТ на пуске, [об/мин]/c" />
+        <Field Name="rateNstNO" Type="REAL" UUID="0E393546451E77594419178145EB96D0" Comment="Номинальная скорость изменения задания на N СТ на НО, [об/мин]/c" />
+        <Field Name="timeCoolMG" Type="REAL" UUID="A2D8337D414C56B7399020B9B9D38C6B" Comment="время охлаждения на НАРР при НО и ВО" />
+        <Field Name="timeCoolHH" Type="REAL" UUID="74FDAC834E2DFC2D865172843081218C" Comment="время охлаждения на ХХ при НО и ВО" />
+        <Field Name="tay1" Type="REAL" UUID="0326580F4F4793689E96849CEDAC9674" Comment="имитатор " />
+        <Field Name="tay2" Type="REAL" UUID="CF7B34D342CB350561B65C89D3600D33" Comment="имитатор " />
+        <Field Name="tay3" Type="REAL" UUID="BB969BFD4BE1131F2F1ABA8AB6C73CB4" Comment="имитатор " />
+        <Field Name="k1" Type="REAL" UUID="911F22FE4A96F3A149D240B05CC321EE" Comment="имитатор " />
+        <Field Name="k2" Type="REAL" UUID="C3424458420EDB299389D08907F8E051" Comment="имитатор " />
+        <Field Name="k3" Type="REAL" UUID="0BF71BAB4A7AD4E644B5C5AD0D265034" Comment="имитатор " />
+    </Fields>
+</Type>

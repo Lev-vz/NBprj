@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_FRI_" Kind="Struct" Comment="Входы регулятора" UUID="FF5211244BFA3929C090AA91D035ACC6">
+    <Fields>
+        <Field Name="updateTun" Type="BOOL" UUID="E1A622A343286F01608BE893E71743BA" Comment="Запись регулятора" />
+        <Field Name="loadTun" Type="BOOL" UUID="73C7452D4F8A1D5ECF933A81773BA375" Comment="Считывание настроек регулятора" />
+        <Field Name="deblock" Type="BOOL" UUID="9B6E7C0643B042CC10D70E8116A312BA" Comment="Деблокировка" />
+        <Field Name="check" Type="BOOL" UUID="0481C29A43C217E3535BC0A84AF6645D" Comment="Проверка защит" />
+        <Field Name="start" Type="BOOL" UUID="2F137DF74A2F59B26B9153A3B2C50AAC" Comment="Команда запуска двигателя +" />
+        <Field Name="stop" Type="BOOL" UUID="DA1A0EFB49C049B474B52193D2E482F5" Comment="Команда останова +" />
+        <Field Name="warm" Type="BOOL" UUID="7006FA6B4CB69DE82F8842B5584802F1" Comment="Окончание запуска после прогрева ?????????????????????" />
+        <Field Name="loLim" Type="BOOL" UUID="F0257F7741E229ADAF082FA1D2016A9A" Comment="Включить нижние ограничения ?????????????????????????" />
+        <Field Name="HH" Type="BOOL" UUID="BBA839F5472281F2A4E0DBB269D3AC4D" Comment="Снижение режима до ХХ +" />
+        <Field Name="MG" Type="BOOL" UUID="D006E8F9401C9318E740DFB3AA411BB5" Comment="Выйти на НАРР +" />
+        <Field Name="regNvd" Type="BOOL" UUID="F970A91F477947B7C807ED82B96DF690" Comment="Регулирование N ВД +" />
+        <Field Name="regNst" Type="BOOL" UUID="D8C88CA34E8167BAF1290D8A30EFF180" Comment="Регулирование N ТН +" />
+        <Field Name="turnUP" Type="BOOL" UUID="EE0CF9824439D261EC9D4989F2EECD59" Comment="Увеличить частоту вращения +" />
+        <Field Name="turnDN" Type="BOOL" UUID="CA30D02A44D16CC47F9A72AA7ECC2D6F" Comment="Уменьшить частоту вращения +" />
+        <Field Name="DG_DU" Type="BOOL" UUID="CFE2B90B4C55674DDCC635971C9E3FB7" Comment="ДУ дозатором +" />
+        <Field Name="Pos_p15_VNA" Type="BOOL" UUID="4E8C077B45D0D4D60899CA932BB7B955" Comment="Ограничение набора мощности +" />
+        <Field Name="Pos_m10_VNA" Type="BOOL" UUID="DE98E2AA4D6670793405C1A6E9A17D7B" Comment="Ограничение сброса мощности +" />
+        <Field Name="drm_Go_HH" Type="BOOL" UUID="8761FFAB4E35415376F0DBB17D3C295A" Comment="Снижение режима до ХХ ???????????????????????" />
+        <Field Name="drm_Go_NARR" Type="BOOL" UUID="E613B17942365B4EB61BE782318789CD" Comment="Снижение режима до МГ ???????????????????????" />
+        <Field Name="SK_ON" Type="BOOL" UUID="68F75D964D433A1EEF480BABA70EADDF" Comment="СК открыт" />
+        <Field Name="OgrR" Type="BOOL" UUID="1EB3714246C3A1C2CF4198820274E03A" Comment="Ограничение режима ???????????????????????" />
+        <Field Name="NO" Type="BOOL" UUID="0679B03244020B7CCC51BD882BE78D21" Comment="Команда нормального останова +" />
+        <Field Name="IMIT_ON" Type="BOOL" UUID="5B8B1517423EEC8B44C70E84E1334EA8" Comment="Имитация включить" />
+        <Field Name="IMIT_HP" Type="BOOL" UUID="50A0DCA741B2E098D340D09FC0DCE711" Comment="Имитация ХП" />
+        <Field Name="IMIT_Work" Type="BOOL" UUID="179CA3BE4F2DF2EF02910E92CF896EF2" Comment="Работа двигателя" />
+        <Field Name="IMIT_Vibeg" Type="BOOL" UUID="3B53B54C42D36F290E44FCAF818FA507" Comment="Выбеги роторов" />
+        <Field Name="Pbz" Type="BOOL" UUID="B68990E443B665225E655D9185FC3C2E" Comment="Ограничение режима" />
+        <Field Name="Mic" Type="BOOL" UUID="84CD364547B9ED27A943AC9D9FA959F8" Comment="Микрофакельный двигатель" />
+    </Fields>
+</Type>

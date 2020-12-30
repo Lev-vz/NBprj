@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="LEV_GRAPHS">
+    <Items>
+        <Item Name="Type_4HNBF62HHEIU5CS4ULYYPQHGAQ.type" />
+        <Item Name="Type_6K5ZUZNQ6DBEZJFXVJH5RVLI4Y.type" />
+        <Item Name="Type_NZRSLGG4Z6HE5OGFP5W7CCRL5U.type" />
+        <Item Name="Type_PY7ID4ZFGD2UHOJ6LSRNX5T47U.type" />
+        <Item Name="Type_VZHBAM4QKBHUFH6PDQGR65PPME.type" />
+        <Item Name="Type_Y3K2ZMBIKAXUJA56FTYE3AZ2GY.type" />
+    </Items>
+</Folder>

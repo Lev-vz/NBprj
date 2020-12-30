@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_Mode" Kind="Struct" Comment="Режимы для логики" UUID="5944C24E4AE41411395B858A0DBA8A90">
+    <Fields>
+        <Field Name="Repair" Type="BOOL" UUID="5DF846AC45660E3BD3B7D5B549E9677C" Comment="Ремонт" />
+        <Field Name="HR" Type="BOOL" UUID="B0FE2C25422C30D522D1D298BACB299F" Comment="Холодный резерв" />
+        <Field Name="GR" Type="BOOL" UUID="3B9FB85F434A36E9404DB0B6C04B8C58" Comment="Горячий резерв" />
+        <Field Name="APK" Type="BOOL" UUID="FF48362B46B9EB17B7C0CD9F7E08A431" Comment="Автоматический пуск на кольцо" />
+        <Field Name="APM" Type="BOOL" UUID="17D231844A57B0CE1F35FFB9BD0D2DEE" Comment="Автоматический пуск в магистраль" />
+        <Field Name="K" Type="BOOL" UUID="A74E8345444EB86399CED9BFB07B17B1" Comment="Кольцо" />
+        <Field Name="M" Type="BOOL" UUID="5F161CAF41BC02E17CA2048F8A69E18C" Comment="Магистраль" />
+        <Field Name="K_M" Type="BOOL" UUID="17A7A4FC47B309761A09A5BAFBF4C4C7" Comment="Переход &quot;Кольцо-Магистраль&quot;" />
+        <Field Name="M_K" Type="BOOL" UUID="E40F78A94500FFECB75090AAA04DDECF" Comment="Переход &quot;Магистраль-Кольцо&quot;" />
+        <Field Name="NOss" Type="BOOL" UUID="8529CE904D466370D0B43186D63EA9E0" Comment="НОсс" />
+        <Field Name="NObs" Type="BOOL" UUID="6B15DE6544EC3E5E6216C788C7CD2340" Comment="НОбс" />
+        <Field Name="AOss" Type="BOOL" UUID="975426454B8D4E1FEFA7E7B593B88747" Comment="АОсс" />
+        <Field Name="AObs" Type="BOOL" UUID="5221C219437070C105B040B6FB796364" Comment="АОбс" />
+    </Fields>
+</Type>

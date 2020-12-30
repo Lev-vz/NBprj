@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Node v. 1.3 >
+<Node Name="ARM" Comment="" Disabled="FALSE" Address="10.50.50.172" TimeSourcePriority="1" TimeResolution="2" NetworkTimeout="2000" PingInterval="300" RetryTimeout="80" AggregationInterval="10" LocalTimeout="2000" LocalPingInterval="300" LocalRetryTimeout="50" LocalAggregationInterval="4" UseSharedMem="FALSE" EventQueue="2000" StoreEventQueue="FALSE" StartState="Default" UUID="731D8DE8449C83B688AE33821B7DBA81">
+    <InterfaceList>
+        <SubApp Name="Sound" Type="1CA08FA7437E17F08C0793A8F47BA1AC" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="8523E8E2460115C4175D118C055B01CD" />
+        <SubApp Name="ASArchive" Type="47AF912D4260D117B0D334B509AA09EB" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="CC5FA12340263B14D881B487506D9E40" />
+        <SubApp Name="Event" Type="C119E5194FED0A7D87EB5C8D24E3A6E5" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="3218380F494A62828325A98605AD4111" />
+        <SubApp Name="PLC_TO_ARM" Type="5DF6693C4746F64C9D53C7B7234CD49D" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="380C8CBE4C93891629D7FDB2F0439083" />
+        <SubApp Name="Report" Type="521421D34824B0245D8FBDB1E5D2F7EC" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="7D357F7846C56F1C5CBE31AD9F037B60" />
+        <SubApp Name="Trend" Type="F0E13D484434001458DAE19B5C667467" Disabled="FALSE" Args="" ExecTimeout="1000000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="705336304A48D8F4DD99F589598CB269" />
+        <SubApp Name="Mnemo" Type="D7834BBE43DE793475CC28BA28622564" Disabled="FALSE" Args="" ExecTimeout="1000000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="0ED8C2B84D61DD9BE7E8B3807B3C396F" />
+    </InterfaceList>
+</Node>

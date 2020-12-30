@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_flag_to_FR" Kind="Struct" UUID="F25F04C04E3B3040D3F3AA80AF877333">
+    <Fields>
+        <Field Name="PZ" Type="BOOL" UUID="37EFA0A84267DE2806A0C4A7C8CD77F0" Comment="Проверка защит" />
+        <Field Name="IMIT_ON" Type="BOOL" UUID="0FBD470A48D0E10FFF19E882E46EB363" Comment="Имитатор включен" />
+        <Field Name="GR" Type="BOOL" UUID="22EFAABC458D90C3ECB39D979B89FC43" Comment="Горячий резерв" />
+        <Field Name="HR" Type="BOOL" UUID="1AA5DF934786DCEA551D35B1BEF3B635" Comment="Холодный резерв" />
+        <Field Name="Repair" Type="BOOL" UUID="A07AAEA142A5EC59BB0827B681EDB46C" Comment="Ремонт" />
+        <Field Name="BTN_TEST_TRK" Type="BOOL" UUID="D9A55AF94DFDD903C5F013B65563A1BE" Comment="кнопка проверка ТРК " />
+    </Fields>
+</Type>

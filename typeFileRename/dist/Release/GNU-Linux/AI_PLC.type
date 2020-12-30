@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="AI_PLC" Kind="Struct" UUID="B290A1BE4D5D52B9175E13A9D47C40D2">
+    <Fields>
+        <Field Name="Span" Type="REAL" UUID="4517D8014BA5F1A31DC490A2FCD8E76C" Comment="диапазон датчика в EU" />
+        <Field Name="Offset" Type="REAL" UUID="625B09604DB57060C6C6D9827263FB2B" Comment="смещение датчика в EU" />
+        <Field Name="Tf" Type="REAL" UUID="DAE597984FC2AFA050E92B89986AE362" Comment="постоянная фильтра &gt; 0.001" />
+        <Field Name="min_ADC" Type="REAL" UUID="A875986F466C964AEDE6E09BAC1A420F" Comment="минимальное значение в единицах АЦП для обрабатываемого канала" />
+        <Field Name="max_ADC" Type="REAL" UUID="EEEBBC024094CD578E5CC690A42B31BA" Comment="максимальное значение в единицах АЦП для обрабатываемого канала" />
+        <Field Name="min_fault_sensor_Eu" Type="REAL" UUID="8392C9FF4B63129DB1C5A5A5BF293B29" Comment="если сигнал с датчика Status.Input_sensor_eu меньше этого значения, то отказ канала" />
+        <Field Name="max_fault_sensor_Eu" Type="REAL" UUID="0B3A58DE4B6F9A69D574C1A5202FA3D9" Comment="если сигнал с датчика Status.Input_sensor_eu больше этого значения, то отказ канала" />
+        <Field Name="ROC" Type="REAL" UUID="8FDDC5F142B3E3FD3E64F296CC14CF38" Comment="скорость изменения сигнала" />
+        <Field Name="recovery_time" Type="REAL" UUID="1568C2D746CAB3E44D7DD794373B2957" Comment="время восстановления канала после исчезновения неисправности" />
+        <Field Name="repair_time" Type="REAL" UUID="DFEE44C24DDA9848DAE5728113B9F98E" Comment="время через которое канал будет автоматически выведен из ручного режима" />
+        <Field Name="ROC_max" Type="REAL" UUID="2966511E464A181C4955B29667D80BDF" Comment="максимальное значение ROC, если ROC_enable = 1" />
+        <Field Name="ROC_min" Type="REAL" UUID="1E56F43440654B2C8F48AABCED63411C" Comment="минимальное значение ROC, если ROC_enable = 1" />
+        <Field Name="ROC_time" Type="REAL" UUID="4176369549AFD27F4EE17384F721B073" Comment="Время определения скорости изменения сигнала  (сек)" />
+        <Field Name="nAi" Type="INT" UUID="A28F7A044DA4059028DB2DBA4EB976E5" Comment="Номер канала" />
+    </Fields>
+</Type>

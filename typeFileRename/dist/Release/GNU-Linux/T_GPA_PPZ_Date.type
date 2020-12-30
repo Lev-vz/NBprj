@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_GPA_PPZ_Date" Kind="Struct" UUID="A89AAE72F55647E485542B78F643AD12">
+    <Fields>
+        <Field Name="Tv_KGT_Av" Type="STRING" UUID="438C6975415CD2B82F1904B71316DF2F" Comment="Аварийно-высокая температура под кожухом двигателя" />
+        <Field Name="Tm_out_Per_Av" Type="STRING" UUID="91FC3E14456CAFF55EE206A70B06D9FF" Comment="Аварийно-высокая температура масла на сливе из переходника" />
+        <Field Name="Tm_out_KVD_Av" Type="STRING" UUID="22A02CC6469BD510C0010FBDCD062C46" Comment="Аварийно-высокая температура масла на сливе из заднего корпуса КВД" />
+        <Field Name="Tm_out_TND_Av" Type="STRING" UUID="FE20598949C5849A04B863A5E21F5E36" Comment="Аварийно-высокая температура масла на сливе из опорного венца ТНД" />
+        <Field Name="Tm_out_N_Av" Type="STRING" UUID="C6A83D1A456990062028428DF7FFBB2E" Comment="Аварийно-высокая температура масла на сливе из опорного венца ТН" />
+        <Field Name="Tm_in_MBD_Av" Type="STRING" UUID="DFEB8ED54065AAE39146AAA5DFCD7F63" Comment="Температура масла в МБД &gt;110 °C" />
+        <Field Name="T_POD_1_Av" Type="STRING" UUID="E7B6EF0E4959426CBAB6F0A5EF793B46" Comment="Аварийно-высокая температура подшипников промопоры т1" />
+        <Field Name="T_POD_2_Av" Type="STRING" UUID="B6520F1B47E4F1676435E99427C8E1BE" Comment="Аварийно-высокая температура подшипников промопоры т2" />
+        <Field Name="Tg_out_N_Av" Type="STRING" UUID="5D5FFC7F43EA24D7C0D80787D6F1AECF" Comment="Аварийно-высокая температура газа на входе Н" />
+        <Field Name="T_PON_Av" Type="STRING" UUID="EFD9D1AD44BA72EE294C07AE726805B0" Comment="Аварийно-высокая температура переднего опорного подшипника Н" />
+        <Field Name="Tp_N_opora_Av" Type="STRING" UUID="7FFF08A841B77B16677276B9FD29CD7B" Comment="Аварийно-высокая температура ОУП Н (опорная часть)" />
+        <Field Name="Tp_N_work_Av" Type="STRING" UUID="920F23FA4EAF3EF7A2059EB75EDAA08F" Comment="Аварийно-высокая температура ОУП опорно-упорного подшипника Н (рабочая колодка)" />
+        <Field Name="Tp_N_ust_Av" Type="STRING" UUID="ACD8CB7948EAFC70BBC778B92B9351D2" Comment="Аварийно-высокая температура опорно-упорного подшипника Н (установ. колодка)" />
+        <Field Name="Razr_out_D_Av" Type="STRING" UUID="EA08C44A4E590263AA5EB8B331A6EF55" Comment="Аварийно-высокое разряжение воздуха на входе в двигатель" />
+        <Field Name="Pm_D_An" Type="STRING" UUID="90DF8B3041A121508910F2A223E6B4F2" Comment="Аварийно-низкое давление масла на входе в двигатель(после ф.)" />
+        <Field Name="Pm_N_An" Type="STRING" UUID="7280328B40AA018ECEF0B491BA1B62B9" Comment="Аварийно-низкое давление масла смазки  H" />
+        <Field Name="dP_mg_An" Type="STRING" UUID="88B13656416E83C6113295974B3C6A5E" Comment="Аварийно-низкий dР масло-газ " />
+        <Field Name="Ptg_in_BTA_An" Type="STRING" UUID="FFE04F5B47A52EF1975A2681C460AF2E" Comment="Аварийно-низкое давление топливного газа на входе в БТА" />
+        <Field Name="dPg_fors_Av" Type="STRING" UUID="227E48294D6359759F8E78AFECDD54DF" Comment="Перепад давлений газа на форсунках высокий" />
+        <Field Name="Vibr_OP_N_Av" Type="STRING" UUID="E96078BC4A03F3A0BD9E5FAB6F8F8495" Comment="Аварийно-высокое вибросмещение опорного подшипника Н" />
+        <Field Name="Vibr_OUP_N_Av" Type="STRING" UUID="7F40A90241E66E9D75DCBE8E25690B28" Comment="Аварийно-высокое вибросмещение опорно-упорного подшипника Н" />
+        <Field Name="Vibr_KVD_Av" Type="STRING" UUID="C8B94F634A6942DD83D681B46EAAFA44" Comment="Аварийно-высокая вибрация корпуса КВД" />
+        <Field Name="Vibr_KND_Av" Type="STRING" UUID="3C4C0C6D44E0C6BBBE71B4A122EE4C46" Comment="Аварийно-высокая вибрация корпуса КНД" />
+        <Field Name="Vibr_N_Av" Type="STRING" UUID="D592AE934A93FC9A6EBE3D97AC5C3063" Comment="Аварийно-высокая вибрация корпуса ТН" />
+        <Field Name="ev_N_KVD_An" Type="STRING" UUID="E83239324CB045F1C1DC119982D50A85" Comment="N КВД &lt; 700 об/мин. на 192 сек. пуска" />
+        <Field Name="Pm_N_RD1" Type="STRING" UUID="F66A400C4F7CD4B6E1D838BC5A6025BE" Comment="Нет Pм на входе в ситему смазки Н РД1" />
+        <Field Name="dPmg" Type="STRING" UUID="9B095E604DF4D28EF9729C9EAE3389DF" Comment="Нет dP масло-газ" />
+        <Field Name="Gas_N" Type="STRING" UUID="2C0B8CDF41B7B37C476DE6B005061654" Comment="Загазованность галереи H&gt;1,0%" />
+        <Field Name="Aoss_BTN_ARM" Type="STRING" UUID="3C799FBB4AD0EFE1674BB4B6B701CB03" Comment="АОсс по команде оператора (АРМ)" />
+        <Field Name="Aoss_BTN_PRU" Type="STRING" UUID="115BA8DF447CE426139D208169778147" Comment="АОсс по команде оператора (ПРУ)" />
+        <Field Name="But_AO_ON" Type="STRING" UUID="DF3D967C4738BE8582C0F79BB8438D92" Comment="АО с кнопки на панели управления" />
+        <Field Name="AO_SAU" Type="STRING" UUID="8AE9CE1E46D48BFD241400AE8BDF4320" Comment="Аварийный останов (АО) от САУ КЦ" />
+        <Field Name="AO_btn" Type="STRING" UUID="F8F12AAC4B66D22E78F9B1AAF2ED5D25" Comment="Аварийный останов (АО) от кнопки в машзале" />
+        <Field Name="Fire" Type="STRING" UUID="62E5DC1A433912F9E4978480DF92DA8B" Comment="Пожар (обобщенный сигнал)" />
+        <Field Name="Pomp_N" Type="STRING" UUID="648A95524A18D8C81A5F32A4E6269095" Comment="Помпаж нагнетателя" />
+        <Field Name="Sdvig_N_ahead" Type="STRING" UUID="6A62270E4F5D5D189A99C6B81ED113F9" Comment="Осевой сдвиг ротора нагнетателя вперед (к турбине)" />
+        <Field Name="Sdvig_N_back" Type="STRING" UUID="9B93020448E0F168D7ABC4A61A33FFA9" Comment="Осевой сдвиг ротора нагнетателя назад (от турбины)" />
+        <Field Name="But_BEO_ON" Type="STRING" UUID="5FA7D276454D6160988537A340EF2086" Comment="Срабатывание БЭО" />
+        <Field Name="SurgeN" Type="STRING" UUID="1B0F44B14BA5D83FF653BD8465E2AD3C" Comment="Помпаж нагнетателя (АПР)" />
+        <Field Name="Pm_in_D_alarm_low" Type="STRING" UUID="118466104469B01B58B294AC3EFCBEEF" Comment="P масла на входе в двигатель &lt;0,1 МПа" />
+        <Field Name="Pm_MNOD_002" Type="STRING" UUID="7C95E75B4BAE812746EED2AA2B8DDF9B" Comment="P масла за эл. МНОД &lt;0,02 МПа" />
+        <Field Name="U380_KK" Type="STRING" UUID="8985E66C457E15A566F96E9794049941" Comment="Нет питания 380 В на КК (стартеры)" />
+        <Field Name="KU_KK1_nON_1" Type="STRING" UUID="4C74EEE549D5A5D6646225A5DE027CB2" Comment="Нет включения КУ в КК1 (1 скор.)" />
+        <Field Name="KU_KK2_nON_1" Type="STRING" UUID="D71664C74EE372C25116C9A0463ED9F0" Comment="Нет включения КУ в КК2 (1 скор.)" />
+        <Field Name="KU_KK1_nON_2" Type="STRING" UUID="FCB71CBA419DED48491894A72C2945A7" Comment="Нет включения КУ в КК1 (2 скор.)" />
+        <Field Name="KU_KK2_nON_2" Type="STRING" UUID="622860D24C117924D3434ABEC4A78482" Comment="Нет включения КУ в КК2 (2 скор.)" />
+        <Field Name="ORT_alarm" Type="STRING" UUID="E2F43AF6447A51474758C1B51CB99650" Comment="Авария ОРТ" />
+        <Field Name="Time_start_600" Type="STRING" UUID="AF43D982486FA3C243C0CCB575BAB5F3" Comment="Время запуска &gt; 600 сек." />
+        <Field Name="Aobs_BTN_ARM" Type="STRING" UUID="2A6766704452C34792D24BB4A5331326" Comment="АОбс по команде оператора" />
+        <Field Name="Aobs_BTN_PRU" Type="STRING" UUID="DAB54ECD40A6E1C0250CEA9E878757B0" Comment="АОбс от ПРУ" />
+        <Field Name="SK_ON" Type="STRING" UUID="FE1CC0784F9BFCDA8DF4EDB6CF0DFA92" Comment="Стоп-кран не открыт" />
+        <Field Name="A_noFire1" Type="STRING" UUID="CD97866F4F22C395781818BFFAAF27C9" Comment="Нет розжига" />
+        <Field Name="A_noFire2" Type="STRING" UUID="6609AF954E54C6E4A39DF1ACA2DD9AF2" Comment="Погасание факела" />
+        <Field Name="A_NndBrk" Type="STRING" UUID="655AA5B0402445CCC1A300898F76C75C" Comment="Отказ каналов изм. N КНД" />
+        <Field Name="A_NvdBrk" Type="STRING" UUID="9A15FC28414AE09DE7E8BEBACA80C714" Comment="Отказ каналов изм. N КВД" />
+        <Field Name="A_NstBrk" Type="STRING" UUID="1CD23DB1477A41617B6FFB806916E036" Comment="Отказ каналов изм. N ТН" />
+        <Field Name="A_Tg_outTNDbrk" Type="STRING" UUID="430146B9409A86F51D7A0BBAA5EA163E" Comment="Отказ каналов изм. Т газа за ТНД" />
+        <Field Name="A_NndLow" Type="STRING" UUID="822C37644582A416292B09AD85D71165" Comment="Низкая N КНД на режиме" />
+        <Field Name="A_NvdLow" Type="STRING" UUID="E8DF4C744F633DC9ABE3399F14875DA3" Comment="Низкая N КВД на режиме" />
+        <Field Name="A_NstLow" Type="STRING" UUID="53BE03F44AAE7118C53F3A96E634B74B" Comment="Низкая N ТН на режиме" />
+        <Field Name="A_NndHigh" Type="STRING" UUID="3D9ED1E540EA48F0F8C07A99A65E9F86" Comment="Высокая N КНД" />
+        <Field Name="A_NvdHigh" Type="STRING" UUID="5C4CCA6A48DA534D363D71A3CA60AE23" Comment="Высокая N КВД" />
+        <Field Name="A_Pv_outKVDHigh" Type="STRING" UUID="CEE610144749AC14E5C22AA3F9DD96DF" Comment="Высокое давление воздуза за КВД" />
+        <Field Name="A_Tg_outTNDhigh" Type="STRING" UUID="1F7577714BF050CF8AF0BDA5D485191D" Comment="Высокая температура газа за ТНД" />
+        <Field Name="A_Tg_outTNDstartHigh" Type="STRING" UUID="368F202E41E78EEF861DD397F9D05696" Comment="Высокая температура газа за ТНД на запуске" />
+        <Field Name="A_Dgdistort" Type="STRING" UUID="242FA78E4FDB72DBA02E33BEBEF38CEE" Comment="Рассогласование по ДГ" />
+        <Field Name="A_NstHigh" Type="STRING" UUID="3A98B7114C794E3FA9FBC49D689830B5" Comment="Высокая N ТН" />
+        <Field Name="Kr1_sh" Type="STRING" UUID="1FD6F5454E85DF74274AD2840282FFB7" Comment="Самопроизвольное закрытие Кр1" />
+        <Field Name="Kr2_sh" Type="STRING" UUID="1BC0ABF049EDA42F587A4681E04FE572" Comment="Самопроизвольное закрытие Кр2" />
+        <Field Name="Kr6_sh" Type="STRING" UUID="6CB92B11438497ECE982869838DC5389" Comment="Самопроизвольное закрытие Кр6" />
+        <Field Name="Lm_MBD_alarm" Type="STRING" UUID="414DDEA5455C9FC1D562F29662B0BAD1" Comment="Уровень масла в МБ двигателя аварийный" />
+        <Field Name="Noss_BTN_ARM" Type="STRING" UUID="337F98454E7D3FB585CA99823C28D977" Comment="НО по команде оператора (АРМ)" />
+        <Field Name="Noss_BTN_PRU" Type="STRING" UUID="E891F11E4923E1838D3954938D3972D3" Comment="НО по команде оператора (ПРУ)" />
+        <Field Name="But_NO_ON" Type="STRING" UUID="258B7EC547F14BC432FBA3AD50335F5F" Comment="НО от кнопки «НО ГПА»" />
+        <Field Name="Nobs_BTN_ARM" Type="STRING" UUID="1F772258473C2334FFC9AF85B0315339" Comment="НОбс по команде оператора (АРМ)" />
+        <Field Name="Nobs_BTN_PRU" Type="STRING" UUID="B2A4B8B0496C67491966E2B1FE03400C" Comment="НОбс по команде оператора (ПРУ)" />
+    </Fields>
+</Type>

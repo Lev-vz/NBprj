@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE SubAppType v. 1.3 >
+<SubAppType Name="PLC_to_ARM" Kind="APPLICATION.LUA" Args="" Comment="" UUID="5DF6693C4746F64C9D53C7B7234CD49D">
+    <InterfaceList>
+        <Signal Name="@COMMAND" UUID="F07649574D17530DAE3C9F842124FE1D" Type="STRING" />
+        <Signal Name="@COMMAND_VALUE" UUID="5D2B87AB44039686766A29B722A46D51" Type="STRING" />
+        <Signal Name="@EVENT" UUID="276446264EBFFE0F663D339AFFB3F233" Type="STRING" />
+        <Signal Name="@FAILOVER_ERROR" UUID="A48A01FF4E10E6B41BBA15A6CDBB4FBE" Type="BOOL" />
+        <Signal Name="@FAILOVER_PRESENCE" UUID="AEF213024DEE71464BF30FAB57907CBB" Type="BOOL" />
+        <Signal Name="@FAILOVER_RESERVE" UUID="B75FD76242CDF0D062EAFF9BA6690051" Type="BOOL" />
+        <Signal Name="@FAILOVER_RESERVED" UUID="B6CC63C94798BACB7F2B6A89F8E1B9BD" Type="BOOL" />
+        <Signal Name="@MESSAGE" UUID="87A71D4B4FB27A73D3951BAFA337556D" Type="STRING" Usage="output" />
+        <Signal Name="@MESSAGE_FRAMEWORK" UUID="981AE36D4853D773B6D8318F546C5B0A" Type="STRING" Usage="output" />
+        <Signal Name="@NODE_ERROR" UUID="1ED9E9CE4C9C76A5D8D570808740AAF2" Type="BOOL" />
+        <Signal Name="@NODE_PEER_ERROR" UUID="DD7C35EB419805A35E9AB2BDEA300170" Type="BOOL" />
+        <Signal Name="@NODE_ROLE" UUID="AF3673874BEB31C67BF0BBA4209C845D" Type="INT" />
+        <Signal Name="@PID" UUID="DB65A6D0437C00D0222520933DD2319E" Type="STRING" Usage="output" />
+        <Signal Name="@RESERVE" UUID="CDE5C2514501A8052E7DA9AF41701589" Type="BOOL" />
+        <Signal Name="@RESERVED" UUID="102B810649FEE074B6DC0A9945B92748" Type="BOOL" />
+        <Signal Name="@STATE" UUID="17E7FE844BFB4F403A300E8706052EBC" Type="STRING" Usage="output" />
+        <Signal Name="@WINDOW" UUID="974D25E94081ED721A34C0B2668773AE" Type="TWINDOW" ArraySize="32" InitialValue="[(VISIBLE:=TRUE, WIDTH:=640, HEIGHT:=480)]" />
+        <Signal Name="APP_FST_SCN" UUID="2695F8D545BABC8E24F2DFA5D462E82A" Type="BOOL" InitialValue="TRUE" Global="TRUE" Comment="SR" />
+        <Signal Name="Mode_Color" UUID="75BF693D493E518A5547ACB08984A222" Type="INT" />
+        <Signal Name="Mode_String" UUID="3BFA88F54D33D61369F7FDBE93556480" Type="STRING" />
+        <Signal Name="TS" UUID="32AC85D049C19AE42307269176F946B9" Type="CE5017BB486C9EDF63763594CD628C3B" Global="TRUE" Comment="Технологическая сигнализация" />
+        <Signal Name="us" UUID="A62D6A6B4383BDBB95C711BA989993F8" Type="C3992A264A11238A712FDD9E387032D3" Global="TRUE" Comment="Режимы" />
+        <Signal Name="UnitState" UUID="634E2EEA408AEB60CFA169A076222A10" Type="INT" Global="TRUE" Comment="Режим объекта" />
+        <Signal Name="Status_String" UUID="215C8CBF4EA3893861FD52AD52A4A4CD" Type="STRING" />
+        <Signal Name="STEP" UUID="768D31DE4285C261CF8F06A35D8917A2" Type="BOOL" ArraySize="24" Global="TRUE" Comment="Мнем:Индикация активного шага алгоритма.TAlgorithm" />
+        <Signal Name="STEP_NUM" UUID="E439A9CE44D956BA921F5498DC468C77" Type="INT" Global="TRUE" Comment="Мнем:Количество шагов алгоритма.TAlgorithm" />
+        <Signal Name="STEP_STR" UUID="AC4CAB914B3F760080755D82CC798AF2" Type="STRING" ArraySize="24" Global="TRUE" Comment="Мнем:Индикация строк алгоритма.TAlgorithm" />
+        <Signal Name="Calc_AI" UUID="9511B6034E64B42B67D541BA33202AE4" Type="A2ACD405420B76D31EA829834BAAC82D" InitialValue="(8AB0AFE44AC6C1BA0530D3A30AAA996D:=100)" Global="TRUE" />
+        <Signal Name="ustT" UUID="B4E3C5064791D066CD8F14AF46AFD5F8" Type="30ECEDE142EB269B13CA1C8A24CACC79" Global="TRUE" Comment="Уст. технологич. задержек" />
+        <Signal Name="TMR" UUID="B2339CBC40E78072619108A1956E811A" Type="30ECEDE142EB269B13CA1C8A24CACC79" Global="TRUE" Comment="Технологические задержки" />
+        <Signal Name="Status_Name_TMR" UUID="1017D7CF42978B303B512CB93538698C" Type="STRING" Comment="Таймера" />
+        <Signal Name="Q_ON" UUID="79B85A5E450A41FCFA45DC82BCD8B7CC" Type="B7A0A1384BD052D7B4D247BA4CB4C611" Global="TRUE" />
+        <Signal Name="State_PLC" UUID="CB462758490EE0974E559CAB6E245D01" Type="BOOL" Global="TRUE" Comment="Связь с PLC" />
+        <Signal Name="State_Siemens" UUID="8619A17943129B1D5C01B79455AD814D" Type="BOOL" Global="TRUE" Comment="Связь с Siemens" />
+    </InterfaceList>
+</SubAppType>

@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Program >
+<Program UUID="EFF259904E0A28C76B683D93C99DE22D" Name="APR" Period="50" PutDataAtEndOfCycle="false">
+    <Variables>
+        <Variable UUID="482D36924E550F13FC9BC08288545BE4" Name="tmpREALtime" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+        <Variable UUID="7A62D72F444510F6D37E9CB61AB0681F" Name="tmpREALtime_prev" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+        <Variable UUID="10E1CD5E4DEB990941B21288D458E33D" Name="del_T" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+        <Variable UUID="B2511CF1490A33646A7A8685A3D6FF6E" Name="FS" Type="BYTE" TypeUUID="C3C10A82401AD741FA0AB89DDE8B5F30" Usage="internal" />
+        <Variable UUID="D90B82D14F1ADDBC16BF5B87F6FF9C1F" Name="Proc_Pg_in_N" Type="c_AI_Proc_auto" TypeUUID="BB5B49364C82250BD6D575A2467D8491" Usage="internal" />
+        <Variable UUID="4BF6BD1246B7C10330AF838DAC6B60FB" Name="Proc_Pg_out_N" Type="c_AI_Proc_auto" TypeUUID="BB5B49364C82250BD6D575A2467D8491" Usage="internal" />
+        <Variable UUID="018114A34CA0502E9EE4EEA63E3D4878" Name="Proc_dP_conf_N" Type="c_AI_Proc_auto" TypeUUID="BB5B49364C82250BD6D575A2467D8491" Usage="internal" />
+        <Variable UUID="C2FD9F41479339D3E05AB49B089F052D" Name="Proc03" Type="c_AI_Proc_auto" TypeUUID="BB5B49364C82250BD6D575A2467D8491" Usage="internal" />
+        <Variable UUID="DC6901B54CF25D0F86CA99B81060117D" Name="Proc04" Type="c_AI_Proc_auto" TypeUUID="BB5B49364C82250BD6D575A2467D8491" Usage="internal" />
+        <Variable UUID="6E77CD2641D9F85CDB8665ABB657D0EA" Name="Call_APR" Type="APR_Main" TypeUUID="FD9F53A7475F07AB260ECD9541AB77EF" Usage="internal" />
+        <Variable UUID="7927C7B54EB6AABF289778B06BD70841" Name="F5S" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+    </Variables>
+    <ST><![CDATA[////////////////////////////////////////////////////////////////////////////////////////////
+tmpREALtime := CLOCK();
+del_T := LREAL_TO_REAL(tmpREALtime - tmpREALtime_prev);
+tmpREALtime_prev := tmpREALtime;
+FS:= BOOL_TO_BYTE(APP_FST_SCN);
+
+////////////////////////////////////////////////////////////////////////
+//ГЕНЕРАТОР ДЛЯ АНАЛИЗА РАБОТЫ ДАННОГО ПРИЛОЖЕНИЯ В ПРИЛОЖЕНИИ БЭАО
+////////////////////////////////////////////////////////////////////////
+//TMRGEN(NOT FLGEN,T#500ms,FLGEN,TIMEGEN);
+if BEO.GENERATOR_APR = 101 then BEO.GENERATOR_APR := 0; end_if;
+BEO.GENERATOR_APR := BEO.GENERATOR_APR + 1;
+
+
+//Обработка аналоговых параметров для АПР
+//Инициализация AI_Init(AI_Curr, Span, Offset, Tf,	min_fault_sensor_Eu, max_fault_sensor_Eu, repair_time, min_ADC, max_ADC, Manual_Auto, ROC_time)
+IF APP_FST_SCN THEN
+//KM04_0_20mA:Давление газа на входе в компрессор A1.1 CH2
+AI_Init_Auto(HMI_APR.Pg_in_N, SEN_PLC_APR.Pg_in_N, 10.0, 0.0, 10000.0, 2.0, 9.99, 1.98, 9.999, 100.0, 5.0, 3600.0, 0.1, 49, FALSE); //АПР
+//KM04_0_20mA:Давление газа на выходе из компрессора A1.1 CH3
+AI_Init_Auto(HMI_APR.Pg_out_N, SEN_PLC_APR.Pg_out_N, 10.0, 0.0, 10000.0, 2.0, 9.99, 1.98, 9.999, 100.0, 5.0, 3600.0, 0.1, 52, FALSE); //АПР
+//KM04_0_20mA:Перепад давлений на конфузоре компрессора A1.1 CH4
+AI_Init_Auto(HMI_APR.dP_conf_N, SEN_PLC_APR.dP_conf_N, 160.0, 0.0, 10000.0, 2.0, 9.99, 1.98, 9.999, 100.0, 5.0, 3600.0, 0.1, 53, FALSE); //АПР
+//	Tin		:=AI_Init(Tin, 	LREAL#240.0, 	LREAL#-60.0, 	LREAL#2.5, 		LREAL#0.1, 	LREAL#9.9, 	LREAL#600.0, LREAL#0.19, 	LREAL#9.79, 	BYTE#0, LREAL#0.5);
+//	Tout	:=AI_Init(Tout, LREAL#240.0, 	LREAL#-60.0,	LREAL#2.5, 		LREAL#0.1, 	LREAL#9.9, 	LREAL#600.0, LREAL#0.19, 	LREAL#9.79, 	BYTE#0, LREAL#0.5);
+END_IF;
+
+
+//Давление газа на входе в компрессор A1.1 CH2
+Proc_Pg_in_N(HMI_APR.Pg_in_N, SEN_PLC_APR.Pg_in_N, del_T, DRV_K_AI_APR.Pg_in_N, APP_FST_SCN);
+//Давление газа на выходе из компрессора A1.1 CH3
+Proc_Pg_out_N(HMI_APR.Pg_out_N, SEN_PLC_APR.Pg_out_N, del_T, DRV_K_AI_APR.Pg_out_N, APP_FST_SCN);
+//Перепад давлений на конфузоре компрессора A1.1 CH4
+Proc_dP_conf_N(HMI_APR.dP_conf_N, SEN_PLC_APR.dP_conf_N, del_T, DRV_K_AI_APR.dP_conf_N, APP_FST_SCN);
+//Proc03(Tin, del_T, AI10149_T_gaz_vx_H, FS);
+//Proc04(Tout, del_T, AI10150_T_gaz_vyx_H, FS);
+
+
+//Вызов блока АПР
+Call_APR(del_T,										//Время цикла, сек, тип Real
+		APP_FST_SCN, 								//Флаг первого скана выполнения приложения, тип Bool
+		1000.0*HMI_APR.Pg_in_N.PV, 						//Значение Рг до Н, тип Real, МПа
+		1000.0*HMI_APR.Pg_out_N.PV, 						//Значение Рг за Н, тип Real, МПа
+		HMI_APR.dP_conf_N.PV, 						//Значение dP на конфузоре Н, тип Real, кПа
+		fl_to_APR.Tin, 								//Значение Тг до Н, тип Real, град
+		fl_to_APR.Tout,						 		//Значение Тг за Н, тип Real, град
+		HMI_APR.Pg_in_N.Condition.fault_common,		//Отказ канала Рг до Н, тип Bool
+		HMI_APR.Pg_out_N.Condition.fault_common,		//Отказ канала Рг за Н, тип Bool
+		HMI_APR.dP_conf_N.Condition.fault_common,		//Отказ канала dP на конфузоре Н, тип Bool
+		fl_to_APR.Tin_fault,							//Отказ канала Тг до Н, тип Bool
+		fl_to_APR.Tout_fault,							//Отказ канала Тг за Н, тип Bool
+		IN_CONST,									//Массив настроечных параметров АПР, тип Real, 70 элементов
+		IN_LINE,									//Массив конфигурации линий АПР, тип Real, 10 элементов
+		fl_to_APR.N_ST,								//Обороты СТ (из регулятора, значение, не support_AI), тип Real
+		fl_to_APR.N_ST_fault,							//Флаг неисправности оборотов СТ (из обработчика аналоговых сигналов), тип Bool
+		fl_to_APR.RU_Zadanie_APK,						//Ручное задание открытия АПК (из SCADA), тип Real
+		fl_to_APR.NST_IN_FLT,							//Флаг неисправности оборотов СТ (из РТ), тип Bool
+		fl_to_APR.RejimWork,							//Флаг работы двигателя (включение расчета рабочей точки), тип Bool
+		fl_to_APR.KranAPK_RA,							//Флаг авт/ручн режима управления АПК, тип Bool
+		fl_to_APR.Fast_Open,							//сумма всех причин аварийного открытия АПК (АО, НО и т.д.) - дискретная команда, тип Bool
+		fl_to_APR.ZAGRUZKA_APR,								//1(TRUE) - разгрузка, 0(FALSE) - загрузка - из алгоритма переходов, тип Bool
+		fl_to_APR.AM_APK_OF,								//сумма всех причин необходимого закрытия АПК  (на пуске, прокрутке, пуске без контура) - дискретная команда, тип Bool
+		fl_to_APR.APK_ON,								//АПК открыт, тип Bool
+		fl_to_APR.APK_OF,								//АПК закрыт, тип Bool
+		fl_to_APR.Rejim_Mag,								//Режим работы ГПА "Магистраль", тип Bool
+		fl_to_APR.Rejim_KO,								//Режим работы ГПА "Кольцо", тип Bool
+		fl_to_APR.BTN_APR_RESET,								//Сброс регулятора, на один скан, тип Bool
+		fl_to_APR.BTN_HLOP_RESET,								//Принудительный сброс зафиксированных хлопков, тип Bool
+//Выходные значения АПР
+		PIN_ROC_MAX, 								//Рассчитанное значение максимальной скорости изменения параметра Рг до Н, тип Real
+		POUT_ROC_MAX, 								//Рассчитанное значение максимальной скорости изменения параметра Рг за Н, тип Real
+		DP_ROC_MAX,									//Рассчитанное значение максимальной скорости изменения параметра dPг на конфузоре Н, тип Real
+		OUT_REAL_AS,								//Массив аналоговых выходных значений АПР, тип Real, 20 элементов
+		OUT_BOOL_AS,								//Массив дискретных выходных значений АПР, тип Bool, 20 элементов
+		OUT_LINE_AS,								//Массив значений линий АПР (для отображения на SCADA), тип Real, 10 элементов
+		OUT_R0820,									//Массив отладочных значений АПР, тип Real, 10 элементов
+//Имимтация в АПР
+		fl_to_APR.LG_ONIMIT,									//Флаг режима имитации, тип Bool
+		fl_to_APR.DP_BASE_IMIT								//Начальное значение канала перепада давления на конфузоре для имитации, тип Real
+);
+IF NOT fl_to_APR.LG_ONIMIT THEN
+ AO_DRV.Set_APK := (100.0 - OUT_REAL_AS[4])/10.0;
+END_IF;
+//Для инициализации FST_APP_SCAN
+(*
+if F5S < 2.0 then
+ F5S := F5S + del_T;
+else
+ APP_FST_SCN := BOOL#0;
+end_if;
+*)
+cycle_time[2]:= del_T*1000.0; 
+
+
+]]></ST>
+    <DataTypes>
+        <Struct UUID="4C99358D49D97BBFF079AEAAFB2FDDD3" Name="AI_">
+            <Field UUID="320393664796D414EEE541BB9E499327" Name="fault_common" Comment="общая неисправность канала" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="1D2891814EB623B6A2177C8E52D96124" Name="simulation" Comment="режим симуляции включен" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="19B2F17A4BB568846D6850B9C163F350" Name="repair" Comment="в ремонте" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="35BBB4274C8D26DC25AEB69E278DF862" Name="repair_time_less_10_percent" Comment="время ремонта истекает" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="7C74AD4E40598C67B4BDB2BA071C1569" Name="up_scale" Comment="больше чем max_fault_sensor_Eu" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="241E7A0B486837D643F6348AE7F39734" Name="down_scale" Comment="меньше чем min_fault_sensor_Eu" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="3A8878DD4B8809AEFA6E22B04B11D0B8" Name="ROC" Comment="ROC превышен" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="6733064D4826D6D9EC2D9FAE4A9A9E9A" Name="init_err" Comment="ошибка инициализации" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="3722EB2F4972A3DD7B25EAAF4CE921B0" Name="res" Comment="резерв" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="77AE2CE043A5A720D4EADA9920F6C01C" Name="simulation_on" Comment="включить режим симуляции из HMI" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="D038B8D34993B8F9AF40BD824FFAA3D7" Name="repair_on" Comment="включить режим ремонта из HMI" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="9308A2364CAE685CBEF3E5B7A034EE69" Name="repair_extension" Comment="продлить время ремонта из HMI" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="8D1BF9A744DED3DCE98FBCA44E039DAA" Name="ps" Comment="для посветки желтым" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="ABB24F6443C1E1D85D970488B4E77D27" Name="orr" Comment="ограничение режима" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="929D2ED54388FF5D070139B202B37AB7" Name="as" Comment="для посветки красным" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="F8749F754994935836C41A87CE57DE35" Name="ROC_enabled" Comment="включение функции ROC" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="205BA42B43E2213FC6B4EA87700659C7" Name="res2" Comment="резерв" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="3FC4AB9446CCEFEFCE7144A3AC5C977D" Name="res3" Comment="резерв" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="7DC565C6438B44421E8F65B96ADC1441" Name="res4" Comment="резерв" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="853846974520C1BE4165B6A0B38344FF" Name="res5" Comment="резерв" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+            <Field UUID="7D2AE31D4C0C92D9095DD7B58E1B61A9" Name="res6" Comment="резерв" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" />
+        </Struct>
+        <Struct UUID="5C4EAAB340E0F06BB767F6AEE30C69DF" Name="AI_HMI">
+            <Field UUID="6680870F41E57E1CD12DE7BD939D5023" Name="PV" Comment="сигнал с датчика, преобразованный к физическим единицам" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="F548944D4A7DC828DEA66BA8786ED508" Name="Condition" Comment="0-11 коды отказов канала, 12-15 команды с мнемосхемы" Type="AI_" TypeUUID="4C99358D49D97BBFF079AEAAFB2FDDD3" />
+            <Field UUID="6829820143254586D6194B9A6F0736A6" Name="CurrentTimeOfRepair" Comment="текущее время ремонта канала" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="CBDE481F460D861CF2BD17929A21107F" Name="Manual_Target" Comment="задание для выхода блока в ручном режиме" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+        </Struct>
+        <Struct UUID="B290A1BE4D5D52B9175E13A9D47C40D2" Name="AI_PLC">
+            <Field UUID="4517D8014BA5F1A31DC490A2FCD8E76C" Name="Span" Comment="диапазон датчика в EU" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="625B09604DB57060C6C6D9827263FB2B" Name="Offset" Comment="смещение датчика в EU" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="DAE597984FC2AFA050E92B89986AE362" Name="Tf" Comment="постоянная фильтра &gt; 0.001" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="A875986F466C964AEDE6E09BAC1A420F" Name="min_ADC" Comment="минимальное значение в единицах АЦП для обрабатываемого канала" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="EEEBBC024094CD578E5CC690A42B31BA" Name="max_ADC" Comment="максимальное значение в единицах АЦП для обрабатываемого канала" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="8392C9FF4B63129DB1C5A5A5BF293B29" Name="min_fault_sensor_Eu" Comment="если сигнал с датчика Status.Input_sensor_eu меньше этого значения, то отказ канала" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="0B3A58DE4B6F9A69D574C1A5202FA3D9" Name="max_fault_sensor_Eu" Comment="если сигнал с датчика Status.Input_sensor_eu больше этого значения, то отказ канала" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="8FDDC5F142B3E3FD3E64F296CC14CF38" Name="ROC" Comment="скорость изменения сигнала" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="1568C2D746CAB3E44D7DD794373B2957" Name="recovery_time" Comment="время восстановления канала после исчезновения неисправности" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="DFEE44C24DDA9848DAE5728113B9F98E" Name="repair_time" Comment="время через которое канал будет автоматически выведен из ручного режима" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="2966511E464A181C4955B29667D80BDF" Name="ROC_max" Comment="максимальное значение ROC, если ROC_enable = 1" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="1E56F43440654B2C8F48AABCED63411C" Name="ROC_min" Comment="минимальное значение ROC, если ROC_enable = 1" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="4176369549AFD27F4EE17384F721B073" Name="ROC_time" Comment="Время определения скорости изменения сигнала  (сек)" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" />
+            <Field UUID="A28F7A044DA4059028DB2DBA4EB976E5" Name="nAi" Comment="Номер канала" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" />
+        </Struct>
+    </DataTypes>
+    <FBLibrary>
+        <Function UUID="0E38F8ED46A751B846886C95AD5CA1E1" Name="AI_Init_Auto" ResultTypeUUID="EC797BDD4541F500AD80A78F1F991834">
+            <Variables>
+                <Variable UUID="78351BA7422AD5DC6A4F30846CC6CE84" Name="AI_HMI" Type="AI_HMI" TypeUUID="5C4EAAB340E0F06BB767F6AEE30C69DF" Usage="inout" />
+                <Variable UUID="96836725409FE9BCB4C4F598CE6B9782" Name="AI_PLC" Type="AI_PLC" TypeUUID="B290A1BE4D5D52B9175E13A9D47C40D2" Usage="inout" />
+                <Variable UUID="ED821802413B4B6902668284F12F2DEE" Name="Span" Comment="диапазон датчика в EU" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="E86960D545B3D11FA31A73B1E22919E2" Name="Offset" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="5D92099245858BBE94C4A091549A8550" Name="Tf" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="35F9EC884074ACE44CA57CACEA1173FB" Name="min_ADC" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="AA20C5634E9ED82B59FE2F8D9CF9D32F" Name="max_ADC" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="AF18B9B04A9C5A676DCB59B49CDBAC7E" Name="min_fault_sensor_Eu" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="DEA88C7549559EE26ED64C85F4B8D6EA" Name="max_fault_sensor_Eu" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="D4B346344CD6A88F95EB39B690B05BAC" Name="ROC" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="58B630F340F8E8B23C0A25AB9203E375" Name="recovery_time" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="9B4C7AEF422ADDD2816291B99D583693" Name="repair_time" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="A679120D445559602D2AF98C3B8ABE99" Name="ROC_time" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="58EF0B6B4F387BD839243F9045E7969E" Name="nAi" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="input" />
+                <Variable UUID="027086F249BCC424D90FC8B861D1A4F9" Name="ROC_enabled" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+            </Variables>
+            <ST><![CDATA[AI_PLC.Span := Span;
+AI_PLC.Offset := Offset;
+AI_PLC.Tf := Tf;
+AI_PLC.min_ADC := min_ADC;
+AI_PLC.max_ADC := max_ADC;
+AI_PLC.min_fault_sensor_Eu := min_fault_sensor_Eu;
+AI_PLC.max_fault_sensor_Eu := max_fault_sensor_Eu;
+AI_PLC.ROC := ROC;
+AI_PLC.recovery_time := recovery_time;
+AI_PLC.repair_time := repair_time;
+AI_PLC.ROC_time := ROC_time;
+AI_PLC.nAi := nAi;
+AI_HMI.Condition.ROC_enabled := ROC_enabled;
+
+if AI_PLC.min_fault_sensor_Eu >= AI_PLC.max_fault_sensor_Eu OR (AI_PLC.Span <= 0.0 OR AI_PLC.min_ADC >= AI_PLC.max_ADC OR AI_PLC.Tf <= 0.0) then AI_HMI.Condition.init_err := TRUE; else AI_HMI.Condition.init_err := FALSE; end_if;]]></ST>
+        </Function>
+        <FunctionBlock UUID="FD9F53A7475F07AB260ECD9541AB77EF" Name="APR_Main">
+            <Variables>
+                <Variable UUID="2EF8BD824A96C71A43110198EAB9AD5A" Name="del_T" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="68B619FC49F214F9BE5D90B0B4CE4D0F" Name="tmp_APK_RA" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="19170D154F2F4504ECBB7D90599E8C2E" Name="tmpREALtime" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+                <Variable UUID="BEDCFC7F42CF2D052FE005BF276ADE59" Name="tmpREALtime_prev" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+                <Variable UUID="EE4697A441BBC77FFF5833A0196251D8" Name="FS" Type="BYTE" TypeUUID="C3C10A82401AD741FA0AB89DDE8B5F30" Usage="internal" />
+                <Variable UUID="EF97B93544D606EB219AF5AE136A1A93" Name="AS_Init" Type="As_Init" TypeUUID="E16C170C4AB2C98499A8BDB2D5CDB8A2" Usage="internal" />
+                <Variable UUID="B5BEAB1F4F11C761D92D4095332072BA" Name="AS" Type="blocks_AS" TypeUUID="60B1B3E5443BFBFA2CA7979928818C85" Usage="internal" />
+                <Variable UUID="F851631D4BF3204812CEE093997808A9" Name="TMRGEN" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+                <Variable UUID="61B8CD82492AFF12141F8B9600BA912E" Name="FLGEN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="0A2144284AE42DB96BFACEB4B7BBB81B" Name="TIMEGEN" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Usage="internal" />
+                <Variable UUID="3549DDC2486B842C8C1C7B994529F23A" Name="CH1_ROC_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="7575A1A14FDFB2B9F278F7988CB8601E" Name="CH2_ROC_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="8B6969D84C8C8AC79DA935B6C44B5493" Name="CH3_ROC_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="71B120084195C116BFDC99A3B3362588" Name="CH1_ROC_proc" Type="ROC_Fault" TypeUUID="9D9E2B404283AED529871B93FF28621F" Usage="internal" />
+                <Variable UUID="23BFE5DB414281A06A5FB2975A09A8A5" Name="CH2_ROC_proc" Type="ROC_Fault" TypeUUID="9D9E2B404283AED529871B93FF28621F" Usage="internal" />
+                <Variable UUID="0A2102C84A75793B508979B5898C5618" Name="CH3_ROC_proc" Type="ROC_Fault" TypeUUID="9D9E2B404283AED529871B93FF28621F" Usage="internal" />
+                <Variable UUID="4BF0E07F4DC6B608D0F6A3B6011F7F92" Name="TMR_FLT00" Type="TOF" TypeUUID="00CC8E1E499F449F877D7C995C0F1337" Usage="internal" />
+                <Variable UUID="E20751034702F883CF3DA4A33FC4027B" Name="TMR_FLT01" Type="TOF" TypeUUID="00CC8E1E499F449F877D7C995C0F1337" Usage="internal" />
+                <Variable UUID="A564A2C54C77D0DB669F8A93948F1FB5" Name="TMR_FLT02" Type="TOF" TypeUUID="00CC8E1E499F449F877D7C995C0F1337" Usage="internal" />
+                <Variable UUID="7B348BE5400DFA0D12D1C69743FBD64A" Name="TMR_FLT03" Type="TOF" TypeUUID="00CC8E1E499F449F877D7C995C0F1337" Usage="internal" />
+                <Variable UUID="73FC30C64FF266319C1592BF48598A23" Name="TMR_FLT04" Type="TOF" TypeUUID="00CC8E1E499F449F877D7C995C0F1337" Usage="internal" />
+                <Variable UUID="F05736A54C97CE8071098497B67B61BB" Name="TMR_FLT_TIME" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Size="5" Array="TRUE" Usage="internal" />
+                <Variable UUID="E950FC34478D04931360B0A5B3F7B5C7" Name="TMR_FLT_ET" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Size="5" Array="TRUE" Usage="internal" />
+                <Variable UUID="B0E05B654E9A3770C75653A410170103" Name="FLT_CH1" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="1896E37647E560E22A790EBE747F0EE4" Name="FLT_CH2" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="EE1215B34D03A154CF3C2A93F5D82397" Name="FLT_CH3" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="3D2EA0634842B7E7215208864A56F4BF" Name="FLT_CH4" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="182705E042093476C8DB78AAC9F627A8" Name="FLT_CH5" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="F61B519C4E37DC55BBD98EBA7FE141C7" Name="TMRROC00" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+                <Variable UUID="A0ED49C84A51CE2EB31528A4E9EB3818" Name="TMRROC01" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+                <Variable UUID="E2821BB24BB96BAC5452029460E02D06" Name="TMRROC02" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+                <Variable UUID="22110B1E4D6C9D34B1CAB1BD93A8DC2B" Name="TMRROC_TIME" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Size="3" Array="TRUE" Usage="internal" />
+                <Variable UUID="1FD9724941B2C09FDDD2DAA718B2ECC1" Name="TMRROC_ET" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Size="3" Array="TRUE" Usage="internal" />
+                <Variable UUID="FDD5FAE94FA4657A089F408C1CCFB215" Name="tmpPIN_ROC_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="79FAA2624BC1A082C2590E895787B833" Name="tmpPOUT_ROC_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="B19109194CB5EB896DC3AF800C8A6354" Name="tmpDP_ROC_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="705C30EF4931E85643B13DB185AB8CB6" Name="F5S" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                <Variable UUID="E938C1224AC3AF966ADF8892D42BC780" Name="APP_FST_SCN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="7DB890B746DA0F210AA209919C3D9EBB" Name="Pin" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="3E9B8FE84947AE3843975DBC0361031C" Name="Pout" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="0D47DF9B42BF29583D2EABAB83194C47" Name="DP" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="05F2B5624CDA155432386AB68879340D" Name="Tin" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="E5D9981B4A6178A47D112CAEA456B4C2" Name="Tout" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="023506114621F9FD1EFE17ACF9AE5218" Name="Pin_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="059F226743A213434185A798C314BBF1" Name="Pout_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="A94B9DEE4ABD94AC8FA10791317FF016" Name="DP_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="18B1747F4A27406E58ADEABE4122346F" Name="Tin_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="79E43BE34B8C512111EFB8858C427807" Name="Tout_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="C375C0F34ED88F1344F9ABBEDAB49DA0" Name="IN_CONST" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Size="70" Array="TRUE" Usage="inout" />
+                <Variable UUID="0336D1364B486FE80D2469BD63383DF8" Name="IN_LINE" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Size="10" Array="TRUE" Usage="inout" />
+                <Variable UUID="A85A406D4395CBDCAAE0FF8632071DB7" Name="PIN_ROC_UST" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                <Variable UUID="B9BCEED74ED51E4BFBF74597510CEC74" Name="POUT_ROC_UST" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                <Variable UUID="9371263E49A76BE0C724EFA3F5D3F5B6" Name="DP_ROC_UST" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                <Variable UUID="ADA2909D47AA1C10B82BF6967ED1662A" Name="PIN_ROC_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="4B03E5F44B9CD4ED0DC0C68A58195B92" Name="POUT_ROC_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="0D897FE34EB109669DC2BB84B9E99E72" Name="DP_ROC_FLT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+                <Variable UUID="08639CBD420888AD5F258F98F7E3D328" Name="IN_REAL" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Size="10" Array="TRUE" Usage="internal" />
+                <Variable UUID="80A425604F5C30D24137F0A72870F75D" Name="IN_BOOL" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Size="25" Array="TRUE" Usage="internal" />
+                <Variable UUID="613AE1DB48B633E9F3B944A118E9F506" Name="NST" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="EA90DADA4070ADC087D5C1976FEC7F22" Name="NST_F" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="F5DFE001465E3775F1449D8ABA1EE859" Name="RU_Zadanie_APK" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="inout" />
+                <Variable UUID="BE8183FE4CF8C48CE8262D8C51C36874" Name="DP_imit" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                <Variable UUID="D9DD31AD484D29DC9F8C2E89A421826B" Name="NST_IN_F" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="69EB156A49CC99327162F8A212877B8F" Name="RejimWork" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="7A73387F4CC3C376E4BE079A2761D278" Name="KranAPK_RA" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="E28A3AAB494200FAE36CB196A195DD72" Name="OPEN_APK" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="B3F3EA29443DD33903FF2F8B8FD4A2F9" Name="ZAGRUZKA_APR" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="9C896019406BF6E54C6717992A0CF53A" Name="CLOSE_APK" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="222E7BA34EED24BD1C8E7CBB9EB487AE" Name="APK_OPEN" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="FF00D776484AD4C351EE3198B8FFAF5B" Name="APK_CLOSE" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="8D96CA6549CD5D19C546158F1348AE61" Name="Rejim_Mag" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="F924F0AE452C5B021046DC84D6B3D2C9" Name="Rejim_KO" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="30DB25444492BD1C74A964BF9F0A5BBA" Name="APR_RESET" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="434CABB8427BC9B1DC29BEA2278C81B1" Name="HLOP_RESET" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="C676D2154DD04BE353745F8314FC1762" Name="PIN_ROC_MAX" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                <Variable UUID="F5BE64094A9B6203744AF4A0D8814E05" Name="POUT_ROC_MAX" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                <Variable UUID="6887DC45437F28560755ACB769B2B565" Name="DP_ROC_MAX" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="output" />
+                <Variable UUID="E1245CF64E0E0DC23C3890A5580DAC0F" Name="OUT_REAL_AS" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Size="20" Array="TRUE" Usage="output" />
+                <Variable UUID="5DB076104F54F1A5A0148CAD7FF6D4A1" Name="OUT_BOOL_AS" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Size="20" Array="TRUE" Usage="output" />
+                <Variable UUID="39CF4AD342B36CF2BFB7F2A7C48A9459" Name="OUT_LINE_AS" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Size="10" Array="TRUE" Usage="output" />
+                <Variable UUID="41DCE4AF49A19CA6AAD331823030537B" Name="OUT_R0820" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Size="10" Array="TRUE" Usage="output" />
+                <Variable UUID="00E9A75542B7361F8518E9BAF86E57AF" Name="ONIMIT" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="input" />
+                <Variable UUID="61E2E3334F03ECF34A8E15963F5EE616" Name="DP_BASE_IMIT" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="4B69E9BA43F713CA2317019FDBA63EF9" Name="TRIG_ZAGR" Type="R_TRIG" TypeUUID="D90E3B974D4D8C72877123B1A897EB52" Usage="internal" />
+                <Variable UUID="96EAA363495CDDEA10CD11B7AD8E4478" Name="TRIG_RAZGR" Type="R_TRIG" TypeUUID="D90E3B974D4D8C72877123B1A897EB52" Usage="internal" />
+                <Variable UUID="EC49266F4617612A6E619FA47AB25867" Name="Q_TRIG" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Size="3" Array="TRUE" Usage="internal" />
+                <Variable UUID="1F6157914B20DEAE7E675A8B7769F636" Name="TRIG_AtoM" Type="R_TRIG" TypeUUID="D90E3B974D4D8C72877123B1A897EB52" Usage="internal" />
+                <Variable UUID="DEE9D1CE4A39E26AD198C9A31DDD5716" Name="TRIG_MtoA" Type="F_TRIG" TypeUUID="F64DAE304009E1613B4AB4AF27532AEF" Usage="internal" />
+            </Variables>
+            <ST><![CDATA[
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Обработчик аналоговых входов
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+IF APP_FST_SCN THEN
+	AS_Init(IN_CONST, IN_LINE); //Настроечные константы АПР
+	PIN_ROC_UST	:= 5.0;
+	POUT_ROC_UST:= 5.0;
+	DP_ROC_UST	:= 1.0;
+END_IF;
+
+//Диагностика исправности каналов давления по скорости изменения
+
+if not ONIMIT then
+	CH1_ROC_proc(Pin, PIN_ROC_UST, PIN_ROC_FLT, PIN_ROC_MAX);
+	CH2_ROC_proc(Pout, POUT_ROC_UST, POUT_ROC_FLT,POUT_ROC_MAX);
+	CH3_ROC_proc(DP, DP_ROC_UST, DP_ROC_FLT, DP_ROC_MAX);
+
+	TMRROC00(tmpPIN_ROC_FLT,T#5s,TMRROC_ET[0],TMRROC_TIME[0]);
+	TMRROC01(tmpPOUT_ROC_FLT,T#5s,TMRROC_ET[1],TMRROC_TIME[1]);
+	TMRROC02(tmpDP_ROC_FLT,T#5s,TMRROC_ET[2],TMRROC_TIME[2]);
+
+	if NOT tmpPIN_ROC_FLT AND PIN_ROC_FLT   then tmpPIN_ROC_FLT := BOOL#1;end_if;
+	if     tmpPIN_ROC_FLT AND TMRROC_ET[0] 	then tmpPIN_ROC_FLT := BOOL#0;end_if;
+
+	if NOT tmpPOUT_ROC_FLT AND POUT_ROC_FLT then tmpPOUT_ROC_FLT := BOOL#1;end_if;
+	if     tmpPOUT_ROC_FLT AND TMRROC_ET[1] then tmpPOUT_ROC_FLT := BOOL#0;end_if;
+
+	if NOT tmpDP_ROC_FLT AND DP_ROC_FLT     then tmpDP_ROC_FLT := BOOL#1;end_if;
+	if     tmpDP_ROC_FLT AND TMRROC_ET[2] 	then tmpDP_ROC_FLT := BOOL#0;end_if;
+
+	TMR_FLT00(FLT_CH1,T#5s,TMR_FLT_ET[0],TMR_FLT_TIME[0]);
+	TMR_FLT01(FLT_CH2,T#5s,TMR_FLT_ET[1],TMR_FLT_TIME[1]);
+	TMR_FLT02(FLT_CH3,T#5s,TMR_FLT_ET[2],TMR_FLT_TIME[2]);
+	TMR_FLT01(FLT_CH4,T#5s,TMR_FLT_ET[3],TMR_FLT_TIME[3]);
+	TMR_FLT02(FLT_CH5,T#5s,TMR_FLT_ET[4],TMR_FLT_TIME[4]);
+
+	FLT_CH1 := Pin_FLT;
+	FLT_CH2 := Pout_FLT;
+	FLT_CH3 := DP_FLT;
+	FLT_CH4 := Tin_FLT;
+	FLT_CH5 := Tout_FLT;
+end_if;
+
+if ONIMIT then
+	IN_REAL[0] := NST; 											// обороты нагнетателя
+	IN_REAL[1] := Pin; 											// давление на входе
+	IN_REAL[2] := Pout; 										// давление за нагнетателем
+	IN_REAL[3] := 10.0; 										// температура до нагнетателя
+	IN_REAL[4] := DP; 											// перепад на конфузоре
+	IN_REAL[5] := 0.7; 											// плотность газа (в приводино 0.69800001)
+	IN_REAL[6] := 745.0; 										// барометрическое давление (в приводино 760.0) - можно поставить показания существ. датчика
+	IN_REAL[7] := RU_Zadanie_APK; 								// уставка для ручного управления
+	IN_REAL[8] := del_T; 										// время цикла (в секундах)
+	IN_REAL[9] := 35.0; 										// температура за нагнетателем
+	IN_BOOL[18] := FALSE;  										// неисправность частоты вращения СТ
+
+	IN_BOOL[19] := FALSE;  										// неисправность давления до нагнетателя
+	IN_BOOL[20] := FALSE;  										// неисправность давления за нагнетателем 
+	IN_BOOL[21] := FALSE;  										// неисправность температуры газа до нагнетателя
+	IN_BOOL[22] := FALSE; 										// неисправность перепада на конфузоре
+	Pin_FLT := FALSE; 											// неисправность давления до нагнетателя
+	Pout_FLT := FALSE;											// неисправность давления за нагнетателем 
+	Tin_FLT := FALSE; 											// неисправность температуры газа до нагнетателя
+	DP_FLT := FALSE;											// неисправность перепада на конфузоре
+end_if;
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Формируем входные даные для АПР
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+IN_BOOL[0]  := RejimWork;										//Двигатель в работе
+IN_BOOL[1]  := FALSE; 											// alw off
+IN_BOOL[2]  := KranAPK_RA;										// ручное\авт управление АПК
+IN_BOOL[3]  := OPEN_APK; 										// сумма всех причин аварийного открытия АПК (АО, НО, вибрации, осевые сдвиги)
+IN_BOOL[4]  := ZAGRUZKA_APR;  									// 1 - разгрузка, 0 - загрузка - из алгоритма переходов
+IN_BOOL[5]  := CLOSE_APK; 										// AS_PROD  - закрыть АПК  (на пуске, прокрутке, пуске без контура)
+IN_BOOL[6]  := APK_OPEN;  										// APK открыт
+IN_BOOL[7]  := APK_CLOSE;  										// АПК закрыт
+IN_BOOL[8]  := Rejim_Mag; 										// работа в магистраль 
+IN_BOOL[9]  := Rejim_KO; 										// работа на кольце  
+IN_BOOL[10] := FALSE; 											// всегда ноль             
+IN_BOOL[11] := TRUE;  											// всегда один
+IN_BOOL[12] := FALSE;  											// всегда ноль
+IN_BOOL[13] := APR_RESET;  										// ресет регулятора, на один скан
+IN_BOOL[14] := HLOP_RESET;  									// сброс хлопков
+IN_BOOL[15] := FALSE;  											// всегда ноль
+IN_BOOL[16] := FALSE; 											// всегда ноль
+IN_BOOL[17] := FALSE;  											// всегда ноль
+
+TRIG_ZAGR((not KranAPK_RA and not ZAGRUZKA_APR and RejimWork), Q_TRIG[1]);
+if Q_TRIG[1] then RU_Zadanie_APK:=0.0; end_if;
+
+TRIG_RAZGR((not KranAPK_RA and ZAGRUZKA_APR and RejimWork), Q_TRIG[2]);
+if Q_TRIG[2] then RU_Zadanie_APK:=100.0; end_if;
+
+TRIG_MtoA((KranAPK_RA and RejimWork), Q_TRIG[4]);
+if Q_TRIG[4] and not ZAGRUZKA_APR then RU_Zadanie_APK:=0.0; end_if;
+if Q_TRIG[4] and ZAGRUZKA_APR then RU_Zadanie_APK:=100.0; end_if;
+
+TRIG_AtoM((KranAPK_RA and RejimWork), Q_TRIG[3]);
+if Q_TRIG[3] then RU_Zadanie_APK:=OUT_REAL_AS[4]; end_if;
+
+if NOT ONIMIT then
+IN_BOOL[18] := NST_F OR NST_IN_F; 								// неисправность частоты нагнетателя
+IN_BOOL[19] := Pin_FLT;  										// неисправность давления до нагнетателя
+IN_BOOL[20] := Pout_FLT;  										// неисправность давления за нагнетателем 
+IN_BOOL[21] := Tin_FLT;  										// неисправность температуры газа до нагнетателя
+IN_BOOL[22] := DP_FLT; 											// неисправность перепада на конфузоре
+		
+IN_REAL[0] := NST; 												// обороты нагнетателя
+IN_REAL[1] := Pin; 												// давление на входе
+IN_REAL[2] := Pout; 											// давление за нагнетателем
+IN_REAL[3] := Tin; 												// температура до нагнетателя
+IN_REAL[4] := DP; 												// перепад на конфузоре
+IN_REAL[5] := 0.7; 												// плотность газа (в приводино 0.69800001)
+IN_REAL[6] := 745.0; 											// барометрическое давление (в приводино 760.0) - можно поставить показания существ. датчика
+IN_REAL[7] := RU_Zadanie_APK; 									// уставка для ручного управления
+IN_REAL[8] := del_T; 											// время цикла (в секундах)
+IN_REAL[9] := Tout; 											// температура за нагнетателем
+end_if;
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Имитация перепада
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+IF ONIMIT then
+	IN_REAL[4] := DP_BASE_IMIT; 					// перепад на конфузоре
+	IF OUT_REAL_AS[4] > 5.0 then    //y = (x-x1)/(x2-x1)*(y2-y1) + y1
+		DP_imit := (OUT_REAL_AS[4] - 5.0) / (100.0 - 5.0) * (0.0 - 20.0) + 20.0;
+	else 
+		DP_imit := (OUT_REAL_AS[4] - 0.0) / (5.0 - 0.0) * (20.0 - 10.0) + 10.0;
+	end_if;
+
+	IF IN_REAL[0] > 3501.0 then
+		DP_imit := DP_imit + ((IN_REAL[0] - 3500.0)/(5600.0-3500.0) * (5.0 - 0.0) + 0.0);
+	end_if;
+	IN_REAL[4] := IN_REAL[4] - DP_imit;
+end_if;
+
+//Вызов АПР
+AS(IN_REAL, IN_BOOL, IN_CONST, IN_LINE, OUT_REAL_AS, OUT_BOOL_AS, OUT_LINE_AS, OUT_R0820);
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Привязка выходов АПР
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+(* привязка аналоговых выходных
+:= OUT_REAL_AS[0]; // Степень сжатия
+:= OUT_REAL_AS[1]; // Приведенный расход
+:= OUT_REAL_AS[2]; // Расход газа
+:= OUT_REAL_AS[3]; // Запас по помпажу
+:= OUT_REAL_AS[4]; // Управление клапаном
+:= OUT_REAL_AS[5]; // Текущее ручное задание
+:= OUT_REAL_AS[6]; // Кол-во хлопков
+:= OUT_REAL_AS[7]; // Активный контур селектора
+:= OUT_REAL_AS[8]; // Интегральный выход 1-го контура
+:= OUT_REAL_AS[9]; // Рассогласование по 2-му контуру
+:= OUT_REAL_AS[10]; // Рассогласование по 3-му контуру
+:= OUT_REAL_AS[11]; // Максимальная скорость уменьшения запаса
+:= OUT_REAL_AS[12]; // Максимальный POC Ps
+:= OUT_REAL_AS[13]; // Максимальный POC Pd
+:= OUT_REAL_AS[14]; // Минимальный приведенный расход
+:= OUT_REAL_AS[15]; // Максимальная скорость изменения Pin
+:= OUT_REAL_AS[16]; // Максимальная скорость изменения Pout
+:= OUT_REAL_AS[17]; // Мощность сжатия компрессора по формуле (12), кВт
+:= OUT_REAL_AS[18]; // Массовый расход газа
+*)
+
+(* привязка дискретных выходных
+
+:= OUT_BOOL_AS[0]; // AS в ручном режиме
+:= OUT_BOOL_AS[1]; // Помпаж
+:= OUT_BOOL_AS[2]; // Защита Suffety активна 
+:= OUT_BOOL_AS[3]; // Защита Step активна 
+:= OUT_BOOL_AS[4]; // Защита POC Ps активна 
+:= OUT_BOOL_AS[5]; // Защита POC Pd активна 
+:= OUT_BOOL_AS[6]; // Закрыт на пуске
+:= OUT_BOOL_AS[7]; // Остановлен
+:= OUT_BOOL_AS[8]; // В работе
+:= OUT_BOOL_AS[9]; // Загрузка
+:= OUT_BOOL_AS[10]; // Разгрузка
+:= OUT_BOOL_AS[11]; // Контур регулирования запаса активен
+:= OUT_BOOL_AS[12]; // Контур ограничения Pout
+:= OUT_BOOL_AS[13]; // Контур ограничения Rc
+:= OUT_BOOL_AS[14]; // Контур регулирования запаса активен
+:= OUT_BOOL_AS[15]; // Контур ограничения Pout
+:= OUT_BOOL_AS[16]; // Контур ограничения Rc
+:= OUT_BOOL_AS[17]; // Защита Diff активна 
+
+*)
+
+(* привязка положения линий
+
+:= OUT_LINE_AS[0]; // Линия помпажа
+:= OUT_LINE_AS[1]; // Линия защиты
+:= OUT_LINE_AS[2]; // Линия ступенчатого открытия
+:= OUT_LINE_AS[3]; // Линия регулирования
+:= OUT_LINE_AS[4]; // Линия плотного закрытия АПК
+:= OUT_LINE_AS[5]; // Линия окончания загрузки
+:= OUT_LINE_AS[6]; // Линия алгоритма по скорости приближения
+:= OUT_LINE_AS[7]; // Линия окончания загрузки
+OUT_REAL_AS[3] - OUT_LINE_AS[3] < 2.0
+*)
+
+//Для отображения раб точки
+if ((IN_REAL[0] < 300.0) OR NOT (Pin < 0.1) AND Pout < 0.1) AND NOT NST_F THEN OUT_REAL_AS[0] := 1.0; END_IF;
+
+if OUT_REAL_AS[3] > 100.0 THEN OUT_REAL_AS[3] := 100.0; END_IF;
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+if F5S < 2.0 then
+ F5S := F5S + del_T;
+else
+ APP_FST_SCN := BOOL#0;
+end_if;
+
+
+
+
+
+
+
+
+
+]]></ST>
+        </FunctionBlock>
+        <FunctionBlock UUID="E16C170C4AB2C98499A8BDB2D5CDB8A2" Name="As_Init" Comment="Инициализация настроечных констант АПР">
+            <Variables>
+                <Variable UUID="6692AFE649344E6145A6FC9F6A0DB69C" Name="IN_CONST" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Size="70" Array="TRUE" Usage="inout" />
+                <Variable UUID="65B3D36643A138D3D1322883CE104C17" Name="IN_LINE" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Size="10" Array="TRUE" Usage="inout" />
+            </Variables>
+            <ST><![CDATA[
+(*
+IN_CONST[0] := 8200.0; // Номинальные обороты
+IN_CONST[1] := 9.0; // Время, через которое пройдет АО при непрерывном нахождении рабочей точки в зоне помпажа, сек
+IN_CONST[2] := 30.6; //Коэф-т конфузора в Яхроме 11.06 // Коэф.конфузора
+IN_CONST[3] := 3.0; // кол-во помпажных точек
+IN_CONST[4] := 1.0; // Степень сжатия т.1 Rc1
+IN_CONST[5] := 184.0; // Приведенный расход т.1 Qpr1
+IN_CONST[6] := 1.25; // Степень сжатия т.2 Rc2
+IN_CONST[7] := 184.0; // Приведенный расход т.2 Qpr2
+IN_CONST[8] := 1.5; // Степень сжатия т.3 Rc3
+IN_CONST[9] := 184.0; // Приведенный расход т.3 Qpr3
+IN_CONST[10] := 0.0; // Нижний лимит
+IN_CONST[11] := 100.0; // Верхний лимит
+IN_CONST[12] := 20.0; // Значение нижнего лимита АПК при алг.
+IN_CONST[13] := 30.0; // Скорость увеличения ручного задания, % в сек 
+IN_CONST[14] := -0.5; // Скорость уменьшения влияния защиты POC на выход CV
+IN_CONST[15] := 3.0; // Скорость разгрузки
+IN_CONST[16] := -0.7; // Скорость загрузки
+IN_CONST[17] := 100.0; // Скорость при АО
+IN_CONST[18] := 100.0; // Скорость открытия при пуске
+IN_CONST[19] := -100.0; // Скорость закрытия при пуске
+IN_CONST[20] := 30.0; // Время удержания CV_POC
+IN_CONST[21] := -5.0; // Стало резервом
+IN_CONST[22] := 80.0; // Процент открытия АПК при обрыве dP
+IN_CONST[23] := 0.1; // Постоянная времени фильтра датчика "Перепад на конфузоре"
+IN_CONST[24] := 0.02; // Коэффициент Дифференцирования переменной "Скорость изменения SP"
+IN_CONST[25] := 9.0; // Максимальная величина скорости приближения к границе помпажа
+IN_CONST[26] := 3.0; // Время между "Хлопками", сек
+IN_CONST[27] := 12.0; // Время сброса счетчика "Хлопков", сек
+IN_CONST[28] := 25.0; // Величина смещения, %
+IN_CONST[29] := 3.0; // Задание количества пересечений линии Line_SO
+IN_CONST[30] := -0.7; // Скорость уменьшения SP, %/сек
+IN_CONST[31] := 30.0; // Резерв
+IN_CONST[32] := -0.7; // Ограничение скорости закрытия в ручном режиме
+IN_CONST[33] := 0.0; // Коэф.ПИД Kp_lt_0[0]
+IN_CONST[34] := 0.1; // Коэф.ПИД Kp_lt_0[2]
+IN_CONST[35] := 5.0; // Коэф.ПИД Kp_lt_0[1]
+IN_CONST[36] := 0.5; // Коэф.ПИД Kp_lt_0[3]
+IN_CONST[37] := 20.0; // Коэф.ПИД Kp_gt_0[1]
+IN_CONST[38] := 0.5; // Коэф.ПИД Kp_gt_0[3]
+IN_CONST[39] := 0.0; // Коэф.ПИД Ki_lt_0[0]
+IN_CONST[40] := 0.01; // Коэф.ПИД Ki_lt_0[2]
+IN_CONST[41] := 5.0; // Коэф.ПИД Ki_lt_0[1]
+IN_CONST[42] := 0.08; // Коэф.ПИД Ki_lt_0[3]
+IN_CONST[43] := 20.0; // Коэф.ПИД Ki_gt_0[1]
+IN_CONST[44] := 0.08; // Коэф.ПИД Ki_gt_0[3]
+IN_CONST[45] := 5441.0; // Контур ограничения давления газа на выходе нагнетателя (ограничение)
+IN_CONST[46] := 1.45; // Контур ограничения степени сжатия нагнетателя (ограничение)
+IN_CONST[47] := 10.0; // Величина первого приращения SP_M, %
+IN_CONST[48] := 3.0; // Дискретность изменения режиме Step, сек
+IN_CONST[49] := 5.0; // Величина второго приращения SP_M, %
+IN_CONST[50] := 5.0; // Порог давления Pout
+IN_CONST[51] := 130.0; // Порог давления Pout
+IN_CONST[52] := 3.0; // Порог давления Pout
+IN_CONST[53] := 5.0; // Порог давления Pin
+IN_CONST[54] := 300.0; // Порог давления Pin
+IN_CONST[55] := 2.0; // Порог давления Pin
+IN_CONST[56] := 0.0; // Pout LO
+IN_CONST[57] := 10000.0; // Pout HI
+IN_CONST[58] := 1.0; // Rc LO
+IN_CONST[59] := 2.0; // Rc HI
+IN_CONST[60] := 2.0; // Кп Pout
+IN_CONST[61] := 0.4; // Ки Pout
+IN_CONST[62] := 0.1; // Кп Rc
+IN_CONST[63] := 0.1; // Ки Rc
+IN_CONST[64] := 10000.0; // Порог скорости изменения Pin (обрыв)
+IN_CONST[65] := 10000.0; // Порог скорости изменения Pout (обрыв)
+
+
+
+
+IN_LINE[0] := 0.0; //Линия помпажа
+IN_LINE[1] := 0.0; //Линия защиты
+IN_LINE[2] := 5.0; //Линия ступенчатого открытия АПК
+IN_LINE[3] := 15.0; //Линия регулирования
+IN_LINE[4] := 8.0; //Линия плотного закрытия АПК
+IN_LINE[5] := 25.0; //Линия окончания загрузки
+IN_LINE[6] := 30.0; //Линия алгоритма по скорости приближения
+*)
+IN_CONST[0] := 5500.0; // Номинальные обороты , было 6500
+IN_CONST[1] := 9.0; // Время, через которое пройдет АО при непрерывном нахождении рабочей точки в зоне помпажа, сек
+IN_CONST[2] := 43.0; //Коэф-т конфузора в Яхроме 11.06 // Коэф.конфузора
+IN_CONST[3] := 3.0; // кол-во помпажных точек
+IN_CONST[4] := 1.34; // Помпажные точки
+IN_CONST[5] := 172.0; // Qpr1
+IN_CONST[6] := 1.42; // Rc2
+IN_CONST[7] := 177.0; // Qpr2
+IN_CONST[8] := 1.5; // Rc3
+IN_CONST[9] := 183.0; // Qpr3
+IN_CONST[10] := 0.0; // Нижний лимит
+IN_CONST[11] := 100.0; // Верхний лимит
+IN_CONST[12] := 20.0; // Значение нижнего лимита АПК при алг.
+IN_CONST[13] := 30.0; // Скорость увеличения ручного задания, % в сек 
+IN_CONST[14] := -20.0;//-0.5; // Скорость уменьшения ручного задания, % в сек 
+IN_CONST[15] := 3.0; // Скорость разгрузки
+IN_CONST[16] := -0.7; // Скорость загрузки
+IN_CONST[17] := 100.0; // Скорость при АО
+IN_CONST[18] := 100.0; // Скорость открытия при пуске
+IN_CONST[19] := -100.0; // Скорость закрытия при пуске
+IN_CONST[20] := -0.5; // скорость уменьшения задания
+IN_CONST[21] := -5.0; // Ограничение скорости закрытия АПК
+IN_CONST[22] := 50.0; // Процент открытия АПК при обрыве dP
+IN_CONST[23] := 0.1; // Постоянная времени фильтра датчика "Перепад на конфузоре"
+IN_CONST[24] := 0.02; // Коэффициент Дифференцирования переменной "Скорость изменения SP"
+IN_CONST[25] := 9.0; // Максимальная величина скорости приближения к границе помпажа
+IN_CONST[26] := 3.0; // Время между "Хлопками", сек
+IN_CONST[27] := 12.0; // Время сброса счетчика "Хлопков", сек
+IN_CONST[28] := 15.0; // Величина смещения, %
+IN_CONST[29] := 3.0; // Задание количества пересечений линии Line_SO
+IN_CONST[30] := -0.5; // Скорость уменьшения SP, %/сек
+IN_CONST[31] := 30.0; // Резерв
+IN_CONST[32] := -1.5; // Резерв
+IN_CONST[33] := 0.0; // Коэф.ПИД Kp_lt_0[0]
+IN_CONST[34] := 0.6; // Коэф.ПИД Kp_lt_0[2]
+IN_CONST[35] := 5.0; // Коэф.ПИД Kp_lt_0[1]
+IN_CONST[36] := 1.0; // Коэф.ПИД Kp_lt_0[3]
+IN_CONST[37] := 20.0; // Коэф.ПИД Kp_gt_0[1]
+IN_CONST[38] := 1.5; // Коэф.ПИД Kp_gt_0[3]
+IN_CONST[39] := 0.0; // Коэф.ПИД Ki_lt_0[0]
+IN_CONST[40] := 0.08; // Коэф.ПИД Ki_lt_0[2]
+IN_CONST[41] := 5.0; // Коэф.ПИД Ki_lt_0[1]
+IN_CONST[42] := 0.08; // Коэф.ПИД Ki_lt_0[3]
+IN_CONST[43] := 20.0; // Коэф.ПИД Ki_gt_0[1]
+IN_CONST[44] := 0.15; // Коэф.ПИД Ki_gt_0[3]
+IN_CONST[45] := 7453.0; // Контур ограничения давления газа на выходе нагнетателя (ограничение) //было 4700
+IN_CONST[46] := 1.44; // Контур ограничения степени сжатия нагнетателя (ограничение)
+IN_CONST[47] := 10.0; // Величина первого приращения SP_M, %
+IN_CONST[48] := 3.0; // Дискретность изменения режиме Step, сек
+IN_CONST[49] := 5.0; // Величина второго приращения SP_M, %
+
+IN_CONST[50] := 5.0; // Порог давления Pout
+IN_CONST[51] := 1000.0; // Порог давления Pout
+IN_CONST[52] := 2.0; // Порог давления Pout
+
+IN_CONST[53] := 5.0; // Порог давления Pin
+IN_CONST[54] := 150.0; // Порог давления Pin
+IN_CONST[55] := 2.0; // Порог давления Pin
+
+IN_CONST[56] := 0.0; // Pout LO
+IN_CONST[57] := 10000.0; // Pout HI
+IN_CONST[58] := 1.0; // Rc LO
+IN_CONST[59] := 2.0; // Rc HI
+IN_CONST[60] := 1.0; // Кп Pout
+IN_CONST[61] := 0.5; // Ки Pout
+IN_CONST[62] := 0.1; // Кп Rc
+IN_CONST[63] := 0.1; // Ки Rc
+IN_CONST[64] := 10000.0; // Порог скорости изменения Pin (обрыв)
+IN_CONST[65] := 10000.0; // Порог скорости изменения Pout (обрыв)
+
+
+
+
+IN_LINE[0] := 5.0; //Линия помпажа
+IN_LINE[1] := 0.0; //Линия защиты
+IN_LINE[2] := 5.0; //Линия ступенчатого открытия АПК
+IN_LINE[3] := 15.0; //Линия регулирования
+IN_LINE[4] := 8.0; //Линия плотного закрытия АПК
+IN_LINE[5] := 15.0; //Линия окончания загрузки
+IN_LINE[6] := 30.0; //Линия алгоритма по скорости приближения]]></ST>
+        </FunctionBlock>
+        <FunctionBlock UUID="9D9E2B404283AED529871B93FF28621F" Name="ROC_Fault">
+            <Variables>
+                <Variable UUID="73C039BE444FB5CBC1DE57BA259B0C0D" Name="ROC_array" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Size="5" Array="TRUE" Usage="internal" />
+                <Variable UUID="B82AADB54B0E5FA51EACE1AC2E934186" Name="ROC" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+                <Variable UUID="F1E849E549EB348A599DEBAA91559396" Name="AI_IN" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="BB011E2A4CB9E5AA0E173FA104EDD41E" Name="ROC_SP" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="input" />
+                <Variable UUID="18FCBDAE4D8662161D455683ABBCB411" Name="out_fault" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="output" />
+                <Variable UUID="6945A11242052C87D49994BAC94BCF23" Name="Max_ROC" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="inout" />
+            </Variables>
+            <ST><![CDATA[ROC_array[4] := ROC_array[3]; 
+ROC_array[3] := ROC_array[2]; 
+ROC_array[2] := ROC_array[1]; 
+ROC_array[1] := ROC_array[0]; 
+ROC_array[0] := AI_IN;
+
+
+
+ROC := (ABS(ROC_array[3] - ROC_array[2]) +ABS(ROC_array[3] - ROC_array[2]) +  ABS(ROC_array[2] - ROC_array[1]) + ABS(ROC_array[1] - ROC_array[0]))/ 4.0;
+if (ABS(ROC) > Max_ROC) then
+ Max_ROC := ABS(ROC);
+end_if;
+if (ABS(ROC) > ABS(ROC_SP)) then
+ out_fault := TRUE;
+else
+ out_fault := FALSE;
+end_if;]]></ST>
+        </FunctionBlock>
+    </FBLibrary>
+</Program>

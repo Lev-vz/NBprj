@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_PLC_K_AI_FR" Kind="Struct" UUID="0AB7B1F84338A2C67FC5CCA9FB0C9A9F">
+    <Fields>
+        <Field Name="Tg_in_KND_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="85DEE7EC48025B1A264C579944E4C5CC" Comment="Температура 1 перед камерой сгорания (за КНД)" />
+        <Field Name="Tg_in_KND_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="E987695D4534EB56824690880288C741" Comment="Температура 2 перед камерой сгорания (за КНД)" />
+        <Field Name="Tg_out_TND_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="D330E71A47D66A20F82FD9A7DE086E4A" Comment="Температура 1 на выходе ТНД" />
+        <Field Name="Tg_out_TND_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="ED6AD3B2435A3D8CFE1A678EED7E5E07" Comment="Температура 2 на выходе ТНД" />
+        <Field Name="Tg_out_TND_3" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="AE5AE89345E2A507197DCCB865C1C452" Comment="Температура 3 на выходе ТНД" />
+        <Field Name="Tg_out_TND_4" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="4B290A894A5F5E6BE6D428911C298EA7" Comment="Температура 4 на выходе ТНД" />
+        <Field Name="Tg_out_TND_5" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="FB6D2AE94C46CBB3DE099D89C8F1D453" Comment="Температура 5 на выходе ТНД" />
+        <Field Name="Tg_out_TND_6" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="0A3D96C84BDD2A6BCC0C848BEA50322D" Comment="Температура 6 на выходе ТНД" />
+        <Field Name="Tg_out_TND_7" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="F90D2EFF4232489CE47F2E9C8257FC14" Comment="Температура 7 на выходе ТНД" />
+        <Field Name="Tg_out_TND_8" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="97CE52124208E24F5DCF65834D794A9C" Comment="Температура 8 на выходе ТНД" />
+        <Field Name="Tg_out_TND_9" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="77551A8C4AB4FD5B5C585A9A2715160F" Comment="Температура 9 на выходе ТНД" />
+        <Field Name="Tg_out_TND_10" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="15DD52D34318CABF9379B69D0BC07E76" Comment="Температура 10 на выходе ТНД" />
+        <Field Name="Tg_out_TND_11" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="F24DEE7541A6DA221555E09153C7B463" Comment="Температура 11 на выходе ТНД" />
+        <Field Name="Tg_out_TND_12" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="1C58947849E0F3D82BC17FA382EC1A93" Comment="Температура 12 на выходе ТНД" />
+        <Field Name="Tg_out_TND_13" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="3515AC0543B6B0D71E6FFCBA3A586289" Comment="Температура 13 на выходе ТНД" />
+        <Field Name="Tg_out_TND_14" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="49673B714ADF3DF6C12AB8970E3D7543" Comment="Температура 14 на выходе ТНД" />
+        <Field Name="Tg_out_TND_15" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="076403A249C8F728C43313A54709E1C0" Comment="Температура 15 на выходе ТНД" />
+        <Field Name="Tg_out_TND_16" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="512E88664950209C51031D8BDBC6B64B" Comment="Температура 16 на выходе ТНД" />
+        <Field Name="Tg_in_TND_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="8CD30118491E8AED128609B95BF29B34" Comment="Температура 1 за ТНД (т.17)" />
+        <Field Name="Tg_in_TND_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="056DE56648F3C55E82AC82B8FAD72FE1" Comment="Температура 2 за ТНД (т.18)" />
+        <Field Name="Pv_out_KVD" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="F0FD4E084653603DD03EC98AF97BC9BF" Comment="Давление воздуха за КВД" />
+        <Field Name="Pos_TRK" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="931B5BA94434BC1417B431A6714BD8C1" Comment="Положение топливно-регулирующего клапана (ДУС)" />
+        <Field Name="N_KND_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="C9D6711B4B2C2294359D4184241F0528" Comment="Частота вращения КНД канал 1" />
+        <Field Name="N_KVD_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="96353FB94D73A463691FFEA432DC62B0" Comment="Частота вращения КВД канал 1" />
+        <Field Name="N_TN_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="EB6625114A0409C3FE143D8A3D5A1F8F" Comment="Частота вращения ротора ТН канал 1" />
+        <Field Name="N_KND_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="76FDE8C248D95C069DC5EEAACA29771F" Comment="Частота вращения КНД канал 2" />
+        <Field Name="N_KVD_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="6DC73C4C418DE3EA63BF23B479253B0C" Comment="Частота вращения КВД канал 2" />
+        <Field Name="N_TN_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="C770AC0D468A1C3E1539418AA99394BA" Comment="Частота вращения ротора ТН канал 2" />
+    </Fields>
+</Type>

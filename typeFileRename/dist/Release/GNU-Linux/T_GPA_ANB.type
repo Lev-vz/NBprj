@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_GPA_ANB" Kind="Struct" UUID="AE56B91020284C36A11F8C7CC9D955A3">
+    <Fields>
+        <Field Name="Tv_KGT_Av" Type="BOOL" UUID="04148B18498D994C6D095BAF03EFD609" Comment="Аварийно-высокая температура под кожухом двигателя" />
+        <Field Name="Tv_KGT_Pv" Type="BOOL" UUID="5E9EA8E94C22BE289D774E99036BAF3A" Comment="Высокая температура под кожухом Д  (ОР)" />
+        <Field Name="Tm_out_Per_Av" Type="BOOL" UUID="C964A11C4845EE10933A14A6C34A496A" Comment="Аварийно-высокая температура масла на сливе из переходника" />
+        <Field Name="Tm_out_Per_Pv" Type="BOOL" UUID="B321BF704FD19F7FC04D1CAAE37D39CB" Comment="Высокая температура масла на сливе из переходника  (ОР)" />
+        <Field Name="Tm_out_Per_Pv1" Type="BOOL" UUID="6D50A55C47BB9000E8CD26ACA7E17E1D" Comment="Повыш. Т м на сливе из переход." />
+        <Field Name="Tm_out_KVD_Av" Type="BOOL" UUID="FF10FC56433BA29889C8B39C63D16FBB" Comment="Аварийно-высокая температура масла на сливе из заднего корпуса КВД" />
+        <Field Name="Tm_out_KVD_Pv" Type="BOOL" UUID="A09353DE40D6366C3F626A9BB333410E" Comment="Высокая температура масла на сливе из заднего корпуса КВД  (ОР)" />
+        <Field Name="Tm_out_KVD_Pv1" Type="BOOL" UUID="818CDA6F47C7715B913C909CF8B7D308" Comment="Повыш. Т м на сливе из ЗК КВД" />
+        <Field Name="Tm_out_TND_Av" Type="BOOL" UUID="99EAF7EC4C45CB713F98ECAC4C24ABA3" Comment="Аварийно-высокая температура масла на сливе из опорного венца ТНД" />
+        <Field Name="Tm_out_TND_Pv" Type="BOOL" UUID="5CAAA94B40998731C8ED28AE00FA35FA" Comment="Высокая температура масла на сливе из опорного венца ТНД  (ОР)" />
+        <Field Name="Tm_out_TND_Pv1" Type="BOOL" UUID="5330A1D8491975FAE37EA4BEBE86BEC0" Comment="Повыш. Т м на сливе из ОВ ТНД" />
+        <Field Name="Tm_out_N_Av" Type="BOOL" UUID="53017F3F4556C3437F7BF5AD7DAF6D85" Comment="Аварийно-высокая температура масла на сливе из опорного венца ТН" />
+        <Field Name="Tm_out_N_Pv" Type="BOOL" UUID="4C73C7A04E7D9C9365B1FFA73A3AFA1D" Comment="Высокая температура масла на сливе из опорного венца ТН  (ОР)" />
+        <Field Name="Tm_out_N_Pv1" Type="BOOL" UUID="856D8877441668A4C08EE889DA40B584" Comment="Повыш. Т м на сливе из ОВ ТН" />
+        <Field Name="Tm_in_MBN_PPUn" Type="BOOL" UUID="E46571D64C5006A985A90DAA5F7072D6" Comment="Т масла в МБН &lt;15 °С" />
+        <Field Name="Tm_in_MBD_Av" Type="BOOL" UUID="7FE5E3CA4B50AD23841F96B2416DBA84" Comment="Температура масла в МБД &gt;110 °C" />
+        <Field Name="Tm_in_MBD_Pn" Type="BOOL" UUID="D31951A94F08C18456DAC9B50717C466" Comment="Низкая температура масла в МБД (ОР)" />
+        <Field Name="Tm_in_MBD_Pv" Type="BOOL" UUID="70DDCA15413DBFF15F8F52B50276698D" Comment="Температура масла в МБД&gt; 105 °C  (ОР)" />
+        <Field Name="Tm_in_MBD_Pn1" Type="BOOL" UUID="48E7199F4940A25439F757B7516EC347" Comment="Пониж. Т масла в МБД" />
+        <Field Name="Tm_in_MBD_Pv1" Type="BOOL" UUID="CF6375C24619ADF23E7D09A839524F38" Comment="Т масла в МБД повышенная" />
+        <Field Name="Tm_in_MBD_PPUn" Type="BOOL" UUID="6B91B7DB491477149FCBA4B8829BF76C" Comment="Тм в МБД &lt; 10 °С" />
+        <Field Name="Tm_in_MBD_PPUn1" Type="BOOL" UUID="BE64188844FD1BE47DA3C6B56FDDFB63" Comment="Тм в МБД &lt; 35 °С" />
+        <Field Name="T_POD_1_Av" Type="BOOL" UUID="F167796F4075CDA4961442B5EA33D993" Comment="Аварийно-высокая температура подшипников промопоры т1" />
+        <Field Name="T_POD_1_Pv" Type="BOOL" UUID="21881BA44290E6F2130EA4AC78B84980" Comment="Повыш. Т подшипников промопоры т1" />
+        <Field Name="T_POD_2_Av" Type="BOOL" UUID="4B47D30143588BB83FEEEFAC2BB64C14" Comment="Аварийно-высокая температура подшипников промопоры т2" />
+        <Field Name="T_POD_2_Pv" Type="BOOL" UUID="EB50EF0147C1866E94E6DB8AFBD8C18F" Comment="Повыш. Т подшипников промопоры т2" />
+        <Field Name="Tg_out_N_Av" Type="BOOL" UUID="BAFE431343CC5A902814E2BCEA7CC4C5" Comment="Аварийно-высокая температура газа на входе Н" />
+        <Field Name="Tg_out_N_Pv" Type="BOOL" UUID="776DB4D941BDEFCAD9D677BB9C369648" Comment="Повыш. Т г на выходе Н" />
+        <Field Name="Tg_out_N_PPUv" Type="BOOL" UUID="62C85AD2466E188F27D7FDB099CFB388" Comment="Тгаза на выходе К &gt; 60 °С" />
+        <Field Name="T_PON_Av" Type="BOOL" UUID="90176D714B0A939C0FFEDB97EB74FB85" Comment="Аварийно-высокая температура переднего опорного подшипника Н" />
+        <Field Name="T_PON_Pv" Type="BOOL" UUID="B81DB8C5487ECFFC89ED6DB2F7E11058" Comment="Повыш. Т переднего ОП Н" />
+        <Field Name="Tp_N_opora_Av" Type="BOOL" UUID="D84277664218854C670061B5808B7D96" Comment="Аварийно-высокая температура ОУП Н (опорная часть)" />
+        <Field Name="Tp_N_opora_Pv" Type="BOOL" UUID="24F02ED54645C7915DD968B2F3414337" Comment="Повыш. Т ОУП Н (опорная часть)" />
+        <Field Name="Tp_N_work_Av" Type="BOOL" UUID="8211F7B74F57144F809CEC9A6E1644BF" Comment="Аварийно-высокая температура ОУП опорно-упорного подшипника Н (рабочая колодка)" />
+        <Field Name="Tp_N_work_Pv" Type="BOOL" UUID="33C7D9C846424D749117159B97245AE6" Comment="Повыш. Т ОУП Н (рабочая колодка)" />
+        <Field Name="Tp_N_ust_Av" Type="BOOL" UUID="897FE74E4A56ED7409E16499328D659E" Comment="Аварийно-высокая температура опорно-упорного подшипника Н (установ. колодка)" />
+        <Field Name="Tp_N_ust_Pv" Type="BOOL" UUID="39791F95458566DFD437BC90E96311A3" Comment="Повыш. Т ОУП Н (установ. колодка)" />
+        <Field Name="Razr_out_D_Av" Type="BOOL" UUID="585A9D6B4B33B33BE7A661958C2F6ECC" Comment="Аварийно-высокое разряжение воздуха на входе в двигатель" />
+        <Field Name="Razr_out_D_Pv" Type="BOOL" UUID="9584673C42CD307722602ABC78CC2D49" Comment="Высокое разрежение воздуха на входе в Д  (ОР)" />
+        <Field Name="Razr_out_D_Pv1" Type="BOOL" UUID="20BB3CC64E21BCBA56CF00B0C0664D1E" Comment="Повышенная разрежение воздуха на входе Д (1ая уставка)" />
+        <Field Name="Pm_D_An" Type="BOOL" UUID="49360D0B4923D14C1608668560506BF6" Comment="Аварийно-низкое давление масла на входе в двигатель(после ф.)" />
+        <Field Name="Pm_D_Pn" Type="BOOL" UUID="2F6C8B154C0E89C9F6E707B2824ECD52" Comment="Пониж. Рм на входе Д (после ф.)" />
+        <Field Name="Pm_N_An" Type="BOOL" UUID="0080F150440369859C1D1793FE77A9F7" Comment="Аварийно-низкое давление масла смазки  H" />
+        <Field Name="Pm_N_Pn" Type="BOOL" UUID="67C9A75640A2730238C5868B0BE122D3" Comment="Понижение давление масла смазки Н" />
+        <Field Name="dP_mg_An" Type="BOOL" UUID="7E99465E47EE4DBD4CB5B5B17307CF19" Comment="Аварийно-низкий dР масло-газ " />
+        <Field Name="dP_mg_Pn" Type="BOOL" UUID="8110D4694F4BE5E897A7779A97AE3C01" Comment="Понижение перепада давления масло-газ" />
+        <Field Name="Ptg_in_BTA_An" Type="BOOL" UUID="591B5E6943CEF3CA1A8912B6C872B08A" Comment="Аварийно-низкое давление топливного газа на входе в БТА" />
+        <Field Name="dPtg_in_filtr_Pv" Type="BOOL" UUID="ABEAFCAC4EC68F7F4BFC7B939F38CC18" Comment="Повыш. dР газа на фильтре" />
+        <Field Name="Pg_out_N_Pv" Type="BOOL" UUID="DAA66BA041B37FD8279C4AB403E51E2D" Comment="Повыш. Рг на выходе Н" />
+        <Field Name="dPg_fors_Av" Type="BOOL" UUID="E26B3C9E4662F5C7081058AF7CC271CF" Comment="Перепад давлений газа на форсунках высокий" />
+        <Field Name="Vibr_OP_N_Av" Type="BOOL" UUID="C36822664BB69A6F4EC70B8AADDB49CC" Comment="Аварийно-высокое вибросмещение опорного подшипника Н" />
+        <Field Name="Vibr_OP_N_Pv" Type="BOOL" UUID="B7D11C654E31BAE754D7249BC69D228B" Comment="Повыш. Вибросмещение ОП Н" />
+        <Field Name="Vibr_OUP_N_Av" Type="BOOL" UUID="D56CBC4F4544EE03DDC3B1B2638C64D6" Comment="Аварийно-высокое вибросмещение опорно-упорного подшипника Н" />
+        <Field Name="Vibr_OUP_N_Pv" Type="BOOL" UUID="19945CAD40A7E3679A32E6A37146811E" Comment="Повыш. Вибросмещение ОУП Н" />
+        <Field Name="Vibr_KVD_Av" Type="BOOL" UUID="76620C14487891D369603E89A59F31A8" Comment="Аварийно-высокая вибрация корпуса КВД" />
+        <Field Name="Vibr_KVD_Pv" Type="BOOL" UUID="E46518674223F0C50A2A7AAA4DC7761E" Comment="Высокая вибрация корпуса КВД  (ОР)" />
+        <Field Name="Vibr_KVD_Pv1" Type="BOOL" UUID="D12C4D6344F4DD22CB9EB89FD32382D4" Comment="Повышенная вибрация корпуса КВД" />
+        <Field Name="Vibr_KND_Av" Type="BOOL" UUID="8BB4C2194FAF416873B120A9E319CF14" Comment="Аварийно-высокая вибрация корпуса КНД" />
+        <Field Name="Vibr_KND_Pv" Type="BOOL" UUID="FF109B0F45774AB843DA988EC9BEC638" Comment="Высокая вибрация корпуса КНД  (ОР)" />
+        <Field Name="Vibr_KND_Pv1" Type="BOOL" UUID="5B6B54894B354800A09A19AF1733445E" Comment="Повышенная вибрация корпуса КНД" />
+        <Field Name="Vibr_N_Av" Type="BOOL" UUID="3BBFEF8D44B2616CB33679B7105D9DC5" Comment="Аварийно-высокая вибрация корпуса ТН" />
+        <Field Name="Vibr_N_Pv" Type="BOOL" UUID="CC1FE1AF4F1298168C9BE3B0955A3D2D" Comment="Высокая вибрация корпуса ТН  (ОР)" />
+        <Field Name="Vibr_N_Pv1" Type="BOOL" UUID="65A016124103330107BD24BC112FB3AA" Comment="Повышенная вибрация корпуса ТН" />
+        <Field Name="ev_Tg_out_TND_Pv" Type="BOOL" UUID="CC32BD184B47D9205F9293B241D7BC4C" Comment="Повышенная Т газа за ТНД" />
+        <Field Name="ev_Tg_out_TND_Pn" Type="BOOL" UUID="30B665B4483F7B075A005992F3EECEE5" Comment="Пониженная Т газа за ТНД" />
+        <Field Name="ev_N_KND_Pn" Type="BOOL" UUID="B3AD2E214449FF1DE3DDC7B63407CA0A" Comment="N КНД &lt; 900 об/мин на 169 сек. пуска" />
+        <Field Name="ev_N_KND_Pn1" Type="BOOL" UUID="9D4C89C74D551F0F0EF885A6BDC7904D" Comment="N КНД &lt; 1500 об/мин на 194 сек. пуска" />
+        <Field Name="ev_N_KND_PPUv" Type="BOOL" UUID="7956B4D244FA202B2CDA729A1171A520" Comment="Nкнд &gt; 300 об/мин" />
+        <Field Name="ev_N_KVD_An" Type="BOOL" UUID="4805763349B5F2803198818D466B2F87" Comment="N КВД &lt; 700 об/мин. на 192 сек. пуска" />
+    </Fields>
+</Type>

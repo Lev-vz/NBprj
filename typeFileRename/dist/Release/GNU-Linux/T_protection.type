@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_protection" Kind="Struct" UUID="B7A0A1384BD052D7B4D247BA4CB4C611">
+    <Fields>
+        <Field Name="dP_mg" Type="BOOL" UUID="36A83A53480C49DF880E00AF94F3166A" Comment="Защита по МГ" />
+        <Field Name="P_msm_N" Type="BOOL" UUID="8713E9724AA071AB6FF870BD5F82C2CC" Comment="Защита по МСМ Н" />
+        <Field Name="dP_g_fors" Type="BOOL" UUID="0DB7DAAC46CF7BF0478E289D48BF99C6" Comment="Защита по газу на форсунках" />
+        <Field Name="P_tg" Type="BOOL" UUID="8856C06645A20640C2E180AEB70E1C98" Comment="Защита по топливному газу" />
+        <Field Name="P_msm_D" Type="BOOL" UUID="4D586AFE4BBE53C876719698588A2D84" Comment="Защита по МСМ Д" />
+        <Field Name="P_msm_D_HH" Type="BOOL" UUID="0AF764864181275BEE6CDD9490AD6539" Comment="Защита по МСМ  Д  ХХ" />
+        <Field Name="SK_ON" Type="BOOL" UUID="E142E53C470283FA53EB03AE7486B04D" Comment="Защита по СК" />
+        <Field Name="fakel" Type="BOOL" UUID="613D313C494396D61AC036B206F5FEE4" Comment="Защита по факелу" />
+    </Fields>
+</Type>

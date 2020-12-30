@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_to_ASArchive" Kind="Struct" UUID="79204C744B17E5DEE6D17B9D659F440B">
+    <Fields>
+        <Field Name="Stop" Type="BOOL" UUID="3DE79BF74DF2F11FC21864AC4DC8EA40" Comment="Обобщенный останов" />
+        <Field Name="Start" Type="BOOL" UUID="9AF0BEF64B9203016469CB82C4ACAB7F" Comment="Обобщенный пуск" />
+    </Fields>
+</Type>

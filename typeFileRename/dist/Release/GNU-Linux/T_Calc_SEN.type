@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_Calc_SEN" Kind="Struct" UUID="A2ACD405420B76D31EA829834BAAC82D">
+    <Fields>
+        <Field Name="Drum_AObs_Step" Type="INT" UUID="18F4FDA141C75C5706EB2EB68F18BC22" Comment="Шаг АОбс" />
+        <Field Name="Drum_AOss_Step" Type="INT" UUID="AC85BA7E44349B2AC9B228B3DA3FE463" Comment="Шаг АОсс" />
+        <Field Name="Drum_APK_Step" Type="INT" UUID="E4738E704080528AACEDF097A2DF9467" Comment="Шаг АПК" />
+        <Field Name="Drum_APM_Step" Type="INT" UUID="EE747A4E48682B8CCF96958C8B2484D1" Comment="Шаг АПМ" />
+        <Field Name="Drum_HP_Step" Type="INT" UUID="36065B79447B2D91F096498115565B57" Comment="Шаг  ХП" />
+        <Field Name="Drum_K_M_Step" Type="INT" UUID="E668D8FD42C75F70B3AF10BC012AD093" Comment="Шаг  К-М" />
+        <Field Name="Drum_KPK_Step" Type="INT" UUID="3382A40347B8D024EF861DAFCF6E52A7" Comment="Шаг КПК" />
+        <Field Name="Drum_M_K_Step" Type="INT" UUID="D7CC22464E5701E149F68D9E9C81A775" Comment="Шаг  М-К" />
+        <Field Name="Drum_NObs_Step" Type="INT" UUID="561809EF440FA7A34AAE86B344BBF4D0" Comment="Шаг НОбс" />
+        <Field Name="Drum_NOss_Step" Type="INT" UUID="68E8806A48584969F255C58DCEEEAAC1" Comment="Шаг НОсс" />
+        <Field Name="Drum_OGR_Step" Type="INT" UUID="6A30E77C45B76E2621A79397DAD935EA" Comment="Шаг ОГР" />
+        <Field Name="Drum_PZ_Step" Type="INT" UUID="317815164B83D53FF413BD8B6FDDB5C3" Comment="Шаг ПЗ" />
+        <Field Name="Drum_PZM_Step" Type="INT" UUID="96673BB541CB084033A696BD9910CFB1" Comment="Шаг ПЗМ" />
+        <Field Name="Drum_PBZ_Step" Type="INT" UUID="B00816F74492B2ED584EA7BA4F7877B9" Comment="ШАГ ПБЗ" />
+        <Field Name="Drum_TP_Step" Type="INT" UUID="2D01DA5743CE09DB891F46B6385A339C" Comment="Шаг  ТП" />
+        <Field Name="sm_BleedingN_Step" Type="INT" UUID="DC2711854A6DFFF69FB8E38C376DC093" Comment="Шаг стравливание Н" />
+        <Field Name="sm_Check_Step" Type="INT" UUID="BEA8174C43BF0DD6BFC1A5B84881D973" Comment="Шаг контроль" />
+        <Field Name="sm_CoolingD_Step" Type="INT" UUID="170A6593444C35B476F02D868C256B69" Comment="Шаг охлаждение Д" />
+        <Field Name="sm_startSGU_Step" Type="INT" UUID="0E1527384F3C1378D5C4EAADDA32F9F5" Comment="Шаг заполнение Н" />
+        <Field Name="sm_fillingN_Step" Type="INT" UUID="D48171E04BDB4CA6D9863098A267CC7C" Comment="Шаг заполнения К" />
+        <Field Name="sm_K_M_Step" Type="INT" UUID="F1C58DCB45CC3C35917B62A768EF7744" Comment="Шаг K-М" />
+        <Field Name="sm_M_K_Step" Type="INT" UUID="61665F614FCCE0F76A1085B64A8066CE" Comment="Шаг М-К" />
+        <Field Name="sm_Sound_Step" Type="INT" UUID="9ADAAF264BA0C1D0F4B6809D045EC57F" Comment="Шаг Звуковая сигнализация" />
+        <Field Name="sm_startD_Step" Type="INT" UUID="F26120D146B1E09AD6205DB3DD63A9B7" Comment="Шаг старт Д" />
+        <Field Name="sm_startMD_Step" Type="INT" UUID="36B18FD24296346A18A56D8BACE1F315" Comment="Шаг пуск МД" />
+        <Field Name="sm_startMN_Step" Type="INT" UUID="1C41E99E4AACE07D6F70CBAB8F5FB44B" Comment="Шаг пуск МН" />
+        <Field Name="sm_Stop_Step" Type="INT" UUID="D2875A9C4940E53E0E120A9C2298119A" Comment="Шаг останов" />
+        <Field Name="sm_startTG_Step" Type="INT" UUID="A7CF1F544FF5230B1B24A293F8B28991" Comment="Шаг пуск ТГ" />
+        <Field Name="sm_warmD_Step" Type="INT" UUID="F9F83E034928AC33A7DCC9AF2E618F4B" Comment="Шаг прогрев" />
+        <Field Name="StartGTD_timer" Type="REAL" UUID="8BD1B66F499D486E5ABE48A3923A136D" Comment="Таймер запуска ГТД" />
+        <Field Name="HeatGTD_timer" Type="REAL" UUID="19AD683D49C9C8484A5C26BABC4227D0" Comment="Таймер прогрева ГТД" />
+        <Field Name="Compres_Rate" Type="REAL" UUID="753764984E6ABD3C80857BB8E01CD61C" Comment="Степень сжатия" />
+        <Field Name="wrong_TRK" Type="REAL" UUID="014309D541D886EFB9816FA1110AE1FD" Comment="Рассогласование ДГ" />
+        <Field Name="Pervoprich_NO" Type="INT" UUID="33DAD38C44E07F64D3629FBA0A0CCB0E" Comment="Первопричина НО" />
+        <Field Name="Pervoprich_AO" Type="INT" UUID="FCFEAB884BEF2B0550C8ED9DF17FBBC4" Comment="Первопричина АО" />
+        <Field Name="T_PROC1" Type="REAL" UUID="46C30EC74F0B6F59092F39B353E80A26" Comment="Температура процессора 1" />
+        <Field Name="T_PROC2" Type="REAL" UUID="94A21ED241FD485A839883B682A174E6" Comment="Температура процессора 2" />
+        <Field Name="set_TPK_RA" Type="REAL" UUID="D14C23644112477B1C8E57B398CB5197" Comment="Задание на ТРК в РА" />
+        <Field Name="Set_TRK" Type="REAL" UUID="4FCBA490463ABCEC9316F7AB1F3CE497" Comment="Задание на ТРК" />
+        <Field Name="N_KND" Type="1EFB0E874BDD1E0D0F45A98B46020C7D" UUID="8C3EB3154AE711D005675EAF52E6C0A5" Comment="Расчетные обороты КНД" />
+        <Field Name="N_KVD" Type="1EFB0E874BDD1E0D0F45A98B46020C7D" UUID="45ADAD68471AA6413EDACBBE2224EDF3" Comment="Расчетные обороты КВД" />
+        <Field Name="N_TN" Type="1EFB0E874BDD1E0D0F45A98B46020C7D" UUID="520BF437436FFCC866E45AA05F0AB46B" Comment="Расчетные обороты ТН" />
+        <Field Name="Qpr" Type="REAL" UUID="10B455DA461792594A393B84304C2D96" Comment="Приведенный расход" />
+        <Field Name="Qmg" Type="REAL" UUID="895CA0AB44DFA59FCA80179C09283A98" Comment="Расход" />
+        <Field Name="Ozp" Type="REAL" UUID="3A8E56D74ED0D9ABB6757CBC7C6C5E9D" Comment="Ограничение, запас по помпажу" />
+        <Field Name="SET_APK" Type="REAL" UUID="6CBFAB004FD524626E1CE682F8572F51" Comment="Задание на АПК" />
+        <Field Name="Tzp" Type="REAL" UUID="EB46E8C2448A321C239011B0B065D634" Comment="Текущий запас по помпажу" />
+        <Field Name="Ch" Type="REAL" UUID="65B1885E4D1A62F1AA276D85170B252F" Comment="Счетчик хлопков" />
+        <Field Name="Tg_out_TND" Type="1EFB0E874BDD1E0D0F45A98B46020C7D" UUID="26CDFA874401275E600812ACB908AEF4" Comment="Расчетная Тг на выходе ТНД" />
+        <Field Name="med_Tg_out_TND" Type="REAL" UUID="0C60E575454B4277734988983E250030" Comment="Расчетная Тг на выходе ТНД медиана" />
+        <Field Name="avg_Tg_out_TND" Type="REAL" UUID="699E731E4B5AD144B88B71B74C1ECCBB" Comment="Расчетная Тг на выходе ТНД  среднее арифметическое температуры" />
+        <Field Name="dT_Tg_out_TND_1" Type="REAL" UUID="6D58561149C4D9E0E5796BBDEFA17BE8" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_2" Type="REAL" UUID="9D52868045E0E8FC1317B89A221F1F2F" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_3" Type="REAL" UUID="E5FEAF6245709F6BDAAA62B214EEC4FA" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_4" Type="REAL" UUID="0507494B4CF0B006A05E4586AEA33011" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_5" Type="REAL" UUID="9A1B86D042DE6BB7D09FAAB5D0027808" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_6" Type="REAL" UUID="84EA0B6D4AF1D271FF1EBA8282431FDD" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_7" Type="REAL" UUID="1F7F4AE1493375F9FFD26FA89CD8567D" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_8" Type="REAL" UUID="6D1852754C5C37B115F6D0B31D0AD702" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_9" Type="REAL" UUID="CE275ACD4B87AF819EE5D98FEF01F63C" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_10" Type="REAL" UUID="840CD0E7410F04A14CD986B1CBE41DEC" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_11" Type="REAL" UUID="060B4F41498783D503E300B807A22556" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_12" Type="REAL" UUID="D884AAF54C9C36A46A21CDB8156A9921" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_13" Type="REAL" UUID="149F454E43965020FB7E58994A475473" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_14" Type="REAL" UUID="BC4A1384451300FE789E00A24DFA8E1A" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_15" Type="REAL" UUID="2D09BA0E41416F1737DB37AE19A3FD6A" Comment="Отклонение термопары от средней" />
+        <Field Name="dT_Tg_out_TND_16" Type="REAL" UUID="565E91F24F5B66E070AAB2A33C291015" Comment="Отклонение термопары от средней" />
+        <Field Name="Tg_in_TND" Type="1EFB0E874BDD1E0D0F45A98B46020C7D" UUID="D41FAEDC4A90301394C3439BAC546419" Comment="Расчетная Тг на выходе ТНД на запуске" />
+        <Field Name="Tg_in_KND" Type="1EFB0E874BDD1E0D0F45A98B46020C7D" UUID="A2EE215F49EC9B0C0E884E931AACAA61" Comment="Расчетная Тг перед камерой сгорания (за КНД)" />
+        <Field Name="dT_KC" Type="1EFB0E874BDD1E0D0F45A98B46020C7D" UUID="1A5DE5A3476BE98B7F84859DAD26DD64" Comment="Перепад температуры в КС" />
+        <Field Name="Light_ON" Type="REAL" UUID="A2EF8AA34C2EF565CA2B5FBED853F675" Comment="Включение освещения" />
+        <Field Name="Light_OF" Type="REAL" UUID="1E3D850647AC4D633FE31D976DA72129" Comment="Отключени освещения" />
+    </Fields>
+</Type>

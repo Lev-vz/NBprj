@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_SEN_FR" Kind="Struct" UUID="814678B042984FEF0D9C9987A5095204">
+    <Fields>
+        <Field Name="Pos_TRK" Type="66E85B694611583D5E0976A599AC4752" UUID="D10407104FBDC2600D2062958F2363EC" Comment="Положение иглы дозатора топливного газа" />
+        <Field Name="Pa_out_KVD" Type="66E85B694611583D5E0976A599AC4752" UUID="07E21AEF481F4E14AF785EA46C298578" Comment="Статическое давление воздуха за КВД" />
+        <Field Name="Tg_out_TVD1" Type="66E85B694611583D5E0976A599AC4752" UUID="E3C4D8444A70191BAD55E1AD0340AF62" Comment="Температура 1 газа за ТВД" />
+        <Field Name="Tg_out_TVD2" Type="66E85B694611583D5E0976A599AC4752" UUID="A097ACB44B6605A4046AD2A786ECC3D9" Comment="Температура 2 газа за ТВД" />
+        <Field Name="Tg_out_TVD3" Type="66E85B694611583D5E0976A599AC4752" UUID="600B3B6D436A307171F466BF724F63DA" Comment="Температура 3 газа за турбиной компрессора (из БЗА)" />
+        <Field Name="N_TK1" Type="66E85B694611583D5E0976A599AC4752" UUID="59DD0799497D0F2C21CEA8A6F8D6175A" Comment="Частота 1 вращения ротора ГТД (обмотка 1 датчика 1)" />
+        <Field Name="N_TK2" Type="66E85B694611583D5E0976A599AC4752" UUID="2C9F554140E75DD93999E48D18892975" Comment="Частота 2 вращения ротора ГТД (обмотка 1 датчика 2)" />
+        <Field Name="N_ST1" Type="66E85B694611583D5E0976A599AC4752" UUID="C99B58BE45E76EE16A1257831FB6C802" Comment="Частота 1 вращения ротора СТ (обмотка 1 датчика 1)" />
+        <Field Name="N_ST2" Type="66E85B694611583D5E0976A599AC4752" UUID="096E4C454B4EB5999C7137A9634EC6DB" Comment="Частота 2 вращения ротора СТ (обмотка 1 датчика 2)" />
+    </Fields>
+</Type>

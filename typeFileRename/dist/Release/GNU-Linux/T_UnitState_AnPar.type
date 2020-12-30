@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_UnitState_AnPar" Kind="Struct" UUID="7A61D1D9474B228CD7DA14BCBFDC32B0">
+    <Fields>
+        <Field Name="AOss" Type="INT" UUID="D2A685D04BEAE92CE5B381AB5206FB58" Comment="Аварийный останов со стравливанием" />
+        <Field Name="AObs" Type="INT" UUID="084DE34B437318C2B1668DBD508F21B3" Comment="Аварийный останов без стравливанием" />
+        <Field Name="NOss" Type="INT" UUID="4134CE244E20F4FFEF9B79918BF8368B" Comment="Нормальный останов со стравливанием" />
+        <Field Name="NObs" Type="INT" UUID="DB59C2ED45CDA6D251C1C1AA378B42FC" Comment="Нормальный останов без стравливания" />
+        <Field Name="Repair" Type="INT" UUID="A6046BFF4C70C993006718B42A5F887E" Comment="Ремонт" />
+        <Field Name="HR" Type="INT" UUID="7DAE167645B0F0C4BF6D2BB6F32EFB92" Comment="Холодный резерв" />
+        <Field Name="GR" Type="INT" UUID="FAE52AB9440883879B6725BB0F09A03B" Comment="Горячий резерв" />
+        <Field Name="PZ" Type="INT" UUID="758845034DBE65A4B430F7BE6DDC4E13" Comment="Проверка защит" />
+        <Field Name="PZM" Type="INT" UUID="A9963B134250FB1A4951B4A4A554C211" Comment="Проверка защит маслосистемы" />
+        <Field Name="PBZ" Type="INT" UUID="840505104685541670CDC5B30946F738" Comment="Пуск без заполнения" />
+        <Field Name="HP" Type="INT" UUID="BBC18901449C7AAE1D9C28970214ABED" Comment="Холодная прокрутка" />
+        <Field Name="OGR" Type="INT" UUID="7FE617C9465437DFC179298E4B37DF38" Comment="Ограничение режима" />
+        <Field Name="KPK" Type="INT" UUID="EEDCED274C2C325007A94D9C9C045FB9" Comment="Комплексная проверка кранов" />
+        <Field Name="APK" Type="INT" UUID="99CC05144F55AC110218A2838936A38E" Comment="Автоматический пуск на «Кольцо»" />
+        <Field Name="APM" Type="INT" UUID="6DADA2D543E0EF30D092719A393A9E6E" Comment="Автоматический пуск в «Магистраль»" />
+        <Field Name="K" Type="INT" UUID="642303F54FF529D6F1C2D0B44BEC09D3" Comment="Кольцо" />
+        <Field Name="M" Type="INT" UUID="B30DC76D4BC3EE82141AED9DD41D908B" Comment="Магистраль" />
+        <Field Name="K_M" Type="INT" UUID="2892FBE3414D91EEFA5D8CAE2CA2D243" Comment="Переход К М" />
+        <Field Name="M_K" Type="INT" UUID="742357584DAA779BA3188E851AF42263" Comment="Переход М К" />
+        <Field Name="Fault" Type="INT" UUID="2CA815BB4AF312008AB213871F563A53" Comment="Нет режима" />
+        <Field Name="TP" Type="INT" UUID="EE80EDF746F987A892A67F90831EA267" Comment="Технологическая прокрутка" />
+    </Fields>
+</Type>

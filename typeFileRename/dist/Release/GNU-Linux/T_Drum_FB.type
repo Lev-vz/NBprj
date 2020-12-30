@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_Drum_FB" Kind="Struct" UUID="5C1D14EA4C762D31BB364F82903E9252">
+    <Fields>
+        <Field Name="Start" Type="BOOL" UUID="8D7033CE4DBD86ABA5126B8B3901D217" Comment="Запуск барабана" />
+        <Field Name="Finish" Type="BOOL" UUID="011B1F9E47104C78EE9A96A0436D3285" Comment="Конец барабана" />
+        <Field Name="STEP" Type="INT" UUID="00AE0FDF4C8B286829DEE59EE848D13F" Comment="Шаг барабана" />
+        <Field Name="ACC" Type="BOOL" UUID="68B9809B44FB3FFFFC4EB49AAA3CAC30" ArraySize="20" Comment="Команда из барабана" />
+        <Field Name="condition" Type="BOOL" UUID="21F9F59945F9EF84411FA5BD8AE08403" ArraySize="20" Comment="Условие перехода на следующий шаг" />
+    </Fields>
+</Type>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_Alarm" Kind="Struct" Comment="Данные для формирования сообщений в ЧМИ" UUID="BFE339EA438C2170B86788A40A41F10C">
+    <Fields>
+        <Field Name="category" Type="DINT" UUID="F0F584D14879A217C8F55D88D2113C9C" Comment="Категория сигнала" />
+        <Field Name="algName" Type="STRING" UUID="0066A8F943C76121109197BAD1E9D2C5" Comment="Алгоритмическое имя" />
+        <Field Name="message" Type="STRING" UUID="02718DCA459FD4DC18353BA8B077B271" Comment="Сообщение в окне сигнализации и журнале событий" />
+        <Field Name="tag" Type="STRING" UUID="F6FE733441EFB7156CAE25A473167C08" Comment="Допинфо для служебных целей" />
+        <Field Name="source" Type="STRING" UUID="4C8EC1E947A8A9FA39AB0C8EA4EBBB0E" Comment="Источник сигнала" />
+    </Fields>
+</Type>

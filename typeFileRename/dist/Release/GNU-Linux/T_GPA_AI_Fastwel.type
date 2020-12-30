@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_GPA_AI_Fastwel" Kind="Struct" UUID="6AFE74934A6449D3A96DE4B6BA0D9B3A">
+    <Fields>
+        <Field Name="KCU_Upr_TRK" Type="REAL" UUID="936D0BCF45622C7D0C4AFBB8253814D4" Comment="КЦУ. Управление ТРК" />
+        <Field Name="KCU_Upr_APK" Type="REAL" UUID="D0E2CB204B9C55F3B2C8B28CFCE655DF" Comment="КЦУ. Управление АПК" />
+        <Field Name="Tv_BB" Type="REAL" UUID="8E78B0974524D11079234BAE7701D4A0" Comment="Температура воздуха в блок-боксе" />
+        <Field Name="U_osn_RKBU" Type="REAL" UUID="CF878E45484829AB297FCE9E55FB38E3" Comment="Напряжение основного питания РК БУ" />
+        <Field Name="U_res_RKBU" Type="REAL" UUID="FB5100104B5C986C449B6C8F39E3658E" Comment="Напряжение резервного питания РК БУ" />
+        <Field Name="T_contr" Type="REAL" UUID="78E536094803450A13059B8BE00AED87" Comment="Температура контроллера" />
+    </Fields>
+</Type>

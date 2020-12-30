@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_flag_to_APR" Kind="Struct" UUID="087607A8436B18ACE07348B4A73CDBAA">
+    <Fields>
+        <Field Name="Tin" Type="REAL" UUID="EFB5BF404400B6082E0214B5DC0A8E94" Comment="Значение Тг до Н, тип Real, град" />
+        <Field Name="Tout" Type="REAL" UUID="17B519B44660FB46D6A5DDB6E689C61E" Comment="Значение Тг за Н, тип Real, град" />
+        <Field Name="Tin_fault" Type="BOOL" UUID="4EDB56464A0FA879C56AC0B3C915C92E" Comment="Отказ канала Тг до Н, тип Bool" />
+        <Field Name="Tout_fault" Type="BOOL" UUID="5531819A49770AAE22AEA193DD24572A" Comment="Отказ канала Тг за Н, тип Bool" />
+        <Field Name="N_ST" Type="REAL" UUID="6638EE654489CCA082D0E0A59F762060" Comment="Обороты СТ (из регулятора, значение, не support_AI), тип Real" />
+        <Field Name="N_ST_fault" Type="BOOL" UUID="EA4A625B44DC5B6E6537D8A1B1445BA1" Comment="Флаг неисправности оборотов СТ (из обработчика аналоговых сигналов), тип Bool" />
+        <Field Name="RU_Zadanie_APK" Type="REAL" UUID="EB60212A4653C78F2B7217A879CE2507" Comment="Ручное задание открытия АПК (из SCADA), тип Real" />
+        <Field Name="NST_IN_FLT" Type="BOOL" UUID="C90D5CA9450C51A3F561BBAD1C9968CC" Comment="Флаг неисправности оборотов СТ (из РТ), тип Bool" />
+        <Field Name="RejimWork" Type="BOOL" UUID="69951D9A44BA600EE32A468C4B06C723" Comment="Флаг работы двигателя (включение расчета рабочей точки), тип Bool" />
+        <Field Name="KranAPK_RA" Type="BOOL" UUID="6DB1EB5A4D98BBA77C18E8B2A583B12C" Comment="Флаг авт/ручн режима управления АПК, тип Bool" />
+        <Field Name="Fast_Open" Type="BOOL" UUID="7642E1A948C7735AFF163DADB19D598C" Comment="сумма всех причин аварийного открытия АПК (АО, НО и т.д.) - дискретная команда, тип Bool" />
+        <Field Name="ZAGRUZKA_APR" Type="BOOL" UUID="BF82A9A74CC9931BC34FDCA3F6BBCC8C" Comment="1(TRUE) - разгрузка, 0(FALSE) - загрузка - из алгоритма переходов, тип Bool" />
+        <Field Name="AM_APK_OF" Type="BOOL" UUID="1CBF0A674E32DFE1C0B8CC9DDFDE3044" Comment="сумма всех причин необходимого закрытия АПК  (на пуске, прокрутке, пуске без контура) - дискретная команда, тип Bool" />
+        <Field Name="APK_ON" Type="BOOL" UUID="3522004640E605C6D9D9E2BFB64830F9" Comment="АПК открыт, тип Bool" />
+        <Field Name="APK_OF" Type="BOOL" UUID="B39E6E2A46EAF720F20FD1A205E9E259" Comment="АПК закрыт, тип Bool" />
+        <Field Name="Rejim_Mag" Type="BOOL" UUID="D43A3F4E4D79CEF5692D3CACEB2FD585" Comment="Режим работы ГПА &quot;Магистраль&quot;, тип Bool" />
+        <Field Name="Rejim_KO" Type="BOOL" UUID="055F33094548F3323EAF54A9D4A0B80F" Comment="Режим работы ГПА &quot;Кольцо&quot;, тип Bool" />
+        <Field Name="BTN_APR_RESET" Type="BOOL" UUID="4A62B2E0400444C858E869AC86CB81EF" Comment="Сброс регулятора, на один скан, тип Bool" />
+        <Field Name="BTN_HLOP_RESET" Type="BOOL" UUID="039399D3417B1EBE2B5247A67714F173" Comment="Принудительный сброс зафиксированных хлопков, тип Bool" />
+        <Field Name="LG_ONIMIT" Type="BOOL" UUID="E85D12B647D0ED93936015AB88EFC15E" Comment="Флаг режима имитации, тип Bool" />
+        <Field Name="DP_BASE_IMIT" Type="REAL" UUID="F4583D59405987EF0F136CAD167000AA" Comment="Начальное значение канала перепада давления на конфузоре для имитации, тип Real" />
+    </Fields>
+</Type>

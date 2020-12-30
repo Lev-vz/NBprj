@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_FR_DATA" Kind="Struct" Comment="СТРУКТУРА ОБМЕНА ДАННЫМИ УУ - ТР" UUID="033791C941EC3AED31F659AB0E8E882C">
+    <Fields>
+        <Field Name="MODE" Type="INT" UUID="93E1E733410FBBF569034F8E1C7BED0F" Comment="Номер режима" />
+        <Field Name="STOP_TR" Type="BOOL" UUID="DB29BDC34845D2042150EEA5D0E37E0A" Comment="Остановить ТР" />
+        <Field Name="Nst_7150H" Type="BOOL" UUID="4721731843FBB85ECEAC7C89E152A100" Comment="Обороты СТ &gt;= 7150 об/мин" />
+        <Field Name="Nvdp_11200H" Type="BOOL" UUID="9CF048C04811A11151B2789AF6D8C1B8" Comment="Обороты ГТД прив. &gt; 11200 об/мин" />
+        <Field Name="Nvd_4100H" Type="BOOL" UUID="F4FB12FC4B5F4F9ED07F88AB11A746E0" Comment="Обороты ГТД &gt; 4100 об/мин" />
+        <Field Name="Nvd_8500H" Type="BOOL" UUID="9E3D6B084C72FB9B19762DBBC5FA6878" Comment="Обороты ГТД &gt; 8500 об/мин" />
+        <Field Name="Nvd_100L" Type="BOOL" UUID="C57F34D64E1C5BEA2582C3A70D48430E" Comment="Обороты ГТД &lt; 100 об/мин" />
+        <Field Name="Nst_20L" Type="BOOL" UUID="31F12048459294C56FE03B90E26BAC27" Comment="Обороты СТ &lt; 20 об/мин" />
+        <Field Name="Nst_7250L" Type="BOOL" UUID="A28EE19A4C25680E9CB8F18954313607" Comment="Обороты СТ &lt; 7250 об/мин" />
+        <Field Name="Nst" Type="REAL" UUID="D9F58DFF46B10726E7356E8E62F9CA07" Comment="Обороты СТ" />
+        <Field Name="Nvd" Type="REAL" UUID="797D82934FBE6C2ADA75B3B449B4C51C" Comment="Обороты ГТД" />
+        <Field Name="Nvd_chan_1" Type="DF4771D84B4B32BB0256698CA9359DC9" UUID="F562546941F5875383AD8FBED9F0D1B7" Comment="ТР: Частота 1 вращения ротора ГТД (обмотка 1 датчика 1)" />
+        <Field Name="Nvd_chan_2" Type="DF4771D84B4B32BB0256698CA9359DC9" UUID="511A503948B7FF75E8F5E2B8FA5F2B41" Comment="ТР: Частота 2 вращения ротора ГТД (обмотка 1 датчика 2)" />
+        <Field Name="Nst_chan_1" Type="DF4771D84B4B32BB0256698CA9359DC9" UUID="A4DAD8874B7EAFC8C11702A3B4D369C5" Comment="ТР: Частота 1 вращения ротора СТ (обмотка 1 датчика 1)" />
+        <Field Name="Nst_chan_2" Type="DF4771D84B4B32BB0256698CA9359DC9" UUID="C756119E4EB59563415697BF560545AD" Comment="ТР: Частота 2 вращения ротора СТ (обмотка 1 датчика 2)" />
+        <Field Name="DG_out" Type="DF4771D84B4B32BB0256698CA9359DC9" UUID="DAEFA126405897BFA4962FBAB1C67665" Comment="ТР: Задание на дозатор газа" />
+        <Field Name="IMIT_ON" Type="BOOL" UUID="E1583A2F4658D59021644691552BD3E9" Comment="Имитатор включен" />
+        <Field Name="Nvd_11200H" Type="BOOL" UUID="6E6055B74F68CBDFD9D052981589D17B" Comment="Nгтд пр &gt; 11200 об/мин" />
+        <Field Name="Razgon_G_ot_T" Type="BOOL" UUID="B0F3ECE74BD78E9516C8D88762C3C6E7" Comment="ТР отрабатывает разгон по зависимости Gt от времени, с ограничением Тг &lt; 500 °С" />
+        <Field Name="Nvd_10360L" Type="BOOL" UUID="8DF17BFC45A6E3A9E89CC19EEB96E52B" Comment="Nгтд &lt; 10360 об/мин" />
+        <Field Name="isFire" Type="BOOL" UUID="3D257CE549F8178B96C663B753F09E19" Comment="Есть горение" />
+        <Field Name="Tst" Type="REAL" UUID="E577A1664CA8C2883EF913AB742FACD2" Comment="Температура СТ" />
+        <Field Name="Tst_chan_1" Type="DF4771D84B4B32BB0256698CA9359DC9" UUID="B7F26C3747A0A8397021BC8ECB3AD950" Comment="ТР: Температура 1 газа за турбиной" />
+        <Field Name="Tst_chan_2" Type="DF4771D84B4B32BB0256698CA9359DC9" UUID="E66E1AD14CACBE96770617B95CD045AA" Comment="ТР: Температура 2 газа за турбиной" />
+        <Field Name="Qg" Type="REAL" UUID="0058662144753A45682478884C136691" Comment="ТР: Расход газа" />
+        <Field Name="setDG" Type="REAL" UUID="F1C650D14F62DBDEBAFA15A1458FDD7E" Comment="ТР: Задание положения ДГ" />
+        <Field Name="setGt" Type="REAL" UUID="6498FD58482D23A92C41CBA43F5E4191" Comment="ТР: Задание на расход" />
+        <Field Name="setNvd_HMI" Type="REAL" UUID="FBCD63C748CC9BF193BF1790DC5DDFE6" Comment="Задание оборотов ГТД от оператора" />
+        <Field Name="setNst_HMI" Type="REAL" UUID="7DC7A6A24CD98556FD8C188EF5AB1DE3" Comment="Задание оборотов СТ от оператора" />
+        <Field Name="RegNvd" Type="BOOL" UUID="15F26300401602D565F2C88376A448A6" Comment="Регулирование по ГТД" />
+        <Field Name="RegNst" Type="BOOL" UUID="35C617D34965F814ECA949B332A81EAB" Comment="Регулирование по СТ" />
+        <Field Name="setNvd" Type="REAL" UUID="28805DEE4ED50C54857D5BBAA17842B6" Comment="Задание оборотов ГТД" />
+        <Field Name="setNst" Type="REAL" UUID="FF40DE9E40A4089CE05131B1D34B1D48" Comment="Задание оборотов СТ" />
+        <Field Name="SK_OF" Type="BOOL" UUID="AE3984664CA8A67B7445C2ADCD25993F" Comment="СК закрыт" />
+        <Field Name="GoTo_Nst_7204" Type="BOOL" UUID="8E4CF2194BA22C6E38912FBC5CD2780C" Comment="Снижение оборотов СТ до 7204 об/мин" />
+        <Field Name="TR_VNA" Type="DF4771D84B4B32BB0256698CA9359DC9" UUID="C070CF86410CC4ACEAEC97AB55C7AA17" Comment="Задание положения ВНА" />
+        <Field Name="STARTER_0" Type="BOOL" UUID="CE52970440DCE5BBC62BC3AF7FD4B96F" Comment="Сигнал задания 4,0 мА" />
+        <Field Name="STARTER_1" Type="BOOL" UUID="5C480A244D825F6E0ED1B2BD17A13CCB" Comment="Сигнал задания 5,1 мА" />
+        <Field Name="STARTER_2" Type="BOOL" UUID="DD2A8C0142E44396DAC0928BA7CA26E1" Comment="Сигнал задания 9,3 мА" />
+        <Field Name="STARTER_3" Type="BOOL" UUID="D6998A984BEAE03DF9DD8B8E6BD519A5" Comment="Сигнал задания 10,7 мА" />
+        <Field Name="STARTER_4" Type="BOOL" UUID="1F1ADAFE49958B1D02E2AF91C1EA3CB2" Comment="Сигнал задания 20,0 мА" />
+        <Field Name="FR_AO" Type="BOOL" UUID="9D6DCBA6449E73E9CEF250A09B95750B" Comment="Аария из топливного регулятора" />
+        <Field Name="AO_FR" Type="BOOL" UUID="38DEA04040FE5853080F81837D2484DD" Comment="Аария в топливный регулятор" />
+        <Field Name="Tstbrk" Type="BOOL" UUID="19231A364590BBC6E0DACDABE87199DD" Comment="Неисправность датчиков температуры за СТ" />
+        <Field Name="Nstbrk" Type="BOOL" UUID="FADA39764B332D4A3B17D2AE5D38C4A0" Comment="Неисправность датчиков оборотов СТ" />
+        <Field Name="Nvdbrk" Type="BOOL" UUID="9C557F524CEAD5BD8E4F318E0F26F329" Comment="Неисправность датчиков оборотов ТК" />
+        <Field Name="Nvdp" Type="REAL" UUID="E05648884D83780B13979DAB8922B4EE" Comment="Обороты ГТД приведеные" />
+        <Field Name="Nst_5250H" Type="BOOL" UUID="CB4CE3AD4D0D87126C6CA6A984030922" Comment="Nst_5250H" />
+        <Field Name="MAX_SPEED" Type="REAL" UUID="9CA493F34E690227C454D5AFF6BBDABF" Comment="MAX_SPEED" />
+        <Field Name="Nst_5000H" Type="BOOL" UUID="289202E941F294E1BC985E9936FFDD47" Comment="Nst_5000H" />
+    </Fields>
+</Type>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_flag_from_APR" Kind="Struct" UUID="EF95CEF648197B2D5C0032A33EFA0B80">
+    <Fields>
+        <Field Name="SurgeN" Type="BOOL" UUID="0E12FD3C4B14B4E7A8C12F88BF951C2F" Comment="Помпаж Н" />
+    </Fields>
+</Type>

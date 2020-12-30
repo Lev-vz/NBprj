@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AM_Internal" Kind="Struct" Comment="Внетренние сигналы" UUID="32BA558A424E0C22E51AEAB8F6691BB0">
+    <Fields>
+        <Field Name="on" Type="BOOL" UUID="8BD39D29468096AD67F9498E5368625F" Comment="был algOn или btnOn" />
+        <Field Name="off" Type="BOOL" UUID="55901A9549CB558C6C22C0950F7C98C1" Comment="был algOff или btnOff" />
+        <Field Name="onCom" Type="BOOL" UUID="9017A0A34F59481F7870ABA8E8504720" Comment="Внутрення команда на откр/вкл" />
+        <Field Name="offCom" Type="BOOL" UUID="AE73561A43F8F72268B77AB5E6E1AD73" Comment="Внутрення команда на закр/откл" />
+        <Field Name="timerOnCom" Type="REAL" UUID="315F560041ABFD91EFAEDF915F0B6D8D" Comment="Таймер включения/открытия" />
+        <Field Name="timerOfCom" Type="REAL" UUID="3B9747C64687596100E87AA15A2B8327" Comment="Таймер выключения/закрытия" />
+        <Field Name="timerExtraOn" Type="REAL" UUID="CA31C77D4FC2844FB5B398B71D67EF2A" Comment="Таймер дожима на открытие" />
+        <Field Name="timerExtraOff" Type="REAL" UUID="9257796D44441394D821E09F2A00FC2D" Comment="Таймер дожима на закрытие" />
+        <Field Name="cntRecommand" Type="INT" UUID="A4860242405A552738919AB6C6484378" Comment="Счётчик поджимов" />
+    </Fields>
+</Type>

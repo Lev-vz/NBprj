@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="HMI_SEN" Kind="Struct" UUID="885BF2D84E88A3BEC20835901C3A5C39">
+    <Fields>
+        <Field Name="PV" Type="REAL" UUID="E3B0C75F4F0DFC4ABE0878ACEC68950A" Comment="Сигнал с датчика, преобразованный к единицам Config.Eu_PV" />
+        <Field Name="CurrentTimeOfRepair" Type="REAL" UUID="55DE718545CAF08DBDF360911D67634F" Comment="Текущее время ремонта" />
+        <Field Name="Manual_Target" Type="REAL" UUID="99415CA14860C0EFC4480FBF3E85250C" Comment="Задание для выхода блока в ручном режиме" />
+        <Field Name="Condition" Type="DWORD" UUID="932BD6754A22DDC339F0A1AC7758D345" Comment="Состояние 0-11 коды отказов, 12-15 команды с мнемосхемы" />
+    </Fields>
+</Type>

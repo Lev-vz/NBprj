@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="support_AI" Kind="Struct" UUID="66E85B694611583D5E0976A599AC4752">
+    <Fields>
+        <Field Name="Oper" Type="0DE23ED741772626DD0AFCBBF6C734E5" UUID="98292A4244CEC586AB0D90A88781030F" Comment="Вычисленные переменные" />
+        <Field Name="Config" Type="F9AED48B4331F00EADC5C3BE77E8FB40" UUID="69B5262E44356F990EAB9A80D859EFD7" Comment="Конфигурационные параметры" />
+    </Fields>
+</Type>

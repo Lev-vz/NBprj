@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_Mode_Index" Kind="Struct" Comment="Номера режимов для графов" UUID="E76541D84A1AE503D8BB52BCE663B994">
+    <Fields>
+        <Field Name="curMode" Type="INT" UUID="9FD12C814D6EF745AD4556A34D4B7BE9" Comment="Текущий номер режима" />
+        <Field Name="Repair" Type="INT" UUID="DB22AFB0479B919C11BD798CDDDCF6A4" Comment="Ремонт" />
+        <Field Name="HR" Type="INT" UUID="20AADC4E4825B20C88EA22AA966B1121" Comment="Холодный резерв" />
+        <Field Name="GR" Type="INT" UUID="BFD5424E47B71D0E2E7DE3BFE28FC3F9" Comment="Горячий резерв" />
+        <Field Name="APK" Type="INT" UUID="557EA73644CB0E5D517B3697B0186098" Comment="Автоматический пуск на кольцо" />
+        <Field Name="APM" Type="INT" UUID="8D14992F43EF88C4D9A71B8480B82F48" Comment="Автоматический пуск в магистраль" />
+        <Field Name="K" Type="INT" UUID="7B1D17364CC28499FD4D349F556A9F0F" Comment="Кольцо" />
+        <Field Name="M" Type="INT" UUID="98034B244053033F1EBECEAF2B1D66ED" Comment="Магистраль" />
+        <Field Name="K_M" Type="INT" UUID="2D8FC1CF40186B923EC14282E2602EAA" Comment="Переход &quot;Кольцо-Магистраль&quot;" />
+        <Field Name="M_K" Type="INT" UUID="8699B1174CFD9C5080AA6FAD0130601F" Comment="Переход &quot;Магистраль-Кольцо&quot;" />
+        <Field Name="NOss" Type="INT" UUID="D3DDE58546A838AFA7116EAAA218CED1" Comment="НОсс" />
+        <Field Name="NObs" Type="INT" UUID="FD1B5BEC4BB751651640EC94716B9C47" Comment="НОбс" />
+        <Field Name="AOss" Type="INT" UUID="14CD6DB249475E16946A558E65FD8DDE" Comment="АОсс" />
+        <Field Name="AObs_1" Type="INT" UUID="B8A0C74B43A2C89C53FF96A9991929B4" Comment="АОбс" />
+    </Fields>
+</Type>

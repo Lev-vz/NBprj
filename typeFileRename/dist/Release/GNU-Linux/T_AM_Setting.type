@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AM_Setting" Kind="Struct" Comment="Настройки ИМ" UUID="256A18694412558E2A55A4B7624DD172">
+    <Fields>
+        <Field Name="AMtype" Type="INT" UUID="A9F2BD324D8460357D6708BCE1858E7A" Comment="Тип ИМ" />
+        <Field Name="delayCommandTimeout" Type="REAL" UUID="3B9747C64687596100E87AA15A2B8327" Comment="Время, при превышении которого снимается выходная команда" />
+        <Field Name="delayExtraOn" Type="REAL" UUID="CA31C77D4FC2844FB5B398B71D67EF2A" Comment="Время дожима на открытие" />
+        <Field Name="delayExtraOff" Type="REAL" UUID="9257796D44441394D821E09F2A00FC2D" Comment="Время дожима на закрытие" />
+        <Field Name="delayNotMoveAlert" Type="REAL" UUID="A4860242405A552738919AB6C6484378" Comment="Задержка формирования нестрагивания" />
+        <Field Name="qRecommand" Type="INT" UUID="C963E92D47DA1945A4FE9B95F09610CF" Comment="Разрешённое количество поджимов" />
+    </Fields>
+</Type>

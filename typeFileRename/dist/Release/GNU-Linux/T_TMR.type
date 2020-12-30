@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_TMR" Kind="Struct" Comment="Задержки" UUID="30ECEDE142EB269B13CA1C8A24CACC79">
+    <Fields>
+        <Field Name="Check_SAU_12h" Type="TIME" UUID="FEA732A34E040293C54B60B2BFFA641A" Comment="Контроль САУ" />
+        <Field Name="Check_SAU_12s" Type="TIME" UUID="F3E4C3E749EB1D48A1813397775EED04" Comment="Контроль САУ" />
+        <Field Name="Check_SAU_6s" Type="TIME" UUID="D82139AD41AEAA11E4DCF38DB394DB44" Comment="Контроль САУ" />
+        <Field Name="Check_SAU_4s" Type="TIME" UUID="36AE81C7495D72B5E08DE6A472513FCA" Comment="Контроль САУ" />
+        <Field Name="CoolingGTD_NARR" Type="TIME" UUID="7A8D49314DA8B508D949379E85634221" Comment="Охлаждение на НАРР" />
+        <Field Name="CoolingGTD_HH" Type="TIME" UUID="B3D798184D76A2FC32777CB61B7E4327" Comment="Охлаждение на ХХ" />
+        <Field Name="OpenKPG" Type="TIME" UUID="B0A1D0934F1DE9BDB57009AB33A771C8" Comment="Открытие КПГ" />
+        <Field Name="OpenSK" Type="TIME" UUID="B0C58D5049020C60942CA7841197BFB8" Comment="Открытие СК" />
+        <Field Name="RazgonGT" Type="TIME" UUID="2106FEB5421B65501F943DA695A870E9" Comment="Разгон" />
+        <Field Name="Sound_ON" Type="TIME" UUID="A4AB4C254C7985AF65856BA263709992" Comment="Предпусковая сигнализация" />
+        <Field Name="StartGTD" Type="TIME" UUID="FF5F71694B12AB53199DCC8FBA51E249" Comment="Пуск ГТД" />
+        <Field Name="is_flame" Type="TIME" UUID="78D5732E4D5BA1AE9DFF449FEDC087F6" Comment="Розж. КС" />
+        <Field Name="prodN" Type="TIME" UUID="74826843404DF7B4F01AB098DDBFB431" Comment="Продувка Н" />
+        <Field Name="stabMN" Type="TIME" UUID="F24713AA4D94EF1747B5079BA724EB39" Comment="Стабилизация МН" />
+        <Field Name="stabMUN" Type="TIME" UUID="E292FCFD4843CC944252898FE170E29B" Comment="Стабилизация уплотнений" />
+        <Field Name="stabN" Type="TIME" UUID="24337C2C491DEC8022CB73ACFDFA6E21" Comment="Стабилизация К" />
+        <Field Name="startMD" Type="TIME" UUID="F61A5D04461107F6A4AFA1921FC14035" Comment="Стабилизация МД" />
+        <Field Name="warm_HH" Type="TIME" UUID="B61EF7D64085B133042CEBB1C5288651" Comment="Прогрев на ХХ" />
+        <Field Name="warm_NARR" Type="TIME" UUID="6956E92E49FBD6720359EDABD5515F4F" Comment="Прогрев на НАРР" />
+        <Field Name="ES_Work_HP" Type="TIME" UUID="5126F7804937FBEF22817BB86EED841B" Comment="Работа стартера на ХП" />
+        <Field Name="KAO_ON" Type="TIME" UUID="5A4A591A4B2F04376062DAB9FA1FDFCD" Comment="Включение КАО" />
+        <Field Name="KPG_1s" Type="TIME" UUID="005EAF7F4B33D22A73C31C86A2D364A8" Comment="Задержка включения КПГ" />
+        <Field Name="KPG_1_1s" Type="TIME" UUID="1FD8B2274360A49C13B4909D14E3C056" Comment="Задержка включения КПГ" />
+        <Field Name="PRU_NObs" Type="TIME" UUID="4F6EA6C04BBC78E05EC94B9E22E6035E" />
+        <Field Name="PRU_NOss" Type="TIME" UUID="A7683F4B40918C548F80CFA71033E3F4" />
+        <Field Name="PRU_AObs" Type="TIME" UUID="A85C959B446E001B036243AAE9FDD882" />
+        <Field Name="PRU_AOss" Type="TIME" UUID="1A22E5F24B5F14741151E195064A9DD6" />
+        <Field Name="KPK" Type="TIME" UUID="394F594E43728845DD151A84959E6C88" />
+        <Field Name="CoolingStab" Type="TIME" UUID="FACAA1C64A884A6C656E0A89A0765F2B" Comment="Стабилизация" />
+        <Field Name="Check_Chips" Type="TIME" UUID="ECF8CB9F46EF88AB55946C9E9E2F3C35" />
+        <Field Name="StabMD" Type="TIME" UUID="D6831EB847F01E02955CD583CDF4F742" Comment="Стабилизация МД" />
+        <Field Name="startTG" Type="TIME" UUID="3489073B4EB8EFB455EFCB80930FE4ED" Comment="Продувка ТГ" />
+        <Field Name="SK_ON" Type="TIME" UUID="749ADD8C4DB14491C47EFB9B4B08DAEC" Comment="Включение СК" />
+        <Field Name="RUS_ON" Type="TIME" UUID="E70056644EBC593EDC4272A7DDD8CB46" Comment="РУС включить" />
+        <Field Name="RPS_ON" Type="TIME" UUID="5FA35B014D5EE4B9564B4B97D73BDE4D" Comment="РПС включить" />
+        <Field Name="BP_ON" Type="TIME" UUID="B36318A24D0D549D57B2EFB8705C9810" Comment="Включить БП СПВ" />
+        <Field Name="BP_OF" Type="TIME" UUID="CDFB7C9443AA570056B9B7B8341E21E7" Comment="Отключить БП СПВ" />
+        <Field Name="SK_Control" Type="TIME" UUID="778D9CF3421B11CA11ECC6AE13F61F61" Comment="Вз защ по СК" />
+        <Field Name="Filling_oil_Kr1" Type="TIME" UUID="C34658714F1D777431BF7A842E1F2BAD" Comment="Подача смазки на Кр1" />
+        <Field Name="Filling_oil_Kr2" Type="TIME" UUID="03E9F3354C57BEDEFC89D49EBC1D121D" Comment="Подача смазки на Кр2" />
+        <Field Name="KPR1_ON" Type="TIME" UUID="B3C6EEE74AC031A7EFD9C0AC5F1F8B44" Comment="Управление КПР1" />
+        <Field Name="KPR2_ON" Type="TIME" UUID="E9177F394CDE01B461CFB69BA797FC62" Comment="Управление КПР2" />
+        <Field Name="BP_SPV_OF" Type="TIME" UUID="A5B4F2404797FE2B3B2C84A2DA00BCA3" Comment="Отключение СПВ" />
+        <Field Name="ORT" Type="TIME" UUID="759EB35C4F7B222588C483AD8FB62877" Comment="Отключения ОРТ" />
+        <Field Name="MNU_OF" Type="TIME" UUID="E07125E64657C85903EDA3977B7204DA" Comment="Отключение МНУ" />
+        <Field Name="Modes" Type="TIME" UUID="2F8C5BF442B57CE8A5B067A462177BBC" Comment="Отключение МННД" />
+        <Field Name="Pm_D" Type="TIME" UUID="625D29E844BEC169DDA869868C48A243" Comment="Давление МННД" />
+        <Field Name="Pm_MNOD_004" Type="TIME" UUID="A66063AB45A5D429505915BF7EDB525D" Comment="Давление за нав.МНОД" />
+        <Field Name="Pm_MNOD" Type="TIME" UUID="DCA695264D1EAF6C6CE602AA80F77796" Comment="Давления МНОД" />
+        <Field Name="MNOD_PZM_OF" Type="TIME" UUID="B3BEA2AD45D7134149EDA4A52322A35F" Comment="Отключение МНОД ПЗМ" />
+        <Field Name="MNOD_OF" Type="TIME" UUID="D2EB1F5D42A2008A02199CA6FF752618" Comment="Отключение МНОД" />
+        <Field Name="Pm_in_D_002" Type="TIME" UUID="D4846C3747C02CCC355543AC69F3089D" Comment="Отключение МНОБ" />
+        <Field Name="Gas_N1" Type="TIME" UUID="B1945A81496E42D1A0E04BB5E4AADF32" Comment="Загазованость 1" />
+        <Field Name="Gas_N2" Type="TIME" UUID="6EDD8B2049A85204D839B29EABC1F09C" Comment="Загазованость 2" />
+        <Field Name="Tv_KGT50" Type="TIME" UUID="F63215D94A88EBB8B05FA480103970BE" Comment="Задержка для температуры под кожухом Д больше 50гр." />
+        <Field Name="Tv_KGT30" Type="TIME" UUID="A453F3434386CE400F4D84986CE16371" Comment="Задержка для температуры под кожухом Д меньше 30гр." />
+        <Field Name="Tv_KGT70" Type="TIME" UUID="8CA90C1E4EB9472248ADB981702726E6" Comment="Задержка для температуры под кожухом Д больше 70гр." />
+        <Field Name="Tv_KGT60" Type="TIME" UUID="83BE59E84FD1D116082FDEB5390A6E8C" Comment="Задержка для температуры под кожухом Д меньше 60гр." />
+        <Field Name="ES_Work_TP" Type="TIME" UUID="CCB34D2F4FF72C6418E42F9DBAD0AABC" Comment="Отключение стартера на ТП" />
+        <Field Name="StartGTD_1" Type="TIME" UUID="AECBC06E484646E80BD518893518CE40" Comment="Пуск ГТД" />
+    </Fields>
+</Type>

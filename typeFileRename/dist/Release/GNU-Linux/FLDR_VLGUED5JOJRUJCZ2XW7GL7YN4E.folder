@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="LEV_AM">
+    <Items>
+        <Item Name="Type_22PFCYVVUVRULDEEZNMVPTMMXM.type" />
+        <Item Name="Type_4UPBJ3GNUDKUREKJ5JIO4HR7EU.type" />
+        <Item Name="Type_6OOVRNVKWKWUNASRSYTEZC7BEM.type" />
+        <Item Name="Type_C24U5OAHVOCEZIXJJFP7JTVCNQ.type" />
+        <Item Name="Type_KJ2UBRFADIUUNNLXID2WVLNVLA.type" />
+        <Item Name="Type_T5JAKDDC6APUFF4WDHCW35HOXA.type" />
+        <Item Name="Type_XFAKCXNNUJTUBL47ZWMR6WBSBQ.type" />
+    </Items>
+</Folder>

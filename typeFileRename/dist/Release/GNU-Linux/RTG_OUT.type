@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="RTG_OUT" Kind="Struct" UUID="6D60ABAC471237FF8313EF89CEEF55F1">
+    <Fields>
+        <Field Name="q_c" Type="REAL" UUID="45A09F7048D65AA3F84C3987CEB1CB8D" Comment="Объемный расход среды приведенный к стандартным условиям, м3/с" />
+        <Field Name="q_v" Type="REAL" UUID="77AA11184FEB868279DF93A312D5560D" Comment="Объемный расход среды при рабочих условиях, м3/с" />
+        <Field Name="q_m" Type="REAL" UUID="83E4FC2941AF18770AB52C8398A967AB" Comment="Массовый расход, кг/с" />
+        <Field Name="Fault" Type="BOOL" UUID="57965F4C4D54035D8263B5ACE909C05C" Comment="Fault" />
+        <Field Name="Error" Type="INT" UUID="D953E6D949025F40D890DBBDED85F074" Comment="Ошибки вычисления расхда (по битам)" />
+    </Fields>
+</Type>

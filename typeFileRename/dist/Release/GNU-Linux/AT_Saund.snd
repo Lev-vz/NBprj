@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Sound >
+<Configuration>
+    <FileList>
+        <File SignalUUID="FDC2A1FE46B3C65AE87CBC909607B588" Path="alarm.wav" />
+    </FileList>
+</Configuration>

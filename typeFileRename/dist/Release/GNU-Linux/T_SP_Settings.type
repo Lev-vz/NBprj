@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_SP_Settings" Kind="Struct" Comment="Настройки уставки" UUID="F35CE5474F9ED831D3CDE984BA397134">
+    <Fields>
+        <Field Name="spVal" Type="REAL" UUID="D9A556B9445296B748433EAA27F4A759" Comment="значения уставки" />
+        <Field Name="target" Type="INT" UUID="A482AD3D4DE33C82903528A701A28AC0" Comment="назначение уставки: 0 – управляющая, 1 – аварийная, 2 – предупредительная, 3 – ограничительная, 4 - технологическая" />
+        <Field Name="setForFault" Type="INT" UUID="BA40E4A546B01AE842584584C851B70C" Comment="значение, записываемое в ANB при неисправности канала: 0 - FALSE, 1 - TRUE, 2 - оставить то что было" />
+        <Field Name="direct" Type="BOOL" UUID="2691ED434FBDB2B1FBFB67A514B27416" Comment="направление срабатывания. TRUE - верхняя, FALSE - нижняя" />
+    </Fields>
+</Type>

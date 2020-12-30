@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_LG" Kind="Struct" UUID="85998F054C748E4B8527B0858259F2ED">
+    <Fields>
+        <Field Name="AI_bad" Type="BOOL" UUID="39D4FE7F43A0781FFE88AA9CBD861E04" Comment="Неисправность аналоговых датчиков" />
+        <Field Name="AO_signal" Type="BOOL" UUID="614DF06644D6935B0D4F5CBDD8792CDC" Comment="Есть аварийный сигналы" />
+        <Field Name="AOb" Type="BOOL" UUID="B2250640460DBE1948D2A6A13F891A5C" Comment="АОбс" />
+        <Field Name="AObs_finish" Type="BOOL" UUID="466172EE4654F3EF5EA03FA4574EAFD8" Comment="АОбс закончен" />
+        <Field Name="AOs" Type="BOOL" UUID="1B85D7474BC4A868B31426802FE1257C" Comment="АОсс" />
+        <Field Name="AOss_finish" Type="BOOL" UUID="0FB82BD54899E4F486AB9BBA4F2B9B96" Comment="АОсс закончен" />
+        <Field Name="OGR" Type="BOOL" UUID="3B3B7A3E4F2ED08A6C9F3F8DF55A46F1" Comment="Ограничение режима" />
+        <Field Name="OFun" Type="BOOL" UUID="2F1CBE8043F227B49C4C88A892A09580" Comment="Огрпничение функциональности" />
+        <Field Name="AOss_tech" Type="BOOL" UUID="A5412F9044E180860B1A5CAC985BC315" Comment="АОсс по техн. условиям" />
+        <Field Name="ARM_AObs" Type="BOOL" UUID="99672A844EB647B983D3A09912049C74" Comment="кнопка АОбс с АРМ" />
+        <Field Name="ARM_AOss" Type="BOOL" UUID="8782106E4DF9FFFAE7A612B9BF4C9D50" Comment="кнопка АОсс с АРМ" />
+        <Field Name="ARM_NObs" Type="BOOL" UUID="170FF5B14D5420A4771998B5FEA39BF6" Comment="кнопка НОбс с АРМ" />
+        <Field Name="ARM_NOss" Type="BOOL" UUID="D0545B7844DDE39EB2F80D84711426C7" Comment="кнопка НОсс с АРМ" />
+        <Field Name="AS_bad" Type="BOOL" UUID="0A91884B4B1193E9ABE8E99B7855C095" Comment="Нет АС" />
+        <Field Name="Aobs_BTN_ARM" Type="BOOL" UUID="0B77F77343943A66D11ADE98A1FF817A" Comment="АОбс по команде оператора (АРМ)" />
+        <Field Name="Aobs_BTN_PRU" Type="BOOL" UUID="12A1AD6F4A423197BA926CA9688058C1" Comment="АОбс по команде оператора (ПРУ)" />
+        <Field Name="Aoss_BTN_ARM" Type="BOOL" UUID="3247F94B4AAC308286A808866DEA4FC9" Comment="АО по команде оператора (АРМ)" />
+        <Field Name="Aoss_BTN_PRU" Type="BOOL" UUID="50AA5BD94550BE85C940A883F7E495ED" Comment="АО по команде оператора (ПРУ)" />
+        <Field Name="CDOut_fault" Type="BOOL" UUID="295C305A43ACAFE696A36E8EE18BBD7F" Comment="Неисправность цепей ИМ" />
+        <Field Name="Check_PZ" Type="BOOL" UUID="9F5D9C744A6A3AA78C784F8D8792D101" Comment="Проверка защит" />
+        <Field Name="Check_SAU" Type="BOOL" UUID="2FC853624826C0EC7DDBC3B561B3DE11" Comment="Контроль САУ" />
+        <Field Name="Check_SAU_OK" Type="BOOL" UUID="19DB8BB14F082AEA296A39A5AA215C23" Comment="Контроль САУ прошел" />
+        <Field Name="DI_bad" Type="BOOL" UUID="35774F8C46410803086877A3D8246607" Comment="Неисправность дискретных датчиков" />
+        <Field Name="Din_fault" Type="BOOL" UUID="6551AAE24592F9EBC68F138FE3B04248" Comment="Неисправность дискретных датчиков" />
+        <Field Name="Force_DI" Type="BOOL" UUID="B6CF33614BF9332EDEAEBABB2D8F2EBC" Comment="Форсировка DI с мнемосхемы" />
+        <Field Name="Force_DO" Type="BOOL" UUID="F5C7D5F145E26E069A791EA71F83B329" Comment="Форсировка DO с мнемосхемы" />
+        <Field Name="GNSD_fault" Type="BOOL" UUID="C33B8F0E41C39BDB6D838F87129174C2" Comment="ГНС двиг. неисправен" />
+        <Field Name="GNSN_fault" Type="BOOL" UUID="19471F49487AC23D7B74DB9B104D4E37" Comment="ГНС компр. неисправен" />
+        <Field Name="GPA_Stop" Type="BOOL" UUID="0AF8419A4E982A50AA8B928629B8C719" Comment="Обобщенный режим останова" />
+        <Field Name="GPA_Work" Type="BOOL" UUID="BBF0538E45FAD7570D8F44ABB614C47F" Comment="Обобщенный режим работы" />
+        <Field Name="GPA_not_Work" Type="BOOL" UUID="76E1AC684075FEC9E5CB1FB879E425DA" Comment="Нет активных режимов" />
+        <Field Name="G_inN" Type="BOOL" UUID="666C3AB64B66301903FE838AB61488A3" Comment="Газ в Н" />
+        <Field Name="IMIT_ON" Type="BOOL" UUID="4CBB4E374E32780C66E3689474657460" Comment="Имитатор включен" />
+        <Field Name="IM_bad" Type="BOOL" UUID="8CC528DA45171401667CA5B837BE220F" Comment="Неисправность цепей ИМ" />
+        <Field Name="Kr1_sh" Type="BOOL" UUID="291D50DB4309A14545E7CC9F990ADA6F" Comment="Самопроизвольная закрытие крана 1" />
+        <Field Name="Kr2_sh" Type="BOOL" UUID="F5C6833D4AAF5007C940CAB817395BBB" Comment="Самопроизвольное закрытие крана 2" />
+        <Field Name="Kr5_OF" Type="BOOL" UUID="71C70B634E202F0CD2393496C611A20A" Comment=" Кран 5 не закрыт (Резерв с газом)" />
+        <Field Name="Kr5_ON" Type="BOOL" UUID="3D6258EF497E4AF13F2C7FB01852E4A2" Comment=" Кран 5 не открыт (Резерв без газа)" />
+        <Field Name="NOb" Type="BOOL" UUID="48429FC14B08DF23756E5FBE42B3DEBE" Comment="НОбс" />
+        <Field Name="NOs" Type="BOOL" UUID="8C1E7C784E962B48FDD08CABBF0F9D43" Comment="НОсс" />
+        <Field Name="Reserv" Type="BOOL" UUID="3E4BFAB84ADBDDAC37E37BBC23383769" Comment="Резерв" />
+        <Field Name="N_TN_brk" Type="BOOL" UUID="81880F6B41C401748A272E985E7C622A" Comment="Отказ канала изм. N ТН" />
+        <Field Name="Nobs_BTN_ARM" Type="BOOL" UUID="853C666248D28DF3E9B7ACB95582305A" Comment="НОбс по команде оператора (АРМ)" />
+        <Field Name="Nobs_BTN_PRU" Type="BOOL" UUID="1C454EA2434873F6AF607F8AFBA583E7" Comment="НОбс по команде оператора (ПРУ)" />
+        <Field Name="Noss_BTN_ARM" Type="BOOL" UUID="4BB9CFF7404EE66A51C9488D43F528A7" Comment="НО по команде оператора (АРМ)" />
+        <Field Name="Noss_BTN_PRU" Type="BOOL" UUID="772AFC4E4B9135AD75F369A9856FA6BA" Comment="НО по команде оператора (ПРУ)" />
+        <Field Name="PPU_GR_Check" Type="BOOL" UUID="D238F87745F6C40B4E3853B300C83CBA" Comment="Контроль ГР" />
+        <Field Name="PPU_GR_Ready" Type="BOOL" UUID="0A527AF943C5410FB7239D92ED3F1345" Comment="Готовность ГР" />
+        <Field Name="PPU_GR_notReady" Type="BOOL" UUID="DF3642924F985B82A4C9BE840AD0DA60" Comment="Нет готовности ГР" />
+        <Field Name="PPU_HR_Check" Type="BOOL" UUID="EDFEE25A444E76A19951ECAEED1E5C89" Comment="Контроль ХР" />
+        <Field Name="PPU_HR_Ready" Type="BOOL" UUID="876798CE4D0F61A75C432787EDE37453" Comment="Готовность ХР" />
+        <Field Name="PPU_HR_notReady" Type="BOOL" UUID="7AE0E19E439127C22D6C7C87721F4844" Comment="Нет готовности ХР" />
+        <Field Name="PRU_AObs" Type="BOOL" UUID="32A21A0741C413BF69B8BCA255004FBD" Comment="кнопка АОбс с ПРУ" />
+        <Field Name="PRU_AOss" Type="BOOL" UUID="E311382243C24ABBB338478635AA0575" Comment="кнопка АОсс с ПРУ" />
+        <Field Name="PRU_NObs" Type="BOOL" UUID="08F36E9044400FCD3FC83497A500864C" Comment="кнопка НОбс с ПРУ" />
+        <Field Name="PRU_NOss" Type="BOOL" UUID="4253BFB544BB8B8B71A0278A8D3428C7" Comment="кнопка НОсс с ПРУ" />
+        <Field Name="Power_bad" Type="BOOL" UUID="69B894CE45FD2BB735EE348B1A8E1274" Comment="Не исправность питания" />
+        <Field Name="Reset_PZ" Type="BOOL" UUID="54025D8B4B6DCF7DBA93108C99975733" Comment="Сброс ПЗ" />
+        <Field Name="RU_IM" Type="BOOL" UUID="9649F570484A696259C7CE98ECCFAD05" Comment="Ручное управление ИМ" />
+        <Field Name="StartGTD" Type="BOOL" UUID="34DFA33F4735EF2ADC0FE2907E4DD240" Comment="Старт ГТД из ТР" />
+        <Field Name="Stop" Type="BOOL" UUID="958F0DDE445452BB48AF6C96082DB430" Comment="Обобщенный останов" />
+        <Field Name="TMO_hh" Type="BOOL" UUID="16AFE6C443ADCB3E7F910CA7525FBA77" Comment="Превышено контр. время выхода на ХХ" />
+        <Field Name="VOD1_fault" Type="BOOL" UUID="C20C279344CC86101A81B09E33C39C5D" Comment="ВОД1 неисправен" />
+        <Field Name="VOD2_fault" Type="BOOL" UUID="C17D0A8F4A9C9E4692A003BFA0390F91" Comment="ВОД2 неисправен" />
+        <Field Name="VOD_NOT_ON" Type="BOOL" UUID="372E18044E86DE208F5EA0B69369BCC2" Comment="ВОД не включился" />
+        <Field Name="deblock" Type="BOOL" UUID="EE4A5D79432B76128634ECB295FE3A96" Comment="Деблокировка" />
+        <Field Name="noG_inN" Type="BOOL" UUID="2936C6614B03002B4F45A3A274E834E4" Comment="Нет газа в Н" />
+        <Field Name="wasGas_ON" Type="BOOL" UUID="8AB397B642BC669E15150CAF6C394C74" Comment="Была загаз. ОН" />
+        <Field Name="wasWarm_GTD" Type="BOOL" UUID="96D3BFFF4B87C643357A81A3EB3E49FD" Comment="Был прогрев ГТД" />
+        <Field Name="was_BTN_APK" Type="BOOL" UUID="9261C1834C0D494921897BBF6920B8E4" Comment="Была нажата кн. АПК" />
+        <Field Name="was_BTN_APM" Type="BOOL" UUID="6E74C1FD421793443EFE76B7C968C717" Comment="Была нажата кн. АПМ" />
+        <Field Name="was_BTN_PBZ" Type="BOOL" UUID="F023D6E0498FA56BFBE1E1A77153B52A" Comment="Была нажата кн. ПБЗ" />
+        <Field Name="was_BTN_HP" Type="BOOL" UUID="89A4D89A4D3EDA40E483E9BD31D84EFF" Comment="Была нажата кн. ХП" />
+        <Field Name="was_BTN_KPK" Type="BOOL" UUID="8035E1AB4EB8107DF794CD86DFBD93F4" Comment="Была нажата кн. КПК" />
+        <Field Name="was_BTN_PZM" Type="BOOL" UUID="0FC5D27A4D6F968FB9B21B884BF7A3FD" Comment="Была нажата кн. ПЗМ" />
+        <Field Name="was_BTN_TP" Type="BOOL" UUID="384E8A76456F8C1A6B8BAE9AF7087728" Comment="Была нажата кн. TП" />
+        <Field Name="was_Check_PZ" Type="BOOL" UUID="82EF7BBA4D22636109BF5DBE4B6CE0D9" Comment="Была проверка защит" />
+        <Field Name="Starter_ON" Type="BOOL" UUID="BED9F34D4766DDB70485ED96CACD6524" Comment="Включение реле упр. стартером" />
+        <Field Name="Starter_OF" Type="BOOL" UUID="1E0D20FB48EB2AD18D9FF4926557CD11" Comment="Отключить стартер" />
+        <Field Name="RPS_OF" Type="BOOL" UUID="C256EDAC47FB7D05842FFB8CA52F5BB2" Comment="Выключение РПС" />
+        <Field Name="RPS_ON" Type="BOOL" UUID="2A7DAD2446C1F1521837ED9193CA8A43" Comment="Включение РПС" />
+        <Field Name="Starter_DU" Type="BOOL" UUID="F2ACC0234BF7B4D9DD81AB95EB70C30D" Comment="Разрешение ДУ стартера" />
+        <Field Name="TEN_MBN_ON" Type="BOOL" UUID="AE1234554FF14FF972DB99A5B8549243" Comment="ТЭН МБН  включить" />
+        <Field Name="TEN_MBN_OF" Type="BOOL" UUID="B6B1B7F048CE1B5ED8197B88D2E0E6B3" Comment="ТЭН МБН  отключить" />
+        <Field Name="TEN_MBN_DU" Type="BOOL" UUID="8C5EA9204550E888F08AA299C78524F9" Comment="Разрешение ДУ ТЭН МБН  " />
+        <Field Name="TEN_MBD_ON" Type="BOOL" UUID="27B266C34C624F7B1E1554B4505D1A33" Comment="ТЭН МБД  включить" />
+        <Field Name="TEN_MBD_OF" Type="BOOL" UUID="98F446244C0738ADC3BEFCB9677D8F10" Comment="ТЭН МБД  отключить" />
+        <Field Name="TEN_MBD_DU" Type="BOOL" UUID="FC6FAC834E7F39958D67DB8A7313D037" Comment="Разрешение ДУ ТЭН МБД" />
+        <Field Name="VMON_1_ON" Type="BOOL" UUID="422E795C4C55EF4E3A0A7985E91B2E38" Comment="ВМОН1 включить" />
+        <Field Name="VMON_1_OF" Type="BOOL" UUID="D9C495E942D491367A4FC2926974CDA4" Comment="ВМОН1 отключить" />
+        <Field Name="VMON_1_DU" Type="BOOL" UUID="F0CD4BF8486778D32A5375B86FF85D7B" Comment="Разрешение ДУ ВМОН1" />
+        <Field Name="VMON_2_ON" Type="BOOL" UUID="4C9AC4AC45540747D2DD1394286521AC" Comment="ВМОН2 включить" />
+        <Field Name="VMON_2_OF" Type="BOOL" UUID="29365903422D934C64A21381FB798CF6" Comment="ВМОН2 отключить" />
+        <Field Name="VMON_2_DU" Type="BOOL" UUID="E4B1538141617F09CFDFAF98DB54F268" Comment="Разрешение ДУ ВМОН2" />
+        <Field Name="VMOD_1_ON" Type="BOOL" UUID="4323C111482A0C06E25AD9B1E4AF181C" Comment="ВМОД1 включить" />
+        <Field Name="VMOD_1_OF" Type="BOOL" UUID="C4E1699142EDE28F08C494B1FD782E81" Comment="ВМОД1 отключить" />
+        <Field Name="VMOD_1_DU" Type="BOOL" UUID="F9BC7C3A4ED5967F8FC9CC9D32B92344" Comment="Разрешение ДУ ВМОД1" />
+        <Field Name="VMOD_2_ON" Type="BOOL" UUID="9F05F8B04E03545269F5A6B64BD44E00" Comment="ВМОД2 включить" />
+        <Field Name="VMOD_2_OF" Type="BOOL" UUID="96F97FBA450D60946E1A74B65D110C21" Comment="ВМОД2 отключить" />
+        <Field Name="VMOD_2_DU" Type="BOOL" UUID="BC45D89A42E2C6AAD2BD6FA32BEE3696" Comment="Разрешение ДУ ВМОД2" />
+        <Field Name="VMOD_3_ON" Type="BOOL" UUID="A2B8DB31493E25F97E2FB4920EED2C2B" Comment="ВМОД3 включить" />
+        <Field Name="VMOD_3_OF" Type="BOOL" UUID="903BA2B14EB608C424FE0180626DE2F7" Comment="ВМОД3 отключить" />
+        <Field Name="VMOD_3_DU" Type="BOOL" UUID="82C8B72F48CC184BCF0B73890B7DE5ED" Comment="Разрешение ДУ ВМОД3" />
+        <Field Name="VMOD_4_ON" Type="BOOL" UUID="B9C24486486902BE3058408A7CDDD760" Comment="ВМОД4 включить" />
+        <Field Name="VMOD_4_OF" Type="BOOL" UUID="DF1557E047D4F610278A12BE91980B5F" Comment="ВМОД4 отключить" />
+        <Field Name="VMOD_4_DU" Type="BOOL" UUID="1FAE993A40597E33FE41F9B6CD322239" Comment="Разрешение ДУ ВМОД4" />
+        <Field Name="SK_ON" Type="BOOL" UUID="B22E2CDD4CEEB57DA97ECD8C84CF86EA" Comment="СК закрыть" />
+        <Field Name="SK_OF" Type="BOOL" UUID="EF77588D4C82DF8A53B84493BAC3FFEA" Comment="СК открыть" />
+        <Field Name="SK_DU" Type="BOOL" UUID="06DF888B4B368097B978C6B82EF7B7A0" Comment="Разрешение ДУ СК" />
+        <Field Name="KNO_ON" Type="BOOL" UUID="56C09113487153048EA5AE9D778796D5" Comment="КНО открыть" />
+        <Field Name="KNO_OF" Type="BOOL" UUID="C76D117B41CEE1506CEA93B6AA04A1DF" Comment="КНО закрыть" />
+        <Field Name="KNO_DU" Type="BOOL" UUID="F2C2875448179B0FA4CAF68E5B0FAE65" Comment="Разрешение ДУ КНО" />
+        <Field Name="AS_Ntn" Type="BOOL" UUID="268392D846F2C6506D569FB40BC9BB60" Comment="Авария по оборотам ТН" />
+        <Field Name="KAO_ON" Type="BOOL" UUID="42F9315F4CB2A2454EA181A3C03D04C9" Comment="КАО открыть" />
+        <Field Name="KAO_OF" Type="BOOL" UUID="B049E9164A5DC285AE9B1796114BE6BB" Comment="КАО закрыть" />
+        <Field Name="KAO_DU" Type="BOOL" UUID="7E01D59D409EB78208DD29A399FE7BAA" Comment="Разрешение ДУ КАО" />
+        <Field Name="KPG_OF" Type="BOOL" UUID="E36494A948E8AED905F297AF96198347" Comment="Отключить КПГ" />
+        <Field Name="KPG_TR" Type="BOOL" UUID="7C031955444836164D653B9AC3A04F18" Comment="Триггер КПГ" />
+        <Field Name="ORT_ON" Type="BOOL" UUID="90D23A8C426B98827DBD48B86C12A9C2" Comment="ОРТ включить" />
+        <Field Name="ORT_OF" Type="BOOL" UUID="8B1E1DDD48B2802A83F967AF5652886D" Comment="ОРТ отключить" />
+        <Field Name="ORT_DU" Type="BOOL" UUID="034D7DC5489726EB55591AB3293809DF" Comment="Разрешение ДУ ОРТ" />
+        <Field Name="Sound_ON" Type="BOOL" UUID="68ED2B2A433BA47006368D931BC4A5E4" Comment="Звуковую сигнализацию включить" />
+        <Field Name="Sound_OF" Type="BOOL" UUID="DE5FAF4D49560CF2650F7CBE811F4A88" Comment="Звуковую сигнализию отключить" />
+        <Field Name="Sound_DU" Type="BOOL" UUID="736F47E04801E09026EE6DB788FFC125" Comment="Разрешение ДУ ЗС" />
+        <Field Name="SND_PS" Type="BOOL" UUID="FD94E52543390A6E577DFEA933C50903" Comment="ПС" />
+        <Field Name="SND_AS" Type="BOOL" UUID="B3A6C5294839B7EC36A374BB095FF10D" Comment="АС" />
+        <Field Name="VOD_15m_OF" Type="BOOL" UUID="26B65EB044B6529264911CA1F7D1E072" Comment="Обдув двигателя после прогрева" />
+        <Field Name="VOD_100s_OF" Type="BOOL" UUID="861DBF2A4249FEBB6FC872ACA5422F4E" Comment="Обдув двигателя после останова" />
+        <Field Name="VOD_ON" Type="BOOL" UUID="8A87A8364B1C4AF46AA9B7B84432E59F" Comment="ВОД вкл" />
+        <Field Name="VOD_DU" Type="BOOL" UUID="40ACCE25466C84B6E7A6AEAADBF10FC5" Comment="ВОД ДУ" />
+        <Field Name="VOD_fault" Type="BOOL" UUID="3E0F5CAF4F20C74E122CB4ACEE272F5C" Comment="Ошибка ВОД" />
+        <Field Name="GNSD_False" Type="BOOL" UUID="77E8141B4DC88D29412E0C88D53ABE3C" Comment="Неисправен ГНС Д" />
+        <Field Name="GNSN_False" Type="BOOL" UUID="0F881FFA43F05BF9C8B25799E27AFBA4" Comment="Неисправен ГНС Н" />
+        <Field Name="GNU_False" Type="BOOL" UUID="273C69454040052D2019CD8E48990D81" Comment="Неисправен ГНУ" />
+        <Field Name="N_KND_brk" Type="BOOL" UUID="AECB312248451C66570B888CE6120F92" Comment="Отказ канала изм. N КНД" />
+        <Field Name="N_KVD_brk" Type="BOOL" UUID="79F8BF41487209ADDAC15185D325D22C" Comment="Отказ канала изм. N КВД" />
+        <Field Name="TRK_ON" Type="BOOL" UUID="5158B9344CD1806D332C13B1CB2EA86B" Comment="Команда на открытие ТРК" />
+        <Field Name="Chips" Type="BOOL" UUID="8BA7105E4169B894DD6CF384973B1DA5" Comment="Стружка в масле" />
+        <Field Name="TR_NOT_READY" Type="BOOL" UUID="59A16A9247DF34C82103BA81C92C5992" />
+        <Field Name="LimitCondition" Type="BOOL" UUID="961A1790440424EC18703CA6F6A0B516" />
+        <Field Name="clamp" Type="BOOL" UUID="4595076B415C0FAD421E288BBC367A53" />
+        <Field Name="Ras_TRK" Type="BOOL" UUID="2710FD42434C9A53F8FCAE9B4CDEDFD6" />
+        <Field Name="Lm_MBD_Av" Type="BOOL" UUID="9C1FD74C4B4305AF2AF980A3DD423A04" />
+        <Field Name="RO_TRK_RU" Type="BOOL" UUID="F339A51D489F034159CFF790303C3BF6" />
+        <Field Name="PRU_deblock" Type="BOOL" UUID="701629F141998DDCE6F1B8B4C9CE05E2" />
+        <Field Name="PRU_kvit" Type="BOOL" UUID="89688EF0492CCC20322454AD6B22F907" />
+        <Field Name="N_KND_PPU" Type="BOOL" UUID="0813E5884D0B37815ADE6C9A4B564B25" />
+        <Field Name="N_KVD_PPU" Type="BOOL" UUID="9EBD51A8459C9F4129CF80B3ED6343A2" />
+        <Field Name="N_TN_PPU" Type="BOOL" UUID="6A63080E4A84B3A60E1A069849F812DC" />
+        <Field Name="Kr6_sh" Type="BOOL" UUID="99A8F692417ED0844A59198276D0EBFC" Comment="Самопроизвольное закрытие крана 6" />
+        <Field Name="SurgeN" Type="BOOL" UUID="EA427D7C4B6DB11B551B07BB6D6C2BCF" Comment="Помпаж нагнетателя (АПР)" />
+        <Field Name="KU_KK1_nON_1" Type="BOOL" UUID="1799F79D409E872FD005019882780836" Comment="Нет включения КУ в КК1 (1 скор.)" />
+        <Field Name="KU_KK2_nON_1" Type="BOOL" UUID="CD3F491E417D6282DF7E6FA6445B2C20" Comment="Нет включения КУ в КК2 (1 скор.)" />
+        <Field Name="KU_KK1_nON_2" Type="BOOL" UUID="936F5DEA46C377D4462A69BA9BD5A289" Comment="Нет включения КУ в КК1 (2 скор.)" />
+        <Field Name="KU_KK2_nON_2" Type="BOOL" UUID="383B03784C83A42BC81FB997D408DF97" Comment="Нет включения КУ в КК2 (2 скор.)" />
+        <Field Name="Time_start_600" Type="BOOL" UUID="CED72B184BE5B34BFE352BB639DC18C4" Comment="Время запуска &gt; 600 сек." />
+        <Field Name="Time_start_300" Type="BOOL" UUID="72160AA6446AAF86BA27EBA4D65B0D6F" Comment="Время запуска &gt; 300 сек." />
+        <Field Name="No_rozjig" Type="BOOL" UUID="FF13B35F468FC71E186BE8B08F980A70" Comment="Нет розжига" />
+        <Field Name="No_fakel" Type="BOOL" UUID="E762B7BD4116B66DAD1C1D9781E836FB" Comment="Погасание факела" />
+        <Field Name="N_TND_brk" Type="BOOL" UUID="AC8F5E854EB9ABDCB41960B8BA3C7477" Comment="Отказ каналов изм. Т газа за ТНД" />
+        <Field Name="VOD_nON" Type="BOOL" UUID="4BA464F7410164F4F4F79D86F1F6EA69" Comment="Не включен ВОД1 и ВОД2  (ОР)" />
+        <Field Name="VOD1_ON" Type="BOOL" UUID="1DD9C1924778B63516681EB96E546953" Comment="промежуточная перменная ВОД1" />
+        <Field Name="VOD1_OF" Type="BOOL" UUID="F72FDBEB4290E862234605BDA0CA98CA" Comment="промежуточная перменная ВОД1" />
+        <Field Name="VOD1_TR" Type="BOOL" UUID="D0358A584B24D48D64ABB28572C9ADBD" Comment="Триггер ВОД1" />
+        <Field Name="VOD2_ON" Type="BOOL" UUID="1A8696804926521008B7C498956F8337" Comment="промежуточная перменная ВОД2" />
+        <Field Name="VOD2_OF" Type="BOOL" UUID="2D2676004230330A7ACEF4913344B864" Comment="промежуточная перменная ВОД2" />
+        <Field Name="VOD2_TR" Type="BOOL" UUID="A5399C104C6A41C570F7789892C7EBA2" Comment="Триггер ВОД2" />
+        <Field Name="Gas_N" Type="BOOL" UUID="866913B54220032A76FF3EACEB82DFE3" Comment="Загазованость галереи Н больше 1%" />
+        <Field Name="KK1_st_1_fault" Type="BOOL" UUID="D1DC3A334B7EB3BC57335C9FCD97B282" Comment="Нет отключения 1 стартера (КК1)" />
+        <Field Name="KK2_st_2_fault" Type="BOOL" UUID="350329B74F715EDE618ECFBFBA616426" Comment="Нет отключения 2 стартера (КК2)" />
+        <Field Name="KK1_ku_failt" Type="BOOL" UUID="3582045742425F79C4C271838CD0E65B" Comment="Нет отключения контактора ускорения в КК1" />
+        <Field Name="KK2_ku_failt" Type="BOOL" UUID="73783B4640358A644F28D48D06456F0B" Comment="Нет отключения контактора ускорения в КК2" />
+        <Field Name="Chips_KP_fault" Type="BOOL" UUID="EB3625D34D8AB73BE85848BBDF97E661" Comment="Неиспраность СС на сливе из КП" />
+        <Field Name="Chips_Per_fault" Type="BOOL" UUID="42663C7740C095E114C69EA8D8069E25" Comment="Неиспраность СС на сливе из перех." />
+        <Field Name="Chips_KVD_fault" Type="BOOL" UUID="05FA463F49F9CCCBB6372A97004AF0DA" Comment="Неиспраность СС на сливе из ЗК КВД" />
+        <Field Name="Chips_TN_fault" Type="BOOL" UUID="76C841A8419D7B552A69048526DC47D7" Comment="Неиспраность СС на сливе ОВ ТН Д" />
+        <Field Name="Chips_TND_fault" Type="BOOL" UUID="1F12EF5440E1DA22703615B745525A12" Comment="Неиспраность СС на сливе ОВ ТН Д" />
+        <Field Name="dPg_in_Kr1" Type="BOOL" UUID="46D7FD774CA036112E8577B5793B6EC7" Comment="dР газа на кране 1" />
+        <Field Name="Alarm_msg" Type="BOOL" UUID="18117DC74101C11E092DFBA08C9828A0" Comment="Есть аварийные сообщения" />
+        <Field Name="U_SAU_fault" Type="BOOL" UUID="2392A8AF437CED9222B6E8B9614C3923" Comment="Неисправность питания САУ" />
+        <Field Name="AI_fault" Type="BOOL" UUID="C58357644BF25ECFDE7D59A185980573" Comment="Неисправность аналоговых каналов" />
+        <Field Name="IM_fault" Type="BOOL" UUID="E82BFE024DAC10DAB886189AA4B748D7" Comment="Неисправность цепей ИМ" />
+        <Field Name="Def_fault" Type="BOOL" UUID="81A733394B4042DB20646792B97B95C4" Comment="Неисправность защит" />
+        <Field Name="DI_fault" Type="BOOL" UUID="2C74EB834410C51B53DFC68CD7EF0FA1" Comment="Неисправность дискретных входов" />
+        <Field Name="Block_380" Type="BOOL" UUID="ACE63D5E4C621F562C6306BDBAFC8010" Comment="Взвод защиты по питанию стартеров" />
+        <Field Name="Altivar_Sk1" Type="BOOL" UUID="D7870879438C4DEC7C52D9A7A883F28F" Comment="Взвод защиты по 1 ск стартера" />
+        <Field Name="Altivar_Sk2" Type="BOOL" UUID="3807CB6A4C9A7D3AF7ACA28EC8FC5EFE" Comment="Взвод защиты по 2 ск сартера" />
+        <Field Name="Start_D_192" Type="BOOL" UUID="26E0497445BC6FCA5117DCB62F2D0EB3" Comment="Взвод защиты по времени пуска 192 с" />
+        <Field Name="Start_D_204" Type="BOOL" UUID="D024E61542D4363B98EA64A3DB08C7C4" Comment="Взвод защиты по времени пуска 204 с" />
+        <Field Name="Tg_Work" Type="BOOL" UUID="84CC18B84A0633D19DF91F9DFB521DD5" Comment="Взвод защиты по температуре газа за ТНД на работе" />
+        <Field Name="Tg_Start" Type="BOOL" UUID="BC1D45C940A9CFE64FB2108366E4F907" Comment="Взвод защиты по температуре газа за ТНД на пуске" />
+        <Field Name="Nnd_3600v" Type="BOOL" UUID="BA39E808461D29D252DA6185620C296A" Comment="Взвод защиты по оборотам Nнд" />
+        <Field Name="Nnd_1600v" Type="BOOL" UUID="5257656947CAF43CAFE45C8A0EA4F8CE" Comment="Взвод защиты по оборотам Nнд" />
+        <Field Name="Pv_outOK_086" Type="BOOL" UUID="D2CE4FA848F5C3C152A37F85216C6F44" Comment="Взвод защиты по давлнию за ОК" />
+        <Field Name="Pv_outOK_157" Type="BOOL" UUID="AEA7C3FB44B03D657067EC986C3D9A87" Comment="Взвод защиты по  давлнию за ОК" />
+        <Field Name="Pv_outOK_096" Type="BOOL" UUID="14C4E670464ED888F672FA8B81248B5E" Comment="Взвод защиты по  давлнию за ОК" />
+        <Field Name="Pv_outOK_147" Type="BOOL" UUID="67CCF8304819F725FCB34CA9D8683690" Comment="Взвод защиты по  давлнию за ОК" />
+        <Field Name="Nnd_900n" Type="BOOL" UUID="A8FAA9D644376AAFB742F18CCFD3F5A6" Comment="Взвод защиты по  оборотам Nнд" />
+        <Field Name="Nnd_1500n" Type="BOOL" UUID="202894A74417781656EA30B2C5D5F6A2" Comment="Взвод защиты по оборотам Nнд" />
+        <Field Name="MS_8p" Type="BOOL" UUID="C3C68C11456148D9A89764918813542C" Comment="Взвод защиты по типу масла" />
+        <Field Name="Filling_oil_Kr1" Type="BOOL" UUID="7E09708343D64165B3DD1E81C092D6B3" Comment="Триггер смазки Кр1" />
+        <Field Name="Filling_oil_Kr2" Type="BOOL" UUID="DC0DE79B48DBDEA3E5F1218319886565" Comment="Триггер смазки Кр2" />
+        <Field Name="SK_TR" Type="BOOL" UUID="86562A3646C98D029A9FB09318F38113" Comment="Триггер СК" />
+        <Field Name="KNOu_TR" Type="BOOL" UUID="61ACFB27483A1464413D3C900CD0C172" Comment="Триггер КНО удержание" />
+        <Field Name="KAO_TR" Type="BOOL" UUID="E9E1725A44D9DD1F69CE19A54EBE2375" Comment="Триггер КАО" />
+        <Field Name="KPR1_ON" Type="BOOL" UUID="B89E3EDC4DDAF8E1B570E8AAC345E3D0" Comment="КПР1 включить" />
+        <Field Name="KPR1_OF" Type="BOOL" UUID="A66EB7C544F6C91E529B73919EAF6CA2" Comment="КПР1 отключить" />
+        <Field Name="KPR2_OF" Type="BOOL" UUID="C40E2ED5428F0B2B13A1328D2DF0E2A9" Comment="КПР2 отключить" />
+        <Field Name="KPR1_TR" Type="BOOL" UUID="B59A5DCB45C70F3E75941089D62FFF64" Comment="Триггер КПР1" />
+        <Field Name="KPR2_TR" Type="BOOL" UUID="0604A0D84F1A81209469FFBCA588DB64" Comment="Триггер КПР2" />
+        <Field Name="BP_SPV_OF" Type="BOOL" UUID="EB922FEC49141764A52FD783B1ECC21A" Comment="Отключение плазменных восп." />
+        <Field Name="GTU_work" Type="BOOL" UUID="9BB031814F0B2586A7EDB4B16EFC5541" Comment="ГТУ работает" />
+        <Field Name="GTU_ON" Type="BOOL" UUID="345A68454E31382CEE068DAA35C50952" Comment="ГТУ включена" />
+        <Field Name="GTU_OF" Type="BOOL" UUID="70EC841F489BE964BC4A98894F0DC76A" Comment="ГТУ отключена" />
+        <Field Name="Deblock_ON" Type="BOOL" UUID="937CC3444C1CCBF8F503809AA90DD7CB" Comment="Деблокировка" />
+        <Field Name="GNS_fault" Type="BOOL" UUID="B29D251E46700C0345593AAACCDC6A9F" Comment="Неиспр. контура ГНС" />
+        <Field Name="Modes" Type="BOOL" UUID="4A12956B47707757DDF660B8903C0854" Comment="Режимы" />
+        <Field Name="Modes_TR" Type="BOOL" UUID="F85A0646468029013843ECB012A63D10" Comment="Триггер режимы" />
+        <Field Name="MNU_OF" Type="BOOL" UUID="AD41E321446160F3BB60E4A5D6E37B1B" Comment="МНУ отключ." />
+        <Field Name="PMNS_ON" Type="BOOL" UUID="AA6F1D8E46E8D649AB62E4B97CD83069" Comment="ПМНС вкл." />
+        <Field Name="PMNS_OF" Type="BOOL" UUID="D9DCA6054977136CB2BFA39A7E8A902C" Comment="ПМНС откл." />
+        <Field Name="PMNS_TR" Type="BOOL" UUID="E622287B42250C85C5E814A03A494CB9" Comment="триггер ПМНС " />
+        <Field Name="MNU1_ON" Type="BOOL" UUID="FFDFF561491487EAE6A1A4BDDF4F5B6E" Comment="МНУ вкл. секция 1" />
+        <Field Name="MNU2_ON" Type="BOOL" UUID="10EC2A1B4D7F6494FC6CF0940B8B4536" Comment="МНУ вкл. секция 2" />
+        <Field Name="Pm_D" Type="BOOL" UUID="40B6119042AD0159158C6D98E64A2687" Comment="Промежуточная переменная для Pm" />
+        <Field Name="MNND_AND" Type="BOOL" UUID="E46128824CA2FB8006EE57845DB0C2AE" Comment="Промежуточная переменная МННД" />
+        <Field Name="MNND_OR" Type="BOOL" UUID="339AEBE84C566B1944D3CB8240DF4C93" Comment="Промежуточная переменная МННД" />
+        <Field Name="MNND_ON" Type="BOOL" UUID="531A1370410FBF755C85C2A96916D818" Comment="Промежуточная переменная МННД для тр." />
+        <Field Name="MNND_OF" Type="BOOL" UUID="1D77E10643DE22A0FE49F594842B8CD6" Comment="Промежуточная переменная МННД для тр." />
+        <Field Name="MNND_TR" Type="BOOL" UUID="995DEC244CA4B2E2901AB6A9604C2172" Comment="Триггер МННД" />
+        <Field Name="MNU_ON" Type="BOOL" UUID="CF03914F455622D3029FFE92FA549491" Comment="Промежуточная переменная МНУ" />
+        <Field Name="MNU1_OF" Type="BOOL" UUID="7E8CC351402EDB43026FE7A5761E58FD" Comment="Промежуточная перменнная для триггера МНУ" />
+        <Field Name="MNU1_TR" Type="BOOL" UUID="E5D0C1F8407CED49BAFABA92510371E5" Comment="Триггер для МНУ" />
+        <Field Name="MNU_1_main" Type="BOOL" UUID="71CE163D4015A71FFF6241B24811F58E" />
+        <Field Name="MNU_2_main" Type="BOOL" UUID="DBA9E7EF495317DBD10D93BD77A93A9C" />
+        <Field Name="MNU_fault" Type="BOOL" UUID="FFEBC44B4D0A7210C29435A28037E903" />
+        <Field Name="Pm_D_ON" Type="BOOL" UUID="45513CF64AEC27A95124858CF90FAF94" Comment="Взведена защита давления масла смазки Д" />
+        <Field Name="MNOD_ON_1" Type="BOOL" UUID="E45AE62B4600D4C1FC5D9AA2A2AA6C84" Comment="Промежуточная пременная МНОД" />
+        <Field Name="MNOD_ON" Type="BOOL" UUID="18FAA59F4E61CA8AAC0A3E947F8AAC48" Comment="Промежуточная пременная МНОД" />
+        <Field Name="MNOD_OF" Type="BOOL" UUID="9CC93981462D5BA02464E3AB8588FFAA" Comment="Промежуточная пременная МНОД" />
+        <Field Name="MNOD_TR" Type="BOOL" UUID="E3E4F72E40ABE97D8A8AF7BB6C743D28" Comment="Триггер МНОД" />
+        <Field Name="MNOB_DU_ON" Type="BOOL" UUID="BCF7482B4E3886818CA334B2923A398E" Comment="Триггер МНОБ ДУ" />
+        <Field Name="MNOB_OF" Type="BOOL" UUID="566C173C4D04A35F89867FB736117E0A" Comment="Промежуточная перменнная для тригера МНОБ вкл." />
+        <Field Name="MNOB_ON" Type="BOOL" UUID="108A5764496452A712AA8E8D1B3E9DF8" Comment="Промежуточная перменнная для тригера МНОБ вкл." />
+        <Field Name="V_000" Type="BOOL" UUID="E1B7D5944823A1A4D5632FA3B6A8070B" />
+        <Field Name="is_flame" Type="BOOL" UUID="8BD196DC411219B5F9BF81A950165CA7" Comment="Есть розжиг камеры сгорания" />
+        <Field Name="Clamp" Type="BOOL" UUID="5121FB4A4E4C3125FBA18DB3A6CD56CF" Comment="Расход" />
+        <Field Name="Kr1_sh_vz" Type="BOOL" UUID="513C8C0E43865B75D1F0D98BEFBCC850" Comment="Защита по самопроизвольному закрытию кр1 " />
+        <Field Name="Kr6_sh_vz" Type="BOOL" UUID="17FBC4254461D835542B0398D3039F6F" Comment="Защита по самопроизвольному закрытию кр6" />
+        <Field Name="Ntn_1600v" Type="BOOL" UUID="C8162E8048E6B81C32D97E8B1D604FDE" />
+        <Field Name="MOB" Type="BOOL" UUID="A73EE6BB4697549AC26F0A92C86D7B31" />
+        <Field Name="SK_ON_PS" Type="BOOL" UUID="C2E358434710E04C3618099F45B3A330" />
+        <Field Name="SK_OF_PS" Type="BOOL" UUID="34D457354967CC8521DD94B217DE9F35" />
+        <Field Name="A_noFire1" Type="BOOL" UUID="8753B9E04CA56D15D15139AA9C560D2E" Comment="Нет розжига" />
+        <Field Name="A_noFire2" Type="BOOL" UUID="78AA77374A1128A3EB818CBB3E745F4B" Comment="Погасание факела" />
+        <Field Name="A_NndBrk" Type="BOOL" UUID="61D8D7CD4411F10F1EB01F9653AC44DE" Comment="Отказ каналов изм. N КНД" />
+        <Field Name="A_NvdBrk" Type="BOOL" UUID="957715EB485D07529FD5FA957B9D6B50" Comment="Отказ каналов изм. N КВД" />
+        <Field Name="A_NstBrk" Type="BOOL" UUID="FDA38A294B33DE5254642E8FE37EECBA" Comment="Отказ каналов изм. N ТН" />
+        <Field Name="A_Tg_outTNDbrk" Type="BOOL" UUID="7A2A1CDA4802474B6CE7CC936584F233" Comment="Отказ каналов изм. Т газа за ТНД" />
+        <Field Name="A_NndLow" Type="BOOL" UUID="ACC06DAF44B1C90E57E84DA78FC102F9" Comment="Низкая N КНД на режиме" />
+        <Field Name="A_NvdLow" Type="BOOL" UUID="23F492614D56D78A5ABC9EAEF5003830" Comment="Низкая N КВД на режиме" />
+        <Field Name="A_NstLow" Type="BOOL" UUID="C5696E3E4329A5C3C231CA9B0BCB5587" Comment="Низкая N ТН на режиме" />
+        <Field Name="A_NndHigh" Type="BOOL" UUID="85B258DF41093C0433DFFEA69B31B957" Comment="Высокая N КНД" />
+        <Field Name="A_NvdHigh" Type="BOOL" UUID="4A400639452171D312D29CA98C238DE0" Comment="Высокая N КВД" />
+        <Field Name="A_Pv_outKVDHigh" Type="BOOL" UUID="E3A6BE4A481376A49CAF8989F9998EF2" Comment="Высокое давление воздуза за КВД" />
+        <Field Name="A_Tg_outTNDhigh" Type="BOOL" UUID="CF1C7D1F4BDBFA49534926B64BE1CC31" Comment="Высокая температура газа за ТНД" />
+        <Field Name="A_Tg_outTNDstartHigh" Type="BOOL" UUID="8CAA70074A3E37CEE1C773BC267D77E7" Comment="Высокая температура газа за ТНД на запуске" />
+        <Field Name="A_Dgdistort" Type="BOOL" UUID="FD1689724E31EE39551584AD1A07F380" Comment="Рассогласование по ДГ" />
+        <Field Name="A_NstHigh" Type="BOOL" UUID="FAA2E44F4186F98DF582108914C6E3E5" Comment="Высокая N ТН" />
+        <Field Name="P_Dgdistort" Type="BOOL" UUID="73163EB446BC2B6F66E77988075FB76E" Comment="Рассогласование по ДГ" />
+        <Field Name="LIM_Tg_outTNDhigh" Type="BOOL" UUID="95A697124BD68019EDF336878B969B31" Comment="Высокая Т газа за ТНД" />
+        <Field Name="Rp_loLimited" Type="BOOL" UUID="3EE7339048507FF7E821539789C47EED" Comment="Двигатель на нижнем ограничении" />
+        <Field Name="Rp_hiLimited" Type="BOOL" UUID="D9EECE774F5DBD86DCD5D7B9AD104648" Comment="Двигатель на верхнем ограничениии" />
+        <Field Name="Rp_loLimitNnd" Type="BOOL" UUID="2E03B2F44E334120BE31EE8F07F55A35" Comment="Нижнеее ограничение по N КНД" />
+        <Field Name="Rp_loLimitNvd" Type="BOOL" UUID="72CBF11D424AA883DCFCD1A737DD9221" Comment="Нижнеее ограничение по N КВД" />
+        <Field Name="Rp_loLimitNst" Type="BOOL" UUID="7CE34184490DC45BA19E37A2CEB2DD50" Comment="Нижнеее ограничение по N СТ" />
+        <Field Name="Rp_hiLimitNnd" Type="BOOL" UUID="82FFD97340218E7FDECE0C85EECC901F" Comment="Верхнеееограничение по N КНД" />
+        <Field Name="Rp_hiLimitNvd" Type="BOOL" UUID="34195D344D67A6E644DE83A03997ACB0" Comment="Верхнеее ограничение по N КВД" />
+        <Field Name="Rp_hiLimitNst" Type="BOOL" UUID="BA8B4F854DAF9766736575876F2DEE0A" Comment="Верхнеее ограничение по N СТ" />
+        <Field Name="Rp_hiLimitT" Type="BOOL" UUID="BAA15BCE49BDCD7AED94189B2BDE2C9A" Comment="Верхнее ограничение по Т газов за ТВД" />
+        <Field Name="Rp_hiLimitPk" Type="BOOL" UUID="51E61C834D8A1D0A518625902740CECC" Comment="Верхнее ограничение по давлению за ОК" />
+        <Field Name="Rp_hiLimitGt" Type="BOOL" UUID="531080584972423593CD05B855C9FCB6" Comment="Верхнеее ограничение по расходу топлива" />
+        <Field Name="Rp_loLimitGt" Type="BOOL" UUID="1E2E561B4BC4A608575404976E2FB0B3" Comment="Нижнеее ограничение по расходу топлива" />
+    </Fields>
+</Type>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AI_OnlyToHMI" Kind="Struct" Comment="цвет показаний канала. Если все FALSE - отображать зелёным цветом" UUID="FE06CA77455905083F02AA9B952DCC88">
+    <Fields>
+        <Field Name="as" Type="BOOL" UUID="A6DC1D85424C687E688780B297D8E257" Comment="отображать красным. Выставляется при выходе канала за аварийную уставку." />
+        <Field Name="os" Type="BOOL" UUID="34D4A67E46AC6A056767E3AEA6CB288C" Comment="отображать фиолетовым. Выставляется при выходе канала за ограничительную уставку." />
+        <Field Name="ps" Type="BOOL" UUID="76B4BE024A2B8A07798118AB07F1D7B3" Comment="отображать жёлтым. Выставляется при выходе канала за предупредительную уставку." />
+    </Fields>
+</Type>

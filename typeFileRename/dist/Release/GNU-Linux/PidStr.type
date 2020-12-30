@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="PidStr" Kind="Struct" UUID="766ADE924C0F2E5402125FA423971CE8">
+    <Fields>
+        <Field Name="conf" Type="7479204D4297EF848DE57B9A37E0C3B6" UUID="CA399D214899B33BCB9DD5B98EBFD65A" Comment="конфигурация контура" />
+        <Field Name="oper" Type="01232E324A9A5DB89A9E94933342D7C0" UUID="2104071E48FBA9BAE4440CB4F955274A" Comment="оперативные расчеты" />
+        <Field Name="SP" Type="REAL" UUID="70C047C74F927BE1AC975C872F293FD1" Comment="уставка" />
+        <Field Name="PV" Type="REAL" UUID="2D4476194E529675F2F2A69EA405CA80" Comment="вход контура" />
+        <Field Name="manual_target" Type="REAL" UUID="B25CC00C4DAE61B1D1077FBFEBB47D0D" Comment="задание на выход в ручном режиме" />
+        <Field Name="CV" Type="REAL" UUID="71F40D084A09B7260F257FB3D8F455DC" Comment="выход контура" />
+        <Field Name="imit" Type="9219253545A770B07F8240BBCB7E4E33" UUID="D0D3E2E84BB4BEB82EB79B905F78BEF1" Comment="имитация выхода на вход через усилитель и апериодическое звено" />
+        <Field Name="var_7" Type="BOOL" UUID="D6673C8B41770F8DB93174A97C9B6F44" Comment="резерв" />
+        <Field Name="var_8" Type="BOOL" UUID="1C17028B4CBFB274B6D9A09E2837E906" Comment="резерв" />
+        <Field Name="var_9" Type="BOOL" UUID="89075DF1445D4EF2184645ABC9025BAB" Comment="резерв" />
+    </Fields>
+</Type>

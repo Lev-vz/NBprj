@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="AI_" Kind="Struct" UUID="4C99358D49D97BBFF079AEAAFB2FDDD3">
+    <Fields>
+        <Field Name="fault_common" Type="BOOL" UUID="320393664796D414EEE541BB9E499327" Comment="общая неисправность канала" />
+        <Field Name="simulation" Type="BOOL" UUID="1D2891814EB623B6A2177C8E52D96124" Comment="режим симуляции включен" />
+        <Field Name="repair" Type="BOOL" UUID="19B2F17A4BB568846D6850B9C163F350" Comment="в ремонте" />
+        <Field Name="repair_time_less_10_percent" Type="BOOL" UUID="35BBB4274C8D26DC25AEB69E278DF862" Comment="время ремонта истекает" />
+        <Field Name="up_scale" Type="BOOL" UUID="7C74AD4E40598C67B4BDB2BA071C1569" Comment="больше чем max_fault_sensor_Eu" />
+        <Field Name="down_scale" Type="BOOL" UUID="241E7A0B486837D643F6348AE7F39734" Comment="меньше чем min_fault_sensor_Eu" />
+        <Field Name="ROC" Type="BOOL" UUID="3A8878DD4B8809AEFA6E22B04B11D0B8" Comment="ROC превышен" />
+        <Field Name="init_err" Type="BOOL" UUID="6733064D4826D6D9EC2D9FAE4A9A9E9A" Comment="ошибка инициализации" />
+        <Field Name="res" Type="BOOL" UUID="3722EB2F4972A3DD7B25EAAF4CE921B0" Comment="резерв" />
+        <Field Name="simulation_on" Type="BOOL" UUID="77AE2CE043A5A720D4EADA9920F6C01C" Comment="включить режим симуляции из HMI" />
+        <Field Name="repair_on" Type="BOOL" UUID="D038B8D34993B8F9AF40BD824FFAA3D7" Comment="включить режим ремонта из HMI" />
+        <Field Name="repair_extension" Type="BOOL" UUID="9308A2364CAE685CBEF3E5B7A034EE69" Comment="продлить время ремонта из HMI" />
+        <Field Name="ps" Type="BOOL" UUID="8D1BF9A744DED3DCE98FBCA44E039DAA" Comment="для посветки желтым" />
+        <Field Name="orr" Type="BOOL" UUID="ABB24F6443C1E1D85D970488B4E77D27" Comment="ограничение режима" />
+        <Field Name="as" Type="BOOL" UUID="929D2ED54388FF5D070139B202B37AB7" Comment="для посветки красным" />
+        <Field Name="ROC_enabled" Type="BOOL" UUID="F8749F754994935836C41A87CE57DE35" Comment="включение функции ROC" />
+        <Field Name="res2" Type="BOOL" UUID="205BA42B43E2213FC6B4EA87700659C7" Comment="резерв" />
+        <Field Name="res3" Type="BOOL" UUID="3FC4AB9446CCEFEFCE7144A3AC5C977D" Comment="резерв" />
+        <Field Name="res4" Type="BOOL" UUID="7DC565C6438B44421E8F65B96ADC1441" Comment="резерв" />
+        <Field Name="res5" Type="BOOL" UUID="853846974520C1BE4165B6A0B38344FF" Comment="резерв" />
+        <Field Name="res6" Type="BOOL" UUID="7D2AE31D4C0C92D9095DD7B58E1B61A9" Comment="резерв" />
+    </Fields>
+</Type>

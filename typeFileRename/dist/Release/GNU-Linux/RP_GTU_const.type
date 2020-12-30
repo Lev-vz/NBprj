@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="RP_GTU_const" Kind="Struct" UUID="3E1F29354EDB58BF4EAF3E9C6D26DC92">
+    <Fields>
+        <Field Name="Ak" Type="REAL" UUID="94A9B2F841691CEAF0669C856BEDEDAE" Comment="Коэффициент конфузора" />
+        <Field Name="Mxj" Type="REAL" UUID="1BF4DF1A438408B9431C7E8BE97B6416" ArraySize="15" Comment="Молярная доля компонента j-го компонента" />
+        <Field Name="Mj" Type="REAL" UUID="52799EC649C59AB0808CC3BB78415FE9" ArraySize="15" Comment="Молярная масса компонента j-го компонента" />
+        <Field Name="k" Type="REAL" UUID="3C8881B546DD9765E09398955354152D" ArraySize="15" Comment="Коэффициент пересчета" />
+        <Field Name="xj" Type="REAL" UUID="692DDFD741E7E3268FA1BA979BA480D5" ArraySize="15" Comment="Объемная концентрация j-го компонента" />
+        <Field Name="Qnj" Type="REAL" UUID="942CCB9B4AB64F2128F3819C3EBADE97" ArraySize="15" Comment="Объемная низшая теплота сгорания j-го компонента" />
+        <Field Name="M" Type="REAL" UUID="7DE7B31F47200D91914BB784AB16CB4B" Comment="Молярная масса газа по формуле (6), кг/моль" />
+        <Field Name="Qn" Type="REAL" UUID="8A2A263F4A0BA2B307090DA8E4B04DC3" Comment="Объемная низшая теплота сгорания  по формуле (21), кДж/м3" />
+    </Fields>
+</Type>

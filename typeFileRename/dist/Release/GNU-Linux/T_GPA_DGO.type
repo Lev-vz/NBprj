@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_GPA_DGO" Kind="Struct" UUID="0464598AD74C452D8F3926FE38E1873E">
+    <Fields>
+        <Field Name="Kr1_ON" Type="BOOL" UUID="843DE9154D355EC8663015957E500680" Comment="Кран № 1 открыть" />
+        <Field Name="Kr1_OF" Type="BOOL" UUID="76D78865427AC28D74FC73A063D6EF3C" Comment="Кран № 1 закрыть" />
+        <Field Name="Kr1_oil" Type="BOOL" UUID="6D2DE2734AE62E71CC2DC4BC23B71E25" Comment="Кран № 1 смазка" />
+        <Field Name="Kr2_ON" Type="BOOL" UUID="A136A258441C050F5B322B967CDB084C" Comment="Кран № 2 открыть" />
+        <Field Name="Kr2_OF" Type="BOOL" UUID="855120504D9DC9699854E3B561556115" Comment="Кран № 2 закрыть" />
+        <Field Name="Kr2_oil" Type="BOOL" UUID="81D386D848753325AD48C998197C4B97" Comment="Кран № 2 смазка" />
+        <Field Name="Kr4_ON" Type="BOOL" UUID="4D54C976412556106AB4C6BF115F7E31" Comment="Кран № 4 открыть" />
+        <Field Name="Kr4_OF" Type="BOOL" UUID="06A80A3B4D6E4108F09E7BA86CA8A25B" Comment="Кран № 4 закрыть" />
+        <Field Name="Kr5_ON" Type="BOOL" UUID="586D1ED8400296DAABDFFCA3559EA79C" Comment="Кран № 5 открыть" />
+        <Field Name="Kr5_OF" Type="BOOL" UUID="C2BFC8C84506D34DEC06D5A8ADF70A33" Comment="Кран № 5 закрыть" />
+        <Field Name="Kr6_ON" Type="BOOL" UUID="3592A318410DB729A97337B47113AD79" Comment="Кран № 6 открыть" />
+        <Field Name="Kr6_OF" Type="BOOL" UUID="F3F62E1747AC3878D9BBFB92F38E4723" Comment="Кран № 6 закрыть" />
+        <Field Name="Kr9_ON" Type="BOOL" UUID="4CF138CC493C71E4B83BEF889B2E8B70" Comment="Кран № 9 открыть " />
+        <Field Name="Kr9_OF" Type="BOOL" UUID="6C0F618C4734AD504E394D98F69943A6" Comment="Кран № 9 закрыть" />
+        <Field Name="Kr12_ON" Type="BOOL" UUID="1B0D9A7048422D7EA390CF837D8F96C7" Comment="Кран № 12 открыть" />
+        <Field Name="Kr12_OF" Type="BOOL" UUID="8BCA715B429B3875A0FEE5AFEA198BCB" Comment="Кран № 12 закрыть" />
+        <Field Name="PMNS_ON" Type="BOOL" UUID="0623B1FF48C1653359836EB888286E8A" Comment="ПМНС Н включить" />
+        <Field Name="MNU_1_ON" Type="BOOL" UUID="6C07A9234AB94D934DE542BA11D27133" Comment="МНУ (1 секция) включить" />
+        <Field Name="MNU_2_ON" Type="BOOL" UUID="5C7D36804B7DD5AFBB6CC9974E3C7BF8" Comment="МНУ (2 секция) включить" />
+        <Field Name="MNND_ON" Type="BOOL" UUID="779C13A04FCF64393D70D3A8EA63F52C" Comment="МННД включить" />
+        <Field Name="MNOD_ON" Type="BOOL" UUID="D5FB3DF942D46E1E772BA18368C7385A" Comment="МНОД включить" />
+        <Field Name="MNOB_ON" Type="BOOL" UUID="935BCA244252E02C7D872FA1727C1E38" Comment="МНОБ Д включить" />
+        <Field Name="VOD_1_ON" Type="BOOL" UUID="95F0C0684529D13842197BBBE9F01A23" Comment="ВОД 1 включить" />
+        <Field Name="VOD_2_ON" Type="BOOL" UUID="579BF131469ED3E27D364780C5BDD379" Comment="ВОД 2 включить" />
+        <Field Name="VMON_1_ON" Type="BOOL" UUID="EDF207064965BA7850161695D68BBC1A" Comment="ВМОН1 включить" />
+        <Field Name="VMOD_2_ON" Type="BOOL" UUID="BA31CA1B4AA2322016ADD3B71ED1B028" Comment="ВМОД2 включить" />
+        <Field Name="VMOD_3_ON" Type="BOOL" UUID="1C020B64470433F5FCA2F6A7731C1FAA" Comment="ВМОД3 включить" />
+        <Field Name="VMON_4_ON" Type="BOOL" UUID="0CA2A8154DB93874403002908BC6EE47" Comment="ВМОН4 включить" />
+        <Field Name="VMOD_5_ON" Type="BOOL" UUID="350BE21F44A792A1EFDD7E91E54FA51E" Comment="ВМОД5 включить" />
+        <Field Name="VMOD_6_ON" Type="BOOL" UUID="1A63CFAA4D536DE6C05E91925008F880" Comment="ВМОД6 включить" />
+        <Field Name="TEN_MBD_ON" Type="BOOL" UUID="D4EEC5114AA27A8C1B51F4B8BF4F380D" Comment="ТЭН МБД включить" />
+        <Field Name="TEN1_MBN_ON" Type="BOOL" UUID="0637F26844F059FDA8A11184F5D9D630" Comment="ТЭН1 в МБН включить" />
+        <Field Name="TEN2_MBN_ON" Type="BOOL" UUID="AD5DA628458AA0E2C92D7CB7019553CE" Comment="ТЭН2 в МБН включить" />
+        <Field Name="TEN3_MBN_ON" Type="BOOL" UUID="543664EE4A30240A233CCA8B66CA505A" Comment="ТЭН3 в МБН включить" />
+        <Field Name="TEN4_MBN_ON" Type="BOOL" UUID="A81DF5964E87FD79EAB0A3B38BC975F1" Comment="ТЭН4 в МБН включить" />
+        <Field Name="TEN1_N_ON" Type="BOOL" UUID="2B07DE4E4260CE061BF23CA7BC5E814D" Comment="ТЭН1 трубопроводов Н включить" />
+        <Field Name="TEN2_N_ON" Type="BOOL" UUID="CBB398704E3667333B366FA2097270B8" Comment="ТЭН2 трубопроводов Н включить" />
+        <Field Name="TEN3_N_ON" Type="BOOL" UUID="6BE1FDEA4CC79A32BC2449885ED807B7" Comment="ТЭН3 трубопроводов Н включить" />
+        <Field Name="TEN4_N_ON" Type="BOOL" UUID="6B6BAABD477201CB7727548B8C9CFACB" Comment="ТЭН4 трубопроводов Н включить" />
+        <Field Name="Alarm_sound_ON" Type="BOOL" UUID="8B88BD8442C5750072A200829A73E8FD" Comment="Звуковую сигнализацию включить" />
+        <Field Name="Light_ON" Type="BOOL" UUID="439BF4C149E5239A6B1E459E362C2C28" Comment="Освещение включить" />
+        <Field Name="SK_ON" Type="BOOL" UUID="84FA80A34D1FE4691854E9A89C889146" Comment="Питание на клапан СК включить" />
+        <Field Name="KPG_ON" Type="BOOL" UUID="E05B1369486E3F005AF79CAF317DF9AE" Comment="КПГ открыть (отключить)" />
+        <Field Name="U_KNO_ON" Type="BOOL" UUID="6DC42361447692D7B759E5BD2C7F0141" Comment="Питание на КНО включить" />
+        <Field Name="U_KNO_udrj12_ON" Type="BOOL" UUID="0798F98D4E659CDEF2A65DA7A45E3DC3" Comment="Питание на КНО включить (удержание12 В)" />
+        <Field Name="U_KAO_ON" Type="BOOL" UUID="1AA449374FD907DF572CBD9B0696C1FA" Comment="Питание на КАО включить" />
+        <Field Name="BP_SPV_ON" Type="BOOL" UUID="4B18769A45E7B2627F85CF95E3D0BF00" Comment="БП плазменных воспламенителей СПВ включить" />
+        <Field Name="KPR1_ON" Type="BOOL" UUID="52A7D771454C3585DF073D8E011328A5" Comment="КПР1 открыть" />
+        <Field Name="KPR2_ON" Type="BOOL" UUID="AFD3B3C04E5E3DD75A45D7A3CC91585D" Comment="КПР2 открыть" />
+        <Field Name="ORT_ON" Type="BOOL" UUID="578EA5554119A8884BC602A1260EEA97" Comment="ОРТ включить" />
+        <Field Name="Check_mex_perm_ON" Type="BOOL" UUID="3234F9434ABBC9D2162E3683673E064A" Comment="Контроль механизмов с БС разрешить" />
+        <Field Name="Starter_upr_ON" Type="BOOL" UUID="6990E86C478B6691E4C1C8B3DFA728CD" Comment="Реле управления стартерами включить" />
+        <Field Name="Speed_ON" Type="BOOL" UUID="A8FEB7AD49BE7F8D85E9DBB37A0236B0" Comment="Реле переключения скоростей включить" />
+        <Field Name="Chips_chek_alarm_ON" Type="BOOL" UUID="7F1257144848293F109E148D66C354F7" Comment="Контроль сигнализаторов стружки (контроль САУ)" />
+        <Field Name="PLC_wor_ON" Type="BOOL" UUID="EBFBC0BD4A1670C7B679A9BF3867423D" Comment="Исправность ПЛК" />
+        <Field Name="Ind_PS_ON" Type="BOOL" UUID="213774764088D75188C137AAB19A961A" Comment="Светозвуковая сигнализация ПС" />
+        <Field Name="Ind_AS_ON" Type="BOOL" UUID="F1DE4BB948702911F4AD21B25E454CB5" Comment="Светозвуковая сигнализация АС " />
+    </Fields>
+</Type>

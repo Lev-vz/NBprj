@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="AI_HMI" Kind="Struct" UUID="5C4EAAB340E0F06BB767F6AEE30C69DF">
+    <Fields>
+        <Field Name="PV" Type="REAL" UUID="6680870F41E57E1CD12DE7BD939D5023" Comment="сигнал с датчика, преобразованный к физическим единицам" />
+        <Field Name="Condition" Type="4C99358D49D97BBFF079AEAAFB2FDDD3" UUID="F548944D4A7DC828DEA66BA8786ED508" Comment="0-11 коды отказов канала, 12-15 команды с мнемосхемы" />
+        <Field Name="CurrentTimeOfRepair" Type="REAL" UUID="6829820143254586D6194B9A6F0736A6" Comment="текущее время ремонта канала" />
+        <Field Name="Manual_Target" Type="REAL" UUID="CBDE481F460D861CF2BD17929A21107F" Comment="задание для выхода блока в ручном режиме" />
+    </Fields>
+</Type>

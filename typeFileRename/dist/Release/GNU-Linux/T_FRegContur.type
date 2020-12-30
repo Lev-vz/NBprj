@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_FRegContur" Kind="Struct" Comment="список контуров регулирования" UUID="1323575E43476194DFB5008E65693FA3">
+    <Fields>
+        <Field Name="NONE" Type="INT" UUID="99B9DA654D8AFA4318B5E9AEDD6D64BD" Comment=" регулирование по разомкнутому контуру" />
+        <Field Name="N_VD" Type="INT" UUID="66EDC85B4B358FBE5B0A7E860CCEECD5" Comment=" регулирующий контур N КВД" />
+        <Field Name="N_ST" Type="INT" UUID="CF1E2EE54CB4EE30CFA4E9ACE5E71C95" Comment=" регулирующий контур N СТ" />
+        <Field Name="N_ND_MIN" Type="INT" UUID="B5CEAECA4A3E1680C34938846527D54C" Comment=" нижний ограничительный контур N КНД" />
+        <Field Name="N_VD_MIN" Type="INT" UUID="EDBFA15247F83B11B3A7E486AB63B20E" Comment=" нижний ограничительный контур N КВД" />
+        <Field Name="N_ST_MIN" Type="INT" UUID="7039BFCE41CA11C3462B8C9A1FA163D8" Comment=" нижний ограничительный контур N СТ" />
+        <Field Name="N_ND_MAX" Type="INT" UUID="7B474BD041B1FAF5CCFF03B6DB77F3C0" Comment=" верхний ограничительный контур N КНД" />
+        <Field Name="N_VD_MAX" Type="INT" UUID="EFF27BFD49C3E004AEBE009437C4812D" Comment=" верхний ограничительный контур N КВД" />
+        <Field Name="N_ST_MAX" Type="INT" UUID="AA56EF6B4B96A332BC067386EB58E9B3" Comment=" верхний ограничительный контур N СТ" />
+        <Field Name="T_MAX" Type="INT" UUID="32239682470BE67B58EFC59666E90368" Comment=" верхний ограничительный контур Т продуктов сгорания" />
+        <Field Name="GT_RATE_UP" Type="INT" UUID="89E374714F2EB6CC3BB04FB0EB76156B" Comment=" верхний ограничительный контур по скорости открытиЯ дозатора" />
+        <Field Name="GT_RATE_DN" Type="INT" UUID="1655C1D44F1B729B535ACDB093F614D8" Comment=" верхний ограничительный контур по скорости закрытиЯ дозатора" />
+        <Field Name="NUM" Type="INT" UUID="95F7A967418ED30DB48E2FB38EA34143" Comment=" число контуров" />
+    </Fields>
+</Type>

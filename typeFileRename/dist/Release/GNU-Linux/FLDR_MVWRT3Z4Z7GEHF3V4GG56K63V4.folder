@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="LEV_DI">
+    <Items>
+        <Item Name="T_DGI.type" />
+        <Item Name="T_DI_All_Settings.type" />
+        <Item Name="T_DI_FromProcessing.type" />
+        <Item Name="T_DI_Setting.type" />
+        <Item Name="T_DI_ToProcessing.type" />
+        <Item Name="Type_55FKKFKNRVUUDFRYTBAWTTSRHQ.type" />
+        <Item Name="Type_OMBDAOHHRTFUBF46WRK3XK7ZOU.type" />
+        <Item Name="Type_T6QOG6AY2J5UBEPU6T24IEEECM.type" />
+        <Item Name="Type_V4SU2C2DVXIEDDB3QJ4USGWY5A.type" />
+        <Item Name="Type_XPWAQPXPAMLUJJTT55PKG2M4BY.type" />
+    </Items>
+</Folder>

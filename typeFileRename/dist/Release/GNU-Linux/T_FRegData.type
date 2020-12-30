@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_FRegData" Kind="Struct" Comment="данные регулятора" UUID="630C7F50434DF7738F8EF1B0858DA3C1">
+    <Fields>
+        <Field Name="regs" Type="159EC7934E9C6115555A68B03CB7DC3C" UUID="7875F71C46B1F570E8E58397A5753C47" ArraySize="10" />
+        <Field Name="contur" Type="INT" UUID="E78B32D84DD3DA8A9FF9BDA3BE0F4567" Comment=" номер контура, по которому определилсЯ общий выход" />
+        <Field Name="conturLim" Type="INT" UUID="E63B2E0644E73EE95979F8A22A7B6EAD" Comment=" номер контура с учетом &quot;виртуальных&quot; контуров" />
+        <Field Name="integ" Type="REAL" UUID="2CF6E13347F58AB1997305BB96A9A70E" Comment=" общий интегратор" />
+        <Field Name="outTemp" Type="REAL" UUID="2E2C9B6744D42100D5914AAFD83EEEF2" Comment=" выход" />
+        <Field Name="hiLimitRateNvd" Type="REAL" UUID="C7E4D6FF4E2C1C0CCACD9D815842A1BC" Comment=" ограничение скорости роста заданиЯ на частоту вращениЯ КВД" />
+        <Field Name="loLimitRateNvd" Type="REAL" UUID="5E6211A24D084C7962A2999831B9EEB8" Comment=" ограничение скорости снижениЯ заданиЯ на частоту вращениЯ КВД" />
+        <Field Name="hiLimitRateNst" Type="REAL" UUID="BD1D04C04B33CFFAB70082938FDD56B7" Comment=" ограничение скорости роста заданиЯ на частоту вращениЯ СТ" />
+        <Field Name="loLimitRateNst" Type="REAL" UUID="FAC61A7A4527D2F4309CFB95B7C2671D" Comment=" ограничение скорости снижениЯ заданиЯ на частоту вращениЯ СТ" />
+        <Field Name="qGoodTC" Type="INT" UUID="5B9C056E4CDEC98E6CC1D290A80DBED3" Comment=" число исправных термопар" />
+        <Field Name="ti" Type="REAL" UUID="23FFCB42438EEEF92ED000827AE04DE2" Comment=" общий таймер" />
+        <Field Name="ti_1" Type="REAL" UUID="72783E114B1A372951FE9DB32B824AE0" />
+        <Field Name="ti_2" Type="REAL" UUID="8D8C52A043C33B5FFB52F4AA0D614962" />
+        <Field Name="ti_3" Type="REAL" UUID="098C26964FCDD043A1EED7A8828C40AE" />
+        <Field Name="ti_4" Type="REAL" UUID="54673D624C83769DC7BD2098E5446312" />
+        <Field Name="ti_5" Type="REAL" UUID="CAD7B0974CBEE76E5332ED90180F45F3" />
+        <Field Name="ti_6" Type="REAL" UUID="FA99A60547DE953DC38D95ABF7F1224C" />
+        <Field Name="tiFire" Type="REAL" UUID="2186EC45447A626A979F4F93AC03A924" Comment=" таймер розжига" />
+        <Field Name="isRegNst" Type="BOOL" UUID="9F5C68184E2AB3985C72E28FB4197553" Comment=" регулирование по оборотам СТ" />
+        <Field Name="setNvd" Type="REAL" UUID="CE07FBA24C230164C65778B627E6D4E6" Comment=" задание на частоту вращениЯ ГГ" />
+        <Field Name="setNst" Type="REAL" UUID="56CDB5D347CD569DCAFE939F6CE3A5A3" Comment=" задание на частоту вращениЯ СТ" />
+        <Field Name="setTmp" Type="REAL" UUID="CD5F1291433442D98C650095C42678F1" Comment=" задание на частоту вращениЯ, пропущенное через ограничениЯ" />
+        <Field Name="setGt" Type="REAL" UUID="FA34768548C1DFC959ADA1AD4D3A9687" Comment=" задание на расход топливного газа через 1-й дозатор" />
+        <Field Name="NvdRate" Type="REAL" UUID="95339C3645EE0F57C55185AF37357896" Comment=" производная по частоте вращениЯ КВД" />
+        <Field Name="NstRate" Type="REAL" UUID="7A83B2F9454077DB2EDE25BD40B2F99F" Comment=" производная по частоте вращения СТ" />
+        <Field Name="FRegMode" Type="INT" UUID="0B2585104CB54BD46A13AEBB74BB04FA" Comment="текущий режим регулятора на работе" />
+        <Field Name="FRegMode_old" Type="INT" UUID="B66EB40B4B694D7BDA90D9A1207C1EDD" Comment="бывший режим регулятора на работе" />
+        <Field Name="wasRegNst" Type="BOOL" UUID="9D37FADB4AAAEF4B60E2D8B72FB100A0" Comment=" регулирование по оборотам СТ на предыдущем цикле" />
+        <Field Name="wasFriHH" Type="BOOL" UUID="0FBAD2B24821CA8F76254A90042251A9" Comment=" наличие сигнала FRI.HH на предыдущем цикле" />
+        <Field Name="wasFriMG" Type="BOOL" UUID="51B3EA1E471C92A1A55D13823F9DC995" Comment=" наличие сигнала FRI.HH на предыдущем цикле" />
+        <Field Name="isFeedback" Type="BOOL" UUID="D886E3A74EEDA6B7EE7452AEEF0A8996" Comment=" работает система контуров ОС" />
+        <Field Name="wasFeedback" Type="BOOL" UUID="D01CD1584EADDC1067BBA8838C9B3CDA" Comment=" работает система контуров ОС  на предыдущем цикле" />
+        <Field Name=" init" Type="BOOL" UUID="E6171FDA44D91300081A9CB4E126B570" Comment=" если = 1, значиит инициализация была" />
+    </Fields>
+</Type>

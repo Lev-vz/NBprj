@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Program >
+<Program UUID="C849A4FC4AFE98C6FBFB748E53212D8E" Name="BEO" Comment="BEO" Period="100" PutDataAtEndOfCycle="false">
+    <Variables>
+        <Variable UUID="D08F9B904774A141B1F7A780D3619E8E" Name="tmpREALtime" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+        <Variable UUID="8F3823294C631FBFDAF859B554D38CCD" Name="tmpREALtime_prev" Type="LREAL" TypeUUID="65F1DDD44EDA9C0776BB16BBDFE36B1F" Usage="internal" />
+        <Variable UUID="7E7008C84B4C3AB46E161BA328774459" Name="del_T" Type="REAL" TypeUUID="42E054C8453789BBDD3594B53BDC7DE5" Usage="internal" />
+        <Variable UUID="B475BE224AB36F6C08235FA03D681833" Name="TMR01" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+        <Variable UUID="01D68DC741ED636CDA15CD88DD474D77" Name="TMR02" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+        <Variable UUID="81D09D994C968945CC6DE0AE2C967D96" Name="TMR03" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+        <Variable UUID="A14837A14DBDC69B07F828B54C5A025D" Name="TMR04" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+        <Variable UUID="B65272F7482CAD19A73C21AC287794B0" Name="TMR05" Type="TON" TypeUUID="EAA43B6B4DCDCEA72AB748B4554FD2AD" Usage="internal" />
+        <Variable UUID="011536834A195BD8059FB4A33365A5CD" Name="TMR_ET" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Size="5" Array="TRUE" Usage="internal" />
+        <Variable UUID="B7EA27034537EAE804EFFA857BB7B8D3" Name="TMR_TIME" Type="TIME" TypeUUID="3EFD49044E055B696F5570BA288FA8D5" Size="5" Array="TRUE" Usage="internal" />
+        <Variable UUID="33C7DFB7444C631A65EF709C9477267F" Name="GENERATOR_LOGIC_prev" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="internal" />
+        <Variable UUID="6783530944CAB44DA7D33B8921333992" Name="GENERATOR_RT_prev" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="internal" />
+        <Variable UUID="69F3372F48BE1CEB71106C8C378A2055" Name="GENERATOR_APR_prev" Type="INT" TypeUUID="47B58C4E4726C8B230965EBE77F1169E" Usage="internal" />
+        <Variable UUID="021752174E6C1190A34A889DBC49D70B" Name="ZERO" Type="BOOL" TypeUUID="EC797BDD4541F500AD80A78F1F991834" Usage="internal" />
+    </Variables>
+    <ST><![CDATA[tmpREALtime := CLOCK();
+del_T := LREAL_TO_REAL(tmpREALtime - tmpREALtime_prev);
+tmpREALtime_prev := tmpREALtime;
+	
+
+    BEO.PCI_CARD_STATUS[0] := Diag_KM04.A1_1; 
+	BEO.PCI_CARD_STATUS[1] := Diag_KM04.A1_2;
+	BEO.PCI_CARD_STATUS[2] := Diag_KM04.A1_3;
+	BEO.PCI_CARD_STATUS[3] := Diag_KM04.A1_4;
+	BEO.PCI_CARD_STATUS[4] := Diag_KM04.A1_5;
+    BEO.PCI_CARD_STATUS[5] := Diag_KM04.A1_6;
+    BEO.PCI_CARD_STATUS[6] := Diag_KM04.A1_7;
+    BEO.PCI_CARD_STATUS[7] := Diag_KM04.A1_8;
+    BEO.PCI_CARD_STATUS[8] := Diag_KM04.A1_9;
+    BEO.PCI_CARD_STATUS[9] := Diag_KM04.A1_10;
+////////////////////////////////////////////////////////////////////////////////////////////
+//Диагностика связи между приложениями
+////////////////////////////////////////////////////////////////////////////////////////////
+if not BEO.FORCE_DO then
+TMR03(BEO.GENERATOR_LOGIC = GENERATOR_LOGIC_prev, T#1000ms, TMR_ET[2], TMR_TIME[3]);//1000
+//TMR04(BEO.GENERATOR_RT = GENERATOR_RT_prev, T#1000ms, TMR_ET[3], TMR_TIME[3]);
+//TMR05(BEO.GENERATOR_APR = GENERATOR_APR_prev, T#1000ms, TMR_ET[4], TMR_TIME[4]);
+
+//Формируем релейный выход
+if NOT TMR_ET[2] AND NOT TMR_ET[3] AND NOT TMR_ET[4] AND 
+	BEO.PCI_CARD_STATUS[0] = WORD#0 AND 
+	BEO.PCI_CARD_STATUS[1] = WORD#0 AND 
+	BEO.PCI_CARD_STATUS[2] = WORD#0 AND 
+	BEO.PCI_CARD_STATUS[3] = WORD#0 AND
+	BEO.PCI_CARD_STATUS[4] = WORD#0 AND	
+	BEO.PCI_CARD_STATUS[5] = WORD#0 AND 
+	BEO.PCI_CARD_STATUS[6] = WORD#0 AND
+	BEO.PCI_CARD_STATUS[7] = WORD#0 AND
+	BEO.PCI_CARD_STATUS[8] = WORD#0 AND
+	BEO.PCI_CARD_STATUS[9] = WORD#0 // AND 
+	//PCI_CARD_STATUS[10] = WORD#0
+then
+	FAULTED_APP_INDEX := 0;
+	TMR01(NOT ZERO,T#250ms,BEO.DOut_PLC_OK,TMR_TIME[0]);//250
+	TMR02(BEO.DOut_PLC_OK,T#250ms,ZERO,TMR_TIME[1]);//250
+end_if;
+
+
+GENERATOR_LOGIC_prev := BEO.GENERATOR_LOGIC;
+GENERATOR_RT_prev 	 := BEO.GENERATOR_RT;
+GENERATOR_APR_prev   := BEO.GENERATOR_APR;
+
+
+//Чтоб узнать какое приложение или карта фолтануло
+if TMR_ET[2] then FAULTED_APP_INDEX := 1;end_if;
+if TMR_ET[3] then FAULTED_APP_INDEX := 2;end_if;
+if TMR_ET[4] then FAULTED_APP_INDEX := 3;end_if;
+if BEO.PCI_CARD_STATUS[0] <> WORD#0 then FAULTED_APP_INDEX := 11;end_if;
+if BEO.PCI_CARD_STATUS[1] <> WORD#0 then FAULTED_APP_INDEX := 12;end_if;
+if BEO.PCI_CARD_STATUS[2] <> WORD#0 then FAULTED_APP_INDEX := 13;end_if;
+if BEO.PCI_CARD_STATUS[3] <> WORD#0 then FAULTED_APP_INDEX := 14;end_if;
+if BEO.PCI_CARD_STATUS[4] <> WORD#0 then FAULTED_APP_INDEX := 15;end_if;
+if BEO.PCI_CARD_STATUS[5] <> WORD#0 then FAULTED_APP_INDEX := 16;end_if;
+if BEO.PCI_CARD_STATUS[6] <> WORD#0 then FAULTED_APP_INDEX := 17;end_if;
+if BEO.PCI_CARD_STATUS[7] <> WORD#0 then FAULTED_APP_INDEX := 18;end_if;
+if BEO.PCI_CARD_STATUS[8] <> WORD#0 then FAULTED_APP_INDEX := 19;end_if;
+if BEO.PCI_CARD_STATUS[9] <> WORD#0 then FAULTED_APP_INDEX := 20;end_if;
+
+//Периодичность выполнения приложения
+cycle_time[6]:= del_T*1000.0;
+//Фактическое время выполнения приложения
+cycle_time[7]:= LREAL_TO_REAL(tmpREALtime - CLOCK())*1000.0;
+
+end_if;]]></ST>
+    <DataTypes />
+</Program>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="C_tun" Kind="Struct" Comment="кривая по точкам" UUID="952AE2324D9779DCB0DACE8DD2180529">
+    <Fields>
+        <Field Name="N" Type="INT" UUID="1CD5EA384E3155804AA7D084D3604EBD" />
+        <Field Name="s" Type="96C8010743EF65C85A06B68BC0017939" UUID="71AAF0E746AFFC413EBF0BB2A6BF711F" ArraySize="25" />
+    </Fields>
+</Type>

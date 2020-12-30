@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_GPA_PPU_GR" Kind="Struct" UUID="02C45F1469F04C1593860FFDA3AC309D">
+    <Fields>
+        <Field Name="Tm_in_MBN_PPUn" Type="BOOL" UUID="ABB378E14F2DE5F66D35E2B2E9E2B161" Comment="Т масла в МБН &lt;15 °С" />
+        <Field Name="Tm_in_MBD_PPUn" Type="BOOL" UUID="7D936CF84CFD3F55A4E95F91E43941E3" Comment="Тм в МБД &lt; 10 °С" />
+        <Field Name="Tm_in_MBD_PPUn1" Type="BOOL" UUID="86DCC6CF41ED6AD271D0BD9F47DB9D98" Comment="Тм в МБД &lt; 35 °С" />
+        <Field Name="Tg_out_N_PPUv" Type="BOOL" UUID="703AF58D41EF82B1F37050AC063AB44F" Comment="Тгаза на выходе К &gt; 60 °С" />
+        <Field Name="U380_KK" Type="BOOL" UUID="D4995689486B2C0602C6EF92AB527E9E" Comment="Нет напряжения 380 на стартере" />
+        <Field Name="U_PMNS" Type="BOOL" UUID="554FD6DB461490FD17EC5B867549529E" Comment="Нет U в цепях упр. ПМНС" />
+        <Field Name="U_MNU_1" Type="BOOL" UUID="4D6DB2BD46FA064BF38E94923F24FF7B" Comment="Нет U в цепях упр. МНУ I" />
+        <Field Name="U_MNU_2" Type="BOOL" UUID="B928C0B141E1D81C523102957CAE8222" Comment="Нет U в цепях упр. МНУ II" />
+        <Field Name="Check_U_DC220" Type="BOOL" UUID="DBC7CF794E61E829EA9BB992464DC9CC" Comment="Нет U =220В (на входе САУ)" />
+        <Field Name="Check_U_AC220" Type="BOOL" UUID="33D7E52445F2A0D205CC67822F625BB9" Comment="Нет U ~220В (на входе САУ)" />
+        <Field Name="Chec_Ukr_110" Type="BOOL" UUID="C4906896465A5889553049A4203395B6" Comment="Нет U =110В цепи кранов" />
+        <Field Name="Lm_MBN_down" Type="BOOL" UUID="CA014CBA41C39B3BCAEA309B07EAD88A" Comment="Уровень масла в МБН нижний" />
+        <Field Name="Lm_MBD_down" Type="BOOL" UUID="BCF0C72E4715C518935BC98A7F619104" Comment="Уровень масла в МБД нижний" />
+        <Field Name="Door_SAU_open" Type="BOOL" UUID="2F47AB8C4B217E2E065DCD854C7FBCFE" Comment="Двери блок-бокса САУ ГПА открыты" />
+        <Field Name="pgrP_brk" Type="BOOL" UUID="D1EA58D64D629495C77FCD8CB5A027CB" Comment="Сист.порош.пожаротуш.неисправ." />
+        <Field Name="U_SAU_fault" Type="BOOL" UUID="B0FA460E4FE201AA00A371A0EF52E1F4" Comment="Неисправность питания САУ" />
+        <Field Name="AI_fault" Type="BOOL" UUID="92D39B014B74DDFE8BC8798D301D7CBA" Comment="Неисправность аналоговых каналов" />
+        <Field Name="IM_fault" Type="BOOL" UUID="3D5AC6934AB184ABE7147A96026D00AF" Comment="Неисправность цепей ИМ" />
+        <Field Name="Def_fault" Type="BOOL" UUID="084FEAED434D2154745BF9B5B3F93122" Comment="Неисправность защит" />
+        <Field Name="DI_fault" Type="BOOL" UUID="3DBF1A9143626CF0C8E7239876487C15" Comment="Неисправность дискретных входов" />
+    </Fields>
+</Type>

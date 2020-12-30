@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_SubMode" Kind="Struct" UUID="1B8288064CCF44B713ABADBE5B3E5AD1">
+    <Fields>
+        <Field Name="PMS" Type="BOOL" UUID="F7855FBB4381946A55D683B5CF41F3C5" Comment="Пуск маслосистемы" />
+        <Field Name="ZKN" Type="BOOL" UUID="DFD265864626F6720D5D23AC59EFA393" Comment="Заполнение контура нагнетателяя" />
+        <Field Name="StartD" Type="BOOL" UUID="1F2616E44FD2568797D036B52812216E" Comment="Запуск двигателя" />
+        <Field Name="K_M" Type="BOOL" UUID="0CC622054B72B60C61B96B9BF1DA906B" Comment="Переход &quot;Кольцо-Магистраль&quot;" />
+        <Field Name="M_K" Type="BOOL" UUID="BF720BEA499A4AD632FE87A015A029A5" Comment="Переход &quot;Магистраль-Кольцо&quot;" />
+        <Field Name="StopGPA" Type="BOOL" UUID="B08167AF41757015633A95B5DB0817F3" Comment="Останов ГПА" />
+        <Field Name="PVS" Type="BOOL" UUID="56CD3FA546C1BF6A6D3859B0BA90286A" Comment="Прокрутка на ВС" />
+    </Fields>
+</Type>

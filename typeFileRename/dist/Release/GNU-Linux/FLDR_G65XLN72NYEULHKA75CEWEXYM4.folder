@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="PID">
+    <Items>
+        <Item Name="Type_4RDZ7U4KC3ZEZIIVPKKX6MVL5A.type" />
+        <Item Name="Type_AOXYVF6EH6BEJG34N3MZLUOGZY.type" />
+        <Item Name="Type_PidConfStr.type" />
+        <Item Name="Type_PidImitStr.type" />
+        <Item Name="Type_PidOperStr.type" />
+        <Item Name="Type_PidStr.type" />
+        <Item Name="Type_SLESVVDQF75E7H2QABWFDCQLDY.type" />
+        <Item Name="Type_Z63WKO75YMGEZF5STHHWKTH7AI.type" />
+    </Items>
+</Folder>

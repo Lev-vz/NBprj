@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_FRegMode" Kind="Struct" Comment=" список режимов работы топливного регулЯтора" UUID="4345E89943103B46A5491CA0D8D5F94B">
+    <Fields>
+        <Field Name="stop" Type="INT" UUID="4AFF6E7147E13EB0BC2879BA4D22AC71" Comment=" &quot;Останов&quot;" />
+        <Field Name="reserve" Type="INT" UUID="A863C2754541825DA5F93C9E91744A9C" Comment=" &quot;Резерв&quot;" />
+        <Field Name="fireRate" Type="INT" UUID="DD5311B64D20E9BC9C3E2FB5CFBB0DB2" Comment=" розжиг и разгон по программе" />
+        <Field Name="rateNvd" Type="INT" UUID="FBD3923D43DAC2CCDE2F43887AD52378" Comment=" разгон по N КВД" />
+        <Field Name="goMG" Type="INT" UUID="C2DE74F448D75A555CB6568D832A1895" Comment=" Выход на МГ" />
+        <Field Name="heatMG" Type="INT" UUID="C1E1907B4297EB69EE685B9AD4F9AA4C" Comment=" прогрев на МГ" />
+        <Field Name="work" Type="INT" UUID="5E34042D4CE9E996C2A545A00A4CF8ED" Comment=" &quot;Работа&quot;" />
+        <Field Name="godwHH" Type="INT" UUID="A065C9E64E70C9EB6884E2AF35532DC1" Comment="снижение на ХХ" />
+        <Field Name="coolingHH" Type="INT" UUID="E1E74F0347A80471B8216593231251B6" Comment="охлаждение на ХХ" />
+        <Field Name="NOgoHH" Type="INT" UUID="7BB64AFE45D6F588368CB29B3B068C34" Comment="режим &quot;НО, снижение до ХХ&quot;" />
+        <Field Name="NOcoolHH" Type="INT" UUID="6A10D9EC40D8C305E4B1A4A64AF874A3" Comment="режим &quot;НО, охлаждение на ХХ&quot;" />
+    </Fields>
+</Type>

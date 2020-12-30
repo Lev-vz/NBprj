@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Zavoljskaya">
+    <Items>
+        <Item Name="Type_25NWPV2NIRUUHNWJUWSUCOWRNA.type" />
+        <Item Name="Type_2HWKIJNII5VUROZINWOVONCZCM.type" />
+        <Item Name="Type_EMTYXYL6ZUQU3OWUK2U4KT3GGM.type" />
+        <Item Name="Type_GPA_AI_DRV.type" />
+        <Item Name="Type_GPA_AI_HMI.type" />
+        <Item Name="Type_GPA_AI_PLC.type" />
+        <Item Name="Type_GPA_AM.type" />
+        <Item Name="Type_GPA_DGI.type" />
+        <Item Name="Type_GPA_DGO.type" />
+        <Item Name="Type_GPA_DI_DRV.type" />
+        <Item Name="Type_GPA_DO_DRV.type" />
+    </Items>
+</Folder>

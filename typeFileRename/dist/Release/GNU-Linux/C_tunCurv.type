@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="C_tunCurv" Kind="Struct" Comment="Настроечные кривые" UUID="8E5185C846D354E50A6871B61523F47D">
+    <Fields>
+        <Field Name="openToGT" Type="952AE2324D9779DCB0DACE8DD2180529" UUID="C372BBCC4143DC7613B7E09845867FC2" Comment="Зависимость расхода топлива от процента открытия ТК" />
+        <Field Name="GTtoOpen" Type="952AE2324D9779DCB0DACE8DD2180529" UUID="842D54F540BCF7284F1C139321C2D07C" Comment="Обратная зависимость расхода топлива от степени открытия топливного клапана" />
+        <Field Name="hiLimNkndFromTinGTU" Type="952AE2324D9779DCB0DACE8DD2180529" UUID="CC0C5B2542E1F480B792CBB8D7C4B3B5" Comment="Зависимость верхнего ограничения по N КНД от температуры воздуха на входе в ГТУ, [об/мин]" />
+        <Field Name="hiLimNkvdFromTinGTU" Type="952AE2324D9779DCB0DACE8DD2180529" UUID="FF8264DD46F509472F275ABF6A49369B" Comment="Зависимость верхнего ограничения по N КВД от температуры воздуха на входе в ГТУ, [об/мин]" />
+        <Field Name="hiLimTtndFromTinGTU" Type="952AE2324D9779DCB0DACE8DD2180529" UUID="B4472AD44CDD598365C837A8DED5EFD4" Comment="Зависимость верхнего ограничения по Т газов за ТНД от температуры воздуха на входе в ГТУ, [ºС]" />
+        <Field Name="corrKpropNndFromNvd" Type="952AE2324D9779DCB0DACE8DD2180529" UUID="B5FD74D44F746EC086C1D8A4C808ED6B" Comment="Коррекция проп. коэфф. ПИД-регулятора по частоте вращения КНД" />
+        <Field Name="corrKpropNvdFromNvd" Type="952AE2324D9779DCB0DACE8DD2180529" UUID="B6DF9CEF458F57787B11FE87B44F6E29" Comment="Коррекция проп. коэфф. ПИД-регулятора по частоте вращения КВД" />
+        <Field Name="corrKpropNstFromNst" Type="952AE2324D9779DCB0DACE8DD2180529" UUID="B18136B24DB767687B9A4B8F0CC8454C" Comment="Коррекция проп. коэфф. ПИД-регулятора по частоте вращения СТ" />
+        <Field Name="corrKpropTndFromNvd" Type="952AE2324D9779DCB0DACE8DD2180529" UUID="2A0BDE3B4887722F32B18194DEC5A039" Comment="Коррекция проп. коэфф. ПИД-регулятора по Т газов за ТНД" />
+    </Fields>
+</Type>

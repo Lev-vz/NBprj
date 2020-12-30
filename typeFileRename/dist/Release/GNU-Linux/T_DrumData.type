@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_DrumData" Kind="Struct" Comment="Данные для одного барабана" UUID="FB7A29904BEADDE2F62C1DAA9FEBBBE4">
+    <Fields>
+        <Field Name="enable" Type="BOOL" UUID="DA0A79F748F7A45C13CF749E212EC4EC" Comment="запустить барабан" />
+        <Field Name="state" Type="INT" UUID="461609C5405A5603E73AE494312A743A" Comment="текущее состояние барабана" />
+        <Field Name="timer" Type="REAL" UUID="958298E141F41BBCD250B88C4605C8A4" ArraySize="10" Comment="массив таймеров для переходов по времени" />
+        <Field Name="limTimer" Type="REAL" UUID="B3A376204E4CDCC434D79F93E7A26E41" ArraySize="10" Comment="массив уставок таймеров" />
+        <Field Name="complete" Type="BOOL" UUID="577B55E542959D23D0AC78983A402A40" Comment="досигнут последнее состояние барабана" />
+    </Fields>
+</Type>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="AI_Oper" Kind="Struct" UUID="0DE23ED741772626DD0AFCBBF6C734E5">
+    <Fields>
+        <Field Name="PV_calc_eu" Type="LREAL" UUID="6680870F41E57E1CD12DE7BD939D5023" Comment="сигнал с датчика, преобразованный к единицам Config.Eu_PV" />
+        <Field Name="ROC_max" Type="LREAL" UUID="00FE3B0F4496D33E61F986BF56927A13" Comment="максимальное значение ROC, если ROC_enable = 1" />
+        <Field Name="ROC_min" Type="LREAL" UUID="8A14BDC34EB871AFF63759AA38809FB0" Comment="минимальное значение ROC, если ROC_enable = 1" />
+        <Field Name="fault_code" Type="BYTE" UUID="F548944D4A7DC828DEA66BA8786ED508" ArraySize="10" Comment="коды отказов канала" />
+        <Field Name="CurrentTimeOfRepair" Type="REAL" UUID="6829820143254586D6194B9A6F0736A6" />
+    </Fields>
+</Type>

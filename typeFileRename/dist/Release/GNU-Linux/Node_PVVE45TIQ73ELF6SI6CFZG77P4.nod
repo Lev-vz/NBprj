@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Node v. 1.3 >
+<Node Name="PLC" Comment="" Disabled="FALSE" Address="10.50.50.234" TimeSourcePriority="2" TimeResolution="2" NetworkTimeout="2000" PingInterval="300" RetryTimeout="80" AggregationInterval="10" LocalTimeout="2000" LocalPingInterval="300" LocalRetryTimeout="50" LocalAggregationInterval="4" UseSharedMem="FALSE" EventQueue="2000" StoreEventQueue="FALSE" StartState="Default" UUID="12D7485D4182024DB0E846BC28E3D1DB">
+    <InterfaceList>
+        <SubApp Name="KM_04" Type="897257994048E53BC72FDE8D1EC7AF48" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="CE6D488143ADB7A1BC0D5E96C7E780D2" />
+        <SubApp Name="Fastwel" Type="28DD14C34E6159DF93C87ABA8AEEB969" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="1A1437554BE34E6DEFAAF084743FCC59" />
+        <SubApp Name="Algoritm" Type="4D7FAB7841B17841F0C1B69365198418" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="F90FC493416F7ED9F686B6AF7A4A8160" />
+        <SubApp Name="FR" Type="921B3270402098E4946D59B12D59003B" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="D3FCD91042A194150D77808DFCA56694" />
+        <SubApp Name="APR" Type="EFF259904E0A28C76B683D93C99DE22D" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="9C8F38494A9A370839E7DFA0D0960ABC" />
+        <SubApp Name="BEO" Type="C849A4FC4AFE98C6FBFB748E53212D8E" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="1D4F695D40137671930A4FA6C373D4D7" />
+        <SubApp Name="PRU" Type="D52231824CE4E759509F829AEEAF2D74" Disabled="FALSE" Args="" ExecTimeout="10000" ShutdownTimeout="1000" GoodResult="0" Comment="" UUID="A30E307B4347B390F09D39B10779C739" />
+    </InterfaceList>
+</Node>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_DRV_K_AI_FR" Kind="Struct" UUID="0B34F9DD447E33D32F06DCA8F5D7709D">
+    <Fields>
+        <Field Name="Tg_in_KND_1" Type="REAL" UUID="3E98A5CA4D091144CC0C87A26462DEC9" Comment="Температура 1 перед камерой сгорания (за КНД)" />
+        <Field Name="Tg_in_KND_2" Type="REAL" UUID="FE90E693459AF89C80DC25944666679D" Comment="Температура 2 перед камерой сгорания (за КНД)" />
+        <Field Name="Tg_out_TND_1" Type="REAL" UUID="91FE62EB4F4535917890CBAC172555E9" Comment="Температура 1 на выходе ТНД" />
+        <Field Name="Tg_out_TND_2" Type="REAL" UUID="A93F6BBF46F6EF90A2D851B1DAEC41FA" Comment="Температура 2 на выходе ТНД" />
+        <Field Name="Tg_out_TND_3" Type="REAL" UUID="7CDFA8584288CC5349176FB8ECDED6B4" Comment="Температура 3 на выходе ТНД" />
+        <Field Name="Tg_out_TND_4" Type="REAL" UUID="D0ECC368437D46D933D7A48DF33D42F1" Comment="Температура 4 на выходе ТНД" />
+        <Field Name="Tg_out_TND_5" Type="REAL" UUID="0AE8485B41E97ACD32FE33A83FBA02A7" Comment="Температура 5 на выходе ТНД" />
+        <Field Name="Tg_out_TND_6" Type="REAL" UUID="324953514ADEEB8DABBC4687723FDB4E" Comment="Температура 6 на выходе ТНД" />
+        <Field Name="Tg_out_TND_7" Type="REAL" UUID="7B9432FC497DD3399B86A688B8207FFF" Comment="Температура 7 на выходе ТНД" />
+        <Field Name="Tg_out_TND_8" Type="REAL" UUID="6F03744E449D337A829D5E99D96CF031" Comment="Температура 8 на выходе ТНД" />
+        <Field Name="Tg_out_TND_9" Type="REAL" UUID="11AF5B604E76DA59DCDCA0BE49ADAF2E" Comment="Температура 9 на выходе ТНД" />
+        <Field Name="Tg_out_TND_10" Type="REAL" UUID="3925C17F4717B8007B557AB6626FE79D" Comment="Температура 10 на выходе ТНД" />
+        <Field Name="Tg_out_TND_11" Type="REAL" UUID="7438F0DF47C7404FDFFD58ABCC6328AF" Comment="Температура 11 на выходе ТНД" />
+        <Field Name="Tg_out_TND_12" Type="REAL" UUID="190319844C25BC257CC758B8DDAD5FB6" Comment="Температура 12 на выходе ТНД" />
+        <Field Name="Tg_out_TND_13" Type="REAL" UUID="0B3EA6034431AEE156F5B7A821BD53ED" Comment="Температура 13 на выходе ТНД" />
+        <Field Name="Tg_out_TND_14" Type="REAL" UUID="5EEFEA5F4D49F763D744B98EAB765A95" Comment="Температура 14 на выходе ТНД" />
+        <Field Name="Tg_out_TND_15" Type="REAL" UUID="780180A2463B7F7E453FA49036306142" Comment="Температура 15 на выходе ТНД" />
+        <Field Name="Tg_out_TND_16" Type="REAL" UUID="9794902A4C7BB9F6C7802FBABCECF56E" Comment="Температура 16 на выходе ТНД" />
+        <Field Name="Tg_in_TND_1" Type="REAL" UUID="F138464E4B9322FADA523DA253DAE3AB" Comment="Температура 1 за ТНД (т.17)" />
+        <Field Name="Tg_in_TND_2" Type="REAL" UUID="2CEDB430454342CCD791EAAEE7BC9013" Comment="Температура 2 за ТНД (т.18)" />
+        <Field Name="Pv_out_KVD" Type="REAL" UUID="9CD0DAA14B47B8FB4C20288F5B5AD6A5" Comment="Давление воздуха за КВД" />
+        <Field Name="Pos_TRK" Type="REAL" UUID="8C4846984DA76924A0F086B66E01829B" Comment="Положение топливно-регулирующего клапана (ДУС)" />
+        <Field Name="N_KND_1" Type="REAL" UUID="25C4E98B4FA358FC63B00EB93F13F243" Comment="Частота вращения КНД канал 1" />
+        <Field Name="N_KVD_1" Type="REAL" UUID="40CF9F2C4B42227AF83AB9B08D44B018" Comment="Частота вращения КВД канал 1" />
+        <Field Name="N_TN_1" Type="REAL" UUID="FC27D5574E50FDD94E33C2BF5C4E8483" Comment="Частота вращения ротора ТН канал 1" />
+        <Field Name="N_KND_2" Type="REAL" UUID="F49E8D8B4543B79BF4277983F418D398" Comment="Частота вращения КНД канал 2" />
+        <Field Name="N_KVD_2" Type="REAL" UUID="C8F9F4D246AC8711C438DC9816EC5678" Comment="Частота вращения КВД канал 2" />
+        <Field Name="N_TN_2" Type="REAL" UUID="FC132CF54DBCCF91F7C956B2A9EE91D9" Comment="Частота вращения ротора ТН канал 2" />
+    </Fields>
+</Type>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_Str_PLC" Kind="Struct" UUID="E97FB264424B62A6F10B4D88CD8A90EC">
+    <Fields>
+        <Field Name="first_NOs" Type="STRING" UUID="68BDA5A64A552FE631C3D69E30CCD04D" Comment="Первопричина НОс" />
+        <Field Name="first_NOb" Type="STRING" UUID="E0EFA8EB428D516EDA3C8A9B55372C98" Comment="Первопричина НОб" />
+        <Field Name="first_AOs" Type="STRING" UUID="0BBCB0B849C80817FCB94AA99FAAC33D" Comment="Первопричина АОс" />
+        <Field Name="first_AOb" Type="STRING" UUID="F258ACBB4B703965B4B95C91F06891FF" Comment="Первопричина АОб" />
+    </Fields>
+</Type>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="AI_New">
+    <Items>
+        <Item Name="Type_AI_.type" />
+        <Item Name="Type_AI_HMI.type" />
+        <Item Name="Type_AI_PLC.type" />
+        <Item Name="Type_TCDGCAX326XUTNLLN6QKXN2FDM.type" />
+    </Items>
+</Folder>

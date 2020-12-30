@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_UnitState_DPar" Kind="Struct" Comment="Формирование режимов" UUID="C3992A264A11238A712FDD9E387032D3">
+    <Fields>
+        <Field Name="AOss" Type="BOOL" UUID="A4498B664CBA0698EB3BF0B403EC7DF0" Comment="АОсс" />
+        <Field Name="AObs" Type="BOOL" UUID="463753CC4F8F59D7CD1AE68AD1CF927C" Comment="АОбс" />
+        <Field Name="NOss" Type="BOOL" UUID="30C703F9482CEC5F390CD99C5D6D76AF" Comment="НОсс" />
+        <Field Name="NObs" Type="BOOL" UUID="FF3CF158485B50DAFC0EEF876B91F512" Comment="НОбс" />
+        <Field Name="Repair" Type="BOOL" UUID="4A2737884F738A2BA90D229C3B12081A" Comment="Ремонт" />
+        <Field Name="HR" Type="BOOL" UUID="59030C0C4859E1FE3F51A7AD52F23AF1" Comment="Холодный резерв" />
+        <Field Name="GR" Type="BOOL" UUID="67A4908F4AFD56548201CC8CFA139268" Comment="Горячий резерв" />
+        <Field Name="PZ" Type="BOOL" UUID="E8C060C94DAF98F2138156A56C8D33E2" Comment="Проверка защит" />
+        <Field Name="PZM" Type="BOOL" UUID="677AD3784A61ABD1F314B8B238EBFE94" Comment="ПЗМ" />
+        <Field Name="HP" Type="BOOL" UUID="CCE9914846BF60E951ED64B2C052F976" Comment="Холодная прокрутка" />
+        <Field Name="KPK" Type="BOOL" UUID="E351C09D4056E6C00B4E96B13DB12CC2" Comment="КПК" />
+        <Field Name="APK" Type="BOOL" UUID="D1DA4DAA4BA1050E9BF9F6BD16DDE572" Comment="АПК" />
+        <Field Name="APM" Type="BOOL" UUID="A79F4B7943F2915A5D40E68FB8569709" Comment="АПМ" />
+        <Field Name="K" Type="BOOL" UUID="E9BECADA49FBC8F6EED19694587636DB" Comment="Кольцо" />
+        <Field Name="M" Type="BOOL" UUID="6A2BD0984CDB4D1E02562DBF79CEB32D" Comment="Магистраль" />
+        <Field Name="K_M" Type="BOOL" UUID="18E7E0C9434677ABD6CDA1AC56E554C4" Comment="Переход К М" />
+        <Field Name="M_K" Type="BOOL" UUID="0A4166664ACF1C4ECDB359A7DBB921F1" Comment="Переход М К" />
+        <Field Name="Fault" Type="BOOL" UUID="D18EA0254BB3D6EC0AA96180960FE1CE" Comment="Нет режима" />
+        <Field Name="Stop" Type="BOOL" UUID="C2251507407A302656DE6CB25729E30E" Comment="Режимы останова" />
+        <Field Name="OGR" Type="BOOL" UUID="18E1A5CD41EEEB88B5EABCA331FFD640" Comment="Ограничение режима" />
+        <Field Name="Start" Type="BOOL" UUID="3226B4C247546D2045482AB514304789" Comment="Пусковые режимы" />
+        <Field Name="Work" Type="BOOL" UUID="59D194224E543B3961A2AEB78EE9E955" Comment="Режимы работы" />
+        <Field Name="Reserv" Type="BOOL" UUID="813D754F4B9B4A583A707B92D1B0366A" Comment="Режимы резерва" />
+        <Field Name="Check" Type="BOOL" UUID="DCF7B68B449673D32BB03D8C05B4866C" Comment="Проверочные режимы" />
+        <Field Name="PBZ" Type="BOOL" UUID="058D2C64402E35C9C925C983DE6F8F49" Comment="Пуск без заполнения" />
+        <Field Name="TP" Type="BOOL" UUID="35E0990B4D5EDA24E8E76CAA25385D27" Comment="Технологиская прокрутка" />
+    </Fields>
+</Type>

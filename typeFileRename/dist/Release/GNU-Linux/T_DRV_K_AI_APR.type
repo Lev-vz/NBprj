@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_DRV_K_AI_APR" Kind="Struct" UUID="13C65EC240048A53CAA1B9A4680441A3">
+    <Fields>
+        <Field Name="Pg_in_N" Type="REAL" UUID="127139D24069C95EBB04AD8E7D0E5343" Comment="Давление газа на входе в компрессор" />
+        <Field Name="Pg_out_N" Type="REAL" UUID="2219D2034EB0F86372A49EB1AF04987B" Comment="Давление газа на выходе из компрессора" />
+        <Field Name="dP_conf_N" Type="REAL" UUID="812C9D9B4934581D0D58B48D99EDB132" Comment="Перепад давлений на конфузоре компрессора" />
+    </Fields>
+</Type>

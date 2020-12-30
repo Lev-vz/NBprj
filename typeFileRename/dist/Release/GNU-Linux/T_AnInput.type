@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AnInput" Kind="Struct" UUID="F6C716BA404007D7988A8B96EA65335F">
+    <Fields>
+        <Field Name="in" Type="REAL" UUID="26F85446433299C74B422FAFC277A501" Comment="текущее значение фильтруемой величины&#x0A;" />
+        <Field Name="out" Type="REAL" UUID="AB7E0D214EE1156B80BEAEBC0263399A" Comment="отфильтрованное значение&#x0A;" />
+        <Field Name="ti" Type="REAL" UUID="51BA096746ED3C699156A582E61D9689" Comment="таймер задержки на восстановление канала после обрыва&#x0A;" />
+        <Field Name="inBrk" Type="BOOL" UUID="92F6094242651DB529958C89E221194A" Comment="признак недостоверности сигнала (входной)&#x0A;" />
+        <Field Name="outBrk" Type="BOOL" UUID="D45AFE5048ED2734F1D9A9958F970D2D" Comment="признак недостоверности сигнала (выходной)&#x0A;" />
+        <Field Name="wasOk" Type="BOOL" UUID="755EC5A04D84069DE2410E901CC99D39" Comment="признак достоверности сигнала (внутренний)&#x0A;" />
+    </Fields>
+</Type>

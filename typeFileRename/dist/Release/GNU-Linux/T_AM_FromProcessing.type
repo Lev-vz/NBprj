@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AM_FromProcessing" Kind="Struct" Comment="Сигналы, идущие из обработчика ИМ" UUID="A6D7875840F9E702E7824F8046D18141">
+    <Fields>
+        <Field Name="qOn" Type="BOOL" UUID="201C2A324E5B70F4DA1F5B8E2010211F" Comment="Выход - &quot;включить&quot; (открыть, форсировка)" />
+        <Field Name="qOff" Type="BOOL" UUID="11C1E90E4B60E9E2AC0164A8CD7688E7" Comment="Выход - &quot;отключить&quot; (закрыть)" />
+        <Field Name="qHoldOn" Type="BOOL" UUID="5FE7AEEB43842E1B420E3A929065CF97" Comment="Выход - &quot;удержание&quot; (трехходовой клапан)" />
+        <Field Name="modeManual" Type="BOOL" UUID="0AFBD4A64FF8C309BDF4D9BBAF1A6E4E" Comment="Режим ручного управления" />
+        <Field Name="fNotOn" Type="BOOL" UUID="E0E79D9F4E8E2BDD77AF57B3E4827898" Comment="Не включен" />
+        <Field Name="fNotOff" Type="BOOL" UUID="8BD39D29468096AD67F9498E5368625F" Comment="Не отключен" />
+        <Field Name="fNotStart" Type="BOOL" UUID="55901A9549CB558C6C22C0950F7C98C1" Comment="Не стронулся" />
+        <Field Name="fSelfOn" Type="BOOL" UUID="9017A0A34F59481F7870ABA8E8504720" Comment="Самопроизвольное включение" />
+        <Field Name="fSelfOff" Type="BOOL" UUID="AE73561A43F8F72268B77AB5E6E1AD73" Comment="Самопроизвольное отключение" />
+        <Field Name="blockCommand" Type="BOOL" UUID="B7E4BD904864CFAF642845A7B7798A7C" Comment="Команда заблокирована таймером макс. длительности" />
+        <Field Name="blockRecommand" Type="BOOL" UUID="1133DD8F4DF10DEBA424AB8DE6F37054" Comment="Команда заблокирована счётчиком поджимов" />
+        <Field Name="fCommon" Type="BOOL" UUID="11B902DC4884FB92CCAEEDAA6BEFCBFA" Comment="Обобщенная неисправность" />
+    </Fields>
+</Type>

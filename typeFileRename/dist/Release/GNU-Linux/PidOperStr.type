@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="PidOperStr" Kind="Struct" UUID="01232E324A9A5DB89A9E94933342D7C0">
+    <Fields>
+        <Field Name="act_SP" Type="REAL" UUID="0B226C6C45577C4E14F536978DB8EE6D" Comment="текущая уставка" />
+        <Field Name="err" Type="REAL" UUID="3267228F415A63C2E44DA9BD4ED61BA0" Comment="текущая ошибка" />
+        <Field Name="P_part" Type="REAL" UUID="6948E0FF4ED09783E76EF6A1F6AA12CC" Comment="пропорциональная составляющая" />
+        <Field Name="D_part" Type="REAL" UUID="B67F183B443352AD5EF497A674B2B299" Comment="диференциальная составляющая" />
+        <Field Name="PplusD_part" Type="REAL" UUID="75A34C3342D29A25396FE3AB7446BEB5" Comment="ПД-составляющая" />
+        <Field Name="DI_part" Type="REAL" UUID="FA4BCD324E584BA3AD2DCCBFE2BB20A6" Comment="интегральная составляющая" />
+        <Field Name="PplusD_part_prev" Type="REAL" UUID="0466211F473D7CAD5F1C01B3B4B694AC" Comment="ПД-составляющая в прошлом цикле" />
+        <Field Name="CV_prev" Type="REAL" UUID="518FBDF24D05B528A8845EA1A51627F5" Comment="выход блока в прошлом цикле" />
+        <Field Name="CV" Type="REAL" UUID="EE550B9A4478E1CFC3F348B34B42FCFD" Comment="выход блока" />
+        <Field Name="der" Type="REAL" UUID="21DF588C4C6575282EBDE4940AF7938E" Comment="скорость изменения входной переменной" />
+    </Fields>
+</Type>

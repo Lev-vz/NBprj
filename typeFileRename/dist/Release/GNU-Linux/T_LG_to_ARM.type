@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_LG_to_ARM" Kind="Struct" UUID="CB5B64B745837E5DDC9E55A2C4C18DE8">
+    <Fields>
+        <Field Name="was_BTN_KPK" Type="BOOL" UUID="B9DB7DA9491C7B83E00A3AAF8530B77F" Comment="Была нажата кн. КПК" />
+        <Field Name="was_BTN_APK" Type="BOOL" UUID="95B42F5A4B7AB62A59FE3DAAD38FE4B5" Comment="Была нажата кн. АПК" />
+        <Field Name="was_BTN_APM" Type="BOOL" UUID="E738184F4C8F06C65268A197DD16075A" Comment="Была нажата кн. АПМ" />
+        <Field Name="was_BTN_PBZ" Type="BOOL" UUID="5322FC844327700504AA199E08B6F370" Comment="Была нажата кн. ПБЗ" />
+        <Field Name="was_BTN_HP" Type="BOOL" UUID="A7A00DD146E398CE0B70E2A691B6E956" Comment="Была нажата кн. ХП" />
+        <Field Name="was_BTN_PZM" Type="BOOL" UUID="0F88AA9240FDC79CE1ABDC85AC2EF61C" Comment="Была нажата кн. ПЗМ" />
+        <Field Name="was_BTN_TP" Type="BOOL" UUID="077172B14F6BD2DB9F0576875535EDDC" Comment="Была нажата кн. TП" />
+        <Field Name="was_BTN_OGV_ON" Type="BOOL" UUID="B31EB0C24FB03D6E42ABEFAB5DD6B260" Comment="Была нажата кн. ПУСК ОГВ ОН" />
+        <Field Name="was_BTN_OGV_OD" Type="BOOL" UUID="F8C7003043BFD461B83AFABFEB3CC6A3" Comment="Была нажата кн. ПУСК ОГВ ОД" />
+        <Field Name="was_BTN_OGV_OMA" Type="BOOL" UUID="3A1831984BC3636FF90EE392A84FED2B" Comment="Была нажата кн. ПУСК ОГВ ОМА" />
+        <Field Name="was_BTN_STOP_PT" Type="BOOL" UUID="B45C4B8444024354CAB4DC8BF6B978BF" Comment="Была нажата кн. СТОП ПТ" />
+        <Field Name="A_OD_ON" Type="BOOL" UUID="968AE2514260E43026870C8EBFCC63F6" Comment="Автоматика в ОД вкл" />
+        <Field Name="A_ON_ON" Type="BOOL" UUID="78BDC3BD4758A11AEF6ABE83705426F8" Comment="Автоматика в ОН вкл" />
+        <Field Name="A_OMA_ON" Type="BOOL" UUID="A762B80D4E7A12795725E1B5BF48496A" Comment="Автоматика в ОМА вкл" />
+        <Field Name="RO_DU" Type="BOOL" UUID="1C1E65C649B02C347A76CBA985BCC96C" Comment="ДУ РО" />
+        <Field Name="PRM_DU_ON" Type="BOOL" UUID="83CA5189474C6CEABCF39B8D09F61F4C" Comment="Разрешение кнопки ДУ вкл УТО" />
+        <Field Name="PRM_DU_OF" Type="BOOL" UUID="D253E3574408639D27F8B29943D389D1" Comment="Разрешение кнопки ДУ выкл УТО" />
+        <Field Name="PRM_AU_ON" Type="BOOL" UUID="4FA4564D4EE6713612D71FB078EC0C93" Comment="Разрешение кнопки АУ вкл УТО" />
+        <Field Name="PRM_AU_OF" Type="BOOL" UUID="27AFD2D349F23752CE07578F18407418" Comment="Разрешение кнопки АУ вкл УТО" />
+        <Field Name="UTO_DU" Type="BOOL" UUID="FE9E8D4D444C625E9911F08D792F6C62" Comment="УТО в режиме ДУ" />
+        <Field Name="UTO_AU" Type="BOOL" UUID="BEF6C164423CEFC6C4A2C69DA05667DA" Comment="УТО в режиме АУ" />
+        <Field Name="UTO_T1_manual" Type="BOOL" UUID="D899A8D84CF867BA96D3C9A0B4F4D43C" Comment="Определение заданной T1 воды на выходе УТО" />
+        <Field Name="UTO_Pulse" Type="BOOL" UUID="0E80961B4C5C80DC3085BD8B7B8EBF5E" Comment="Тип команд на заслонки в ДУ" />
+        <Field Name="PRM_BGUT_ON" Type="BOOL" UUID="47542A954775AD6987F7EA8992CA0319" Comment="Разрешение кнопки БЖУТ открыть" />
+        <Field Name="PRM_BGUT_OF" Type="BOOL" UUID="D49FFC544D661198CFB4E2932542F358" Comment="Разрешение кнопки БЖУТ закрыть" />
+        <Field Name="PRM_VGUT_ON" Type="BOOL" UUID="B6DFA5194267687F7F1BA1BEAA866F3C" Comment="Разрешение кнопки ВЖУТ открыть" />
+        <Field Name="PRM_VGUT_OF" Type="BOOL" UUID="208F912F45644A374661D58EEE6E7BFC" Comment="Разрешение кнопки ВЖУТ закрыть" />
+        <Field Name="PRM_APK_DU" Type="BOOL" UUID="28030E084D27239E169BC097602DD2BD" Comment="Разрешение АПК ДУ" />
+        <Field Name="PRM_SET_TRK" Type="BOOL" UUID="B2B8563C41B0E25B9E6942B35691A51A" Comment="Разрешение управление ТРК" />
+        <Field Name="Sound_Fire" Type="BOOL" UUID="A4A5B25E47DEBC90C82B7A965CF3C717" />
+        <Field Name="Tg_Start" Type="BOOL" UUID="EBC6E2C7470E9A92C15BD0AD6DFE6BC3" Comment="Взвод защиты по Тг за ТВД" />
+        <Field Name="Tg_Work" Type="BOOL" UUID="CBD964CA4C97441025ACA19CD70854AF" Comment="Взвод защиты по Тг за ТВД на запуске" />
+        <Field Name="Micro_Fakel" Type="BOOL" UUID="061CBFD04C65D2ACCEDBCAB32341EA5C" Comment="Микрофакельный двигвтель" />
+        <Field Name="MS_8p" Type="BOOL" UUID="4BA6A7554EEDC2C6E537FFBA0B167371" Comment="Тип смасла MS_8p" />
+    </Fields>
+</Type>

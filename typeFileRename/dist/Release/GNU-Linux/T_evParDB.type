@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_evParDB" Kind="Struct" UUID="2EE0C3E74B9A1CF736E8329DAFFBC7FE">
+    <Fields>
+        <Field Name="Tv_inGTU" Type="F6C716BA404007D7988A8B96EA65335F" UUID="D858FB6343783516212121BCD61B9186" Comment="РасчетнаЯ Т воздуха на входе ГТУ (1 канал), [°C]&#x0A;" />
+        <Field Name="Tv_outKND" Type="3EBC340249558D93184EEB8E69A31FB7" UUID="0325CBCC48F244212BADC9B1521B25DC" Comment="РасчетнаЯ Т воздуха за КНД (2 канала), [°C]&#x0A;" />
+        <Field Name="Ptg_inConf" Type="F6C716BA404007D7988A8B96EA65335F" UUID="B15042E2476E9A2EB494FBB488FAFED4" Comment="Расчетное Pтг перед мерной шайбой (1 канал), МПа&#x0A;" />
+        <Field Name="Ptg_outDG" Type="F6C716BA404007D7988A8B96EA65335F" UUID="86D27CF744A6D78A3FE3F3B03A10D260" Comment="Расчетное Pтг перед ДГ (1 канал), МПа&#x0A;" />
+        <Field Name="Nnd" Type="F6C716BA404007D7988A8B96EA65335F" UUID="32D8D1164E890DDA676C329D445B6E32" Comment="РасчетнаЯ N КНД (2 канала), [об/мин]&#x0A;" />
+        <Field Name="Nvd" Type="F6C716BA404007D7988A8B96EA65335F" UUID="6666EC164EBA1E848ADC79A3388F357F" Comment="РасчетнаЯ N КВД (2 канала), [об/мин]&#x0A;" />
+        <Field Name="Nst" Type="F6C716BA404007D7988A8B96EA65335F" UUID="7602F620478CC1A25DB9DF918B5A7DB5" Comment="РасчетнаЯ N ТН (2 канала), [об/мин]&#x0A;" />
+        <Field Name="Tg_outTND" Type="F6C716BA404007D7988A8B96EA65335F" UUID="2579C2FC4AE11073E8E531A2E7DDA549" Comment="РасчетнаЯ Т газа за ТНД (16 термопар), [°C]" />
+        <Field Name="Tg_outTNDstart" Type="3EBC340249558D93184EEB8E69A31FB7" UUID="860B23234FF328E0531F4DA049940C91" Comment="РасчетнаЯ Т газа за ТНД на запуске (2термопары), [°C]" />
+        <Field Name="Pv_outOK" Type="F6C716BA404007D7988A8B96EA65335F" UUID="5D387F21433176DD332DC987AAE7A34D" Comment="Расчетное P воздуха за ОК (1 канал), МПа&#x0A;" />
+        <Field Name="posDG" Type="F6C716BA404007D7988A8B96EA65335F" UUID="559B8F214CA4BF99EC7E59A4A0EFE641" Comment="Расчетное положение ДГ (1 канал), %&#x0A;" />
+        <Field Name="dT_onKS" Type="REAL" UUID="313FE4E245DD5CFE0A93CAB1AECC86F1" Comment="Перепад Т газа на КС, [°C]" />
+        <Field Name="NndNorm" Type="REAL" UUID="8ADEEF8D47F6C09DD2E61DAC868E7AFF" Comment="приведеннаЯ к условиЯм на входе в двигатель частота вращениЯ КНД, [об/мин]" />
+        <Field Name="NvdNorm" Type="REAL" UUID="8F5F394B4DDDBC5E307DE1B149941815" Comment="приведеннаЯ к условиЯм на входе в двигатель частота вращениЯ КВД, [об/мин]" />
+        <Field Name="NstNorm" Type="REAL" UUID="592D7B984137ED635B7FD3AC5268BDD9" Comment="приведеннаЯ к условиЯм на входе в двигатель частота вращениЯ СТ, [об/мин]" />
+        <Field Name="Tg_inBTA" Type="REAL" UUID="101FBA2B4BB2E329E4D28798EECA0307" Comment="Температура топливного газа перед БТА" />
+        <Field Name="setDG_DU" Type="REAL" UUID="C6EE36D34083F3E280BD708EE39E813D" Comment="задание на ДГ при ручном управлении" />
+        <Field Name="setDG" Type="REAL" UUID="70E013004A4A93E7699B2A8C15BE8E3A" Comment="Управление регулирующим клапаном дозатора газа " />
+        <Field Name="setNvd" Type="REAL" UUID="653B0EEC4793849F6A8CB89492753251" Comment="Задание на N КВД" />
+        <Field Name="setNst" Type="REAL" UUID="E9B23EAB4F1483ADE4397AB653B6E15C" Comment="Задание на N ТН" />
+        <Field Name="d_timeToGT" Type="REAL" UUID="2EBEFB564BD78F4AE49F4590034B5E0B" Comment="Расход на розжиг" />
+    </Fields>
+</Type>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_fl_KC" Kind="Struct" UUID="85AF354340541A55C7C9D8A860886FFE">
+    <Fields>
+        <Field Name="OGR_EXIST" Type="BOOL" UUID="32D3AD05491AA8F48D8C838C9ACB61A2" />
+        <Field Name="UPR_ON" Type="BOOL" UUID="7CCB9B2F436A0407C7B73FAAED0687BB" Comment="Перевести ГПА в управление от КЦ" />
+        <Field Name="UPR_OK" Type="BOOL" UUID="68E204C4475059C6F213928C3B5475CE" Comment="ГПА перешло в управление от КЦ" />
+        <Field Name="RAZR" Type="BOOL" UUID="44DA95C74225E16E8D652D83FBA4CEF9" Comment="Разрешение управление от КЦ" />
+        <Field Name="NST_USTAVKA" Type="REAL" UUID="2FF75E6F4E662BD3F22CEBB5B14F8EA7" Comment="Задание на изменение оборотов СТ" />
+        <Field Name="DI" Type="BOOL" UUID="1F5CC76A45E3B5B6513E04B50EDFD1E7" ArraySize="16" Comment="Дискретные параметры " />
+        <Field Name="AI" Type="REAL" UUID="55C32D36496C8BD09816AA9CEFA1CE4C" ArraySize="21" Comment="Аналоговые параметры" />
+    </Fields>
+</Type>

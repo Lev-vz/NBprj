@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_Diag_KM" Kind="Struct" UUID="661877A949F6320C7E2CC0AC724AF8D9">
+    <Fields>
+        <Field Name="A1_1" Type="WORD" UUID="BAFE00BE42E47DE281AC07A5750CA066" Comment="1-ая плата" />
+        <Field Name="A1_2" Type="WORD" UUID="C408AEB3416D43FA469869A86E85A644" Comment="2-ая плата" />
+        <Field Name="A1_3" Type="WORD" UUID="81EB6B12440346F9A13B4592A043EC79" Comment="3-ая плата" />
+        <Field Name="A1_4" Type="WORD" UUID="6CE989624B76C4A02446E6B308C88EC7" Comment="4-ая плата" />
+        <Field Name="A1_5" Type="WORD" UUID="FC23B22C4A347DA13D7022981156671F" Comment="5-ая плата" />
+        <Field Name="A1_6" Type="WORD" UUID="A808873746FF989655325F8D0A538B90" Comment="6-ая плата" />
+        <Field Name="A1_7" Type="WORD" UUID="159986754E822F42B30E4694D56B0349" Comment="7-ая плата" />
+        <Field Name="A1_8" Type="WORD" UUID="D09318D346DB40C541D1C596DC6BD59A" Comment="8-ая плата" />
+        <Field Name="A1_9" Type="WORD" UUID="47A96ED2434F58622127859E8C26E336" Comment="9-ая плата" />
+        <Field Name="A1_10" Type="WORD" UUID="3875F05D407FF24DF3DE518893573E59" Comment="10-ая плата" />
+        <Field Name="A1_11" Type="WORD" UUID="4BA9D8EB43D39383790CB9A2162789DE" Comment="11-ая плата" />
+        <Field Name="A1_12" Type="WORD" UUID="DCD324D54D1665E06A76FA842DD4D31E" Comment="12-ая плата" />
+    </Fields>
+</Type>

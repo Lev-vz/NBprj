@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_Stat" Kind="Struct" UUID="5C256F404590F8E9241DC39E4DF5C23C">
+    <Fields>
+        <Field Name="SumAOc" Type="REAL" UUID="3A6F221E4A99F90711FCC592D8C6DB74" />
+        <Field Name="SumAOc_Month" Type="REAL" UUID="235552E248D3F18E29A7BAA5CA7C775F" />
+        <Field Name="SumAOc_Year" Type="REAL" UUID="F78675864AA5CB7ACCC78FABF9874726" />
+        <Field Name="SumAOb" Type="REAL" UUID="636DBF4A4F9840FD248460A2B42051AE" />
+        <Field Name="SumAOb_Month" Type="REAL" UUID="DC689B3C4A44D1673D61E99E1328D9F9" />
+        <Field Name="SumAOb_Year" Type="REAL" UUID="5778E13349288AF2BC87FAA31E4F57CD" />
+        <Field Name="SumNOc" Type="REAL" UUID="710BF0DA4384A65460C43C80FE788B7D" />
+        <Field Name="SumNOc_Month" Type="REAL" UUID="CF19A37B4781C03FAC5154A82B0B0B60" />
+        <Field Name="SumNOc_Year" Type="REAL" UUID="3792520F48723F605F63E4B510BDF619" />
+        <Field Name="SumNOb" Type="REAL" UUID="862AB7214BD9405DDD5C89995E1B2E3E" />
+        <Field Name="SumNOb_Month" Type="REAL" UUID="1615091F4E06FDE5FE9297B091948962" />
+        <Field Name="SumNOb_Year" Type="REAL" UUID="9058A026410E1D9C3B77DD923C351905" />
+        <Field Name="SumPusk" Type="REAL" UUID="634591C44E1AAB491A03D08DDF4888B8" />
+        <Field Name="SumPusk_Month" Type="REAL" UUID="063C40AB43A7190C5177509383AD496A" />
+        <Field Name="SumPusk_Year" Type="REAL" UUID="8618F939456DD4F139F73F83D82A6514" />
+        <Field Name="SumWork" Type="REAL" UUID="1A6DDDE34B90D669783552BACEE5A0F2" />
+        <Field Name="SumXP" Type="REAL" UUID="D18CF58C4C99D3944CB02EA4FED1B402" />
+        <Field Name="SumXP_Month" Type="REAL" UUID="4A0243224C80E6089F7F629B8DD9D16D" />
+        <Field Name="SumXP_Year" Type="REAL" UUID="C57BA4A348BFE06B249EAA8F26D16419" />
+        <Field Name="SumProm" Type="REAL" UUID="C243C1DE418759A3B9E487B0F803DD3C" />
+        <Field Name="SumRemont" Type="REAL" UUID="F864238A4B2AF7E3D0C26783415DCED6" />
+        <Field Name="Work_H" Type="REAL" UUID="429647024D7C01BFEC29EA9092F595AB" Comment="Время наработки ГТУ в часах" />
+        <Field Name="Work_H_Day" Type="REAL" UUID="F73804D94CD064E5A3E6DAAB33633C75" Comment="Время наработки ГТУ за текущие сутки в часах" />
+        <Field Name="Work_H_last" Type="REAL" UUID="B7D508824BC2741A7BB98AAD9B17A92A" Comment="Время наработки ГТУ в часах с посл. запуска" />
+        <Field Name="Work_H_Month" Type="REAL" UUID="CD5BC9A044A2E4757A3CE0B50AB13505" Comment="Наработка ГТУ за месяц" />
+        <Field Name="Work_H_Year" Type="REAL" UUID="0EB528E54CE1AF3A446A77A35B878DDB" Comment="Наработка ГТУ за год" />
+        <Field Name="Work_H_nom" Type="REAL" UUID="DF45A36C4E6C3A59CC56108F13212794" Comment="Наработка ГТУ на номинальном режиме" />
+        <Field Name="Work_H_Day_nom" Type="REAL" UUID="1E75D39E43BA4917EFDB6AB60F6724A3" Comment="Наработка ГТУ на номинальном режиме за текущие сутки" />
+        <Field Name="Work_H_Day_max" Type="REAL" UUID="ECADAC7E43E2FC5EDF09ECA2A563C549" Comment="Наработка ГТУ на максимальном режиме за текущие сутки" />
+        <Field Name="Work_H_Month_nom" Type="REAL" UUID="E376222143891B5FE4AF269E4A8909AC" Comment="Наработка ГТУ на номинальном режиме за текущий месяц" />
+        <Field Name="Work_H_Month_max" Type="REAL" UUID="CB964410495B272FD0294F8DF1D1471D" Comment="Наработка ГТУ на максимальном режиме за текущий месяц" />
+        <Field Name="Work_H_Year_nom" Type="REAL" UUID="149CC0F5401BE1553B54C684B51F9AFA" Comment="Наработка ГТУ  на номинальном режиме за текущий год" />
+        <Field Name="Work_H_Year_max" Type="REAL" UUID="2A31069146266D5CD2F286BC30739B63" Comment="Наработка ГТУ  на максимальном режиме за текущий год" />
+        <Field Name="Work_H_Oil_D" Type="REAL" UUID="BD07D2EC4C7FB0F44D0A6EA9E9E481EA" Comment="Наработка ГТУ с момента последней заправки масла в МБД" />
+        <Field Name="Work_M_Oil_24" Type="REAL" UUID="3B6B6CB945A82077AE8F6EB65F213314" />
+        <Field Name="Work_H_Oil_N" Type="REAL" UUID="305007354D33441F90DCB182D6C5676E" Comment="Наработка ГТУ с момента последней заправки масла в МБН" />
+        <Field Name="Work_H_Oil_N_24" Type="REAL" UUID="21E3A94840242B7CCD36C39DA5A5DF5C" />
+        <Field Name="Rezerv_H_Month" Type="REAL" UUID="D6D950AE4DF876B447060FA8052DEBF9" Comment="Нахождение ГПА в резерве за месяц" />
+        <Field Name="Rezerv_H_Year" Type="REAL" UUID="2F683ECC4ECAB548C3B12D832AFDF167" Comment="Нахождение ГПА в резерве за год" />
+        <Field Name="Work_Nagn_H" Type="REAL" UUID="A0CD8C8E4C628293769BED9B39A3BA5C" Comment="Наработка нагнетателя в часах" />
+        <Field Name="SumKp1_O" Type="REAL" UUID="C53161944B84E4D88433F2B4FBCFCBAE" Comment="Счетчик открытий Крана 1" />
+        <Field Name="SumKp2_O" Type="REAL" UUID="D25500D543809484EC3407879973CE63" Comment="Счетчик открытий Крана 2" />
+        <Field Name="N_PNS" Type="REAL" UUID="A184ACB04F068DA106E9D29462DDB9E3" Comment="Наработка ПНС" />
+        <Field Name="N_PNU" Type="REAL" UUID="FD1CE88A4737B94E6F749483E383E56B" Comment="Наработка ПНУ" />
+        <Field Name="N_VOT" Type="REAL" UUID="A16AD110486B86F8D4CA8DA46267EBF3" Comment="Наработка ВОТ" />
+        <Field Name="N_VOD1" Type="REAL" UUID="F47EE32842501F18D5BC16A8412CBA7A" Comment="Наработка ВОД1" />
+        <Field Name="N_VOD2" Type="REAL" UUID="B58E2CA846FFBFA05CA52F92A9768D57" Comment="Наработка ВОД2" />
+        <Field Name="N_VOD3" Type="REAL" UUID="3AD856BC4747CBC23616C293853A9DA0" Comment="Наработка ВОД3" />
+        <Field Name="N_VOD4" Type="REAL" UUID="CC9A52B04D977656F44129ADBEFBD4C8" Comment="Наработка ВОД4" />
+        <Field Name="N_VVOU1" Type="REAL" UUID="01836B2044A868FF83FFA8877B417D34" Comment="Наработка ВВОУ1" />
+        <Field Name="N_VVOU2" Type="REAL" UUID="D57BD14344CDBB7C09E02591FED0C3FF" Comment="Наработка ВВОУ2" />
+        <Field Name="N_VMOD1" Type="REAL" UUID="3C3DD62A4DF0F42BA6D8899AB3E3A459" Comment="Наработка ВМОД1" />
+        <Field Name="N_VMOD2" Type="REAL" UUID="BDA39D8C4876D133F6FE69B2216B7022" Comment="Наработка ВМОД2" />
+        <Field Name="N_VMON1" Type="REAL" UUID="723DCE784075663F36E09A9ABB987B8F" Comment="Наработка ВМОН1" />
+        <Field Name="N_VMON2" Type="REAL" UUID="CE5153BD4B697A02F0D153AA359C9B55" Comment="Наработка ВМОН2" />
+        <Field Name="N_VVN" Type="REAL" UUID="CC59116F4DE1B685839BA5A847D7B288" Comment="Наработка ВВН" />
+        <Field Name="N_VBMA" Type="REAL" UUID="FD67BD824747E0617DEA3F8E09EF62DE" Comment="Наработка ВОМА" />
+        <Field Name="N_MBD" Type="REAL" UUID="C6B010DC465CA8C47E3F1EA7F95B12B4" Comment="Наработка ТЭН МБД" />
+        <Field Name="N_MBN1" Type="REAL" UUID="CFAAAD3B4D24AB6023C8EFBF3FA8702D" Comment="Наработка ТЭН МБН1" />
+        <Field Name="N_MBN2" Type="REAL" UUID="860A5B754013FB0990514B83580106D4" Comment="Наработка ТЭН МБН2" />
+        <Field Name="N_ERGTU" Type="REAL" UUID="A80036CE450F0F8E058366B7D6D92792" Comment="Наработка ЭРГТУ" />
+        <Field Name="N_ERON" Type="REAL" UUID="F9CAC0DE442A744C1E80F4A390FDF545" Comment="Наработка ЭРОН" />
+        <Field Name="N_ERPT" Type="REAL" UUID="E2E9ADD54E5FC8EE020C57AFAE42BFD1" Comment="Наработка ЭРПТ" />
+    </Fields>
+</Type>

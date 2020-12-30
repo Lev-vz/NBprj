@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ReportEngine >
+<Configuration>
+    <ReportList>
+        <Report Equation="Make_Report1=TRUE" Printer="lp" Template="GPA_Report_PPZ.htm" Print="FALSE" ShowPreview="TRUE" Archive="" FileNameTemplate="Report_%Y%m%d_%H%M%S.htm" Comment="PPZ" Landscape="TRUE" MarginTop="10" MarginLeft="10" MarginRight="10" MarginBottom="10" PageSize="A4" FullPage="FALSE" />
+        <Report Equation="Make_Report_SV1=TRUE" Printer="lp" Template="Raport_SV1.htm" Print="FALSE" ShowPreview="TRUE" Archive="" FileNameTemplate="C:\Reports\SUT\%Y%m%d_SV1.htm" Comment="Smena_1" Landscape="FALSE" MarginTop="5" MarginLeft="7" MarginRight="7" MarginBottom="5" PageSize="A4" FullPage="FALSE" />
+        <Report Equation="Make_Report_SV2=TRUE" Printer="lp" Template="Raport_SV2.htm" Print="FALSE" ShowPreview="TRUE" Archive="" FileNameTemplate="C:\Reports\SUT\%Y%m%d_SV2.htm" Comment="Smena_2" Landscape="FALSE" MarginTop="7" MarginLeft="5" MarginRight="5" MarginBottom="7" PageSize="A4" FullPage="FALSE" />
+    </ReportList>
+</Configuration>

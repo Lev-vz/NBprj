@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_2chanel" Kind="Struct" UUID="3EBC340249558D93184EEB8E69A31FB7">
+    <Fields>
+        <Field Name="chan1" Type="REAL" UUID="DBA29A184795BEA76D620B8FDF35DF3B" />
+        <Field Name="chan2" Type="REAL" UUID="408EC7A64462ECAF8B336BB4BF5724A9" />
+        <Field Name="brk1" Type="BOOL" UUID="685A0C024762876614EDFB919E9455B1" />
+        <Field Name="brk2" Type="BOOL" UUID="B2D727CD40383AB7FB8234A1FBCC2359" />
+        <Field Name="ti1" Type="REAL" UUID="8237051F4C2C025E7A779EBD6D3A5299" />
+        <Field Name="ti2" Type="REAL" UUID="78D8DCB742E8B86D932913935405B905" />
+        <Field Name="out" Type="REAL" UUID="325502144FA6D45CB93F4ABCD00A5CF2" />
+        <Field Name="outBrk" Type="BOOL" UUID="5E33B42B4D63AE90B729B2B8F58C980A" />
+    </Fields>
+</Type>

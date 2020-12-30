@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_GPA_DI_Fastwel" Kind="Struct" UUID="5CBC2A8B4BEB236D7A88EA92BAF304B2">
+    <Fields>
+        <Field Name="A2_11" Type="WORD" UUID="EBA79332407C1971FD1E84AAA8434BB9" />
+        <Field Name="A2_12" Type="WORD" UUID="5CFD0D0E4F460B8E16A4AEB93563E180" />
+        <Field Name="A2_13" Type="WORD" UUID="69CA7AC040ACB07B83297CA945301641" />
+        <Field Name="A2_14" Type="WORD" UUID="BF410AE04CD3E43B32DF2C8273A00D7A" />
+        <Field Name="A2_15" Type="WORD" UUID="EF256AB544449BB15A28BC88BA372C1C" />
+    </Fields>
+</Type>

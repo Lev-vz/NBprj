@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_flag_from_FR" Kind="Struct" UUID="9787792546B26C105CBF28BCB4436432">
+    <Fields>
+        <Field Name="Tg_out_TVD_High" Type="BOOL" UUID="EB774EC04FA27E5E8A89C899BA27CCBE" Comment="Высокая Тг за ТВД" />
+        <Field Name="Tg_out_TVD_startHigh" Type="BOOL" UUID="3DDEF9E241E0769AF8A24DB88446FFA3" Comment="Высокая Тг за ТВД на пуске" />
+        <Field Name="no_Flame" Type="BOOL" UUID="9110B8A44683B3E4C01F929C5E835C8F" Comment="Нет розжига" />
+        <Field Name="Flame_failure" Type="BOOL" UUID="4E29D81447498A410153A78CAF9D4CAD" Comment="Погасание камеры сгорания" />
+        <Field Name="surgeD" Type="BOOL" UUID="618644874E8A054A57D5879F3E4CA274" Comment="Помпаж двигателя" />
+        <Field Name="N_ST_High" Type="BOOL" UUID="DECF30574BA3319EB1616691C11CE2E8" Comment="Высокие обороты СТ" />
+        <Field Name="AOss_FR" Type="BOOL" UUID="BBCC58144A81CED168B7CDA6AA01FD4D" Comment="Обобщенный АОсс от ТР" />
+        <Field Name="AObs" Type="BOOL" UUID="A6A6BC49406C174910F06BBE1EA001FF" Comment="Обобщенный АОбс от TP" />
+        <Field Name="ST_free_rotation" Type="BOOL" UUID="3F7146B149945EB9DF3B229B2CB275FB" Comment="Самопроизвольная раскрутка СТ" />
+        <Field Name="N_TK_High" Type="BOOL" UUID="2A41381C4D59038FEAD38996C6A66306" Comment="Высокая N ТК" />
+        <Field Name="prN_TK_High" Type="BOOL" UUID="252A0699427045BC45DB35B75220285B" Comment="Высокая приведенная N TK" />
+        <Field Name="freez_N_start" Type="BOOL" UUID="B9C07D7C46E5F9F8B52F94AC1267F761" Comment="Зависание на запуске" />
+        <Field Name="Tg_out_TVD_fault" Type="BOOL" UUID="F9E806EE4B02170C541D52BBF1B581E6" Comment="Отказ каналов измерения Тг за ТВД" />
+        <Field Name="N_TK_fault" Type="BOOL" UUID="BED168104A26A6177B0C93AD8B9376A8" Comment="Отказ каналов измерения N TK" />
+        <Field Name="N_ST_fault" Type="BOOL" UUID="FE1844C8480D650C475219A5710B7A48" Comment="Отказ каналов измерения N СТ" />
+        <Field Name="N_GG_fault" Type="BOOL" UUID="FE3ED5724280EA1BB44E898EC91EF408" />
+        <Field Name="N_ST_low" Type="BOOL" UUID="F705C14C4BD7D7F156DC2691DF7E6A75" Comment="Низкая N СТ на режиме" />
+        <Field Name="N_TK_low" Type="BOOL" UUID="26E7787041F02B71F0A644996839ACD1" Comment="Низкая N ТК на режиме" />
+        <Field Name="N_ST_alert" Type="BOOL" UUID="BC5EAB734934302FD3E522866E488483" Comment="Повышенная N СТ" />
+        <Field Name="N_TK_alert" Type="BOOL" UUID="A9AEE78D49B4EF0AD46A4B85DBF9F42C" Comment="Повышенная N ТК" />
+        <Field Name="prN_TK_alert" Type="BOOL" UUID="78EC3B984D56CBF020B53E8EBAC89B07" Comment="Повышенная приведенная N TK" />
+        <Field Name="Tg_out_TVD_alert" Type="BOOL" UUID="DBAC896842BDD367D4819289511801B6" Comment="Повышенная Т газа за турбиной" />
+        <Field Name="Pk_alert" Type="BOOL" UUID="19030A3E4414DCC3B07E53A975353614" Comment="Повышенная P*k" />
+        <Field Name="AOss_from_FR" Type="BOOL" UUID="6F68309E476C8F11C6638E938A161C8D" Comment="Обобщенный АОсс от ТР" />
+        <Field Name="AObs_from_FR" Type="BOOL" UUID="705AC3A145F395B0D22A618A3AC13AB6" Comment="Обобщенный АОбс от TP" />
+    </Fields>
+</Type>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="Support_AI ">
+    <Items>
+        <Item Name="HMI_SEN.type" />
+        <Item Name="Type_62CBR25KYA2ELM4SRDUZEFC4TY.type" />
+        <Item Name="Type_7VXX2CAQINNEHLHRUXD5OBUNOM.type" />
+        <Item Name="Type_A4A5ECXIIQMELJEINWJGDKHBCA.type" />
+        <Item Name="Type_AI_Config.type" />
+        <Item Name="Type_AI_Oper.type" />
+        <Item Name="Type_BK6ZJBEEM4BEVLGMWPR2F4MWKI.type" />
+        <Item Name="Type_BKUFGIZ5QBFUNEA53BNDQXHUKE.type" />
+        <Item Name="Type_ESAHGNRMTQ6E5A25DBLXO6Q7WI.type" />
+        <Item Name="Type_EUJTVLDDIDPEVMIHNHA6HSKSXQ.type" />
+        <Item Name="Type_GMH7ASOFDCSUVE6MHNP4X2TUJ4.type" />
+        <Item Name="Type_LKB6FEEJAD3UNJSL72BR2DYV74.type" />
+        <Item Name="Type_LPSZ6RPUYRGUBCLHCIFS6POYME.type" />
+        <Item Name="Type_UG7IG6PUOA4UZEUXOHE7ADO3BE.type" />
+        <Item Name="Type_VPB2DV3LX2RETF6JGLBDJXKNYQ.type" />
+        <Item Name="Type_YFD3F6KLPJHEXBELQSI7GETEEI.type" />
+        <Item Name="Type_ZRYYLIIJ27CENEG4RQK6QZ3VKY.type" />
+        <Item Name="Type_support_AI.type" />
+    </Items>
+</Folder>

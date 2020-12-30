@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_GPA_AO_DRV" Kind="Struct" UUID="E327CD1846EFA8DACCB2AF8DF3CAF654">
+    <Fields>
+        <Field Name="Set_TRK" Type="REAL" UUID="88AD9545421AAAF237004E91840B31C9" Comment="Управление ТРК" />
+        <Field Name="Set_APK" Type="REAL" UUID="BCD34EAB43615846903E5CAD1BF1FE2B" Comment="Управление АПК" />
+    </Fields>
+</Type>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_PRU" Kind="Struct" UUID="69061350479FF075132885BA792A0CDA">
+    <Fields>
+        <Field Name="AI" Type="REAL" UUID="68712AC04B4E9B9EEA131985CD51755E" ArraySize="30" Comment="Аналоговые параметры" />
+        <Field Name="State" Type="INT" UUID="43AFDCA84EDAEAE9570E4A9E30FC30DF" ArraySize="25" Comment="Состояния ИМ" />
+        <Field Name="WRD" Type="WORD" UUID="8CEAD7DD48D9BD4FA1BD55BA3909F105" ArraySize="2" Comment="Слова" />
+        <Field Name="Reg" Type="INT" UUID="1B3ED12F4506CDF30643E68F5A3E6AFB" ArraySize="2" Comment="Режимы" />
+        <Field Name="BTN" Type="BOOL" UUID="3437D63B4BFAAFF43040FB9C3BAF0D03" ArraySize="5" Comment="Кнопки" />
+        <Field Name="BTN_TMO" Type="BOOL" UUID="6754D251495B45B7DDDB1A978DCB56BF" ArraySize="5" Comment="Сработка таймера" />
+        <Field Name="BTN_TMR" Type="TIME" UUID="853660CC4C1F192B62A193B0C11B9112" ArraySize="5" Comment="Задержка таймера" />
+    </Fields>
+</Type>

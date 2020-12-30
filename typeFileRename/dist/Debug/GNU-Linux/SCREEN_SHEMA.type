@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="SCREEN_SHEMA" Kind="Struct" UUID="34E707924C29E73D1EBE75B41C72DA0B">
+    <Fields>
+        <Field Name="Size_X" Type="LREAL" UUID="1AEA0C7144FDADF21F3A20AC1D1EFB7C" />
+        <Field Name="Size_Y" Type="LREAL" UUID="4629E6A644BF6863AA0E039FEDD5742A" />
+        <Field Name="W1_X" Type="LREAL" UUID="408D04AC44CBB28B6B5F6BAD9BCE26DD" />
+        <Field Name="W1_Y" Type="LREAL" UUID="FF25AE90437F2591F4B4C086BE253145" />
+        <Field Name="W1_Size_X" Type="LREAL" UUID="BA38D3F84E827216180E6DBF9FC961B4" />
+        <Field Name="W1_Size_Y" Type="LREAL" UUID="E50086D942EBD2235CFF8FB68C905084" />
+    </Fields>
+</Type>

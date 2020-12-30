@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_TS" Kind="Struct" UUID="CE5017BB486C9EDF63763594CD628C3B">
+    <Fields>
+        <Field Name="GR_noReady" Type="BOOL" UUID="1DED01AA4EA917EA2CFA7981162E7290" Comment="контроль ГР" />
+        <Field Name="HR_noReady" Type="BOOL" UUID="F65B378147757084B6AC12916E76D7D4" Comment="контроль ХР" />
+        <Field Name="HR_Ready" Type="BOOL" UUID="DF933D2548AE57E0A6BCA3A491760DEA" Comment="без газа" />
+        <Field Name="GR_Ready" Type="BOOL" UUID="3909FC7A43114E22401D638C40A98F8A" Comment="без газа" />
+        <Field Name="HR_Ready_G" Type="BOOL" UUID="D20B2C0948F45DB8E186F591175321DD" Comment="c газом" />
+        <Field Name="GR_Ready_G" Type="BOOL" UUID="417629C74DE857F62DE8A398C824A01C" Comment="c газом" />
+        <Field Name="Start_MD" Type="BOOL" UUID="C07822464CA27B3891C935A46F3C4B84" Comment="Пуск системы МД" />
+        <Field Name="Wait_blow_N" Type="BOOL" UUID="DFFA1E714A6A3313D7C7A7BC0512B7B9" Comment="Продувка контура Н" />
+        <Field Name="Stab_Pg_N" Type="BOOL" UUID="DFA5A15C4897ECF60C53A09BD87C064C" Comment="Стабилизация Рг контура Н" />
+        <Field Name="Start_TG" Type="BOOL" UUID="1C44FCEA498EE36D8269158139294B9F" Comment="Пуск ТГ" />
+        <Field Name="noG_inN" Type="BOOL" UUID="8CFABB674BFC365FC2B3E8946C1990EA" Comment="Нет газа в Н" />
+        <Field Name="blowing_N" Type="BOOL" UUID="D72F995544E4FC18AE60FDAF7D48FBD4" Comment="Стравливание контура Н" />
+        <Field Name="stop_Finish" Type="BOOL" UUID="D60B66464B4BC89E3BBC608B86C286E8" Comment="Останов ГПА завершен" />
+        <Field Name="Check_SAU" Type="BOOL" UUID="8188E67A43C1F6527842BFAD555A8183" Comment="Контроль САУ" />
+        <Field Name="Ready_KPK" Type="BOOL" UUID="A0261D51484FB2697C5B5B90A05EC050" Comment="Готов к КПК" />
+        <Field Name="Ready_APK" Type="BOOL" UUID="69A3DB374DFD8AFC7E9EC99D15560197" Comment="Готовность АПК" />
+        <Field Name="Ready_APM" Type="BOOL" UUID="9A9EB1314F19D8767F7CDEAA3780A8DF" Comment="Готов к АПМ" />
+        <Field Name="Ready_PBZ" Type="BOOL" UUID="6309B4B9414E26983A0759B9C16B0E3F" Comment="Готов к ПБЗ" />
+        <Field Name="Ready_HP" Type="BOOL" UUID="8121658B4D05EBF2554877B9EEFF55B6" Comment="Готов к ХП" />
+        <Field Name="Ready_TP" Type="BOOL" UUID="E4E924E84FE2210CF110AAA88DA0F65A" Comment="Готов к ТП" />
+        <Field Name="Ready_PZM" Type="BOOL" UUID="B806FFC948F61C7BEDF8039DB3495EB6" Comment="Готов к ПЗМ" />
+        <Field Name="StartGTD" Type="BOOL" UUID="3DD65EA84EA2CA9417EE5FBF2E7713D4" Comment="Запуск ГТД" />
+        <Field Name="IMIT_ON" Type="BOOL" UUID="397F1CEA424ED7E1CB4690AB2532F647" Comment="Включена имитация" />
+        <Field Name="wasGas_ON" Type="BOOL" UUID="444102DD49301FADCBE10782EE4C6082" Comment="Была загаз. ОН" />
+        <Field Name="filling_MN" Type="BOOL" UUID="EA70D25945EF2B0D427756B06F7A149D" Comment="Заполнение маслосистемы Н" />
+        <Field Name="Stab_MN" Type="BOOL" UUID="C87FA60C45A2824BE6DFADBCBE8C3508" Comment="Стабилизация маслосистемы Н" />
+        <Field Name="filling_MUN" Type="BOOL" UUID="84932EE84C1479E4F2008DAAE53DE8F1" Comment="Заполнение маслоуплотнений Н" />
+        <Field Name="Stab_MUN" Type="BOOL" UUID="9563708E42A5E7574FB3D88EF93466AF" Comment="Стабилизация маслоуплотнений Н" />
+        <Field Name="Sound_ON" Type="BOOL" UUID="FA8C9A21406BFF21CC5188BFA308F4D1" Comment="Предпусковая сигнализация" />
+        <Field Name="Check_PZM" Type="BOOL" UUID="9C52F1C8426A9D8680DE14B6DF63FD47" Comment="Проверка защит по маслосистеме" />
+        <Field Name="Check_PZM_finish" Type="BOOL" UUID="56C7BAC24E45629E1939CCB74C96F16E" Comment="Защиты по маслосистеме проверены успешно" />
+        <Field Name="HP_work" Type="BOOL" UUID="B2D0A49341F9F5C23D8E499A78B34BCA" Comment="ХП двигателя" />
+        <Field Name="HP_finish" Type="BOOL" UUID="9B7DBBD24099CB15E26F3EB69428081D" Comment="Окончание ХП" />
+        <Field Name="AOss_finish" Type="BOOL" UUID="465276194D5BB40C7CC1FBA45F2F8A79" Comment="АОсс завершено" />
+        <Field Name="AObs_finish" Type="BOOL" UUID="484E12434450CAC2979B468A73D9860C" Comment="АОбс завершено" />
+        <Field Name="VOD_15m_OF" Type="BOOL" UUID="252B00F54F069CC85DC9E89945B812CD" Comment="Обдув двигателя после прогрева" />
+        <Field Name="VOD_100s_OF" Type="BOOL" UUID="8AE37FD3411A7F06A2BE0AB73960B33C" Comment="Обдув двигателя после останова" />
+        <Field Name="GNSD_False" Type="BOOL" UUID="8EF2A7BC43F88A66236595B9D3056D08" Comment="Неисправен ГНС Д" />
+        <Field Name="GNU_False" Type="BOOL" UUID="3B958397427ACDECB58C249542FE2C57" Comment="Неисправен ГНУ" />
+        <Field Name="Wait_blow_TG" Type="BOOL" UUID="3ED786C44D0D8FB9C064AA92EB886B78" Comment="Продувка ТГ" />
+        <Field Name="GNSN_False" Type="BOOL" UUID="8D5059114C085D423C141797094BA65C" Comment="Неисправен ГНС Н" />
+        <Field Name="Check_PZ" Type="BOOL" UUID="125D84A84EB45C6D0F9876AF852FE42C" Comment="Проверка защит" />
+        <Field Name="VOD_1_main" Type="BOOL" UUID="82EC851C4BEBB49D77DB5ABD11952AAD" Comment="ВОД1 Основной" />
+        <Field Name="VOD_2_main" Type="BOOL" UUID="68A782D84AA2E803C485E2813CF00424" Comment="ВОД2 Основной" />
+        <Field Name="MNU_1_main" Type="BOOL" UUID="97E6F86B438DDC84EA93D489284ADEC4" Comment="МНУ1 Основной" />
+        <Field Name="MNU_2_main" Type="BOOL" UUID="26C2EB2046C0FF6772837381CFB2C132" Comment="МНУ2 Основной" />
+        <Field Name="is_flame" Type="BOOL" UUID="F3BE695944F388B267CDD89DF992843B" Comment="Есть розжиг" />
+        <Field Name="goHH" Type="BOOL" UUID="A7967F1F474454ABD0FD4AAA62DD254E" Comment="Выход на  ХХ" />
+        <Field Name="warm_HH" Type="BOOL" UUID="2621F5D140A94E58E36D929DC9063505" Comment="Прогрев на ХХ" />
+        <Field Name="goNARR" Type="BOOL" UUID="0E041D194A47791F0F98B8B203EF714B" Comment="Выход на НАРР" />
+        <Field Name="warm_NARR" Type="BOOL" UUID="8906BF1A406727B49A550B949B42D79A" Comment="Прогрев на НАРР" />
+        <Field Name="cooling_NARR" Type="BOOL" UUID="82BFF3B74B7B5E2C943A9AB62E764DED" Comment="Охлаждение на НАРР" />
+        <Field Name="N_HH" Type="BOOL" UUID="E65523C44B7949C6F00B32BF3D57E98E" Comment="Снижение на ХХ" />
+        <Field Name="CoolingGTD" Type="BOOL" UUID="6214A60848DF8D537EC3008261604C44" Comment="Охлаждение на ХХ" />
+    </Fields>
+</Type>

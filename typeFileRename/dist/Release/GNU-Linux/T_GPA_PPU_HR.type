@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_GPA_PPU_HR" Kind="Struct" UUID="EACC285071F84C6C8277185056BFF7CD">
+    <Fields>
+        <Field Name="ev_N_KND_PPUv" Type="BOOL" UUID="14EE69E148DCDDD14BA184A37C2F1A91" Comment="Nкнд &gt; 300 об/мин" />
+        <Field Name="Kr1_OF" Type="BOOL" UUID="2595037B475573EECD2A93A78377C147" Comment="Кран 1 не закрыт" />
+        <Field Name="Kr2_OF" Type="BOOL" UUID="3BEBD696409A9A1ADA77EF99B739FFBB" Comment="Кран 2 не закрыт" />
+        <Field Name="Kr4_OF" Type="BOOL" UUID="4EAAD39645ACCCA79FCCEDA5C9850EB0" Comment="Кран 4 не закрыт" />
+        <Field Name="Kr6_OF" Type="BOOL" UUID="7614A11743AA3F54184D219C33FB4C84" Comment="Кран 6 не закрыт" />
+        <Field Name="Kr12_OF" Type="BOOL" UUID="3E21FBF9434748690AA408991938007B" Comment="Кран 12 не закрыт" />
+        <Field Name="Kr9_ON" Type="BOOL" UUID="295FBC1D42CFD71A8B88F2936E1A3F29" Comment="Кран 9 не открыт" />
+        <Field Name="SK_OF" Type="BOOL" UUID="63C661944DA7F738AC9171AE40A03D71" Comment="СК не закрыт" />
+        <Field Name="Alarm_msg" Type="BOOL" UUID="722A57184E0981B673B289871AD88823" Comment="Есть аварийные сообщения" />
+        <Field Name="Gas_N" Type="BOOL" UUID="76512C7E4287FF42B548B59880FCFC1E" Comment="Загазованность галереи Н&gt;1,0%" />
+        <Field Name="Kr5_ON" Type="BOOL" UUID="ACBA7382403E366769885691DFA9E60A" Comment="Кран 5 не открыт" />
+        <Field Name="Kr5_OF" Type="BOOL" UUID="DD2CE44B4B23ADDDBC7B959F64376210" Comment="Кран 5 не закрыт" />
+    </Fields>
+</Type>

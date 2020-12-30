@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AM_Type" Kind="Struct" Comment="Типы ИМ" UUID="051F63034827516CAB051DA5B020B008">
+    <Fields>
+        <Field Name="am1x0" Type="INT" UUID="737D4C8F4EBCD983AAD2908C7A8EC2BD" Comment="1 команда, 0 конечников" />
+        <Field Name="am1x1" Type="INT" UUID="6F680179405B189CBD22B5BD64F40E54" Comment="1 команда, 1 конечник" />
+        <Field Name="am1x2" Type="INT" UUID="22E3C9C546E91EB7723C9BAA7121CFF9" Comment="1 команда, 2 конечника" />
+        <Field Name="am2x1" Type="INT" UUID="06755D614D955371BE3697A24DCFC718" Comment="2 команды, 1 конечник" />
+        <Field Name="am2x2" Type="INT" UUID="1372E510496A823D17924DA4ECCE4516" Comment="2 команды, 2 конечника" />
+        <Field Name="am3x2" Type="INT" UUID="CBB74150431ECE5B6D7C659D95472B9F" Comment="3 команды (on, off, stop), 2 конечника" />
+        <Field Name="am2x2x3ware" Type="INT" UUID="115705CB436452647F64D98E84E08A1A" Comment="2 команды, 2 конечника, трёхпроводная схема" />
+    </Fields>
+</Type>

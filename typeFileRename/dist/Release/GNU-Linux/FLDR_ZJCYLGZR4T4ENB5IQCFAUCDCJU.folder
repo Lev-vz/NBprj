@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="DRV">
+    <Items>
+        <Item Name="Type_3WYWNXWWMB6ULKJBWMIQPL4KEI.type" />
+        <Item Name="Type_77OTQ626RMLEPH7ZSEDBPWND2E.type" />
+        <Item Name="Type_AI_FR.type" />
+        <Item Name="Type_AI_SR.type" />
+        <Item Name="Type_AnOut.type" />
+        <Item Name="Type_C3WQNTGITRTUTCKWXK37UF5Y4I.type" />
+        <Item Name="Type_DRV_K_AI.type" />
+        <Item Name="Type_DRV_K_AI_APR.type" />
+        <Item Name="Type_DRV_K_DI.type" />
+        <Item Name="Type_DRV_K_DO.type" />
+        <Item Name="Type_DRV_S_AI.type" />
+        <Item Name="Type_DRV_S_DI.type" />
+        <Item Name="Type_DRV_S_DO.type" />
+        <Item Name="Type_Diag_KM.type" />
+        <Item Name="Type_N2ACLSJUJLRETHUAU7XWQKWAY4.type" />
+    </Items>
+</Folder>

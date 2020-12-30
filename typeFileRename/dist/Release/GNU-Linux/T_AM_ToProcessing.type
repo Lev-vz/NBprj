@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AM_ToProcessing" Kind="Struct" Comment="Сигналы, идущие в обработчик ИМ" UUID="779CB6804A1EFE299C44259879EE559D">
+    <Fields>
+        <Field Name="on" Type="BOOL" UUID="19D882B74B65A1AD618E1B9A1FECEACA" Comment="Команда включения из алгоритма" />
+        <Field Name="off" Type="BOOL" UUID="6C02D4CE41FBAD9DDDBCCF8126F850C9" Comment="Команда отключения из алгоритма" />
+        <Field Name="prmManual" Type="BOOL" UUID="DFD4ADAC4C179329158E9795D2A10464" Comment="Разрешение ручного управления" />
+        <Field Name="exFault" Type="BOOL" UUID="11B902DC4884FB92CCAEEDAA6BEFCBFA" Comment="Внешняя неисправность" />
+        <Field Name="reset" Type="BOOL" UUID="3B9747C64687596100E87AA15A2B8327" Comment="Сброс счётчиков поджима и таймеров, блокирующих команды" />
+    </Fields>
+</Type>

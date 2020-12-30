@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="PLC">
+    <Items>
+        <Item Name="E079B0E64556720E806FA393FCDC7989" />
+        <Item Name="Type_43SIM7JGQQOUXKB2HF5PKJ6QJE.type" />
+        <Item Name="Type_4FA4TPD5K42U7FCIQBVJXJ3A3A.type" />
+        <Item Name="Type_7E5UMJTU77IEJHQTQVVGHDSKDU.type" />
+        <Item Name="Type_AObs_Time.type" />
+        <Item Name="Type_AOss_Time.type" />
+        <Item Name="Type_DB47Z4PC4XNEZOSLWFQ7Y5NDNM.type" />
+        <Item Name="Type_DRM.type" />
+        <Item Name="Type_DWB5BV5JHWMENI62UJL4LNCQME.type" />
+        <Item Name="Type_Drum_FB.type" />
+        <Item Name="Type_FRIIOGHWVYXUJG24RVOWZI6YSY.type" />
+        <Item Name="Type_FZYSX5XQOWHU7G6DXKG4VDSHOY.type" />
+        <Item Name="Type_GPA_SEN_ALG.type" />
+        <Item Name="Type_GPA_SEN_APR.type" />
+        <Item Name="Type_IG6Q427G4O4U7GPDX5SIC37ZVE.type" />
+        <Item Name="Type_JPY4OVFWP53UTA3ZSWRYF4KUN4.type" />
+        <Item Name="Type_JUAOBALRGW7U7LO654HO253NR4.type" />
+        <Item Name="Type_KAPCJBLSD7DE7LKTJ2VY34QQVQ.type" />
+        <Item Name="Type_MDVTQKFG3UKERGHX4EHYL6XBLA.type" />
+        <Item Name="Type_NObs_DPar.type" />
+        <Item Name="Type_NObs_Time.type" />
+        <Item Name="Type_NOss_Time.type" />
+        <Item Name="Type_OIIENIDEAOVUBIUU5ROYWBUMRE.type" />
+        <Item Name="Type_PS_Time.type" />
+        <Item Name="Type_RG2DQNUXHH6ETKLVDHE7AYYZ7E.type" />
+        <Item Name="Type_TBGYKENOJDYULMA4CH4LMPB3FI.type" />
+        <Item Name="Type_TSRYTCUBTG3EZDLCSDSI5MARYU.type" />
+        <Item Name="Type_UPLPSCA745AUJK7RX2RHJMBPII.type" />
+        <Item Name="Type_UnitState_AnPar.type" />
+        <Item Name="Type_XQYD22URQJ3U7BETKNR4C3GAKU.type" />
+        <Item Name="Type_YESV3S4SIWIEJHYPTSRIYPUO6M.type" />
+        <Item Name="Type_ZT2CYYUZGQSUFAOCOKDYUY62G4.type" />
+        <Item Name="Type_int_DRV_S_DO.type" />
+    </Items>
+</Folder>

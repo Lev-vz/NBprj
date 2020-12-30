@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_BEO" Kind="Struct" UUID="8EEE45E645CE6C609CDAF788CAC62D27">
+    <Fields>
+        <Field Name="cycle_time" Type="REAL" UUID="FF7C9DA143F3CC87129FC09B99077547" ArraySize="20" Comment="0 - Logic ,  1-RT,  2-AS,  3-,  " />
+        <Field Name="PCI_CARD_STATUS" Type="WORD" UUID="0289270A46EBA09829FA59A9B646E8A3" ArraySize="12" Comment="Статусы плат носителей (0 - хорошо)" />
+        <Field Name="GENERATOR_LOGIC" Type="INT" UUID="759B61374AB14D70A265B2AEA5E668BB" />
+        <Field Name="GENERATOR_RT" Type="INT" UUID="595AE8904A5007F4BC56EC8628AD8048" />
+        <Field Name="GENERATOR_APR" Type="INT" UUID="5FDE5BF549A342A067588F8E2CD5C7B3" />
+        <Field Name="DOut_PLC_OK" Type="BOOL" UUID="BAF18FF94F9AB34ABCA54581BA62DB26" Comment="Автоматическое включение БЭО" />
+        <Field Name="FORCE_DO" Type="BOOL" UUID="5AA666D141BFE26A228785A5451CC6CF" />
+    </Fields>
+</Type>

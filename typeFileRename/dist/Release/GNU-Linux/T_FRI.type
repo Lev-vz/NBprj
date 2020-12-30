@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_FRI" Kind="Struct" Comment="Входы регулятора" UUID="FF5211244BFA3929C090AA91D035ACC6">
+    <Fields>
+        <Field Name="updateTun" Type="BOOL" UUID="4619946D4DC6E16296665FB669D60617" Comment="Запись настроек регулятора" />
+        <Field Name="loadTun" Type="BOOL" UUID="624430EB4CF2ED43D60BCC8DC1A67C6D" Comment="Считывание настроек регулятора" />
+        <Field Name="deblock" Type="BOOL" UUID="D3D1B5C24A863A8C8C0FEA8FACB53B65" Comment="Деблокировка" />
+        <Field Name="check" Type="BOOL" UUID="CB00B4AB4C5571748342628A444F34C0" Comment="Проверка защит" />
+        <Field Name="start" Type="BOOL" UUID="7E6A11324033D777A7728686A3A5207D" Comment="Команда запуска двигателя" />
+        <Field Name="stop" Type="BOOL" UUID="49A482E5465C3C9023C0D8A922625850" Comment="Команда останова" />
+        <Field Name="loLim" Type="BOOL" UUID="732765344F4570D26FCDA49A83F7C49D" Comment="Включить нижние ограничения" />
+        <Field Name="HH" Type="BOOL" UUID="E3B1514E4B9EBA439ECE1A99E959AD26" Comment="Снижение режима до ХХ" />
+        <Field Name="MG" Type="BOOL" UUID="6454F399497F063F5DDD6ABF86CA7050" Comment="Разгон до режима МГ" />
+        <Field Name="regNvd" Type="BOOL" UUID="5F1000AF4F575AB018EF58B47776764C" Comment="Регулирование N КВД" />
+        <Field Name="regNst" Type="BOOL" UUID="C845BA244042FFBB17F401BDF191F4FF" Comment="Регулирование N ТН" />
+        <Field Name="turnUP" Type="BOOL" UUID="776A54BF49064169F078DBA72293E4FF" Comment="Увеличить частоту вращения" />
+        <Field Name="turnDN" Type="BOOL" UUID="32F5512045CB95E605164792B8CFEF2B" Comment="Уменьшить частоту вращения" />
+        <Field Name="AO" Type="BOOL" UUID="3C56222046F8565F878DAFBD585A59D4" Comment="Аварийный останов" />
+        <Field Name="DG_DU" Type="BOOL" UUID="AF56BB9F4AD7E4F0CA0FC69E3679869F" Comment="ДУ дозатором" />
+        <Field Name="Gt_DU" Type="BOOL" UUID="85F390C34342A6B3A22AE889C0A9F880" Comment="ДУ расходом топлива" />
+        <Field Name="starterOn" Type="BOOL" UUID="1E7B84CB44599095AEB5E7BCD082CF14" Comment="Признак включённого стартера" />
+    </Fields>
+</Type>

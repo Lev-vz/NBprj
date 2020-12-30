@@ -1,0 +1,10 @@
+#include <iostream>
+#include <fstream> // подключаем библиотеку
+using namespace std;
+
+int main()
+{
+	ifstream file; // создаем объект класса ifstream
+	file.open("d:\\1\\файл.txt"); // открываем файл
+}
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_PID" Kind="Struct" Comment="Cтруктура, описывающаЯ переменные состоЯниЯ одного регулЯтора" UUID="159EC7934E9C6115555A68B03CB7DC3C">
+    <Fields>
+        <Field Name="num" Type="INT" UUID="B8A3F9F24A418AA44929FAB8ECED85AD" Comment="порЯдковый номер регулЯтора" />
+        <Field Name="Kp" Type="REAL" UUID="7F27793F4D5EC3C117C5DBBB5AC776E4" Comment="П-коэффициент&#x0A;" />
+        <Field Name="Ki" Type="REAL" UUID="AC6060F4444E235CC9728083A7DC8DE3" Comment="И-коэффициент&#x0A;" />
+        <Field Name="Kd" Type="REAL" UUID="8A21670F4CBA38FD843C0B82851306D0" Comment="Д-коэффициент&#x0A;" />
+        <Field Name="DZ" Type="REAL" UUID="C9E9AB834519751DE8D1ABB2084CD537" Comment="зона нечувствительности&#x0A;" />
+        <Field Name="dInteg" Type="REAL" UUID="504F960D4AA463E2B40F04B7AF054857" Comment="добавка к общему интегратору от текущего контура&#x0A;" />
+        <Field Name="oldErr" Type="REAL" UUID="9EDF40A74776F13640C6C6995D620EB9" Comment="ошибка регулированиЯ на предыдущем цикле&#x0A;" />
+        <Field Name="out" Type="REAL" UUID="2A931C00491EF8732DE819A10A1DA72A" Comment="выход регулЯтора&#x0A;" />
+        <Field Name="integ" Type="REAL" UUID="C19DA9C84E92042C378F09BF2174F042" Comment="интегратор&#x0A;" />
+        <Field Name="lagDiff" Type="REAL" UUID="98DB6597431CB67F5313679A31E0241F" Comment="Сглаженный дифференциал" />
+        <Field Name="tauLagDiff" Type="REAL" UUID="E570C0C6488B823E63C1038CFC783CCB" Comment="степень сглаживания дифферециала " />
+    </Fields>
+</Type>

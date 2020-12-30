@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="APS">
+    <Items>
+        <Item Name="Type_GPA_AS.type" />
+        <Item Name="Type_GPA_PPU_GR.type" />
+        <Item Name="Type_GPA_PPU_HR.type" />
+        <Item Name="Type_GPA_PS.type" />
+        <Item Name="Type_HACFF3PJMP5EBDNXNXYFZJBQFU.type" />
+        <Item Name="Type_IZ5ZBKKWMTYU3MMM4TMBRXSOFM.type" />
+        <Item Name="Type_PPZ_AI_Out.type" />
+        <Item Name="Type_PPZ_Date.type" />
+        <Item Name="Type_PPZ_Sel.type" />
+    </Items>
+</Folder>

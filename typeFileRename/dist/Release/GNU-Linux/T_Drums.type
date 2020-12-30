@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_Drums" Kind="Struct" Comment="Все барабаны проекта" UUID="6D160BC841234549E8C3A1A11BD56B16">
+    <Fields>
+        <Field Name="AOss" Type="FB7A29904BEADDE2F62C1DAA9FEBBBE4" UUID="0B77700A49989EF31DE4AC835E8EB667" Comment="АОсс" />
+        <Field Name="AObs" Type="FB7A29904BEADDE2F62C1DAA9FEBBBE4" UUID="32752DD64B3ADC16D42122956B99FA9C" Comment="АОбс" />
+        <Field Name="NOss" Type="FB7A29904BEADDE2F62C1DAA9FEBBBE4" UUID="D2779096487253989D01119427676020" Comment="НОсс" />
+        <Field Name="NObs" Type="FB7A29904BEADDE2F62C1DAA9FEBBBE4" UUID="BC89D8C4451506FA3C35CEBFFD596028" Comment="НОбс" />
+        <Field Name="APK" Type="FB7A29904BEADDE2F62C1DAA9FEBBBE4" UUID="59C55B6D4ABBE51A5F74EE8FFE3F41B1" Comment="Автоматический пуск на кольцо" />
+        <Field Name="APM" Type="FB7A29904BEADDE2F62C1DAA9FEBBBE4" UUID="9858A15440C82CF881BA4CAA3EFCE4AB" Comment="Автоматический пуск в магистраль" />
+        <Field Name="K_M" Type="FB7A29904BEADDE2F62C1DAA9FEBBBE4" UUID="5CFDE5954C45878FF46BC29C65CE6515" Comment="Переход &quot;Кольцо-Магистраль&quot;" />
+        <Field Name="M_K" Type="FB7A29904BEADDE2F62C1DAA9FEBBBE4" UUID="4FAA03644A1CDFEE59F5C4BA7417A224" Comment="Переход &quot;Магистраль-Кольцо&quot;" />
+        <Field Name="PMS" Type="FB7A29904BEADDE2F62C1DAA9FEBBBE4" UUID="EFBCA6524457B8D28F67938DEF1507AA" Comment="Пуск маслосистемы нагнетателя" />
+        <Field Name="ZKN" Type="FB7A29904BEADDE2F62C1DAA9FEBBBE4" UUID="A4CE23054E1ACDEBF9A6E883D7618260" Comment="Заполнение контура нагнетателя" />
+    </Fields>
+</Type>

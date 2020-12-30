@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_DrumOut" Kind="Struct" Comment="Выходы барабанов  для использования в логике" UUID="5AC922104CFA6586F5C7B984AA0C12B2">
+    <Fields>
+        <Field Name="PNS_ON" Type="BOOL" UUID="9E21C0744E870328C31716835D87C90E" Comment="ПНС включить из барабана" />
+        <Field Name="PNS_OFF" Type="BOOL" UUID="7B95536446124552EF941DA26E494BDF" Comment="ПНС отключить из барабана" />
+        <Field Name="PNU_ON" Type="BOOL" UUID="A7E62CB24F0FB44062675FA40E424D90" Comment="ПНУ включить из барабана" />
+        <Field Name="PNU_OFF" Type="BOOL" UUID="E8E7A5474251B847538676BF3D011E27" Comment="ПНУ отключить из барабана" />
+        <Field Name="Kr1_ON" Type="BOOL" UUID="DB9BCDFA42C464F7AFFEDE841439E134" Comment="Кран 1 открыть из барабана" />
+        <Field Name="Kr1_OF" Type="BOOL" UUID="4D6A262D48D72768C708E9A0319837F0" Comment="Кран 1 закрыть из барабана" />
+        <Field Name="Kr2_ON" Type="BOOL" UUID="37EF51A5484CD11EE9FBB5B523AC68C9" Comment="Кран 2 открыть из барабана" />
+        <Field Name="Kr2_OF" Type="BOOL" UUID="83FCA6F64E7143F52C498193ED0EB742" Comment="Кран 2 закрыть из барабана" />
+        <Field Name="Kr4_ON" Type="BOOL" UUID="CC20D1CE4780FC6A7CD4998D533F2774" Comment="Кран 4 открыть из барабана" />
+        <Field Name="Kr4_OF" Type="BOOL" UUID="B96DBBA6408907B45942659E321EC76D" Comment="Кран 4 закрыть из барабана" />
+        <Field Name="Kr5_ON" Type="BOOL" UUID="A2521CB644A59F3E39504AB516B3F596" Comment="Кран 5 открыть из барабана" />
+        <Field Name="Kr5_OF" Type="BOOL" UUID="C00138E94CBAEA2487F9F78CBF49603E" Comment="Кран 5 закрыть из барабана" />
+        <Field Name="Kr6_ON" Type="BOOL" UUID="68ABB00F4D654F5ECB78FE94B202DD60" Comment="Кран 6 открыть из барабана" />
+        <Field Name="Kr6_OF" Type="BOOL" UUID="7A4CBC814676F88E3957AC91DF549AF1" Comment="Кран 6 закрыть из барабана" />
+        <Field Name="Kr6r_ON" Type="BOOL" UUID="AE9CE1DE4836B692ADB431B2D865A245" Comment="Кран 6р открыть из барабана" />
+        <Field Name="Kr6r_OF" Type="BOOL" UUID="1995515A47B1A425F353B09C2EB66688" Comment="Кран 6р закрыть из барабана" />
+    </Fields>
+</Type>

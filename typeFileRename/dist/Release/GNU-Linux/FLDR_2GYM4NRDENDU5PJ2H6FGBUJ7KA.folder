@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Folder config v. 1.0 >
+<Folder Name="LEV_AI">
+    <Items>
+        <Item Name="T_AI_FromProcessing.type" />
+        <Item Name="T_AI_OnlyToHMI.type" />
+        <Item Name="T_AI_Settings.type" />
+        <Item Name="T_AI_ToProcessing.type" />
+        <Item Name="T_GPA_ANB.type" />
+        <Item Name="Type_6PRJ2J4I7UKEHLHQ2THHPCVD6E.type" />
+        <Item Name="Type_7CZTCZTQG44EVD4RIL5AX5EZKY.type" />
+        <Item Name="Type_DG3762DXAN3EPMU4J3I7F7AF2Y.type" />
+        <Item Name="Type_GPA_ANB.type" />
+        <Item Name="Type_GPA_Ust.type" />
+        <Item Name="Type_JWNTNB7YC5RUFBHJOXUKUTYSCM.type" />
+        <Item Name="Type_PGKLHARJUKQE7MAKIZWZT42TB4.type" />
+        <Item Name="Type_RM24TCNYDJ2EFAGOKFHW6RDYGE.type" />
+        <Item Name="Type_SOXJFW5QBXDEDJEFY3QX7O7DW4.type" />
+    </Items>
+</Folder>

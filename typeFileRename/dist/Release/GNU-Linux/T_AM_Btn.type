@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AM_Btn" Kind="Struct" Comment="Команды из ЧМИ" UUID="EFC2F1704642389525D840801681051A">
+    <Fields>
+        <Field Name="on" Type="BOOL" UUID="EE772F3C427FF0AA1E5E2293A92221E0" Comment="Кнопка &quot;включить/открыть&quot; (СКАДА)" />
+        <Field Name="off" Type="BOOL" UUID="BE4222254E1390B490FEE4B1046551C5" Comment="Кнопка &quot;отключить/закрыть&quot; (СКАДА)" />
+        <Field Name="manualOn" Type="BOOL" UUID="A9587CB84DC3816F748222A872962DEE" Comment="Кнопка включения режима Ручной (СКАДА)" />
+        <Field Name="manualOff" Type="BOOL" UUID="956D9E09435F00C25848949288E39BAA" Comment="Кнопка отключения режима Ручной (СКАДА)" />
+        <Field Name="takePos" Type="BOOL" UUID="BB63D9F84C4E1DC4B9CCBC8A0CFB7A08" Comment="Принять текущее положение, как правильное" />
+    </Fields>
+</Type>

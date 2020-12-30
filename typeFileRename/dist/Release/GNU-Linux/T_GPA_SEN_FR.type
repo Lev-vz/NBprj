@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_GPA_SEN_FR" Kind="Struct" UUID="0E9E08ED4DCB52C9CFCBC49591359B1D">
+    <Fields>
+        <Field Name="Pos_TRK" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="8B02469142CE67E07EFBB888D95B6F3D" Comment="Положение иглы дозатора топливного газа" />
+        <Field Name="Pa_out_KVD" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="FB6F10144A00FF674B061E9967DB287C" Comment="Статическое давление воздуха за КВД" />
+        <Field Name="Tg_out_TVD1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="D801D3EC43784D39415D54BE6D040845" Comment="Температура 1 газа за ТВД" />
+        <Field Name="Tg_out_TVD2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="D0690B924B83530D3ED09BAFBC0DF73E" Comment="Температура 2 газа за ТВД" />
+        <Field Name="Tg_out_ST" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="FA183321411363E0DCBD6480E16F0841" Comment="Температура выхлопных газов за СТ" />
+        <Field Name="Tv_out_KVD" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="402075BF4D7531F4603062910E714934" Comment="Температура воздуха за КВД" />
+        <Field Name="Tg_out_TK" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="7031C23541F0690BA072DE8C69F108D9" Comment="Температура 3 газа за турбиной компрессора (из БЗА)" />
+        <Field Name="N_TK1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="62D7F0D94C41C10AD69FECAC1B50D97E" Comment="Частота 1 вращения ротора ГТД (обмотка 1 датчика 1)" />
+        <Field Name="N_TK2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="DF47322247F8EBBC6008CBA2F5646ACF" Comment="Частота 2 вращения ротора ГТД (обмотка 1 датчика 2)" />
+        <Field Name="N_ST1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="01B773114D17668B412FD8A9672286ED" Comment="Частота 1 вращения ротора СТ (обмотка 1 датчика 1)" />
+        <Field Name="N_ST2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="FB8850834D5508140E0365B4C8CC6B63" Comment="Частота 2 вращения ротора СТ (обмотка 1 датчика 2)" />
+    </Fields>
+</Type>

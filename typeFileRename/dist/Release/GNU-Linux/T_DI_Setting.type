@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_DI_Setting" Kind="Struct" Comment="настройки дискретного канала" UUID="94C521C642227325371AE7BCC363E527">
+    <Fields>
+        <Field Name="del" Type="REAL" UUID="F4E568F84F851C26BC98888E215BE0B4" Comment="задержка для устранения дребезга, сек." />
+        <Field Name="recoveryTime" Type="REAL" UUID="A2EB714E44D93BF7914FCB98668244C4" Comment="время восстановления после неисправности, сек." />
+        <Field Name="repairTime" Type="REAL" UUID="9A9862F749710A86B5EC96A4424155F8" Comment="максимальное время в ремонте, сек. Не может быть «0»" />
+        <Field Name="inv" Type="BOOL" UUID="CFDE822746172BCFCEA5E2AD018044BE" Comment="необходимость инвертирования измеренного значения" />
+    </Fields>
+</Type>

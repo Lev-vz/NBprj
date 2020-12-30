@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_GPA_HMI_APR" Kind="Struct" UUID="A403AAD54F8D16F275EF81A098D7B7A5">
+    <Fields>
+        <Field Name="Pg_in_N" Type="5C4EAAB340E0F06BB767F6AEE30C69DF" UUID="B0A6813549B98F4641AD3EAA1489D32E" Comment="Давление газа на входе в компрессор" />
+        <Field Name="Pg_out_N" Type="5C4EAAB340E0F06BB767F6AEE30C69DF" UUID="9433637F4D0B4583E41F1581C4E71C07" Comment="Давление газа на выходе из компрессора" />
+        <Field Name="dP_conf_N" Type="5C4EAAB340E0F06BB767F6AEE30C69DF" UUID="C8E50A5C4C68C21A620CF5ACA8A7E879" Comment="Перепад давлений на конфузоре компрессора" />
+    </Fields>
+</Type>

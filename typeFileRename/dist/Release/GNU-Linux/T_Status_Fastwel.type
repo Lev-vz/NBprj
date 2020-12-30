@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_Status_Fastwel" Kind="Struct" UUID="CB346AD34533266E9C580692309A1515">
+    <Fields>
+        <Field Name="Diag_A2_1" Type="WORD" UUID="2C8F9C2D4BB67CF9ED068A97EFE85B38" />
+        <Field Name="Diag_A2_2" Type="WORD" UUID="ECE6C46F4EDDCF00543CD485A5203B27" />
+        <Field Name="Diag_A2_3" Type="WORD" UUID="55AF60D24CF788A71E4AE8B5B30963B2" />
+        <Field Name="Diag_A2_4" Type="WORD" UUID="77ACD181461333B791E1B3A356244A16" />
+        <Field Name="Diag_A2_5" Type="WORD" UUID="0024355B4B4999FBBBC50E8AE46289DA" />
+        <Field Name="Diag_A2_6" Type="WORD" UUID="F2075E564C60ED12F871858FB2BAAD80" />
+        <Field Name="Diag_A2_7" Type="WORD" UUID="7053C24A45F60DC62C74239D80C3EC5C" />
+        <Field Name="Diag_A2_8" Type="WORD" UUID="6DC1407347167E21B22F3E990CDE5411" />
+        <Field Name="Diag_A2_9" Type="WORD" UUID="CE860AB54B141934315251AB3EB4440C" />
+        <Field Name="Diag_A2_10" Type="WORD" UUID="80841F404BD85190D5FAFCB69AF8B4A9" />
+        <Field Name="Diag_A2_11" Type="WORD" UUID="58D83A794CB30AB0A8F4B5950BB18ACB" />
+        <Field Name="SweepCounter" Type="WORD" UUID="E5647F614104E688CDAD2482E6A66E2E" />
+        <Field Name="RunStop" Type="WORD" UUID="587515DA4D34435E2C15C3A4F31E2B32" />
+    </Fields>
+</Type>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AI_FromProcessing" Kind="Struct" Comment="устанавливаются программой обработки канала" UUID="2318F94F4C3CEA2681DE4C8C432A66E9">
+    <Fields>
+        <Field Name="PV" Type="REAL" UUID="19F27C8242D7A36082010591B7CF4F94" Comment="значение для САУ. Рассчитывается из  measure, Manual_Target с учётом неисправностей и фильтрации" />
+        <Field Name="measure" Type="REAL" UUID="A3EB72B04BD66AA21B5AC7AE2F98299D" Comment="Пересчёт кода АЦП в инженерные единицы" />
+        <Field Name="CurrentTimeOfRepair" Type="REAL" UUID="38416DF64674643E8CA7A9BEBA367F95" Comment="оставшееся время ремонта" />
+        <Field Name="fault_common" Type="BOOL" UUID="91BA71324E5A549D017A04ADEA8F79D0" Comment="обобщённая неисправность. Образуется по «ИЛИ» от break,up_scale,down_scale,ROC,settingErr" />
+        <Field Name="break" Type="BOOL" UUID="3C4E50D84C86F18E26AB11B82F29366B" Comment="обрыв канала" />
+        <Field Name="up_scale" Type="BOOL" UUID="0D6DA34841CAD4EC78135AB63D380E46" Comment="выход за верхний зашкал" />
+        <Field Name="down_scale" Type="BOOL" UUID="5B8683E24E32517CC4004890703E4F48" Comment="выход за нижний зашкал" />
+        <Field Name="ROC" Type="BOOL" UUID="19BA9712445B10EBD6F5C8868CCD540D" Comment="превышение скорости изменения вверх или вниз" />
+        <Field Name="settingErr" Type="BOOL" UUID="18C0BED74B6CD173D937BCB0E13A9E0A" Comment="ошибка задания настроек – несоответствие допустимым значениям" />
+        <Field Name="manual" Type="BOOL" UUID="4C50A79642D731899CE3CF85880FAFF1" Comment="канал в дист.упр." />
+        <Field Name="repair" Type="BOOL" UUID="CC8456884B1A1197E95A94978DEFC35D" Comment="канал в ремонте" />
+        <Field Name="repair_time_less_10_percent" Type="BOOL" UUID="D1EBBA994EC52CDAECD32B9BF9865F01" Comment="до конца ремонта осталось меньше 10% от заданного времени" />
+    </Fields>
+</Type>

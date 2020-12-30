@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_DGI" Kind="Struct" Comment="Дискретные входы" UUID="67DDF5BF447D37CE52448EB115101C06">
+    <Fields>
+        <Field Name="arr" Type="BOOL" UUID="7188FC9A46546B20D0876BB24E3D5875" ArraySize="1" />
+        <Field Name="Kr1_ON" Type="BOOL" UUID="2F9A230F48A883CA4DB60EB59EE2213C" Comment="Кран № 1 открыт" />
+        <Field Name="Kr1_OF" Type="BOOL" UUID="80BFDC784A701FE0086EE4919783A44A" Comment="Кран № 1 закрыт" />
+        <Field Name="Kr2_ON" Type="BOOL" UUID="96FA035145B2649EC25A1B9A40D8CD83" Comment="Кран № 2 открыт" />
+        <Field Name="Kr2_OF" Type="BOOL" UUID="38FA294B4876A01DDEBC1FA28187EF07" Comment="Кран № 2 закрыт" />
+        <Field Name="Kr4_ON" Type="BOOL" UUID="CD292D10485AE4B83AB6F9958F9239D5" Comment="Кран № 4 открыт" />
+        <Field Name="Kr4_OF" Type="BOOL" UUID="AFE8B804460BBC7996EA3188740276DB" Comment="Кран № 4 закрыт" />
+        <Field Name="Kr5_ON" Type="BOOL" UUID="F72A99974BBF9ABA51C1F880455FED2B" Comment="Кран № 5 открыт" />
+        <Field Name="Kr5_OF" Type="BOOL" UUID="23C2931F4A872D6D2D38C48FC653AA67" Comment="Кран № 5 закрыт" />
+        <Field Name="Kr6_ON" Type="BOOL" UUID="4253D888453F50FC2CA204B53EFDFC85" Comment="Кран № 6 открыт" />
+        <Field Name="Kr6_OF" Type="BOOL" UUID="4505F98642BCC69DB36D6E89D54E7C55" Comment="Кран № 6 закрыт" />
+        <Field Name="Kr9_ON" Type="BOOL" UUID="E464D64D4C46E6E5F50163B4937547B6" Comment="Кран № 9 открыт" />
+        <Field Name="Kr9_OF" Type="BOOL" UUID="3C1CF90143D2D8A1659BB3A773E01DAD" Comment="Кран № 9 закрыт" />
+        <Field Name="Kr12_ON" Type="BOOL" UUID="624B45C34135ED2E97F2D19DB540E4D9" Comment="Кран № 12 открыт" />
+        <Field Name="Kr12_OF" Type="BOOL" UUID="1D231ACF44E9379E79686D80EEDA015C" Comment="Кран № 12 закрыт" />
+        <Field Name="dPm_in_D" Type="BOOL" UUID="7E6B6661419729D4414DB880798167DE" Comment="Перепад давлений масла на фильтре на входе в Д больше 0.1 МПа" />
+        <Field Name="dPm_in_BTA" Type="BOOL" UUID="B40B33D64C9E6943DD6D6D8998C1DB33" Comment="Перепад давлений масла на фильтре на входе в БТА больше 0.1 МПа" />
+        <Field Name="dPmg" Type="BOOL" UUID="B3EF761E4B6EA26DFAD7349B074B8181" Comment="Перепад давлений масло-газ меньше 0.03 Мпа" />
+        <Field Name="Sdvig_N_ahead" Type="BOOL" UUID="9486F4944DD7BDD58ED875AADBBD4A5D" Comment="Осевой сдвиг ротора нагнетателя вперед (к турбине)" />
+        <Field Name="Sdvig_N_back" Type="BOOL" UUID="FED4CD9C484B04B1ECAE8B9218D52EBF" Comment="Осевой сдвиг ротора нагнетателя назад (от турбины)" />
+        <Field Name="Pomp_N" Type="BOOL" UUID="656D46824F539E45B7A139A4E42C8E4D" Comment="Помпаж нагнетателя" />
+        <Field Name="Pm_in_D_alarm_low" Type="BOOL" UUID="91DDC50F4015E420C270BFBCD195C280" Comment="Давление масла на входе в Д аварийно низкое меньше 0.1 МПа" />
+        <Field Name="Pm_in_D_002" Type="BOOL" UUID="646B3E004FFDCDFFF7685395A463B39D" Comment="Давление масла на входе в Д больше 0.02 МПа" />
+        <Field Name="Pm_in_D_low002" Type="BOOL" UUID="A88EA3944B0C89440196A9AF825356EF" Comment="Давление масла на входе в Д низкое меньше 0.2 МПа" />
+        <Field Name="dPm_MOB_005" Type="BOOL" UUID="70C5E1D1472E9A606BDBA381BABBF843" Comment="Перепад давлений масла на МОБе больше 0.05 МПа" />
+        <Field Name="Pm_MNOD_002" Type="BOOL" UUID="2344EC8C4C4452908067FDB3152B4851" Comment="Давление масла за эл. МНОД больше 0,02 МПа" />
+        <Field Name="Pm_MNOD_004" Type="BOOL" UUID="98C561CD454DBFD09FBB42B62C6FB989" Comment="Давление масла за нав. МНОД больше 0.04 МПа" />
+        <Field Name="Pm_till_MNU" Type="BOOL" UUID="ED8475474B50A77CE6FCDBA356434E3E" Comment="Давление масла в трубопроводе до МНУ" />
+        <Field Name="Pg_in_P_N" Type="BOOL" UUID="8E8795534FD7A9C249416C94700A711D" Comment="Давление газа в полости Н" />
+        <Field Name="Pm_POD_N" Type="BOOL" UUID="917CEAA949F18B8A8C2ED388071CAA72" Comment="Давление масла на смазку подшипников Н" />
+        <Field Name="dPg_in_Kr1" Type="BOOL" UUID="80448B674F4A37E368AA51B9C1372988" Comment="Перепад давлений газа на кране N1" />
+        <Field Name="Pm_N_RD1" Type="BOOL" UUID="45E17BDF459F247E04984781035637BD" Comment="Давление масла на входе в систему смазки Н РД1" />
+        <Field Name="Pv_MB_N_002" Type="BOOL" UUID="443A4BAD47F0CD7651B6138A9EB72D7B" Comment="Давление воздуха в маслобаке Д больше 0.02 МПа" />
+        <Field Name="Pm_upl_low" Type="BOOL" UUID="69D0F6AF40FC143879010A9264BCF010" Comment="Давление масла уплотнения низкое" />
+        <Field Name="U_PMNS" Type="BOOL" UUID="C9BDD6D144F16F1E0D59F7A3196A26F8" Comment="Наличие напряжения в цепях управления ПМНС" />
+        <Field Name="U_MNU_1" Type="BOOL" UUID="194CC55445B7CD1658E88DBC3386F05F" Comment="Наличие напряжения в цепях управления МНУ I" />
+        <Field Name="U_MNU_2" Type="BOOL" UUID="A35121984609B980A706CC8D9A4D1E1A" Comment="Наличие напряжения в цепях управления МНУ II" />
+        <Field Name="Lm_MBN_up" Type="BOOL" UUID="DF0B2E9F40C467271568B9AEDA335DFF" Comment="Уровень масла в МБН верхний" />
+        <Field Name="Lm_MBN_down" Type="BOOL" UUID="51DF6E6A4457F953E9BB288E29F6E3F3" Comment="Уровень масла в МБН нижний" />
+        <Field Name="Lm_MBD_up" Type="BOOL" UUID="F9D65CB042631B3399F312A5B0AA4EC9" Comment="Уровень масла в МБД верхний" />
+        <Field Name="Lm_MBD_alarm" Type="BOOL" UUID="3D0126C144EDFE851B523A87FFF4EC90" Comment="Уровень масла в МБД аварийный" />
+        <Field Name="KCD_Lm_MBD_alarm" Type="BOOL" UUID="282175AD484C3186BD6343BD7950A1D5" Comment="КЦД. Уровень масла в МБД аварийный" />
+        <Field Name="Lm_MBD_down" Type="BOOL" UUID="9F0C0C774E11C7DD4921F2AD301FF3C1" Comment="Уровень масла в МБД нижний" />
+        <Field Name="SK_ON" Type="BOOL" UUID="5991813844FC8AF62BC26BAEA931950C" Comment="Стоп-кран открыт" />
+        <Field Name="SK_OF" Type="BOOL" UUID="E8EF88E847B8A4968A4722BB00278234" Comment="Стоп-кран закрыт" />
+        <Field Name="Pg_in_BTA_16" Type="BOOL" UUID="9ED26359424EBE1FE0E34CAD805C7291" Comment="Давление газа на входе в БТА больше 1.6 МПа" />
+        <Field Name="Chips_KP" Type="BOOL" UUID="C9F2E1AD444339D06B838191132E1DD7" Comment="Наличие стружки на сливе из КП" />
+        <Field Name="Chips_Per" Type="BOOL" UUID="979EC4714565ECBC0B34608F6BF63BAD" Comment="Наличие стружки на сливе из переходника" />
+        <Field Name="Chips_KVD" Type="BOOL" UUID="92CB03F0417858C783420AB1D16A5F5C" Comment="Наличие стружки на сливе из ЗК КВД" />
+        <Field Name="Chips_TND" Type="BOOL" UUID="5C6F087F4E2F87BE22DA65ACB37ECA81" Comment="Наличие стружки на сливе из ОВ ТНД Д" />
+        <Field Name="Chips_TN" Type="BOOL" UUID="BFBD7B3A4B2511A223AFCE9B5AA69201" Comment="Наличие стружки на сливе из ОВ ТН Д" />
+        <Field Name="PMNS_ON" Type="BOOL" UUID="13BD1A7A47D8469FB1688B9CBC3C65C4" Comment="ПМНС Н включен" />
+        <Field Name="PMNS_OF" Type="BOOL" UUID="700EEDFF408CE009E806608381145255" Comment="ПМНС Н отключен" />
+        <Field Name="MNU_1_ON" Type="BOOL" UUID="CF37814B47AD55A36D670E9BBB16833F" Comment="МНУ (1 секция) включен" />
+        <Field Name="MNU_1_OF" Type="BOOL" UUID="AE5227744AC21CD57E309FA20F2247CD" Comment="МНУ (1 секция) отключен" />
+        <Field Name="MNU_2_ON" Type="BOOL" UUID="389F5F8049C1EBB97CE81AB36D8A6AC3" Comment="МНУ (2 секция) включен" />
+        <Field Name="MNU_2_OF" Type="BOOL" UUID="AFC39F5D4EC5D45D8FC421B4AB5F219A" Comment="МНУ (2 секция) отключен" />
+        <Field Name="MNND_ON" Type="BOOL" UUID="D9C1D6F143428DC5444BE29ABC69FB6E" Comment="МННД включен" />
+        <Field Name="MNND_OF" Type="BOOL" UUID="77B36F5C4AB037EBC185578074526D71" Comment="МННД отключен" />
+        <Field Name="MNOD_ON" Type="BOOL" UUID="76536B2647397FA40E580F9AAE63579C" Comment="МНОД включен" />
+        <Field Name="MNOD_OF" Type="BOOL" UUID="7FEBBF534003B0A998E9EBB94192831C" Comment="МНОД отключен" />
+        <Field Name="MNOB_ON" Type="BOOL" UUID="B2B8D5EC44B27DD38591D493B7EE6176" Comment="МНОБ Д включен" />
+        <Field Name="MNOB_OF" Type="BOOL" UUID="A08FC6924EBCBDE0AAACA8A4EF0E190A" Comment="МНОБ Д отключен" />
+        <Field Name="VOD_1_ON" Type="BOOL" UUID="B9B921B84CA7453E0B0AC1931F732B08" Comment="ВОД 1 включен" />
+        <Field Name="VOD_2_ON" Type="BOOL" UUID="4ABC0C30454E4A5C11CF9AB77CAD5BCB" Comment="ВОД 2 включен" />
+        <Field Name="VMON_1_ON" Type="BOOL" UUID="21F96DA0495ED94D99B083B40035A384" Comment="ВМОН1 включен" />
+        <Field Name="VMON_4_ON" Type="BOOL" UUID="0C3B9996435DBE8705E58DA8088D4AE4" Comment="ВМОН4 включен" />
+        <Field Name="VMOD_2_ON" Type="BOOL" UUID="DC9C452746157A01BC8921A8A8311ABD" Comment="ВМОД2 включен" />
+        <Field Name="VMOD_3_ON" Type="BOOL" UUID="F005B97D4BCCAF4A74985EBE0163F310" Comment="ВМОД3 включен" />
+        <Field Name="VMOD_5_ON" Type="BOOL" UUID="04D0FC924760894B487BC5924C1E922E" Comment="ВМОД5 включен" />
+        <Field Name="VMOD_6_ON" Type="BOOL" UUID="576054EF464D80A6C709479F715130FC" Comment="ВМОД6 включен" />
+        <Field Name="KU_and_ON" Type="BOOL" UUID="8A74469A476D27386DF7EDB6D011B920" Comment="КУ в КК1 и КК2 включены" />
+        <Field Name="KU_or_ON" Type="BOOL" UUID="077BF54446051F7A748159942F2D3EDF" Comment="КУ в КК1 или КК2 включен" />
+        <Field Name="K1_KK1_1_ON" Type="BOOL" UUID="9A74067649DD4C5048090E9A96A49CC2" Comment="К1 1ск. (РК1) в КК1 включен" />
+        <Field Name="K2_KK1_2_ON" Type="BOOL" UUID="16C907CC408A7A6301BF10885337CB9E" Comment="К2 2ск. (РК2) в КК1 включен" />
+        <Field Name="KU_KK1_ON" Type="BOOL" UUID="CF45B77047F2005FAC01E48DCFCB09CB" Comment="КУ в КК1 включен" />
+        <Field Name="K1_KK2_1_ON" Type="BOOL" UUID="2315EFF54B816A8453D1209B4BFF7976" Comment="К1 1ск. (РК1) в КК2 включен" />
+        <Field Name="K2_KK2_2_ON" Type="BOOL" UUID="E4F6E45340A2CF4B55443A9C31C5D985" Comment="К2 2ск. (РК2) в КК2 включен" />
+        <Field Name="KU_KK2_ON" Type="BOOL" UUID="80744B5940F8E699751F94B7F432E81D" Comment="КУ в КК2 включен" />
+        <Field Name="U380_KK" Type="BOOL" UUID="8DE036D14F33BA008452C2BC5C13AFE2" Comment="Наличие напряжения ~380 В в КК" />
+        <Field Name="TEN1_MBN_ON" Type="BOOL" UUID="D0D2E05B4C38B62433CA3FA8960E1782" Comment="ТЭН1 в МБН включен" />
+        <Field Name="TEN2_MBN_ON" Type="BOOL" UUID="3BBC03044EAE5ACE476BE88467EB854B" Comment="ТЭН2 в МБН включен" />
+        <Field Name="TEN3_MBN_ON" Type="BOOL" UUID="8073AE8247CE7001DF8133A73C8C83AC" Comment="ТЭН3 в МБН включен" />
+        <Field Name="TEN4_MBN_ON" Type="BOOL" UUID="9703302F43A2746826FEDEAA6D4578DC" Comment="ТЭН4 в МБН включен" />
+        <Field Name="TEN1_N_ON" Type="BOOL" UUID="9F8B3FE8463F1AE800F558AFD445C94E" Comment="ТЭН1 трубопроводов Н включен" />
+        <Field Name="TEN2_N_ON" Type="BOOL" UUID="F976728C42D882E476B515917DEA0690" Comment="ТЭН2 трубопроводов Н включен" />
+        <Field Name="TEN3_N_ON" Type="BOOL" UUID="2151924447B9B8D9501169965661F1C9" Comment="ТЭН3 трубопроводов Н включен" />
+        <Field Name="TEN4_N_ON" Type="BOOL" UUID="1F9983184776FF41768682ACEE652F0A" Comment="ТЭН4 трубопроводов Н включен" />
+        <Field Name="TEN_MBD_ON" Type="BOOL" UUID="175919504EA5C31C20F3F49AE0B74221" Comment="ТЭН МБД включен" />
+        <Field Name="ORT_check" Type="BOOL" UUID="965DA9DD42C5FF6AA4305A90B97D9362" Comment="Контроль ОРТ" />
+        <Field Name="ORT_alarm" Type="BOOL" UUID="133C109146D5EF0E9E7EE6B7CECA4A1B" Comment="Авария ОРТ" />
+        <Field Name="KCD_ORT_alarm" Type="BOOL" UUID="CE03F7614C47DCE7A0644BAFD5ECEC86" Comment="КЦД. Авария ОРТ" />
+        <Field Name="Pos_m10_VNA" Type="BOOL" UUID="A1B284CF49A648683AAC7FADE637FFC8" Comment="ВНА в положении -10" />
+        <Field Name="Pos_p15_VNA" Type="BOOL" UUID="7C2C1FE247BB196B0C7777844C1194D2" Comment="ВНА в положении +15" />
+        <Field Name="Gas_N" Type="BOOL" UUID="13F37C22488A36E03B5245B10BF15E58" Comment="Загазованность галереи Н больше 1 %" />
+        <Field Name="KCD_Gas_N" Type="BOOL" UUID="5611EC154AB52D12108BD98100DE48CE" Comment="КЦД. Загазованность галереи Н больше 1 %" />
+        <Field Name="ICE_VOU" Type="BOOL" UUID="DEE0F3BE4070A6A3DDDCF5878357C931" Comment="Обледенение ВОУ (СОУ-1)" />
+        <Field Name="Fire" Type="BOOL" UUID="3C951EEC41823D055578509B97A5C242" Comment="Пожар в МБД, МБН, МФ (порошок)" />
+        <Field Name="KCD_Fire" Type="BOOL" UUID="FDE6E3B54CE9A8167A4289BED4F6A242" Comment="КЦД. Пожар в МБД, МБН, МФ (порошок)" />
+        <Field Name="pgrP_brk" Type="BOOL" UUID="F0669D93439206F79E40BF80120D6D0B" Comment="Сист.порош.пожаротуш.неисправ." />
+        <Field Name="AO_btn" Type="BOOL" UUID="32C4C39E48E48B3A96D1CB9C2E5F835C" Comment="Аварийный останов (АО) от кнопки в машзале" />
+        <Field Name="KCD_AO_btn" Type="BOOL" UUID="B60E97184E4E10CEB4CDE59156E56E38" Comment="КЦД. Аварийный останов (АО) от кнопки в машзале" />
+        <Field Name="AO_SAU" Type="BOOL" UUID="7DBC6CB94EA0822C5297EF840F407865" Comment="Аварийный останов (АО) от САУ КЦ" />
+        <Field Name="KCD_AO_SAU" Type="BOOL" UUID="7E951576453CD0A22137DBA4F14AFB83" Comment="КЦД. Аварийный останов (АО) от САУ КЦ" />
+        <Field Name="Door_SAU_open" Type="BOOL" UUID="AE8EBD45453383447C65B8899EB44CB9" Comment="Двери блок-бокса САУ ГПА открыты" />
+        <Field Name="KCU_Kr1_ON" Type="BOOL" UUID="1BB4070746156300BBBD4A9FB3BEEADB" Comment="КЦУ. Кран №1 открыть" />
+        <Field Name="KCU_Kr1_OF" Type="BOOL" UUID="AE67154C4E12582E68979AA2F83CAEE4" Comment="КЦУ. Кран №1 закрыть" />
+        <Field Name="KCU_Kr1_oil" Type="BOOL" UUID="F0CD35B94CEB39FF9FA5968920F1F289" Comment="КЦУ. Кран № 1 смазка" />
+        <Field Name="KCU_Kr2_ON" Type="BOOL" UUID="C21A224A4F8AC3F2DF0E05B3CCA646B3" Comment="КЦУ. Кран № 2 открыть" />
+        <Field Name="KCU_Kr2_OF" Type="BOOL" UUID="8A96EA254CFC2254A9BFADAB7F5E60AD" Comment="КЦУ. Кран № 2 закрыть" />
+        <Field Name="KCU_Kr2_oil" Type="BOOL" UUID="AFA1EAFD4B2EC3A9B3E9088BB04D438A" Comment="КЦУ. Кран № 2 смазка" />
+        <Field Name="KCU_Kr4_ON" Type="BOOL" UUID="B656379D43348934BD77208971040806" Comment="КЦУ. Кран № 4 открыть" />
+        <Field Name="KCU_Kr4_OF" Type="BOOL" UUID="B4EBCF5F46384DA1D62AFC9CD6561CF0" Comment="КЦУ. Кран № 4 закрыть" />
+        <Field Name="KCU_Kr5_ON" Type="BOOL" UUID="DB6C53434B6FB87CF0F5CABECA5CAE58" Comment="КЦУ. Кран № 5 открыть" />
+        <Field Name="KCU_Kr5_OF" Type="BOOL" UUID="6E8E1F7A47F6D6988E2EC1A96302EA5F" Comment="КЦУ. Кран № 5 закрыть" />
+        <Field Name="KCU_Kr6_ON" Type="BOOL" UUID="D5DCBB8642398F7695079D826878C53D" Comment="КЦУ. ран № 6 открыть" />
+        <Field Name="KCU_Kr6_OF" Type="BOOL" UUID="CBDBEAC4447809E1BF66F79B6ED37669" Comment="КЦУ. Кран № 6 закрыть" />
+        <Field Name="KCU_Kr9_ON" Type="BOOL" UUID="7199E7DD474B4AC08A28E48EA8605072" Comment="КЦУ. Кран № 9 открыть" />
+        <Field Name="KCU_Kr9_OF" Type="BOOL" UUID="E6CC85CB41579BEE0A98EA8956F8B931" Comment="КЦУ. Кран № 9 закрыть" />
+        <Field Name="KCU_Kr12_ON" Type="BOOL" UUID="F8D6898540E26F64E2436FB3B6745356" Comment="КЦУ. Кран № 12 открыть" />
+        <Field Name="KCU_Kr12_OF" Type="BOOL" UUID="45386FA246FC5DFFAA4A868BCBBCE8F9" Comment="КЦУ. Кран № 12 закрыть" />
+        <Field Name="KCU_PMNS_OM" Type="BOOL" UUID="30E3CB464C86BC3C3799678D498DC226" Comment="КЦУ. ПМНС Н включить" />
+        <Field Name="KCU_MNU_1_ON" Type="BOOL" UUID="3EFEEACF45B3C857631BB1AEF375850C" Comment="КЦУ. МНУ (1 секция) включить" />
+        <Field Name="KCU_MNU_2_ON" Type="BOOL" UUID="6A23CD844E94CFB5533EC09B2962DDB1" Comment="КЦУ. МНУ (2 секция) включить" />
+        <Field Name="KCU_MNND_ON" Type="BOOL" UUID="DE737A3D4143FDA7ABA2758D4A7E8FE3" Comment="КЦУ. МННД включить" />
+        <Field Name="KCU_MNOD_ON" Type="BOOL" UUID="2E049A7E4A41A38CAAE9EFA40BCC7B51" Comment="КЦУ. МНОД включить" />
+        <Field Name="KCU_MNOB_D_ON" Type="BOOL" UUID="6B404F5243AFB0F0B8C032897C83D6B1" Comment="КЦУ. МНОБ Д включить" />
+        <Field Name="KCU_VOD_1_ON" Type="BOOL" UUID="04DA077144F8B8B768C834B27421CC92" Comment="КЦУ. ВОД1 включить" />
+        <Field Name="KCU_VOD_2_ON" Type="BOOL" UUID="D3A0A995487F1715D49F25B00FF713AD" Comment="КЦУ. ВОД2 включить" />
+        <Field Name="Check_U_AC220" Type="BOOL" UUID="948C91654000D1CD5EB5AA87F0901CDF" Comment="Контроль основного питания РК БУ ~220 В" />
+        <Field Name="Check_U_DC220" Type="BOOL" UUID="033971894DA5AC59D2A7429F00005134" Comment="Контроль резервного питания РК БУ =220 В" />
+        <Field Name="Check_UZIP" Type="BOOL" UUID="4BA340DC4EE154138F807B8277528282" Comment="Контроль исправности разрядников" />
+        <Field Name="QF_ON" Type="BOOL" UUID="96AB0BE14E548B304F749B83F86348D5" Comment="Автоматы питания включены" />
+        <Field Name="Check_U_DC220_BEO_osn" Type="BOOL" UUID="7FA0203A4E1B85C249B9F4939F64DBA1" Comment="Контроль основного питания БЭАО ~220 В" />
+        <Field Name="Check_U_DC220_BEO_rez" Type="BOOL" UUID="FE35F4B94044BCCB711AE58A50BB0F52" Comment="Контроль резервного питания БЭАО =220 В" />
+        <Field Name="Check_U_AI_Tp" Type="BOOL" UUID="C861DBA24D33D87BDC99FA9544FE363E" Comment="Контроль питания терминальных панелей AI" />
+        <Field Name="Check_U_DI_Tp" Type="BOOL" UUID="FC01A035467A3A383EC803BED419B2D8" Comment="Контроль питания терминальных панелей DI" />
+        <Field Name="Check_U_D0_Tp" Type="BOOL" UUID="E32D1DD2456738AC7E47E29781DE362A" Comment="Контроль питания терминальных панелей DO" />
+        <Field Name="Check_U_DC24_PLC_osn" Type="BOOL" UUID="5624FBCE4A88EF3CABA526951F6DA146" Comment="Исправность основного ИП =24В ПЛК" />
+        <Field Name="Check_U_DC24_PLC_rez" Type="BOOL" UUID="A64257CC4992B24DEC050C83AA0D4FA9" Comment="Исправность резервного ИП =24В ПЛК" />
+        <Field Name="Check_U_DC24_VU_osn" Type="BOOL" UUID="08C63AE44FF9ACA804418786B337D6F9" Comment="Исправность основного ИП =24В внутренних устройств" />
+        <Field Name="Check_U_DC24_VU_rez" Type="BOOL" UUID="F4A4FEDA4C66F5705D429FA6F159766F" Comment="Исправность резервного ИП =24В внутренних устройств" />
+        <Field Name="Check_U_DC24_AI_osn" Type="BOOL" UUID="CE48B13F4E333815D10CE0A028381139" Comment="Исправность основного ИП =24В аналоговых входов" />
+        <Field Name="Check_U_DC24_AI_rez" Type="BOOL" UUID="B93A94DC48FFCAD7ECEB77B6082C3EF7" Comment="Исправность резервного ИП =24В аналоговых входов" />
+        <Field Name="Check_U_DC24_DI_osn" Type="BOOL" UUID="2CCC80F64E34A93962AC01A46C9F77CF" Comment="Исправность основного ИП =24В DI, (внеш.)" />
+        <Field Name="Check_U_DC24_DI_rez" Type="BOOL" UUID="A3F2E96F40F43113194F969E18B8F530" Comment="Исправность резервного ИП =24В DI, (внеш.)" />
+        <Field Name="Check_U_DC24_VU_1_osn" Type="BOOL" UUID="DA96BB114ECD0EA63F25F6B85C967DA5" Comment="Исправность основного ИП =24В внешних устройств" />
+        <Field Name="Check_U_DC24_VU_1_rez" Type="BOOL" UUID="BB7B4499416663BDD10E09957C36AF64" Comment="Исправность резервного ИП =24В внешних устройств" />
+        <Field Name="Check_U_DC24_BEO_osn" Type="BOOL" UUID="BF02EB894D49C05D53E98C926CE911ED" Comment="Исправность основного ИП =24В БЭО, РПКУ" />
+        <Field Name="Check_U_DC24_BEO_rez" Type="BOOL" UUID="CBC4047D42370AA86665DEB723F58122" Comment="Исправность резервного ИП =24В БЭО , РПКУ" />
+        <Field Name="Check_U_CO1_plus" Type="BOOL" UUID="F92719EE47E37E299579D1950AC8B3D0" Comment="Контроль питания +15 В СО-1" />
+        <Field Name="Check_U_CO1_minus" Type="BOOL" UUID="BD401CE94597A8B51F591C8D8C1BAEC2" Comment="Контроль питания -15 В СО-1" />
+        <Field Name="But_BEO_ON" Type="BOOL" UUID="BA0C50054488F0D7E12648B464075B12" Comment="Кнопка «ЭАО» нажата" />
+        <Field Name="KCD_But_BEO_ON" Type="BOOL" UUID="84D1B51C45919ADBC713DF894E03CD9E" Comment="КЦД. Кнопка «ЭАО» нажата" />
+        <Field Name="But_AO_ON" Type="BOOL" UUID="564381C44692B6496E3A0FA4BA18044E" Comment="Кнопка «АО ГПА» нажата" />
+        <Field Name="KCD_But_AO_ON" Type="BOOL" UUID="6ABAC16446F1E484BCC7C59E4F2E7434" Comment="КЦД. Кнопка «АО ГПА» нажата" />
+        <Field Name="But_NO_ON" Type="BOOL" UUID="52EA76474AC7BEA7983810BDFC893650" Comment="Кнопка «НО ГПА» нажата" />
+        <Field Name="BEO_ready" Type="BOOL" UUID="23EED4E749EFD37D0C6830A44475B3BE" Comment="Готовность БЭО" />
+        <Field Name="But_Kvit_ON" Type="BOOL" UUID="F9D5BFB149D39002F2CC988E68BE15DC" Comment="Кнопка «Квитирование» нажата" />
+        <Field Name="BEO_work" Type="BOOL" UUID="8B7FF56C41218F83135264A082503583" Comment="БЭО работает" />
+        <Field Name="Check_U_osn_BUSHD220" Type="BOOL" UUID="2EEC506C431A6F2364D60C8EDB474E7C" Comment="Контроль основного питания БУШД ~220 В" />
+        <Field Name="Check_U_osn_BUSHD24" Type="BOOL" UUID="6D387A9E47665A3AC5DE6991ABD038EA" Comment="Контроль резервного питания БУШД =24 В" />
+        <Field Name="Chec_Ukr_110" Type="BOOL" UUID="CA99D955408C772D739845B46B57418C" Comment="Контроль питания кранов =110 В" />
+        <Field Name="Check_U_PRU24" Type="BOOL" UUID="B65083FD498931BF5BD6C8BCEC7F6B5C" Comment="Контроль питания ПРУ =24 В" />
+        <Field Name="Check_Uvibr24" Type="BOOL" UUID="1B6681CE495B1DA676647085D296F980" Comment="Контроль питания датчиков уровня и вибрации =24 В" />
+    </Fields>
+</Type>

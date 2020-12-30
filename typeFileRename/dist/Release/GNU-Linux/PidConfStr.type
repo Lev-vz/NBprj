@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="PidConfStr" Kind="Struct" UUID="7479204D4297EF848DE57B9A37E0C3B6">
+    <Fields>
+        <Field Name="KP" Type="REAL" UUID="0569A34E425EF680030C65AF977B1492" Comment="коэффициент П-составляющей" />
+        <Field Name="KI" Type="REAL" UUID="ECB4F9784534CED4B287BA9AFB8299C3" Comment="коэффициент И-составляющей" />
+        <Field Name="KD" Type="REAL" UUID="B744EF214A718427210510A3969A974F" Comment="коэффициент Д-составляющей" />
+        <Field Name="SP_ramp_rate" Type="REAL" UUID="B77275FC42DAC6D5D4C6199B4B7DD4C9" Comment="скорость изменения уставки" />
+        <Field Name="depr_SP" Type="BOOL" UUID="6651FFEA4E2ACE05A3124A88C9F115B1" Comment="влияние скорости на изменение уставки" />
+        <Field Name="CV_max" Type="REAL" UUID="A3E72F6B4655B77CBEE1A7B76E4DE7D4" Comment="максимальное значение выхода" />
+        <Field Name="CV_min" Type="REAL" UUID="7527554041B5D9914A7558A92D46EEB2" Comment="минимальное значение выхода" />
+        <Field Name="CV_vel_max" Type="REAL" UUID="4299A3DA43877DC75C6168A6AB8714BD" Comment="макс. скорость увеличения выхода" />
+        <Field Name="CV_vel_min" Type="REAL" UUID="036F9A7648015892505D32A614291890" Comment="макс. скорость уменьшения выхода" />
+        <Field Name="n_samples_der" Type="INT" UUID="F7333BC145A4BF8E3AA5B2A486022173" Comment="количество циклов определения скорости изменения входа" />
+        <Field Name="manual" Type="BOOL" UUID="01B831B8463BC6D80D652C87C61DACA7" Comment="ручной режим" />
+        <Field Name="manual_rate" Type="REAL" UUID="4CAAF55B4521C533E695729ED2670D39" Comment="скорость изменения выхода в ручном режиме" />
+        <Field Name="der_DB" Type="REAL" UUID="0D34DCA947B9FE6BB1D4B5ABAF1209A7" Comment="зона нечувствительности по скорости" />
+        <Field Name="der_treshold" Type="REAL" UUID="2F77E4C84EF9FD98AF3A4C93473F9588" Comment="макс. смещение уставки по скорости" />
+        <Field Name="DB" Type="REAL" UUID="FFA8261B4C1C44325D186F99973AE4EB" Comment="зона нечувствительности контура" />
+        <Field Name="CV_reverse" Type="BOOL" UUID="A5306C9B4C74397F0700A1B8413C9042" Comment="направление выхода (0-уменьшение,1-увеличение)" />
+    </Fields>
+</Type>

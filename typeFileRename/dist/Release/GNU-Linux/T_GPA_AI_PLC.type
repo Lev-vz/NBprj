@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_GPA_AI_PLC" Kind="Struct" UUID="77566D20A926441C884995A2A88FE550">
+    <Fields>
+        <Field Name="Tv_KGT" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="AFA3BD3D4D29FB33431968AD0D00D618" Comment="Температура под кожухом Д" />
+        <Field Name="Tg_in_KND_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="447846B14CD30FE4262E12A64B47E940" Comment="Температура 1 перед камерой сгорания (за КНД)" />
+        <Field Name="Tg_in_KND_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="D807D15F420D509A47B8EFAAE0FDC588" Comment="Температура 2 перед камерой сгорания (за КНД)" />
+        <Field Name="Tg_out_TND_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="4484FCDF419C9E9632B2AB961A159368" Comment="Температура 1 на выходе ТНД" />
+        <Field Name="Tg_out_TND_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="CB6AFB414523092ABA3AA7B33EA76B48" Comment="Температура 2 на выходе ТНД" />
+        <Field Name="Tg_out_TND_3" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="D427B5BD44D448D12AF407B2892B6816" Comment="Температура 3 на выходе ТНД" />
+        <Field Name="Tg_out_TND_4" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="C96BF1FB43F918DD955CF6A32AB7DE1F" Comment="Температура 4 на выходе ТНД" />
+        <Field Name="Tg_out_TND_5" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="FBBA1F6F4F68E583ACF6E3A57F6BE1C5" Comment="Температура 5 на выходе ТНД" />
+        <Field Name="Tg_out_TND_6" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="9EA6556345A34361A4A15999590AF766" Comment="Температура 6 на выходе ТНД" />
+        <Field Name="Tg_out_TND_7" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="184A37044A3BAA27B89D21A0BD92FC54" Comment="Температура 7 на выходе ТНД" />
+        <Field Name="Tg_out_TND_8" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="BB6661604586E38E99C31DB3615DF16D" Comment="Температура 8 на выходе ТНД" />
+        <Field Name="Tg_out_TND_9" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="B33B66E442C5BEBE0034EFBBB28D879D" Comment="Температура 9 на выходе ТНД" />
+        <Field Name="Tg_out_TND_10" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="3296CF744584A41C3731E6AEF5B79BC9" Comment="Температура 10 на выходе ТНД" />
+        <Field Name="Tg_out_TND_11" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="9ADB300D4A7FDB519CBC9CA99C5B2404" Comment="Температура 11 на выходе ТНД" />
+        <Field Name="Tg_out_TND_12" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="75766FF74EA0A52AD384788503DAFAF7" Comment="Температура 12 на выходе ТНД" />
+        <Field Name="Tg_out_TND_13" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="458E3A9F43F4019BC18EDCB551EAF97B" Comment="Температура 13 на выходе ТНД" />
+        <Field Name="Tg_out_TND_14" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="A35FD5C8417EF72A02DB6D84F04E7DBC" Comment="Температура 14 на выходе ТНД" />
+        <Field Name="Tg_out_TND_15" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="DE2BF5D54A8A2F112B5FD98FA21B1272" Comment="Температура 15 на выходе ТНД" />
+        <Field Name="Tg_out_TND_16" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="E7E2381F45A68A60A2AE388E1970F25A" Comment="Температура 16 на выходе ТНД" />
+        <Field Name="Tg_in_TND_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="0039E2804785603743AA5CAED2B2B0E0" Comment="Температура 1 за ТНД (т.17)" />
+        <Field Name="Tg_in_TND_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="77A808A4490CBA65C9CF05B1AFAB76E1" Comment="Температура 2 за ТНД (т.18)" />
+        <Field Name="Tm_out_Per" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="96620C774620C6AFC0AD59A14E58FFAD" Comment="Температура масла на сливе из переходника" />
+        <Field Name="Tm_out_KVD" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="3FF96EBB487D4045545C1B9D30FCB4C4" Comment="Температура масла на сливе из заднего корпуса КВД" />
+        <Field Name="Tm_out_TND" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="FBC4C6CE4E62E9D7444C47A25AFB86C6" Comment="Температура масла на сливе из опорного венца ТНД" />
+        <Field Name="Tm_out_N" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="E3CA9A304DE5B196D30461B721648811" Comment="Температура масла на сливе из опорного венца ТН" />
+        <Field Name="Tm_in_MBN" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="2EEC626940D0342A3094E98EA56F7A96" Comment="Температура масла в МБН" />
+        <Field Name="Tm_in_MBD" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="FE285BAB4A4DAFEBF18E4D94E8CA726E" Comment="Температура масла в МБД" />
+        <Field Name="Tm_in_D" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="B26DDB8E40745F97CF7872A943F97BCD" Comment="Температура масла на входе Д" />
+        <Field Name="T_POD_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="92E92B934973404A3300DD9D8DE7DD79" Comment="Температура 1 подшипников промопоры" />
+        <Field Name="T_POD_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="B974166342209AA3EE88CDAAD9A1ABD5" Comment="Температура 2 подшипников промопоры" />
+        <Field Name="Tg_in_N" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="CC03316743B5F6FFCD30C1AC7503D5F7" Comment="Температура газа на входе Н" />
+        <Field Name="Tg_out_N" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="05F63C214E1D46930E44A5AC3E759A38" Comment="Температура газа на выходе Н" />
+        <Field Name="T_PON" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="9602125A440D72044D000A88079FA0D1" Comment="Температура переднего опорного подшипника Н" />
+        <Field Name="Tp_N_opora" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="A95145274AF67EC62E138BBD93DE53B4" Comment="Температура опорно-упорного подшипника Н (опорная часть)" />
+        <Field Name="Tp_N_work" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="CEA621CF469E4440A5F65E9C287E0859" Comment="Температура опорно-упорного подшипника Н (рабочая колодка)" />
+        <Field Name="Tp_N_ust" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="548674A14C45E1343DED5F95C1029E93" Comment="Температура опорно-упорного подшипника Н (установочная колодка)" />
+        <Field Name="Tms_N_AVO" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="97D27D364CF33E5B88E62987FFC91D6C" Comment="Температура масла смазки нагнетателя после АВО" />
+        <Field Name="T_atm" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="607D9C194FED2A116BC0F9A8F7ABA881" Comment="Температура атмосферного воздуха" />
+        <Field Name="Tv_in_D" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="42F57DC14520F2FDBA8234A3214D0FF3" Comment="Температура воздуха на входе в двигатель" />
+        <Field Name="T_H20_in_Ut" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="0D1F89D5457256234821D1815A8E08F7" Comment="Температура воды на входе утилизатора" />
+        <Field Name="T_H20_out_Ut" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="75899D0B454311AF6AFAB8AE689D086D" Comment="Температура воды на выходе утилизатора" />
+        <Field Name="Ttg_in_BTA" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="1B45C1434C4828BD2752EBAF94BE9688" Comment="Температура топливного газа на входе в БТА" />
+        <Field Name="T_BB" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="E508EFE7402A64F7EC1F72B1D60874EF" Comment="Температура воздуха в ББ" />
+        <Field Name="Razr_out_D" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="5516911048A1D4D0F6C457946DE446C2" Comment="Разрежение воздуха на входе в двигатель" />
+        <Field Name="Pm_D" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="F46681A34A111756948EF0BC97F96DB9" Comment="Давление масла на входе в двигатель (после фильтра)" />
+        <Field Name="Pm_N" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="DCC08FFB4C33E6C81E029BB252E9DAF8" Comment="Давление масла смазки Н" />
+        <Field Name="dP_mg" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="15A56641456A7E49859FD39E8929634E" Comment="Перепад давлений масло-газ" />
+        <Field Name="Ptg_in_BTA" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="D3D2788744D07FB117F463871C3AA547" Comment="Давление топливного газа на входе БТА" />
+        <Field Name="dPtg_in_filtr" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="9E970A184D7D60447C65CE8BC8E9A34F" Comment="Перепад давлений топливного газа на фильтре" />
+        <Field Name="Pg_in_N" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="2FA9D1BB4E20996166B3948781E536EF" Comment="Давление газа на входе Н" />
+        <Field Name="Ptg_zamer" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="261D0FCF47FEB4DE3D72959EE7EEBD75" Comment="Давление топливного газа на замерной нитке" />
+        <Field Name="dPtg_in_diaf" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="72C30306426751129239BB971E4E8544" Comment="Перепад давлений топливного газа на диафрагме" />
+        <Field Name="Pg_out_N" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="1BB174974AFEF54C4BC68FAC1922ABF5" Comment="Давление газа на выходе Н" />
+        <Field Name="dP_conf" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="23080EA84626D2E65063FAB90324E416" Comment="Перепад давлений на конфузоре" />
+        <Field Name="P_atm" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="AC973B9C4890BD7C58452390242BFF96" Comment="Давление атмосферного воздуха" />
+        <Field Name="dPg_fors" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="D6AB0AC04649E180023A65BEBA87F12A" Comment="Перепад давлений газа на форсунках" />
+        <Field Name="Pv_out_KVD" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="DA2F0C334459F51CD3979992CBC1E81B" Comment="Давление воздуха за КВД" />
+        <Field Name="dPm_in_filtr_N" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="E49B963B400772EBE9FADD8636B4D415" Comment="Перепад давлений масла на фильтре Н (ТП-22)" />
+        <Field Name="Lm_MBN" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="8182095343A97D8E765CAD8A7969FCDF" Comment="Уровень в МБН" />
+        <Field Name="Vibr_OP_N" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="2E8A0285442CDCD0552AEEB4C1EB609F" Comment="Вибросмещение ОП нагнетателя" />
+        <Field Name="Vibr_OUP_N" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="ADB18D69439E14179993A5A25F282878" Comment="Вибросмещение ОУП нагнетателя" />
+        <Field Name="Vibr_KVD" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="187D53124D8B23D462CCC3BAEFD8F2A2" Comment="Вибрация корпуса КВД" />
+        <Field Name="Vibr_KND" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="78FDE793475FD28A4D3DE9BAE2548828" Comment="Вибрация корпуса КНД" />
+        <Field Name="Vibr_N" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="1F67CEFF4D6ADFE1250F4B9CF1FFC1E1" Comment="Вибрация корпуса ТН" />
+        <Field Name="Pos_TRK" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="2DD4B2894ADFD4DB05842C80D4AF0464" Comment="Положение топливно-регулирующего клапана (ДУС)" />
+        <Field Name="KCU_Upr_TRK" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="2116F2F84287A76ED418B0895236B2F2" Comment="КЦУ. Управление топливно-регулирующим клапаном " />
+        <Field Name="U_osn_RKBU" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="3559E8724EDD99800184C49FFC1B127B" Comment="Напряжение основного питания РК БУ" />
+        <Field Name="U_res_RKBU" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="55A916F24E31F6D0689F0CBAE779D46A" Comment="Напряжение резервного питания РК БУ" />
+        <Field Name="T_PLC" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="901575394B5063CA3F1EC89E38BED41A" Comment="Температура контроллера" />
+        <Field Name="N_KND_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="BA19C1534A3D2448F24FA9935BED47EA" Comment="Частота вращения КНД канал 1" />
+        <Field Name="N_KVD_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="5E608C054E2A8E9703D74CB9E8B1B7EC" Comment="Частота вращения КВД канал 1" />
+        <Field Name="N_TN_1" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="DED834E640F0112F263B9AAA5AB569E0" Comment="Частота вращения ротора ТН канал 1" />
+        <Field Name="N_KND_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="49B64CF348F41B1251986FB6E1623BDE" Comment="Частота вращения КНД канал 2" />
+        <Field Name="N_KVD_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="5B427B904D5B4A021B3F74B64FB00CAF" Comment="Частота вращения КВД канал 2" />
+        <Field Name="N_TN_2" Type="B290A1BE4D5D52B9175E13A9D47C40D2" UUID="180DBBC6406CA21F7D34DE969A1BFA4E" Comment="Частота вращения ротора ТН канал 2" />
+    </Fields>
+</Type>

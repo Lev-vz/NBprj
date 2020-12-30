@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AM_Simulaton" Kind="Struct" Comment="Параметры и данные для имитации" UUID="88DE60EF4F8C47FD69A9F1B469621C9A">
+    <Fields>
+        <Field Name="deleyStartMove" Type="REAL" UUID="DF3C63B84D3A2581E1BEBABBEE2B70E0" Comment="Задержка на начало перестановки" />
+        <Field Name="deleyEndMove" Type="REAL" UUID="D29C39984C714DF833BD819B7C957F49" Comment="Задержка на завершение перестановки" />
+        <Field Name="timerMove" Type="REAL" UUID="ABA8F0C748F08DC3B194649DC1DDFF3C" Comment="Таймер перестановки" />
+        <Field Name="position" Type="REAL" UUID="6FDF0AE841E5A058664A5AAEC07CE8B7" Comment="Текущее положение - для имитации ан.пар." />
+    </Fields>
+</Type>

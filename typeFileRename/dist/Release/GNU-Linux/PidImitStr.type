@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="PidImitStr" Kind="Struct" UUID="9219253545A770B07F8240BBCB7E4E33">
+    <Fields>
+        <Field Name="T_ob" Type="REAL" UUID="982D8EA34733FA087D405CBA11C89493" Comment="постоянная времени" />
+        <Field Name="ON" Type="BOOL" UUID="A76F9C1F46C948346A60698DDEBFE06E" Comment="включение имитации" />
+        <Field Name="K" Type="REAL" UUID="5EF3872A43A9B047D5CE65A1990D6B69" Comment="коэффициент умножения" />
+    </Fields>
+</Type>

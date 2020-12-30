@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_FRS" Kind="Struct" Comment="Выходы регулятора" UUID="008B66B5444EF6C9802E599B15F4656A">
+    <Fields>
+        <Field Name="R_reserve" Type="BOOL" UUID="19CF183B4A39CA77C837A1A318BDEFDD" Comment="Резерв" />
+        <Field Name="R_start" Type="BOOL" UUID="55AECE45474D8BECEC9B8D871C56664F" Comment="Пуск" />
+        <Field Name="R_work" Type="BOOL" UUID="3A0AFA764E4305F2DFEC40995BE5EDDE" Comment="Работа" />
+        <Field Name="R_stop" Type="BOOL" UUID="3B76A7AC47A47F840C22EC84AD509F16" Comment="Останов" />
+        <Field Name="Rp_fire" Type="BOOL" UUID="6D0BB0C24B34533AEF1F8C89B8E0F41A" Comment="Розжиг" />
+        <Field Name="Rp_rate" Type="BOOL" UUID="1A5EFA8D4F0026744DAF208FA2A11825" Comment="Разгон по программе" />
+        <Field Name="Rp_rateNvd" Type="BOOL" UUID="6FE51ADA4A66E34F1BD6DCBBF660B349" Comment="Разгон по N КВД" />
+        <Field Name="Rp_heat" Type="BOOL" UUID="4511BCE8498C8EF2880B2DAAD5CF7FBE" Comment="Прогрев на малом газу" />
+        <Field Name="Rp_MG" Type="BOOL" UUID="D1B52B4B4AAADAF55A564DA36DA1E7C0" Comment="Малый газ" />
+        <Field Name="Rp_HH" Type="BOOL" UUID="D82ED0FD4D954018545A21BE40256AE6" Comment="Холостой ход" />
+        <Field Name="isFire" Type="BOOL" UUID="1AC6EF494D0C488E54EA96BCAD69BE6C" Comment="Есть горение" />
+        <Field Name="Rp_regNvd" Type="BOOL" UUID="5DDF468147A9D4A1A4F773ACF0ABC635" Comment="Регулирование по N КВД" />
+        <Field Name="Rp_regNst" Type="BOOL" UUID="F1FFB4EA4C1EC28A3443849680F2D2D7" Comment="Регулирование по N СТ" />
+        <Field Name="Rp_DG_DU" Type="BOOL" UUID="9B9CE8FF450DEE83683A97975BFC742B" Comment="ДУ дозатором" />
+        <Field Name="Rp_Gt_DU" Type="BOOL" UUID="B7DF52E14C2BF9DAA6889789868FA2E5" Comment="ДУ расходом топлива" />
+        <Field Name="Rp_loLimitNnd" Type="BOOL" UUID="0907314C418385DF46C211AD68B282BA" Comment="Нижнее ограничение по N КНД" />
+        <Field Name="Rp_loLimitNvd" Type="BOOL" UUID="7744545949F967F4C93DA8A4C5B7AAC5" Comment="Нижнее ограничение по N КВД" />
+        <Field Name="Rp_loLimitNst" Type="BOOL" UUID="AFB21E9D4708BACC3E3EBFBB4B386420" Comment="Нижнее ограничение по N ТН" />
+        <Field Name="Rp_hiLimitNnd" Type="BOOL" UUID="8947E35E45773CE6D8F7CD8D270869D5" Comment="Верхнее ограничение по N КНД" />
+        <Field Name="Rp_hiLimitNvd" Type="BOOL" UUID="A434E1DF4168A7BD50968DBA86AD4019" Comment="Верхнее ограничение по N КВД" />
+        <Field Name="Rp_hiLimitNst" Type="BOOL" UUID="523FD1754934F8609777CEB1CE0B035C" Comment="Верхнее ограничение по N ТН" />
+        <Field Name="Rp_hiLimitT " Type="BOOL" UUID="43B50D2E41D67E6BA3B21484DBFF6DEB" Comment="Верхнее ограничение по Т газа за ТНД" />
+        <Field Name="Rp_hiLimited" Type="BOOL" UUID="FE48297F43B3CB820A5BF98FDF47596D" Comment="Двигатель на верхнем ограничении" />
+        <Field Name="Rp_loLimited" Type="BOOL" UUID="057A814E40D52BCF673B08BB80106A66" Comment="Двигатель на нижнем ограничении" />
+        <Field Name="P_Nnd1brk" Type="BOOL" UUID="597407874229A6975A0C3EB3E5C8143B" Comment="Отказ 1-го канала изм. N КНД" />
+        <Field Name="P_Nnd2brk" Type="BOOL" UUID="151B598B4D53A14DD541F18282C385E1" Comment="Отказ 2-го канала изм. N КНД" />
+        <Field Name="P_NndDistort" Type="BOOL" UUID="96BB7F0F4841B5597B65CF8FDC6F9717" Comment="Рассогласование по N КНД" />
+        <Field Name="P_Nvd1brk" Type="BOOL" UUID="F8021F89497472344C541B85A427E5F7" Comment="Отказ 1-го канала изм. N КВД" />
+        <Field Name="P_Nvd2brk" Type="BOOL" UUID="B1F10BA64F8EC2E62E90EC9C0E418D10" Comment="Отказ 2-го канала изм. N КВД" />
+        <Field Name="P_NvdDistort" Type="BOOL" UUID="EBD8DA664CA129149821369FA896336D" Comment="Рассогласование по N КВД" />
+        <Field Name="P_Nst1brk" Type="BOOL" UUID="3AFA7A684EFE6C25F31A3DA58E3CC853" Comment="Отказ 1-го канала изм. N СТ" />
+        <Field Name="P_Nst2brk" Type="BOOL" UUID="447318774B5761220BBBB39767B2C547" Comment="Отказ 2-го канала изм. N СТ" />
+        <Field Name="P_NstDistort" Type="BOOL" UUID="48313E244677CB7CAD56D7915C2B3FED" Comment="Рассогласование по N СТ" />
+        <Field Name="P_Tg_outTNDbrk" Type="BOOL" UUID="595A01014FB36FBEE98AEE97F7A29E4D" Comment="Отказ термопар Т газа за ТНД" />
+        <Field Name="P_Ta_inDbrk" Type="BOOL" UUID="F9BD33564B3F4DDBB42FC2B73A134823" Comment="Отказ канала изм. Т воздуха на входе ГТУ" />
+        <Field Name="P_Pa_outKVDbrk" Type="BOOL" UUID="F8A73EFA4C4DB51D456B7B82739451C6" Comment="Отказ канала изм. P воздуха за КВД" />
+        <Field Name="P_Ptg_inIDbrk" Type="BOOL" UUID="5ACA826140B49F99460E3082AED30191" Comment="Отказ канала изм. P тг на измерительной диафрагме" />
+        <Field Name="P_Ttg_outIDbrk" Type="BOOL" UUID="270D81F046F48C9DBD42DC9536A402FE" Comment="Отказ канала изм. Т тг после измерительной диафрагмы" />
+        <Field Name="P_Ptg_inDbrk" Type="BOOL" UUID="5E8AB2444CB9C376B0448D89B2B82FF8" Comment="Отказ канала изм. P тг на входе в Д" />
+        <Field Name="P_DGbrk" Type="BOOL" UUID="F85D3CD44822B453479AC7A97D7F39D9" Comment="Рассогласование по ДГ" />
+        <Field Name="A_NndBrk" Type="BOOL" UUID="775D6D26411812FF18341183BEA6D9F1" Comment="Отказ каналов изм. N КНД" />
+        <Field Name="A_NvdBrk" Type="BOOL" UUID="291EB3A34D531349526621849C7943E3" Comment="Отказ каналов изм. N КВД" />
+        <Field Name="A_NstBrk" Type="BOOL" UUID="26097D3049632C7911AB30B8A14BB3E9" Comment="Отказ каналов изм. N СТ" />
+        <Field Name="A_TaftTNDbrk" Type="BOOL" UUID="08B241364613373A69C97EBA829023CF" Comment="Отказ каналов изм. Т газа за ТНД" />
+        <Field Name="A_NndHigh" Type="BOOL" UUID="A01CC1E5487980D2DE4B8C94C9F67162" Comment="Высокая N КНД" />
+        <Field Name="A_NvdHigh" Type="BOOL" UUID="4570D7554DD181E757F0EE93CC68B67C" Comment="Высокая N КВД" />
+        <Field Name="A_NstHigh" Type="BOOL" UUID="C5D4323C4E69D693C511F4859D6E0298" Comment="Высокая N СТ" />
+        <Field Name="A_TaftTNDhigh" Type="BOOL" UUID="D98AC24A492765541383EF8E35573C59" Comment="Высокая Т газа за ТНД" />
+        <Field Name="A_DGbrk" Type="BOOL" UUID="E381EDF94E8D50C50589D0883EABC2BC" Comment="Рассогласование по ДГ" />
+        <Field Name="A_noFire1" Type="BOOL" UUID="D64FA936480DE36C5E40DD8EA7018AE0" Comment="Нет розжига" />
+        <Field Name="A_noFire2" Type="BOOL" UUID="7BD6E16441BCC7029CE871AD22E08F1C" Comment="Погасание факела" />
+        <Field Name="A_common" Type="BOOL" UUID="A7D5888B4F3D3606FADD9E9967E585C9" Comment="Обобщённая авария от регулятора топлива" />
+        <Field Name="FRegMode" Type="INT" UUID="882334F4401DF779C1B48AA24EE087A0" Comment="Режим регулятора" />
+        <Field Name="contur" Type="INT" UUID="A06FF2894A9A7C380295A394FB7BFEAF" Comment="Активный контур" />
+    </Fields>
+</Type>

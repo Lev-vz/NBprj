@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_DI_ToProcessing" Kind="Struct" Comment="команды из ЧМИ" UUID="55B37D104E6E69A8BD7466B4968651A1">
+    <Fields>
+        <Field Name="manualTarget" Type="BOOL" UUID="8C1FDD024010C62C7EB01A8B35880AAB" Comment="Задание из ЧМИ" />
+        <Field Name="BTNmanualOn" Type="BOOL" UUID="9ED2B40E49BAA3DC17C4E6A34BE0EE72" Comment="Кнопка вкл. задания значения из ЧМИ" />
+        <Field Name="BTNmanualOf" Type="BOOL" UUID="C3606ECA4E40998E32B48AA467E477F9" Comment="Кнопка откл. задания значения из ЧМИ" />
+        <Field Name="BTNrepairOn" Type="BOOL" UUID="908FD99743B5C7334653B4989B84A416" Comment="Кнопка вкл. ремонта" />
+        <Field Name="BTNrepairOf" Type="BOOL" UUID="60E47C4A48A9AA46738B5284516765E5" Comment="Кнопка откл. ремонта" />
+        <Field Name="BTNrepairProlong" Type="BOOL" UUID="6FBD32F442AC9DB3CE4BCFABEEEF8D86" Comment="Кнопка продления ремонта" />
+    </Fields>
+</Type>

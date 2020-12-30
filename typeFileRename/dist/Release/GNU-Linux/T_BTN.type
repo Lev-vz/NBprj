@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_BTN" Kind="Struct" UUID="0057899A4996499F3C56F6B354BE7123">
+    <Fields>
+        <Field Name="Deblock" Type="BOOL" UUID="7C0C0D824ACC836B0E88DBA07F8575A0" Comment="Кн. АРМ &quot;Деблокировка&quot;" />
+        <Field Name="TEST_DUS" Type="BOOL" UUID="EFB5C9A544E2B1BFA8AA759E2E62E6F3" Comment="Проверка ТРК" />
+        <Field Name="ARM_NObs" Type="BOOL" UUID="0427C5FD4424001253B9EB9F9CDEFF32" Comment="Кн. АРМ &quot;НОбс&quot;" />
+        <Field Name="ARM_NOss" Type="BOOL" UUID="7BCF6A4E426036506ED3B79765CC8887" Comment="Кн. АРМ &quot;НОcс&quot;" />
+        <Field Name="ARM_AObs" Type="BOOL" UUID="40BBD36A4FCDA5EC5CA0CFACE1E8E07C" Comment="Кн. АРМ &quot;АОбс&quot;" />
+        <Field Name="ARM_AOss" Type="BOOL" UUID="1CAB9CA74E8D4477F0F5C8ABE473EAA7" Comment="Кн. АРМ &quot;АОсс&quot;" />
+        <Field Name="cancel" Type="BOOL" UUID="2EC322B348429D9BB0C5ED90FF06A11D" Comment="Кн. АРМ &quot;Отмена&quot;" />
+        <Field Name="Repair" Type="BOOL" UUID="217C5D2642D107C2373BADAC36EF2BA3" Comment="Кн. АРМ &quot;Ремонт&quot;" />
+        <Field Name="HR" Type="BOOL" UUID="5E63DB2745DF356793F450931C1307DC" Comment="Кн. АРМ &quot;Холодный резерв&quot;" />
+        <Field Name="GR" Type="BOOL" UUID="8F7A0A714EEFDA878643D39E3FC4CF7E" Comment="Кн. АРМ &quot;Горячий резерв&quot;" />
+        <Field Name="PZ" Type="BOOL" UUID="E8F86B514243562E379E09B652A9C547" Comment="Кн. АРМ &quot;Проверка защит&quot;" />
+        <Field Name="PZM" Type="BOOL" UUID="824DDC7046831A4DE42AF89CA1190F20" Comment="Кн. АРМ &quot;Проверка защит масла&quot;" />
+        <Field Name="HP" Type="BOOL" UUID="DA6DD02041EBABC423150E8936F8D656" Comment="Кн. АРМ &quot;Холодная прокрутка&quot;" />
+        <Field Name="KPK" Type="BOOL" UUID="953FCE41425D85BFA267F498FD701769" Comment="Кн. АРМ &quot;Комплексная проверка кранов&quot;" />
+        <Field Name="APK" Type="BOOL" UUID="07E4B8884585F948071555A8BF316CED" Comment="Кн. АРМ &quot;Пуск на кольцо&quot;" />
+        <Field Name="APM" Type="BOOL" UUID="EFADD92A444D9461F5850B961B50DBF9" Comment="Кн. АРМ &quot;Пуск в магистраль&quot;" />
+        <Field Name="PBZ" Type="BOOL" UUID="C609234C4556DF08BFA98DBB918716F8" Comment="Кн. АРМ &quot;ПБЗ&quot;" />
+        <Field Name="K" Type="BOOL" UUID="60FF16C44C3895E53F0AE7BE53DC8647" Comment="Кн. АРМ &quot;Кольцо&quot;" />
+        <Field Name="M" Type="BOOL" UUID="9AF90704426693EB421074B4A1ABA1E0" Comment="Кн. АРМ &quot;Магистраль&quot;" />
+        <Field Name="Start" Type="BOOL" UUID="AF5313E841A4DC006170CD924607AF9C" Comment="Кн. АРМ &quot;Пуск&quot;" />
+        <Field Name="Force_DO" Type="BOOL" UUID="B597005144BF16C99A19318AADC44792" Comment="Кн. &quot;Форсировка DO&quot;" />
+        <Field Name="Force_DI" Type="BOOL" UUID="1309CF4043EDB5E918D3C2B281ADBF4E" Comment="Кн. &quot;Форсировка DI&quot;" />
+        <Field Name="IMIT_ON" Type="BOOL" UUID="18CC715940E93F8C091E67A9BFC6C280" Comment="Кн. &quot;Вкл. имитацию&quot;" />
+        <Field Name="IMIT_OF" Type="BOOL" UUID="6B4242E741DC12E9C31B219EF8103DFE" Comment="Кн. &quot;Выкл. имитацию&quot;" />
+        <Field Name="APR_RESET" Type="BOOL" UUID="CBA6C7844A516526CD471687B3498734" Comment="Кн. &quot;Сброс регулятора АП, на один скан&quot;" />
+        <Field Name="APR_HLOP_RESET" Type="BOOL" UUID="28879161403F84710242D5BC72B61F80" Comment="Кн. &quot;Принудительный сброс зафиксированных хлопков АП&quot;" />
+        <Field Name="Manual_Set_ES" Type="BOOL" UUID="0D14216C46D3E2516CCD198E9E208DC9" Comment="Кн. &quot;Задание на ЭС&quot;" />
+        <Field Name="Manual_Set_VNA" Type="BOOL" UUID="C7A0B5364F517E1043E03AA485645570" Comment="Кн. &quot;Задание на ВНА&quot;" />
+        <Field Name="Manual_Set_APK" Type="BOOL" UUID="5E5929E84B68821D5CE864BFF45A6874" Comment="Кн. &quot;Задание на АПК&quot;" />
+        <Field Name="Manual_Set_TRK" Type="BOOL" UUID="7BE2CC5E426400DCC746979BAF5D0D99" Comment="Кн. &quot;Задание на ТРК&quot;" />
+        <Field Name="TP" Type="BOOL" UUID="7FF97B8A45EB893CEFB4B9A48788DA1F" Comment="Кн. &quot;Технологическая прокрутка&quot;" />
+        <Field Name="AutoStart" Type="BOOL" UUID="4F0F3B99404BA291B85E778E826D1FB2" Comment="Автоматический запуск ТП" />
+        <Field Name="RU_IM" Type="BOOL" UUID="85A8A5B0409C5FDECD64538BB84C76EC" Comment="Кн. &quot;РУ ИМ&quot;" />
+        <Field Name="SND_OFF" Type="BOOL" UUID="46ED05534FA28E9B683C2CAD42D3B9BE" Comment="Кн. Откл. звука" />
+        <Field Name="Start_OGV_OD" Type="BOOL" UUID="2CD6C0054473189F222A24897297C301" Comment="Выпуск ОГВ в ОД" />
+        <Field Name="Start_OGV_ON" Type="BOOL" UUID="E25113174A68A844BF83A0BC826ED1A3" Comment="Выпуск ОГВ в ОН" />
+        <Field Name="Start_OGV_OMA" Type="BOOL" UUID="741B37EB4E3FC10D38ED78A18F951E72" Comment="Выпуск ОГВ в ОМА" />
+        <Field Name="Start_ASPT" Type="BOOL" UUID="5640E73644A21C428555AEA9B3EC2EC2" Comment="Подтвердить" />
+        <Field Name="cancel_ASPT" Type="BOOL" UUID="9A00BB734EE1B05344A966BE8D955F71" Comment="Отмена" />
+        <Field Name="STOP_PT" Type="BOOL" UUID="6E63D1A24BDEF95CBD6183A425E5C0DF" Comment="Стоп ПТ" />
+        <Field Name="A_OD_ON" Type="BOOL" UUID="F152544F4AD4BFE9D54F98A73C52B50F" Comment="Вкл автоматики ОД" />
+        <Field Name="A_ON_ON" Type="BOOL" UUID="4D7C52C24BD3B8B09EF90986E0E96A72" Comment="Вкл автоматики ОН" />
+        <Field Name="A_OMA_ON" Type="BOOL" UUID="C3F7B9D24E6AF2DF9F2D0CBB4F3C1E84" Comment="Вкл автоматики ОМА" />
+        <Field Name="A_OD_OF" Type="BOOL" UUID="E881B3D8422C24F16578188D4ACEFF54" Comment="Откл автоматики ОД" />
+        <Field Name="A_ON_OF" Type="BOOL" UUID="0175D8614A3EA963F7AB27A3E2845435" Comment="Откл автоматики ОН" />
+        <Field Name="A_OMA_OF" Type="BOOL" UUID="3290741C41F9CAC14D7485BFBF754473" Comment="Откл автоматики ОМА" />
+        <Field Name="VGUT_ON" Type="BOOL" UUID="8DC7F6A141E0D10A450631A5A6DE4AB5" Comment="ВЖУТ откр" />
+        <Field Name="VGUT_OF" Type="BOOL" UUID="D62253794801B545DA4699BDF72445AA" Comment="ВЖУТ закр" />
+        <Field Name="BGUT_ON" Type="BOOL" UUID="AAD2082A4A41AABFA617C68ABB2EAABB" Comment="БЖУТ откр" />
+        <Field Name="BGUT_OF" Type="BOOL" UUID="C5753A9B4FE5540172D299B64A0C29BC" Comment="БЖУТ закр" />
+        <Field Name="UTO_T1_manual" Type="BOOL" UUID="9D2E629043C57DB574DA6D856185CE17" Comment="Ручной ввод Т1" />
+        <Field Name="UTO_T1_eval" Type="BOOL" UUID="0155DEC446B52BD3E4EB3193B678E88F" Comment="Расчётная Т1&#x0A;" />
+        <Field Name="UTO_AU_ON" Type="BOOL" UUID="38DBA9284D373E636929C0BB10442F28" Comment="АУ УТО включить&#x0A;" />
+        <Field Name="UTO_AU_OF" Type="BOOL" UUID="FCF8863B4905C675FFF870B270C90276" Comment="АУ УТО отключить" />
+        <Field Name="UTO_DU_ON" Type="BOOL" UUID="67010DAE4A6CA80EDDFB9CB296FE0C5E" Comment="ДУ УТО включить" />
+        <Field Name="UTO_DU_OF" Type="BOOL" UUID="5C06EFE54DB9672525FA338718EB2AA3" Comment="ДУ УТО отключить" />
+        <Field Name="UTO_DUpulse" Type="BOOL" UUID="21CA190D4D0E87C7A0F3A3BCF68B7426" Comment="Импульсные команды в ДУ&#x0A;" />
+        <Field Name="UTO_DUcontinuous" Type="BOOL" UUID="5DA1799549311E789069B191295CF4F5" Comment="Непрерывные команды в ДУ&#x0A;" />
+        <Field Name="UTO_ResCom" Type="BOOL" UUID="D379AD4F48F6E4F72311FB9D173DCE49" Comment="Снять команды" />
+        <Field Name="VOD_1_main" Type="BOOL" UUID="F19D07CB4F2BD9ED68A90AAC9B809165" Comment="ВОД1 основной" />
+        <Field Name="VOD_2_main" Type="BOOL" UUID="855A08554ACFF396F979D9AEF8E7844F" Comment="ВОД2 основной" />
+        <Field Name="BTA_gidro" Type="BOOL" UUID="585766D2467FCA0C7950938B8308489A" Comment="БТА гидравлический" />
+        <Field Name="BTA_pnevmo" Type="BOOL" UUID="E3F0F0644B4C1913CDE7309D1D901035" Comment="БТА пневматический" />
+        <Field Name="RO_max" Type="BOOL" UUID="F2ACE9C24C337269E8EDFC9C1C51BB61" Comment="РО на максимум" />
+        <Field Name="RO_min" Type="BOOL" UUID="FDF26B2A49A8F289982EC69CB6EAFBDB" Comment="РО на минимум" />
+        <Field Name="APK_Fast_Open" Type="BOOL" UUID="64ACCF9F489F56E267241A907A63375B" Comment="Экстренное открытие АПК" />
+        <Field Name="BtnRaise" Type="BOOL" UUID="146B15EE422BD29F64EED48A6E54BCA3" Comment="кнопка: вверх в режиме заморозки" />
+        <Field Name="BtnLower" Type="BOOL" UUID="81FCC36C4ADF6ED70E5D62923455CA79" Comment="кнопка: вниз в режиме заморозки" />
+        <Field Name="Sound_ASPT_ON" Type="BOOL" UUID="8A3BDF104B54846B096E9EAC824AD0DD" Comment="кнопка включения звука" />
+        <Field Name="Sound_ASPT_OF" Type="BOOL" UUID="61742C2C47F6EB84FAB8E2AC46820411" Comment="кнопка отключения звука" />
+        <Field Name="RO_UP" Type="BOOL" UUID="C82F297B458ABBA1F6FD08AE60097722" />
+        <Field Name="RO_Down" Type="BOOL" UUID="B6A476E946B9D56B41BA5780EC99315F" />
+        <Field Name="DRK_UP" Type="BOOL" UUID="FA45DABA4B30A4FBB5C9DF97476308FF" />
+        <Field Name="DRK_Down" Type="BOOL" UUID="CA4387EE4072785547C1BBA17A3B2EE3" />
+        <Field Name="MNU_2_main" Type="BOOL" UUID="5B4E93D3451AF359A4C0AA822FBCA309" />
+        <Field Name="MNU_1_main" Type="BOOL" UUID="BDCE221E4C1055B28EFC938BD202EA85" />
+        <Field Name="updateTun" Type="BOOL" UUID="6F6BA6894DEBF5DD1D0FCA87682AB281" Comment="Запись настроек регулЯтора" />
+        <Field Name="loadTun" Type="BOOL" UUID="40E220D844AC1FD6269020815A7B410D" Comment="Считывание настроек регулЯтора" />
+        <Field Name="HH" Type="BOOL" UUID="C01432144023848BF2662394ED019225" Comment="Снижение режима до ХХ" />
+        <Field Name="turnUP" Type="BOOL" UUID="FA75A3BF4DF3B1712A6A9699B5A25EA9" />
+        <Field Name="turnDN" Type="BOOL" UUID="2EA7CC1A4B63F635A2CC37A322B4177E" />
+        <Field Name="MG" Type="BOOL" UUID="F84CF4BE489D8F56CA780A9B84917DF5" Comment="Увеличение режима до НАРР" />
+        <Field Name="turnOF" Type="BOOL" UUID="92BB453A4ED9C660227B40B59A5093AA" />
+        <Field Name="Micro_Fakel_ON" Type="BOOL" UUID="1EB19CBC479F4F784A4739A014CDF0C2" Comment="Микрофакельный двигатель вкл" />
+        <Field Name="Micro_Fakel_OF" Type="BOOL" UUID="5491F72747567922520637907638F8A3" Comment="Микрофакельный двигатель выкл" />
+        <Field Name="MS8P_ON" Type="BOOL" UUID="746C096D47CE22F56A7702AA2CD7F125" Comment="МС8П вкл" />
+        <Field Name="MS8P_OF" Type="BOOL" UUID="C0DDB1924007067D08142FB06A045D0F" Comment="МС8П выкл" />
+    </Fields>
+</Type>

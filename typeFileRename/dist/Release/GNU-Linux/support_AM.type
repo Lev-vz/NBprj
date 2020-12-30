@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="support_AM" Kind="Struct" Comment="v1.0 от 20170724" UUID="C106944B4821777BDF4444BFAF940D8C">
+    <Fields>
+        <Field Name="AMtype" Type="INT" UUID="A9F2BD324D8460357D6708BCE1858E7A" Comment="Тип ИМ" />
+        <Field Name="iOn" Type="BOOL" UUID="1A995F0248657661B1308380D9F4D87D" Comment="Вход - &quot;включен&quot; (открыт)" />
+        <Field Name="iOff" Type="BOOL" UUID="A4A187F345D46BFF7F1E74BAAC0A68DC" Comment="Вход - &quot;отключен&quot; (закрыт)" />
+        <Field Name="iCon" Type="BOOL" UUID="03F97D98411E9EC39A7712A9B4B20B06" Comment="Вход - контроль цепи включения (открытия)" />
+        <Field Name="iCoff" Type="BOOL" UUID="759A0B224B61D47A8578AF8414C56F3D" Comment="Вход - контроль цепи отключения (закрытия)" />
+        <Field Name="qOn" Type="BOOL" UUID="201C2A324E5B70F4DA1F5B8E2010211F" Comment="Выход - &quot;включить&quot; (открыть, форсировка)" />
+        <Field Name="qOff" Type="BOOL" UUID="11C1E90E4B60E9E2AC0164A8CD7688E7" Comment="Выход - &quot;отключить&quot; (закрыть)" />
+        <Field Name="qHoldOn" Type="BOOL" UUID="5FE7AEEB43842E1B420E3A929065CF97" Comment="Выход - &quot;удержание&quot; (трехходовой клапан)" />
+        <Field Name="algOn" Type="BOOL" UUID="19D882B74B65A1AD618E1B9A1FECEACA" Comment="Команда включения из алгоритма" />
+        <Field Name="algOff" Type="BOOL" UUID="6C02D4CE41FBAD9DDDBCCF8126F850C9" Comment="Команда отключения из алгоритма" />
+        <Field Name="modeManual" Type="BOOL" UUID="0AFBD4A64FF8C309BDF4D9BBAF1A6E4E" Comment="Режим ручного управления" />
+        <Field Name="disableManual" Type="BOOL" UUID="DFD4ADAC4C179329158E9795D2A10464" Comment="Блокировка ручного управления" />
+        <Field Name="disableCon" Type="BOOL" UUID="5D54B84B4523F31E7E76568A084EC298" Comment="Не учитывать контроль цепи управления команды &apos;открыть&apos;" />
+        <Field Name="disableCoff" Type="BOOL" UUID="A76745A6499C76A5134D26BA24F6B0FF" Comment="Не учитывать контроль цепи управления команды &apos;закрыть&apos;" />
+        <Field Name="btnMode" Type="BOOL" UUID="A9587CB84DC3816F748222A872962DEE" Comment="Кнопка переключения режима Ручной/Авто (СКАДА)" />
+        <Field Name="btnOn" Type="BOOL" UUID="EE772F3C427FF0AA1E5E2293A92221E0" Comment="Кнопка &quot;включить&quot; (СКАДА)" />
+        <Field Name="btnOff" Type="BOOL" UUID="BE4222254E1390B490FEE4B1046551C5" Comment="Кнопка &quot;отключить&quot; (СКАДА)" />
+        <Field Name="prmBtnOn" Type="BOOL" UUID="CC3B16024550DB62F0467489E47AE2AE" Comment="Разрешение ручного включения в авто-режиме (для повтора команды)" />
+        <Field Name="prmBtnOff" Type="BOOL" UUID="4BBED86E4627364227EE5FACC94EB2C0" Comment="Разрешение ручного отключения в авто-режиме (для повтора команды)" />
+        <Field Name="fNotOn" Type="BOOL" UUID="E0E79D9F4E8E2BDD77AF57B3E4827898" Comment="Не включен" />
+        <Field Name="fNotOff" Type="BOOL" UUID="8BD39D29468096AD67F9498E5368625F" Comment="Не отключен" />
+        <Field Name="fNotStart" Type="BOOL" UUID="55901A9549CB558C6C22C0950F7C98C1" Comment="Не стронулся" />
+        <Field Name="fSelfOn" Type="BOOL" UUID="9017A0A34F59481F7870ABA8E8504720" Comment="Самопроизвольное включение" />
+        <Field Name="fSelfOff" Type="BOOL" UUID="AE73561A43F8F72268B77AB5E6E1AD73" Comment="Самопроизвольное отключение" />
+        <Field Name="fFB" Type="BOOL" UUID="606C52A44EEFE033EE4698B7EB4FB9D4" Comment="Двойное положение" />
+        <Field Name="fCon" Type="BOOL" UUID="28F8E9B34EA757B64F9D6C8C7608F482" Comment="Нет контроля цепи включения" />
+        <Field Name="fCoff" Type="BOOL" UUID="9CFA42B24C1EEAB80BFF6CB966F8718E" Comment="Нет контроля цепи отключения" />
+        <Field Name="fCommon" Type="BOOL" UUID="11B902DC4884FB92CCAEEDAA6BEFCBFA" Comment="Обобщенная неисправность" />
+        <Field Name="delayChangeOvertimeAlert" Type="REAL" UUID="315F560041ABFD91EFAEDF915F0B6D8D" Comment="Время перестановки, при превышении которого выдается предупреждение" />
+        <Field Name="delayQTimeout" Type="REAL" UUID="3B9747C64687596100E87AA15A2B8327" Comment="Время перестановки, при превышении которого снимается выходная команда" />
+        <Field Name="delayExtraOn" Type="REAL" UUID="CA31C77D4FC2844FB5B398B71D67EF2A" Comment="Время дожима на открытие" />
+        <Field Name="delayExtraOff" Type="REAL" UUID="9257796D44441394D821E09F2A00FC2D" Comment="Время дожима на закрытие" />
+        <Field Name="delayNotMoveAlert" Type="REAL" UUID="A4860242405A552738919AB6C6484378" Comment="Задержка формирования нестрагивания" />
+        <Field Name="delayCircBrkAlert" Type="REAL" UUID="FB2BAAEE4F7F1CC355E123A2BBBDD150" Comment="Задержка формирования обрыва контроля цепи" />
+        <Field Name="_miOnEx" Type="BOOL" UUID="1C044B42495E9100DD4AADA7909A789D" Comment="Резерв" />
+        <Field Name="_miOffEx" Type="BOOL" UUID="84E411A74D61EAB3B3010F9F5751BB35" Comment="Резерв" />
+        <Field Name="_mqOnEx" Type="BOOL" UUID="B65811BD456B0F52D44E8A86A7E7C060" Comment="Резерв" />
+        <Field Name="_mqOffEx" Type="BOOL" UUID="7A7BD2814D25523890C040B139EC7233" Comment="Резерв" />
+    </Fields>
+</Type>

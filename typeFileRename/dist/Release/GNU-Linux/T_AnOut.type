@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AnOut" Kind="Struct" UUID="6EBCC4394AA07120A0265DA552DE2DB8">
+    <Fields>
+        <Field Name="Set_TRK" Type="REAL" UUID="23D787954676CD9F7DB2E6A5F2941B8F" Comment="Управление иглой ДГ ДС-В-3МП" />
+        <Field Name="Set_ES" Type="REAL" UUID="F26007B045A2954DCCAD1CA016494E42" Comment="Установка скорости по току ЭС" />
+        <Field Name="Set_APK" Type="REAL" UUID="B8ACB5334EFAAED3A48D7A8987959F93" Comment="Управление краном 6р" />
+        <Field Name="Set_VNA" Type="REAL" UUID="3081183444940903B79B2FB21CD42CE9" Comment="Управление ВНА" />
+    </Fields>
+</Type>

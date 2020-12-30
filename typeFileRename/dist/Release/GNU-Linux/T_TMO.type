@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_TMO" Kind="Struct" UUID="19B328E84A47FB6007F4DDB2371A05D3">
+    <Fields>
+        <Field Name="Check_SAU_12h" Type="BOOL" UUID="4AC73C0C49F9B731D84A23A9792728DE" Comment="Контроль САУ" />
+        <Field Name="Check_SAU_12s" Type="BOOL" UUID="B5603C674696FBEB67617890D77336D6" Comment="Контроль САУ" />
+        <Field Name="Check_SAU_6s" Type="BOOL" UUID="CE80F4E2401FB127EC192FAFC6140F5C" Comment="Контроль САУ" />
+        <Field Name="Check_SAU_4s" Type="BOOL" UUID="F7AAA6374004804DDDD7A49508488C3F" Comment="Контроль САУ" />
+        <Field Name="CoolingGTD_NARR" Type="BOOL" UUID="6EF7FE4B490656D57D0EDCB9D773A7DE" Comment="Охлаждение на НАРР" />
+        <Field Name="CoolingGTD_HH" Type="BOOL" UUID="F4E659574494C2DBCA98B39ECAAF11C9" Comment="Охлаждение на ХХ" />
+        <Field Name="OpenKPG" Type="BOOL" UUID="4DFB40184F0BD21C710560BDD6A94530" Comment="Открытие КПГ" />
+        <Field Name="OpenSK" Type="BOOL" UUID="76B05CD34A215B1AA3716AA85A7555EF" Comment="Открытие СК" />
+        <Field Name="RazgonGT" Type="BOOL" UUID="9DD936C84F2D22C180DE7BB51684315B" Comment="Разгон" />
+        <Field Name="Sound_ON" Type="BOOL" UUID="758695644F6076B19900A6A5FA165653" Comment="Предпусковая сигнализация" />
+        <Field Name="StartGTD" Type="BOOL" UUID="7A7094C94066581174361984971FB7A5" Comment="Пуск ГТД" />
+        <Field Name="is_flame" Type="BOOL" UUID="22C9300B4F93913C6D5FFB997DBE2B59" Comment="Есть розж. камеры сгорания" />
+        <Field Name="prodN" Type="BOOL" UUID="A306BE6A4A31348B969DE897ACF32B01" Comment="Продувка Н" />
+        <Field Name="stabMN" Type="BOOL" UUID="5E39C4784AB9514BAFD8B092A97BE913" Comment="Стабилизация МН" />
+        <Field Name="stabMUN" Type="BOOL" UUID="262F95314F695C9389359191C5294033" Comment="Стабилизация уплотнений" />
+        <Field Name="stabN" Type="BOOL" UUID="BAD210C44B98370C5D2EF0819A89FD86" Comment="Стабилизация Н" />
+        <Field Name="startMD" Type="BOOL" UUID="37ADB6F840A5CC60851BDFBED23A1418" Comment="Стабилизация МД" />
+        <Field Name="warm_HH" Type="BOOL" UUID="52AC7C0D4C827750E90BB294730BD242" Comment="Прогрев на ХХ" />
+        <Field Name="warm_NARR" Type="BOOL" UUID="9EAC0FDC4D5CC8BC08CD88BD24AB761F" Comment="Прогрев на НАРР" />
+        <Field Name="ES_Work_HP" Type="BOOL" UUID="5B7ACBAD4DC007FDF6766886C93AA020" Comment="Работа стартера на ХП" />
+        <Field Name="KAO_ON" Type="BOOL" UUID="918D18F74F0921025297CE8A3AB916C1" Comment="Включение КАО" />
+        <Field Name="KPG_1s" Type="BOOL" UUID="E064648F4E1193C822F715828AAA406C" Comment="Задержка включения КПГ" />
+        <Field Name="KPG_1_1s" Type="BOOL" UUID="3C0B3C934F2D36CF4B218AA122B634DC" Comment="Задержка включения КПГ" />
+        <Field Name="PRU_NObs" Type="BOOL" UUID="2113328B4DB2DF74044321820D42C021" />
+        <Field Name="PRU_NOss" Type="BOOL" UUID="19E5C9AC4B0C766557AAD382BD3A71CF" />
+        <Field Name="PRU_AObs" Type="BOOL" UUID="811A296B4D546F7B925CB99F6FE387AE" />
+        <Field Name="PRU_AOss" Type="BOOL" UUID="E53FA38E4921446CC7080F8507C2D362" />
+        <Field Name="KPK" Type="BOOL" UUID="98D80BB4411D559A8288EFBAF5889EB0" />
+        <Field Name="CoolingStab" Type="BOOL" UUID="3392A2584070861C4F66CDB4491852C0" Comment="Стабилизация" />
+        <Field Name="Check_Chips" Type="BOOL" UUID="4E9C449B439AC0AF43DF2BA79C857D6C" />
+        <Field Name="StabMD" Type="BOOL" UUID="5C51BFA847E59D29CF4C29962A3AF563" Comment="Стабилизация МД" />
+        <Field Name="startTG" Type="BOOL" UUID="7CB4169346E1E1D9775E40A0E99810EC" Comment="Продувка ТГ" />
+        <Field Name="SK_ON" Type="BOOL" UUID="EAD29CAB444C84133C556B8A010CFEE7" Comment="Включение СК" />
+        <Field Name="RUS_ON" Type="BOOL" UUID="436A7F9C4D96A8326112ED846F21C31B" Comment="РУС включить" />
+        <Field Name="RPS_ON" Type="BOOL" UUID="1900075945E8D63E6810B9B44524EE46" Comment="РПС включить" />
+        <Field Name="BP_ON" Type="BOOL" UUID="B0EBA2D64ACA11CE134A038C12C92143" Comment="Включить БП плазменных воспламенителей СПВ" />
+        <Field Name="BP_OF" Type="BOOL" UUID="E4E544234352B2E0E1A9E186DC08F061" Comment="Отключить БП плазменных воспламенителей СПВ" />
+        <Field Name="SK_Control" Type="BOOL" UUID="CC139E2B42A17A3FEF0315AF4EA9DA93" Comment="Взвести защиту по контролю открытого СК" />
+        <Field Name="Filling_oil_Kr1" Type="BOOL" UUID="B7FDA0EF4322B522BA1C51982E506832" Comment="Подача смазки на Кр1" />
+        <Field Name="Filling_oil_Kr2" Type="BOOL" UUID="47B201A440D75AD8449178B63F15C8C1" Comment="Подача смазки на Кр2" />
+        <Field Name="KPR1_ON" Type="BOOL" UUID="EACA6408492265385E4DEAB4252E935E" Comment="Управление КПР1" />
+        <Field Name="KPR2_ON" Type="BOOL" UUID="EF9E5239496D58D24D13F38C0B085506" Comment="Управление КПР2" />
+        <Field Name="BP_SPV_OF" Type="BOOL" UUID="A17197894EF02F8FB50080A646C4EEB2" Comment="Отключение СПВ" />
+        <Field Name="ORT" Type="BOOL" UUID="8B702C0E43E7AC9BFB511BBA6800BC32" Comment="Отключения ОРТ" />
+        <Field Name="MNU_OF" Type="BOOL" UUID="382DB02A4495DE2A02F80BB281354B8D" Comment="Отключение МНУ" />
+        <Field Name="Modes" Type="BOOL" UUID="5C14D6A147BEAEF4AD975DBCBA65F98E" Comment="Отключение МННД" />
+        <Field Name="Pm_D" Type="BOOL" UUID="5EF18226484A2D6CDCAC87ABB21A03B1" Comment="Давление МННД" />
+        <Field Name="Pm_MNOD_004" Type="BOOL" UUID="C17F95A54FC1A5FF613565BA86D0528B" Comment="Давление за нав.МНОД" />
+        <Field Name="Pm_MNOD" Type="BOOL" UUID="DE01905645FF0A2E68068DA9A0883029" Comment="Давления МНОД" />
+        <Field Name="MNOD_PZM_OF" Type="BOOL" UUID="63F127214DE0AFC8BF3ABA9356463A22" Comment="Отключение МНОД ПЗМ" />
+        <Field Name="MNOD_OF" Type="BOOL" UUID="66DA8F774600FB9D30B81FA6BCD3FBE7" Comment="Отключение МНОД" />
+        <Field Name="Pm_in_D_002" Type="BOOL" UUID="9B6C59BE4CA9CEC27239A493E4E5976A" Comment="Отключение МНОБ" />
+        <Field Name="Gas_N1" Type="BOOL" UUID="F1B1AD2844C31545E72F71AF05D4A374" Comment="Загазованость 1" />
+        <Field Name="Gas_N2" Type="BOOL" UUID="B3D1A7E54C84517D7AD8F0AABF66FD50" Comment="Загазованость 2" />
+        <Field Name="Tv_KGT50" Type="BOOL" UUID="BDD7A8964851B23437E4ADBF8D8500E1" Comment="Задержка для температуры под кожухом Д больше 50гр." />
+        <Field Name="Tv_KGT30" Type="BOOL" UUID="E05821084D5B1D2D66A156A76B36AD6D" Comment="Задержка для температуры под кожухом Д меньше 30гр." />
+        <Field Name="Tv_KGT70" Type="BOOL" UUID="44D4AC5E4EECEA4B29F68994019DFB9E" Comment="Задержка для температуры под кожухом Д больше 70гр." />
+        <Field Name="Tv_KGT60" Type="BOOL" UUID="40EFDDC241404AFD2513EF90567EF95E" Comment="Задержка для температуры под кожухом Д меньше 60гр." />
+        <Field Name="ES_Work_TP" Type="BOOL" UUID="1947906F47D7AADCE81F7FAD78CAE046" Comment="Отключение стартера на ТП" />
+        <Field Name="StartGTD_1" Type="BOOL" UUID="BE6E6B444A3B3294FDB7CC8D527FD085" Comment="Пуск ГТД" />
+    </Fields>
+</Type>

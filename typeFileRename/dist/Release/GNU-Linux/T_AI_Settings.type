@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_AI_Settings" Kind="Struct" Comment="Настройки канала" UUID="668FE9B94A603427C8EDBBB8917A7594">
+    <Fields>
+        <Field Name="min" Type="REAL" UUID="FB67A3DA420756403139A9A1A55A1E0B" Comment="минимум шкалы канала, ед.изм. Не может быть &gt;= max" />
+        <Field Name="max" Type="REAL" UUID="DEBFDD8947671DAD4F62B3906E549D25" Comment="максимум шкалы канала, ед.изм. Не может быть &lt;= min" />
+        <Field Name="loLim" Type="REAL" UUID="F2019A6B428158F97791128B8B1A7793" Comment="уровень зашкала вниз, ед.изм. Не может быть &gt;= hiLim и &lt; min" />
+        <Field Name="hiLim" Type="REAL" UUID="6E72FC8C4F651BC8B53876B41271BA90" Comment="уровень зашкала вверх, ед.изм. Не может быть &lt;= loLim и &gt; max" />
+        <Field Name="minADC" Type="REAL" UUID="4E4459DF473A3E30D2F89AA9947EF0EC" Comment="значение АЦП, соответствующее минимуму шкалы канала, б.р." />
+        <Field Name="maxADC" Type="REAL" UUID="9089B91D425EF4959B8BA19E1A31D99F" Comment="значение АЦП, соотв. макс. шкалы, б.р. Не может быть равно minADC" />
+        <Field Name="minROC" Type="REAL" UUID="A232AB4B47591CE39488C6B941E25388" Comment="макс. допустимая скорость сниж. показаний, ед.изм./сек. Если «0» - скорость падения не анализируется" />
+        <Field Name="maxROC" Type="REAL" UUID="A5E5FAC44F01EAEA13899DB13BDF15FF" Comment="макс. допустимая скорость роста, ед.изм./сек. Если «0» - скорость роста не анализируется" />
+        <Field Name="ROC_time" Type="REAL" UUID="FB0EF9774036FFE88CBDF1A1289DFE2B" Comment="время, за которое анализируется скорость изменения, сек. Если «0» - скорость не анализируется" />
+        <Field Name="recoveryTime" Type="REAL" UUID="4EB874C747AAFA074CD28E9CC46435A9" Comment="время восстановления после неисправности, сек." />
+        <Field Name="repairTime" Type="REAL" UUID="E440FE654B539B836D917399FD4E5AA5" Comment="максимальное время в ремонте, сек. Не может быть «0»" />
+        <Field Name="tau" Type="REAL" UUID="6ED460F74B6BA4406C4563B0886FDAD5" Comment="тау фильтра, сек. Если «0» - фильтрация отсутствует" />
+        <Field Name="id" Type="REAL" UUID="3F395516439962F4E9E60DB41873E7C7" Comment="номер по порядку" />
+    </Fields>
+</Type>

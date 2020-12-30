@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="T_SEN_SR" Kind="Struct" UUID="529A34794689FB3E7B6A2F936B2A7ADD">
+    <Fields>
+        <Field Name="Pg_in_N" Type="66E85B694611583D5E0976A599AC4752" UUID="B148A10446B1685BE4EB31963B8B28A5" Comment="Давление газа на входе в компрессор" />
+        <Field Name="Pg_out_N" Type="66E85B694611583D5E0976A599AC4752" UUID="DA641B004DF8E16B4FB6E5BB22187908" Comment="Давление газа на выходе из компрессора" />
+        <Field Name="dP_conf_N" Type="66E85B694611583D5E0976A599AC4752" UUID="489BABCF41B6D79A430FECA0F19E5BB4" Comment="Перепад давлений на конфузоре компрессора" />
+        <Field Name="Tg_out_N" Type="66E85B694611583D5E0976A599AC4752" UUID="7C3693564AF519A7532ED7926542A2D8" Comment="Температура газа на выходе из компрессора" />
+        <Field Name="Tg_in_N" Type="66E85B694611583D5E0976A599AC4752" UUID="A6BBB32643034298EDAA1F95D86CC6D5" Comment="Температура газа на входе в компрессор" />
+    </Fields>
+</Type>

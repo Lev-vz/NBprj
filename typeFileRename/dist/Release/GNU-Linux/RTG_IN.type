@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Type v. 1.0 >
+<Type Name="RTG_IN" Kind="Struct" UUID="3B10374246314A7BDE1270B820B0E23D">
+    <Fields>
+        <Field Name="Ro_s" Type="REAL" UUID="A1CEF94447A8BF274107E68A6712B574" Comment="Плотность газа при стандартных условиях, кг/м3" />
+        <Field Name="X_a" Type="REAL" UUID="0554F99F42BA26DDD3827093FA95FE62" Comment="Молярная доза азота, %" />
+        <Field Name="X_u" Type="REAL" UUID="4B05E6914F19D5871C685A8D073A2096" Comment="Молярная доза углекистлоты, %" />
+        <Field Name="Dcu_20" Type="REAL" UUID="24211F39407372E6A156AE82CC746E6F" Comment="Диаметр отверстия СУ при стандартных условиях, м" />
+        <Field Name="D_20" Type="REAL" UUID="04128D054B7DE54A2BBB57BA8A0F590C" Comment="Диаметр трубы при стандартных условиях, м" />
+        <Field Name="R_sh" Type="REAL" UUID="1B0D77B8496DCA9CC69C459478ABE89E" Comment="Среднее арифметическое отклонение профиля шероховатости ИТ, м" />
+        <Field Name="Alfa_cu" Type="REAL" UUID="326A39AA421F94DFEF2ED8BEF8EC0426" Comment="Температурный кэффициент линейного расширения материала СУ" />
+        <Field Name="Alfa_t" Type="REAL" UUID="38BB86B843866C28E45F2C96CEEA1771" Comment="Температурный кэффициент линейного расширения материала ИТ" />
+        <Field Name="r_n" Type="REAL" UUID="924F0D1E43A54382A5691B9BB25C9696" Comment="Начальный радиус входной кромки диафрагмы, м" />
+        <Field Name="Tau_t" Type="REAL" UUID="23DCD5304BA3207B7AE15CBDE9A2D10B" Comment="Текущее время эксплуатации диафрагмы" />
+        <Field Name="tt" Type="REAL" UUID="9258C7A44AD0EE4769CB1D8E1E086B66" Comment="Температура газа, гр.С" />
+        <Field Name="P_iz" Type="REAL" UUID="9F4B48C444C9A4935B6B77B45628A134" Comment="Избыточное давление, Па" />
+        <Field Name="P_at" Type="REAL" UUID="3792B910433D4A8AAD22C19492653E77" Comment="Атмосферное давление, Па" />
+        <Field Name="dP" Type="REAL" UUID="809418E54FEABBC2AB2F3BBF7AD1F2D5" Comment="Перепад на СУ, Па" />
+        <Field Name="ContractTime" Type="INT" UUID="CAB3D6134C42F99EA3D96392099A59FD" Comment="Контрактное время" />
+        <Field Name="dP_F" Type="BOOL" UUID="3187A04E4C980E438075C4A30C53B6F2" Comment="Отказ замера перепада давления на диафрагме" />
+    </Fields>
+</Type>
