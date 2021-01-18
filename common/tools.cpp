@@ -191,7 +191,7 @@ int read2Sockets(int *sockArr, char **buf, int ta){
                 }else{                                                      //если ответ recv > 0 
                     bufTmp[bytes_read]='\0';                                    //принимаем данные
                     cout<<"socket"<<sockArr[i]<<":\n"<<bufTmp;//<<"|"<<endl;
-                    strcpy(buf[i],bufTmp);                                      //в соответствующую строку
+                    //strcpy(buf[i],bufTmp);                                      //в соответствующую строку
                 }
             }
         }
@@ -224,7 +224,10 @@ int getSocketForData(int socketID) {
 void sendFile(string pathFile, int socketID, int socketForFile){
     char buffer[BUFFER_SIZE];
     FILE *f = fopen(pathFile.c_str(), "rb");                    //открываем файл
-    if(f<=0) return;                                            //если открытие не удалось - зжавершаем функцию
+    if(f<=0){
+        cout<<"Не удалось открыть файл "<<pathFile.c_str()<<endl;
+        return;                                            //если открытие не удалось - завершаем функцию
+    } 
     
     int x = pathFile.find_last_of("/");                         //отделяем имя файла от пути
     string fn = pathFile.substr(x+1);
@@ -235,7 +238,7 @@ void sendFile(string pathFile, int socketID, int socketForFile){
     //!!!! Тут дожен быть анализ ответа сервера на предмет подтверждения готовности сервера принять данные
     
     while(!feof(f)){                                            //пока не конец файла, 
-        int qSimb=fread(buffer,1,BUFFER_SIZE,f);                    //передаем частями файл (сколько помещается в буфере)
+        int qSimb=fread(buffer,1,BUFFER_SIZE-1,f);                    //передаем частями файл (сколько помещается в буфере)
         if(qSimb!=0) send(socketForFile, buffer, qSimb, 0);         //если считано ненулевое количество байт - передаём их через сокет данных
     }
 }

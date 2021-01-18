@@ -49,10 +49,10 @@ int main(void)
     do{
         if(isKbInput(kbInput)){
             if(sockArr[1] == -1) sockArr[1] = getSocketForData(ctrlSoket);
-            cout<<"kbInput.substr(0,4) = "<<kbInput.substr(0,4)<<"]"<<endl;
+            //cout<<"kbInput.substr(0,4) = "<<kbInput.substr(0,4)<<"]"<<endl;
             if(kbInput.substr(0,4) == "STOR"){
-                cout<<"kbInput.substr(4) = ["<<kbInput.substr(4)<<"]\n";
-                sendFile(kbInput.substr(4), sockArr[0], sockArr[1]);
+                //cout<<"kbInput.substr(4) = ["<<kbInput.substr(5)<<"]\n";
+                sendFile(kbInput.substr(5), sockArr[0], sockArr[1]);
                 close(sockArr[1]);
                 sockArr[1] = -1;
             }else{
@@ -61,7 +61,7 @@ int main(void)
                 cout << "rep = "<<rep<<"\n";
             }
         }
-        read2Sockets(sockArr, (char**)buf);
+        read2Sockets(sockArr, (char**)buf, 1);
     }while(kbInput!="exit");
     
     close(ctrlSoket);  ///закрытие соединения
