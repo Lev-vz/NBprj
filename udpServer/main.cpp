@@ -32,8 +32,11 @@ void die(const char *s)
 	exit(1);
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
+    long ta = 500000;
+    if(argc>1) ta = atoi(argv[1])*1000;//если в аргументах командной строки что-о есть - принимаем это за заданную подсеть
+
     struct sockaddr_in si_me;
     struct sockaddr_in si_other;
 
@@ -69,7 +72,7 @@ int main(void)
         cout<<"Received packet from address "<<inet_ntoa(si_other.sin_addr)<<" port "<<ntohs(si_other.sin_port)<<endl;
         //printf("Received packet from %s:%d\n", inet_ntoa(si_other.sin_addr), si_other.sin_port);
         printf("Data: %s\n" , buf);
-
+        usleep(ta);
         //now reply the client with the same data
         if (sendto(s, buf, recv_len, 0, (struct sockaddr*) &si_other, slen) <= 0) die("sendto()");
     }
