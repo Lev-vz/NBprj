@@ -25,6 +25,7 @@ using namespace std;
 
 #define BUFLEN 512	//Max length of buffer
 #define PORT 8888	//The port on which to listen for incoming data
+#define SERVER "172.16.35.97"
 
 void die(const char *s)
 {
@@ -37,15 +38,15 @@ int main(int argc, char *argv[])
     long ta = 500000;
     if(argc>1) ta = atoi(argv[1])*1000;//если в аргументах командной строки что-о есть - принимаем это за заданную подсеть
 
-    struct sockaddr_in si_me;
-    struct sockaddr_in si_other;
+    struct sockaddr_in si_me, si_other, si_second;
+    //struct sockaddr_in ;
 
-    int s, recv_len;
+    int s, s2, recv_len;
     socklen_t slen = sizeof(si_other);
     char buf[BUFLEN];
 
     //create a UDP socket
-    if ((s=socket(AF_INET, SOCK_DGRAM, 0)) < 0) die("socket");
+    if ((s = socket(AF_INET, SOCK_DGRAM, 0)) < 0) die("socket");
     
     // zero out the structure
     memset((char *) &si_me, 0, sizeof(si_me));
@@ -56,6 +57,17 @@ int main(int argc, char *argv[])
 
     //bind socket to port
     if( bind(s , (struct sockaddr*)&si_me, sizeof(si_me) ) < 0) die("bind");
+    //create a UDP socket
+    //---- Сокет на второй порт для инициативной передачи ----
+    if ((s2 = socket(AF_INET, SOCK_DGRAM, 0)) < 0) die("socket");
+    
+    // zero out the structure
+    memset((char *) &si_second, 0, sizeof(si_me));
+
+    si_second.sin_family = AF_INET;
+    si_second.sin_port = htons(8880);
+    si_second.sin_addr.s_addr  = inet_addr(SERVER);
+
 
     //keep listening for data
     while(1)
