@@ -36,6 +36,13 @@ void die(const char *s, int e)
     exit(e);
 }
 
+void SetSock(sockaddr_in &sock){
+    memset((char*) &sock, 0, sizeof(sock));
+    sock.sin_family = AF_INET;
+    sock.sin_port = htons(8888);
+    sock.sin_addr.s_addr  = inet_addr(SERVER);
+}
+
 int main(void)
 {
     struct sockaddr_in si[2];//_other, si_me;
@@ -50,8 +57,8 @@ int main(void)
     //---- сокет для приёма сообщений ----------------
     if ( (s[1]=socket(AF_INET, SOCK_DGRAM, 0)) < 0) die("socket", 2);//IPPROTO_UDP
     
+    //SetSock(si[1]);
     memset((char *) &si[1], 0, sizeof(si[1]));
-
     si[1].sin_family = AF_INET;
     si[1].sin_port = htons(8880);
     si[1].sin_addr.s_addr = htonl(INADDR_ANY);
@@ -63,7 +70,7 @@ int main(void)
 
     int n = 1;
     setsockopt(s[0],SOL_SOCKET,SO_BROADCAST,&n,sizeof(n));
-    
+    //SetSock(si[0]);
     memset((char*) &si[0], 0, sizeof(si[0]));
     si[0].sin_family = AF_INET;
     si[0].sin_port = htons(8888);
@@ -84,20 +91,23 @@ int main(void)
         //send the message TrueFalse1
         if (sendto(s[0], message.c_str(), message.length() , 0 , (struct sockaddr *) &si[0], slen[0])<=0)	die("sendto", 4);//()");
         for(int i=0;i<2;i++){
-            int rc = poll(fds, nfds, 3000);
-            if (rc < 0){
-              perror("  poll() failed");
-              break;
-            }
-            if(rc > 0){
-                for(int i = 0; i < 2; i++){
-                    if(fds[i].revents == POLLIN){
-                        //try to receive some data, this is a blocking call
-                        int n = recvfrom(s[i], buf, BUFLEN, 0, (struct sockaddr *) &si[i], &slen[i]);
-                        if (n <=0 ) die("recvfrom()", 5);
-                        buf[n] = 0;
-                        cout<<"On socket "<<i<<" received packet from address "<<inet_ntoa(si[i].sin_addr)<<" port "<<ntohs(si[i].sin_port)<<endl;
-                        cout<<"Recive "<<n<<" byte. Buf = "<<buf<<endl;
+            int rc=1;
+            while(rc){
+                rc = poll(fds, nfds, 3000);
+                if (rc < 0){
+                  perror("  poll() failed");
+                  break;
+                }
+                if(rc > 0){
+                    for(int i = 0; i < 2; i++){
+                        if(fds[i].revents == POLLIN){
+                            //try to receive some data, this is a blocking call
+                            int n = recvfrom(s[i], buf, BUFLEN, 0, (struct sockaddr *) &si[i], &slen[i]);
+                            if (n <=0 ) die("recvfrom()", 5);
+                            buf[n] = 0;
+                            cout<<"On socket "<<i<<" received packet from address "<<inet_ntoa(si[i].sin_addr)<<" port "<<ntohs(si[i].sin_port)<<endl;
+                            cout<<"Recive "<<n<<" byte. Buf = "<<buf<<endl;
+                        }
                     }
                 }
             }

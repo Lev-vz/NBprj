@@ -32,6 +32,13 @@
 
 using namespace std;
 
+void SetSocket(int &sok){
+    memset((char*) &sok, 0, sizeof(sok));
+    si[0].sin_family = AF_INET;
+    si[0].sin_port = htons(8888);
+    si[0].sin_addr.s_addr  = inet_addr(SERVER);
+}
+
 void mastDie(const char *s, int numErr)
 {
     perror(s);

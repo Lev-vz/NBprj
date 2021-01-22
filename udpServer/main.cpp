@@ -55,7 +55,6 @@ int main(int argc, char *argv[])
 
     if( bind(s , (struct sockaddr*)&si_me, sizeof(si_me) ) < 0) die("bind");
     //---------------------------------------------------------------------------
-    //create a UDP socket
     //---- Сокет на второй порт для инициативной передачи ----
     if ((s2 = socket(AF_INET, SOCK_DGRAM, 0)) < 0) die("socket");
     memset((char *) &si_second, 0, sizeof(si_me));
@@ -68,20 +67,15 @@ int main(int argc, char *argv[])
     //keep listening for data
     while(1)
     {
-        //printf(
         cout<<"Waiting for data...";
         fflush(stdout);
 
-        //try to receive some data, this is a blocking call
-        recv_len = recvfrom(s, buf, BUFLEN, 0, (struct sockaddr *) &si_other, (socklen_t*) &slen);
         if (recv_len <= 0) die("recvfrom");
         buf[recv_len] = 0;
-        //print details of the client/peer and the data received inet_ntoa(*(struct in_addr*)&ipaddr)
         cout<<"Received packet from address "<<inet_ntoa(si_other.sin_addr)<<" port "<<ntohs(si_other.sin_port)<<endl;
         //printf("Received packet from %s:%d\n", inet_ntoa(si_other.sin_addr), si_other.sin_port);
         printf("Data: %s\n" , buf);
         usleep(ta);
-        //now reply the client with the same data
         //if (sendto(s, buf, recv_len, 0, (struct sockaddr*) &si_other, slen) <= 0) die("sendto()");
         if (sendto(s2, buf, recv_len, 0, (struct sockaddr*) &si_second, slen) <= 0) die("sendto");
     }
