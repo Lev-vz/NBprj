@@ -43,31 +43,27 @@ int main(int argc, char *argv[])
 
     int s, s2, recv_len;
     socklen_t slen = sizeof(si_other);
+    //socklen_t slen2 = sizeof(si_second);
     char buf[BUFLEN];
-
-    //create a UDP socket
+    //---------------------------------------------------------------------------
     if ((s = socket(AF_INET, SOCK_DGRAM, 0)) < 0) die("socket");
-    
-    // zero out the structure
     memset((char *) &si_me, 0, sizeof(si_me));
 
     si_me.sin_family = AF_INET;
-    si_me.sin_port = htons(PORT);
+    si_me.sin_port = htons(8888);
     si_me.sin_addr.s_addr = htonl(INADDR_ANY);
 
-    //bind socket to port
     if( bind(s , (struct sockaddr*)&si_me, sizeof(si_me) ) < 0) die("bind");
+    //---------------------------------------------------------------------------
     //create a UDP socket
     //---- Сокет на второй порт для инициативной передачи ----
     if ((s2 = socket(AF_INET, SOCK_DGRAM, 0)) < 0) die("socket");
-    
-    // zero out the structure
     memset((char *) &si_second, 0, sizeof(si_me));
 
     si_second.sin_family = AF_INET;
     si_second.sin_port = htons(8880);
-    si_second.sin_addr.s_addr  = inet_addr(SERVER);
-
+    si_second.sin_addr.s_addr  = inet_addr("172.16.35.97");
+    //-------------------------------------------------------------------------
 
     //keep listening for data
     while(1)
@@ -86,7 +82,8 @@ int main(int argc, char *argv[])
         printf("Data: %s\n" , buf);
         usleep(ta);
         //now reply the client with the same data
-        if (sendto(s, buf, recv_len, 0, (struct sockaddr*) &si_other, slen) <= 0) die("sendto()");
+        //if (sendto(s, buf, recv_len, 0, (struct sockaddr*) &si_other, slen) <= 0) die("sendto()");
+        if (sendto(s2, buf, recv_len, 0, (struct sockaddr*) &si_second, slen) <= 0) die("sendto");
     }
 
     close(s);
