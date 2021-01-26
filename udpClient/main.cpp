@@ -52,7 +52,6 @@ int main(void)
     slen[1]=sizeof(si[1]);
     char buf[BUFLEN];
     string message;//[BUFLEN];
-    struct pollfd fds[2];
     
     //---- сокет для приёма сообщений ----------------
     if ( (s[1]=socket(AF_INET, SOCK_DGRAM, 0)) < 0) die("socket", 2);//IPPROTO_UDP
@@ -76,6 +75,7 @@ int main(void)
     si[0].sin_port = htons(8888);
     si[0].sin_addr.s_addr  = inet_addr(SERVER);
     //------------------------------------------------------------------------
+    struct pollfd fds[2];
     memset(fds, 0 , sizeof(fds));
     fds[0].fd = s[0];
     fds[0].events = POLLIN;
