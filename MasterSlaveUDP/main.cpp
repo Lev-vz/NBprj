@@ -18,16 +18,15 @@
 #include <sys/poll.h>
 
 #define BUFLEN 512	//Max length of buffer
-#define PORT 888	//The port on which to send data
+#define Q_SOCK 3	//The port on which to send data
 
 using namespace std;
 
-void SetSocket(sockaddr_in &sok, int port, char *ip){
-    cout<<"sockIP="<<ip<<endl;
+void SetSocket(sockaddr_in &sok, int port, in_addr_t ip){
     memset((char*) &sok, 0, sizeof(sok));
     sok.sin_family = AF_INET;
     sok.sin_port = htons(port);
-    sok.sin_addr.s_addr  = inet_addr(ip);
+    sok.sin_addr.s_addr  = ip;
 }
 
 void mastDie(const char *s, int numErr)
@@ -66,11 +65,10 @@ int getLastByteIP(string subNet){
                     exit(3);
                 }
             } 
-            printf("pos=%d, [%d]\n",pos, lastAddr);
-            //cout<<"h="<<host<<", find substr = "<<h.find(subNet)<<endl;
         } 
     }
     freeifaddrs(ifaddr);
+    cout<<"В указанной подсети адрес устройства - "<<subNet<<lastAddr<<endl;
     return lastAddr;
 }
 
@@ -85,12 +83,17 @@ int main(int argc, char *argv[])
 {   //------- запомнили момент запуска программы -----------
     double time = getTime();
     //-------------------------------------------------------
-    struct sockaddr_in sockSt[2];//_other, si_me;
-    int sockID[2];
-//---- сокет для приёма сообщений ----------------
+    struct sockaddr_in sockSt[Q_SOCK];//_other, si_me;
+    int sockID[Q_SOCK];
+    //---- сокет для приёма сообщений ----------------
     if ( (sockID[0] = socket(AF_INET, SOCK_DGRAM, 0)) < 0) mastDie("socket", 1);
-    SetSocket(sockSt[0], 8880, INADDR_ANY);
+    SetSocket(sockSt[0], 8880, htonl(INADDR_ANY));
     if( bind(sockID[0] , (struct sockaddr*)&sockSt[0], sizeof(sockSt[0])) < 0) mastDie("bind", 2);
+    //--------------------------------------------------------------------
+    //---- сокет для приёма сообщений ----------------
+    if ( (sockID[2] = socket(AF_INET, SOCK_DGRAM, 0)) < 0) mastDie("socket", 9);
+    SetSocket(sockSt[2], 8888, htonl(INADDR_ANY));
+    if( bind(sockID[2] , (struct sockaddr*)&sockSt[2], sizeof(sockSt[2])) < 0) mastDie("bind", 8);
     //--------------------------------------------------------------------
     //----- Определяем свой адрес в заданной подсети -------------
     //cout<<"argc="<<argc<<", argv[1]="<<argv[1]<<endl;
@@ -99,59 +102,83 @@ int main(int argc, char *argv[])
     int lastByteIP = getLastByteIP(subNet);
     //-------------------------------------------------------------
     //---- сокет для отправки broadcast сообщений ----------------
-    if ( (sockID[1] = socket(AF_INET, SOCK_DGRAM, 0)) < 0) mastDie("socket", 3);//IPPROTO_UDP
+    if ( (sockID[1] = socket(AF_INET, SOCK_DGRAM, 0)) < 0) mastDie("socket", 3);
     socklen_t slen=sizeof(sockSt[1]);
     int n = 1;
     setsockopt(sockID[1],SOL_SOCKET,SO_BROADCAST,&n,sizeof(n));
-    string broadCast = subNet + "255";
-    SetSocket(sockSt[1], 8888, (char*) broadCast.c_str());
+    string ip = subNet + "255";
+    SetSocket(sockSt[1], 8888, inet_addr(ip.c_str()));
     //------------------------------------------------------------
+    //---- Сокет на второй порт для инициативной передачи ----
+    struct sockaddr_in si_second;
+    int s2;
+    if ((s2 = socket(AF_INET, SOCK_DGRAM, 0)) < 0) mastDie("socket",6);
+    memset((char *) &si_second, 0, sizeof(si_second));
 
-    struct pollfd fds[2];
+    si_second.sin_family = AF_INET;
+    si_second.sin_port = htons(8880);
+    si_second.sin_addr.s_addr  = inet_addr("0.0.0.0");
+    //-------------------------------------------------------------------------
+    //----- Подготовка данных для поллинга-----
+    struct pollfd fds[Q_SOCK];
     memset(fds, 0 , sizeof(fds));
     fds[0].fd = sockID[0];
     fds[0].events = POLLIN;
     fds[1].fd = sockID[1];
     fds[1].events = POLLIN;
-    //----- Если lastByteIP == 1, запускаем чистого мастера ------
+    fds[2].fd = sockID[2];
+    fds[2].events = POLLIN;
     
-    char buf[BUFLEN];
-    string message;//[BUFLEN];
-    
+    //----- Основной цикл ------
+    char buf[BUFLEN];                   //буфер для приёма приходящих данных
+    string message;                     //буфер для исходящих данных
+    bool imMaster = lastByteIP == 1;    //Если lastByteIP == 1, запускаем чистого мастера ------
     while(1){
-        double newTime = getTime();
-        message = to_string(newTime)+"("+to_string(newTime-time)+")";
-        cout<<message<<endl;
-        time = newTime;
-        //send the message
-        if (sendto(sockID[1], message.c_str(), message.length() , 0 , (struct sockaddr *) &sockSt[1], slen)<=0)	mastDie("sendto",4);//()");
-        for(int i=0;i<2;i++){
-            int rc=1;
-            while(rc){
-                rc = poll(fds, 2, 1000);
-                if (rc < 0){
-                  perror("poll");
-                  break;
-                }
-                if(rc > 0){
-                    for(int i = 0; i < 2; i++){
-                        if(fds[i].revents == POLLIN){
-                            //try to receive some data, this is a blocking call
-                            int n = recvfrom(sockID[i], buf, BUFLEN, 0, (struct sockaddr *) &(sockSt[i]), &slen);
-                            if (n <=0 ) mastDie("recvfrom()", 5);
-                            buf[n] = 0;
+        double newTime = getTime();         //определяем текущее время
+                                            //если с запуска программы или последнего запроса на любой сокет прошло более 10 секунд
+                                            //или выставлен флаг "я мастер и прошло 5 сек...
+        if(newTime-time > (10.0 + lastByteIP*0.1) || imMaster && newTime-time > 5.0){
+            imMaster = true;                    //выставляем флаг "я мастер"
+            cout<<"Прошло "<<newTime-time<<" секунд"<<endl; //------------ контрольный вывод ----------------
+            message = to_string(newTime)+"("+to_string(newTime-time)+")";//------ формируем сообщение -----------------
+                                                            //отправляем broadcast-запрос
+            if (sendto(sockID[1], message.c_str(), message.length() , 0 , (struct sockaddr *) &sockSt[1], slen)<=0) mastDie("sendto",4);//()");
+            time = newTime;                                 // и засекаем время
+        }
+        int rc=1;                           //заводим ненулевой флаг ответа функции poll
+        while(rc){                          //пока он остаётся ненулевым, производим опрос сокетов
+            rc = poll(fds, Q_SOCK, 100);        //проверяем в течении 100мс не пришло ли чего-нибудь на какой-нибудь сокет
+            if (rc < 0){                        //если ответ меньше 0
+              perror("poll");                       //выводим сообщение об ошибке и выходим из цикла опроса сокетов
+              break;
+            }
+            if(rc > 0){                         //если ответ больше 0
+                time = newTime;                     //засекаем время
+                for(int i = 0; i < Q_SOCK; i++){    //проходим по всем опрашиваемым сокетам
+                    if(fds[i].revents == POLLIN){       //и там, где стоит признак пришедших данных...
+                                                            //вычитываем данные из сокета
+                        int n = recvfrom(sockID[i], buf, BUFLEN, 0, (struct sockaddr *) &(sockSt[i]), &slen);
+                        if (n <=0 ) mastDie("recvfrom()", 5);//проверяем длину посылки - если она меньше или = 0 - завершаем программу с ошибкой
+                        buf[n] = 0;                         //если всё нормально - ставим 0 в конец полученных данных
+                        string inpIp = inet_ntoa(sockSt[i].sin_addr);
+                        cout<<"inpIp != ip"<<inpIp<<"?"<<ip<<endl;
+                        if(inpIp != ip && inpIp!= "127.0.0.1" && inpIp!= "0.0.0.0"){
+                            //----------- контрольный вывод --------------------------
                             cout<<"On socket "<<i<<" received packet from address "<<inet_ntoa(sockSt[i].sin_addr)<<" port "<<ntohs(sockSt[i].sin_port)<<endl;
                             cout<<"Recive "<<n<<" byte. Buf = "<<buf<<endl;
+                            //--------------------------------------------------------
+                            if(i==2){                       //если посылка пришла на сокет 2 - значит это broadcast запрос
+                                usleep(lastByteIP *10000);      //ждём время равное lastByteIP * 10 мс
+                                si_second.sin_addr  = sockSt[i].sin_addr;   //выставляем адрес получателя равным адресу запрашивателя
+                                message = to_string(newTime)+"("+to_string(newTime-time)+")";   //формируем сообщение
+                                //шлём данные запрашивающему
+                                if (sendto(s2, message.c_str(), message.length(), 0, (struct sockaddr*) &si_second, slen) <= 0) mastDie("sendto",7);
+                            }
                         }
                     }
                 }
             }
         }
     }
-
-//    clock_gettime(CLOCK_REALTIME, &spec);
-//    double dtime = spec.tv_sec + spec.tv_nsec/1000000000.0 - time;
-//    cout<<"dtime="<<dtime<<endl;
-
     return 0;
 }

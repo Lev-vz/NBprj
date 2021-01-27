@@ -70,6 +70,8 @@ int main(int argc, char *argv[])
         cout<<"Waiting for data...";
         fflush(stdout);
 
+        //try to receive some data, this is a blocking call
+        recv_len = recvfrom(s, buf, BUFLEN, 0, (struct sockaddr *) &si_other, (socklen_t*) &slen);
         if (recv_len <= 0) die("recvfrom");
         buf[recv_len] = 0;
         cout<<"Received packet from address "<<inet_ntoa(si_other.sin_addr)<<" port "<<ntohs(si_other.sin_port)<<endl;
