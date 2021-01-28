@@ -11,17 +11,16 @@
 #include <unistd.h>
 #include <string>
 #include <cstring>
-//#include <linux/if_link.h>
 #include <math.h>
 #include <time.h>
 #include <fcntl.h>
 #include <sys/poll.h>
 
 #define BUFLEN 512	//Max length of buffer
-#define Q_SOCK 3	//The port on which to send data
+#define Q_SOCK 3	//количество сокетов, опрашиваемое функцией poll
 
 using namespace std;
-
+//Заполнение структуры сокета
 void SetSocket(sockaddr_in &sok, int port, in_addr_t ip){
     memset((char*) &sok, 0, sizeof(sok));
     sok.sin_family = AF_INET;
@@ -29,27 +28,28 @@ void SetSocket(sockaddr_in &sok, int port, in_addr_t ip){
     sok.sin_addr.s_addr  = ip;
 }
 
-void mastDie(const char *s, int numErr)
-{
+//сообщение об ошибке и завешение программы с заданным кодом
+void mastDie(const char *s, int numErr){
     perror(s);
     exit(numErr);
 }
 
+//Определение IP данного конкретного устройства для заданной подсети
+//аргумент - адрес подсети в формате 192.168.0. без последнего байта
+//возвращает - последний байт IP-адреса в формате int
 int getLastByteIP(string subNet){
-    //---- Определение ИП данного конкретного устройства для заданной подсети ---
     struct ifaddrs *ifaddr, *ifa;//создаём указатели на структуры отисания сетевых интерфейсов
     int family, s, n;
     char host[NI_MAXHOST];
     if (getifaddrs(&ifaddr) == -1) mastDie("getifaddrs", 1);
     
-    /* обходим связный список, сохраняя начальный указатель, чтобы
-       освободить список позже */
-    int lastAddr = 1;//atoi(host+pos);
+    //обходим связный список, сохраняя начальный указатель, чтобы освободить список позже
+    int lastAddr = 1;
     for (ifa = ifaddr, n = 0; ifa != NULL; ifa = ifa->ifa_next, n++) {
         if (ifa->ifa_addr == NULL)
             continue;
         family = ifa->ifa_addr->sa_family;
-        /* для адресов интерфейса AF_INET* показываем адрес */
+        // для адресов интерфейса AF_INET* показываем адрес
         if (family == AF_INET){// || family == AF_INET6) {
             s = getnameinfo(ifa->ifa_addr,sizeof(struct sockaddr_in), host, NI_MAXHOST, NULL, 0, NI_NUMERICHOST);
             if (s != 0) {
@@ -72,6 +72,7 @@ int getLastByteIP(string subNet){
     return lastAddr;
 }
 
+//Возвращает текущее время в формате double секунд с 0 часов 1 января 1970 года с точностью до микросекунд
 double getTime(){
     struct timespec spec;
     clock_gettime(CLOCK_REALTIME, &spec);
@@ -134,6 +135,9 @@ int main(int argc, char *argv[])
     string message;                     //буфер для исходящих данных
     bool imMaster = lastByteIP == 1;    //Если lastByteIP == 1, запускаем чистого мастера ------
     while(1){
+        /*
+         здесь должен быть вызов функции обработки данных от датчиков и подготовка данныях для пересылки мастеру
+         */
         double newTime = getTime();         //определяем текущее время
                                             //если с запуска программы или последнего запроса на любой сокет прошло более 10 секунд
                                             //или выставлен флаг "я мастер и прошло 5 сек...
@@ -160,14 +164,17 @@ int main(int argc, char *argv[])
                         int n = recvfrom(sockID[i], buf, BUFLEN, 0, (struct sockaddr *) &(sockSt[i]), &slen);
                         if (n <=0 ) mastDie("recvfrom()", 5);//проверяем длину посылки - если она меньше или = 0 - завершаем программу с ошибкой
                         buf[n] = 0;                         //если всё нормально - ставим 0 в конец полученных данных
-                        string inpIp = inet_ntoa(sockSt[i].sin_addr);
-                        cout<<"inpIp != ip"<<inpIp<<"?"<<ip<<endl;
-                        if(inpIp != ip && inpIp!= "127.0.0.1" && inpIp!= "0.0.0.0"){
+                        string inpIp = inet_ntoa(sockSt[i].sin_addr); //определяем IP отправителя полученной посялки
+                        //если этот пакет получен не от самого себя - начинаем обработку полученной информации
+                        if(inpIp != (subNet+to_string(lastByteIP)) && inpIp!= "127.0.0.1" && inpIp!= "0.0.0.0"){
                             //----------- контрольный вывод --------------------------
                             cout<<"On socket "<<i<<" received packet from address "<<inet_ntoa(sockSt[i].sin_addr)<<" port "<<ntohs(sockSt[i].sin_port)<<endl;
                             cout<<"Recive "<<n<<" byte. Buf = "<<buf<<endl;
                             //--------------------------------------------------------
                             if(i==2){                       //если посылка пришла на сокет 2 - значит это broadcast запрос
+                                /*
+                                 Здесь должен быть вызов функции обработки данных из broadcast запроса
+                                 */
                                 usleep(lastByteIP *10000);      //ждём время равное lastByteIP * 10 мс
                                 si_second.sin_addr  = sockSt[i].sin_addr;   //выставляем адрес получателя равным адресу запрашивателя
                                 message = to_string(newTime)+"("+to_string(newTime-time)+")";   //формируем сообщение
