@@ -9,12 +9,12 @@
 #include <vector>
 #include <list>
 #include <algorithm>
-
-#include "tools.h"
+#include <dlfcn.h>
+//#include "tools.h"
 
 using namespace std;
 bool ex = true;
-
+/*
 static string getAnswer()
 {    
     string answer;
@@ -53,26 +53,29 @@ void * thrd(void *y){
     }
     fclose(f);
 }
+*/
 
-extern "C" int hello();
 
 int main(int argc, char** argv) {
-    list<int> v = {11,20,40,30};
-    v.push_back(33);
-    if(v.empty()){
-        cout<<"vector empty\n";
-        return 0; 
-    }
-    auto ti = v.begin();
-    ti++;
-    v.remove(*ti);
-    for(auto it = v.begin(); it != v.end(); it++)//list<int>::iterator
-        cout<<*it<<endl;
-    auto biggest = max_element(v.begin(), v.end());
-    cout << "Max element is " << *biggest;// << " at position " << distance(begin(v), biggest) << endl;
-    
-    int x = hello();
+    //void *handle = dlopen("libhwDinLib.so",RTLD_LAZY);
+    //int(*fun)(void) = dlsym(handle,"hello");
+    int x = 0;//(*fun)();
+    //dlclose(handle);
     cout<<"Return code: "<<x<<endl;    
+//    list<int> v = {11,20,40,30};
+//    v.push_back(33);
+//    if(v.empty()){
+//        cout<<"vector empty\n";
+//        return 0; 
+//    }
+//    auto ti = v.begin();
+//    ti++;
+//    v.remove(*ti);
+//    for(auto it = v.begin(); it != v.end(); it++)//list<int>::iterator
+//        cout<<*it<<endl;
+//    auto biggest = max_element(v.begin(), v.end());
+//    cout << "Max element is " << *biggest;// << " at position " << distance(begin(v), biggest) << endl;
+//    
 //
 //    auto smallest = min_element(v.begin(), v.end());
 //    cout << "min element is " << *smallest<< " at position " << distance(begin(v), smallest) << endl;    //pthread_t tid; /* идентификатор потока */
@@ -102,5 +105,6 @@ int main(int argc, char** argv) {
 //    int *arr;
 //    setArr(arr,2);
 //    cout<<"x="<<arr[0]<<", y="<<arr[1]<<"\n";
+    return 0;
 }
 

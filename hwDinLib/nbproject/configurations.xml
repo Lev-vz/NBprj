@@ -4,6 +4,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Исходные файлы"
                    projectFiles="true">
+      <logicalFolder name="common" displayName="common" projectFiles="true">
+        <itemPath>../common/defines.h</itemPath>
+        <itemPath>../common/tools.cpp</itemPath>
+        <itemPath>../common/tools.h</itemPath>
+      </logicalFolder>
       <itemPath>hwDinLibMain.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="HeaderFiles"
@@ -26,6 +31,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../common</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="2">
@@ -35,7 +43,16 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <commandlineTool>g++ -fPIC</commandlineTool>
+        </ccTool>
       </compileType>
+      <item path="../common/defines.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../common/tools.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../common/tools.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="hwDinLibMain.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -59,6 +76,12 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="../common/defines.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../common/tools.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../common/tools.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="hwDinLibMain.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>

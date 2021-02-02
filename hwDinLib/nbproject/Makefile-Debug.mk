@@ -15,8 +15,8 @@ NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
 CC=gcc
-CCC=g++
-CXX=g++
+CCC=g++ -fPIC
+CXX=g++ -fPIC
 FC=gfortran
 AS=as
 
@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/b4460d1a/tools.o \
 	${OBJECTDIR}/hwDinLibMain.o
 
 
@@ -61,6 +62,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libhwDinLib.${CND_DLIB_EXT}: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libhwDinLib.${CND_DLIB_EXT} ${OBJECTFILES} ${LDLIBSOPTIONS} -shared -fPIC
+
+${OBJECTDIR}/_ext/b4460d1a/tools.o: ../common/tools.cpp
+	${MKDIR} -p ${OBJECTDIR}/_ext/b4460d1a
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/b4460d1a/tools.o ../common/tools.cpp
 
 ${OBJECTDIR}/hwDinLibMain.o: hwDinLibMain.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -9,8 +9,8 @@ using namespace std;
 
 //#include <dynamic.h>
 
-extern "C" int hello()
+extern "C" int hello(char *str)
 {
-cout<<"Hello world!\n I'm function hello()"<<endl;
-return 0;
+    cout<<"DLL user say: "<<str<<endl;
+    return 0;
 }
