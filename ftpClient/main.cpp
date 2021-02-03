@@ -15,14 +15,14 @@
 
 using namespace std;
 
-char addr[16] = "127.0.0.1"; //по умолчанию - локальный сервер
+char addr[16] = "172.16.35.97"; //по умолчанию - локальный сервер
 
 //идентификация. Для тестирования имена задаются прямо в ней. Потом заменить на аргументы
   bool login(int socketId, char *buf) {
     cout << "Введите имя: "; char name[64] = "testuser";// cin >> name;
     sprintf(buf,"USER %s\r\n",name);                        //формируем логин для сервера
     send(socketId,buf,strlen(buf),0);                       //отправляем логин
-    readServ(socketId,buf);                                 //читаем ответ сервера. Пока ника не используем
+    readServ(socketId,buf);                                 //читаем ответ сервера. Он всегда 
     cout << "Введите пароль: "; char pass[64] = "1";// cin >> pass;
     sprintf(buf,"PASS %s\r\n",pass);                        //формируем пароль для сервера
     send(socketId,buf,strlen(buf),0);                       //отправляем пароль
@@ -37,7 +37,8 @@ char addr[16] = "127.0.0.1"; //по умолчанию - локальный се
 int main(void)
 {
     char buf[2][BUFFER_SIZE];                               //создаём массив строк для ответов через сокеты
-    int ctrlSoket = getSocketId(addr, 21);                  //создаём сокет управляющего канала
+    int ctrlSoket = getSocketId(addr, atoi("21"));                  //создаём сокет управляющего канала
+    cout<<"ctrlSoket = "<<ctrlSoket<<endl;
     readServ(ctrlSoket, buf[0]);                            //вычитываем реакцию сервера на установление связи
     
     //!!! тут должна быть проверка реакции сервера
@@ -48,7 +49,10 @@ int main(void)
     int sockArr[2] = {ctrlSoket, -1};                       //создаём массив из двух сокетов
     do{
         if(isKbInput(kbInput)){
-            if(sockArr[1] == -1) sockArr[1] = getSocketForData(ctrlSoket);
+            if(sockArr[1] == -1){
+                cout<<"change data-socket"<<endl;
+                sockArr[1] = getSocketForData(ctrlSoket);
+            }
             //cout<<"kbInput.substr(0,4) = "<<kbInput.substr(0,4)<<"]"<<endl;
             if(kbInput.substr(0,4) == "STOR"){
                 //cout<<"kbInput.substr(4) = ["<<kbInput.substr(5)<<"]\n";

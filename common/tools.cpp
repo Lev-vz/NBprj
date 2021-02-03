@@ -10,7 +10,7 @@
 #include <list>
 
 #include "defines.h"
-#include "tools.h"
+#include "../common/tools.h"
 
 using namespace std;
   
@@ -194,6 +194,7 @@ int read2Sockets(int *sockArr, char **buf, int ta){
                     //strcpy(buf[i],bufTmp);                                      //в соответствующую строку
                 }
             }
+            strncpy(buf[i],bufTmp,BUFFER_SIZE-1);
         }
     }
     return 0;
@@ -221,12 +222,12 @@ int getSocketForData(int socketID) {
 }
 //пересылка файла с клиета на сервер
 //Аргументы: путь к пересылаемому файлу + имя файла, идентификатор сокета управления, идентификатор сокета передачи данных
-void sendFile(string pathFile, int socketID, int socketForFile){
+int sendFile(string pathFile, int socketID, int socketForFile){
     char buffer[BUFFER_SIZE];
     FILE *f = fopen(pathFile.c_str(), "rb");                    //открываем файл
     if(f<=0){
         cout<<"Не удалось открыть файл "<<pathFile.c_str()<<endl;
-        return;                                            //если открытие не удалось - завершаем функцию
+        return 1;                                            //если открытие не удалось - завершаем функцию
     } 
     
     int x = pathFile.find_last_of("/");                         //отделяем имя файла от пути
@@ -241,4 +242,5 @@ void sendFile(string pathFile, int socketID, int socketForFile){
         int qSimb=fread(buffer,1,BUFFER_SIZE-1,f);                    //передаем частями файл (сколько помещается в буфере)
         if(qSimb!=0) send(socketForFile, buffer, qSimb, 0);         //если считано ненулевое количество байт - передаём их через сокет данных
     }
+    return 0;
 }

@@ -13,11 +13,11 @@
 #include "../common/defines.h"
 #include "../common/tools.h"
 
-#define BUFFER_SIZE 1024
+//#define BUFFER_SIZE 1024
 
 using namespace std;
 
-char addr[16] = "127.0.0.1"; //по умолчанию - локальный сервер
+//char addr[16] = "127.0.0.1"; //по умолчанию - локальный сервер
 
 //идентификация. Для тестирования имена задаются прямо в ней. Потом заменить на аргументы
 int login(int socketId, char *buf, char *name, char *pass) {
@@ -34,10 +34,11 @@ int login(int socketId, char *buf, char *name, char *pass) {
 }
  
 int parsLine(string line, string delim, vector<string> &tmp){
+    if(!line.size()) return -1;
     size_t prev, next, delta = delim.length();	//
     prev = 0;                                   //
     while ((next = line.find(delim, prev)) != string::npos){            //
-        cout<<"prev="<<prev<<", next="<<next<<", delta="<<delta<<", ["<<line.substr(prev, next - prev)<<"]\n";
+        //cout<<"prev="<<prev<<", next="<<next<<", delta="<<delta<<", ["<<line.substr(prev, next - prev)<<"]\n";
         if(prev != next) tmp.push_back(line.substr(prev, next - prev)); //
         prev = next + delta;                                            //
     }
@@ -47,42 +48,59 @@ int parsLine(string line, string delim, vector<string> &tmp){
 
 extern "C" int ftp(char *commLine)
 {
-    vector<string> tmp;
-    parsLine(commLine, " ", tmp);
-    for(int i=0; i< tmp.size(); i++) cout<<"["<<tmp[i]<<"]"<<endl;
-    /*
+    vector<string> tmp;                 //массив для разбора строки
+    parsLine(commLine, " ", tmp);       //
+    int tmpSize = tmp.size();
+    if(tmpSize < 5 || tmpSize > 6){
+        cout<<"\""<<commLine<<"\" - неправильный формат запроса."<<endl<<
+                "Должно быть через побел: <IP-адрес> <порт> <логин> <пароль> <путь и имя файла-источника> [целевой путь]"<<endl<<
+                "Пример: 172.16.35.97 21 testuser 1 c:/projects/kln/ttt.cfg cfg"<<endl;
+        exit(2);
+    }
+    //for(int i=0; i< tmp.size(); i++) cout<<"["<<tmp[i]<<"]"<<endl;
     char buf[2][BUFFER_SIZE];                               //создаём массив строк для ответов через сокеты
-    int ctrlSoket = getSocketId(addr, 21);                  //создаём сокет управляющего канала
+    
+    int ctrlSoket = getSocketId((char*)tmp[0].c_str(), atoi(tmp[1].c_str()));                  //создаём сокет управляющего канала
+    if(ctrlSoket < 0){
+        cout<<"Неправильный адрес "<<tmp[0]<<" или неправильный порт "<<tmp[1]<<". Или FTP-сервер не запущен"<<endl;
+        exit(3);        
+    }
     readServ(ctrlSoket, buf[0]);                            //вычитываем реакцию сервера на установление связи
     
     //!!! тут должна быть проверка реакции сервера
 
-    int ret = login(ctrlSoket, buf[0], name, pass);                     //логинимся с сервером, пока не залогинимся - функция login должна вернуть true
+    int ret = login(ctrlSoket, buf[0], (char*)tmp[2].c_str(), (char*)tmp[3].c_str());    //логинимся с сервером
     if(!ret) return ret;
+    
+    if(tmpSize == 6){
+        sprintf(buf[0],"CWD %s\r\n",tmp[5].c_str());
+        send(ctrlSoket,buf[0],strlen(buf[0]),0);
+        readServ(ctrlSoket, buf[0]);                       //читаем ответ сервера
+        string tmp = buf[0];
+        if(tmp.substr(0,3) != "250"){
+            cout<<"Неправильно указан целевой путь "<<tmp[5]<<endl;
+            exit(3);        
+        }
+    }
+    
+    sprintf(buf[0],"TYPE I\r\n");
+    send(ctrlSoket,buf[0],strlen(buf[0]),0);
+    readServ(ctrlSoket, buf[0]);                       //читаем ответ сервера
+    string str = buf[0];
+    if(str.substr(0,3) != "200"){
+        cout<<"Не удалось установить бинарный тип передачи файла"<<endl;
+        exit(3);        
+    }
 
     int sockArr[2] = {ctrlSoket, -1};                       //создаём массив из двух сокетов
-    do{
-        if(isKbInput(kbInput)){
-            if(sockArr[1] == -1) sockArr[1] = getSocketForData(ctrlSoket);
-            //cout<<"kbInput.substr(0,4) = "<<kbInput.substr(0,4)<<"]"<<endl;
-            if(kbInput.substr(0,4) == "STOR"){
-                //cout<<"kbInput.substr(4) = ["<<kbInput.substr(5)<<"]\n";
-                sendFile(kbInput.substr(5), sockArr[0], sockArr[1]);
-                close(sockArr[1]);
-                sockArr[1] = -1;
-            }else{
-                kbInput += "\n";
-                int rep = send(ctrlSoket, kbInput.c_str(), kbInput.size(), 0);
-                cout << "rep = "<<rep<<"\n";
-            }
-        }
-        read2Sockets(sockArr, (char**)buf, 1);
-    }while(kbInput!="exit");
-    
+    sockArr[1] = getSocketForData(ctrlSoket);
+    ret = sendFile(tmp[4], sockArr[0], sockArr[1]);
+    close(sockArr[1]);
+    readServ(ctrlSoket, buf[0]);                       //читаем ответ сервера
+    //read2Sockets(sockArr, (char**)buf, 1);
+    cout << "buf[0]:"<<buf[0]<<endl<< "buf[1]:"<<buf[1]<<endl;
     close(ctrlSoket);  ///закрытие соединения
-    close(sockArr[1]);  ///закрытие соединения
     cout << "Client exit"<<endl;
-    */
     return 0;
 }
 

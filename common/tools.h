@@ -15,6 +15,6 @@ int readSockets(list<int> &sockArr, list<string> buf, int ta = 5);
 int getSocketId(char*, int);
 int read2Sockets(int *sockArr, char **buf, int ta = 5);
 int getSocketForData(int socketID);
-void sendFile(string pathFile, int socketID, int socketForFile);
+int sendFile(string pathFile, int socketID, int socketForFile);
 
 #endif

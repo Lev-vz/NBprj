@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
     }
     int (*fun)(char*);
     fun = (int(*)(char*))dlsym(handle,"ftp");//
-    char str[256] = " Ku    rf re ku!   ";
+    char str[256] = "172.16.35.97 21 testuser 1 /home/lev/tmp/555/3.txt 1";
     cout<<"str="<<str<<endl;
     int x = (*fun)(str);
     dlclose(handle);
