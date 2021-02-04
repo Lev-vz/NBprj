@@ -43,6 +43,9 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libVegaFtpClient.${CND_DLIB_EXT}</output>
+        </linkerTool>
       </compileType>
       <item path="../common/defines.h" ex="false" tool="3" flavor2="0">
       </item>

@@ -70,32 +70,10 @@ int readServ(int socketID, char *buf, int ta) {
         //cout<<"Что-то пришло!"<<endl;       //контрольный вывод
         int bytes_read = recv(socketID, buf, BUFFER_SIZE-1, 0);
         buf[bytes_read]='\0';
-        cout<<"buf="<<buf<<", bytes_read="<<bytes_read<<endl; //
+        cout<<"buf="<<buf<<" bytes_read="<<bytes_read<<endl; //
     }
     return 0;
 }
-////функция чтения многих сокетов
-//int readSockets(set<int> &clients, fd_set &readset){
-//    char buf[BUFFER_SIZE];
-//    for(set<int>::iterator it = clients.begin(); it != clients.end(); it++)
-//    {
-//        if(FD_ISSET(*it, &readset)){// Поступили данные от клиента, читаем их
-//            int bytes_read = recv(*it, buf, BUFFER_SIZE-1, 0);
-//            buf[bytes_read]='\0';
-//            cout<<"buf="<<buf<<"|"<<endl;
-//
-//            if(bytes_read <= 0){// Соединение разорвано, удаляем сокет из множества
-//                cout<<"Socket send "<<bytes_read<<" byts and connect abort."<<endl;
-//                close(*it);
-//                clients.erase(*it);
-//                
-//            }else if(bytes_read > 3)
-//                send(*it, buf, bytes_read, 0);// Отправляем данные обратно клиенту
-//        }
-//    }
-//    return 0;
-//}
-
 //Чтение списка сокетов 
 int readSockets(list<int> &sockArr, list<string> buf, int ta){
     if(sockArr.empty()){
@@ -235,12 +213,18 @@ int sendFile(string pathFile, int socketID, int socketForFile){
     
     sprintf(buffer,"STOR %s\r\n",fn.c_str());                   //формируем сообщение серверу
     send(socketID,buffer,strlen(buffer),0);                     //посылаем сообщение
-    
+    readServ(socketID, buffer, 1);
+    cout<<"server answer: "<<buffer<<endl;
     //!!!! Тут дожен быть анализ ответа сервера на предмет подтверждения готовности сервера принять данные
     
     while(!feof(f)){                                            //пока не конец файла, 
         int qSimb=fread(buffer,1,BUFFER_SIZE-1,f);                    //передаем частями файл (сколько помещается в буфере)
-        if(qSimb!=0) send(socketForFile, buffer, qSimb, 0);         //если считано ненулевое количество байт - передаём их через сокет данных
+        if(qSimb!=0){
+          send(socketForFile, buffer, qSimb, 0);         //если считано ненулевое количество байт - передаём их через сокет данных  
+          cout<<"send "<<qSimb<<" byte"<<endl;
+          readServ(socketForFile, buffer, 1);
+          readServ(socketID, buffer, 1);
+        } 
     }
     return 0;
 }

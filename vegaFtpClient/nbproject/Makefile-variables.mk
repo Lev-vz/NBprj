@@ -9,8 +9,8 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=libvegaFtpClient.so
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/libvegaFtpClient.so
+CND_ARTIFACT_NAME_Debug=libVegaFtpClient.so
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/libVegaFtpClient.so
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
 CND_PACKAGE_NAME_Debug=libvegaFtpClient.so.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/libvegaFtpClient.so.tar
