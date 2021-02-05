@@ -44,16 +44,18 @@ int rcv(int id, char *buf, int port){
     return len;                                 //возвращаем длину считанной строки
 }
 //функция создания и заполнения структуры для таймаута
-timeval setTimeOut(int s, int us){
+timeval setTimeOut(int ta){
+    int s = ta/1000;
+    int ms  = ta%1000;
     timeval timeout;
     timeout.tv_sec = s;   //задаём секунды
-    timeout.tv_usec = 0;  //задаём микросекунд
+    timeout.tv_usec = ms * 1000;  //задаём микросекунды
     return timeout;
 }
 
 //функция чтения из сокета
-int readServ(int socketID, char *buf, int ta) {
-    timeval timeout = setTimeOut(ta,0);  //зададим  структуру времени со значением 5 сек
+int readServ(int socketID, char *buf, long ta) {
+    timeval timeout = setTimeOut(ta);  //зададим  структуру времени со значением 5 сек
     fd_set readset;                     //создаём структуру для анализа функцией select
     FD_ZERO(&readset);                  //чистим её
     FD_SET(socketID, &readset);         //записываем в неё дескриптер сокета
@@ -61,7 +63,7 @@ int readServ(int socketID, char *buf, int ta) {
     if(selRep < 0)                      //если ответ от сокета отрицательный
     {
         perror("select");                   //выводим сообщение об ошибке функции select
-        exit(3);                            //выходим с кодом 3
+        return -1;                            //выходим с кодом 3
     }
     //cout<<"selRep = "<<selRep<<endl;        //контрольный вывод
     selRep = FD_ISSET(socketID, &readset);  //если ошибки не было - проверяем, в нужный ли сокет пришла информация 
@@ -70,7 +72,8 @@ int readServ(int socketID, char *buf, int ta) {
         //cout<<"Что-то пришло!"<<endl;       //контрольный вывод
         int bytes_read = recv(socketID, buf, BUFFER_SIZE-1, 0);
         buf[bytes_read]='\0';
-        cout<<"buf="<<buf<<" bytes_read="<<bytes_read<<endl; //
+        return bytes_read;
+        //cout<<"buf="<<buf<<" bytes_read="<<bytes_read<<endl; //
     }
     return 0;
 }
@@ -83,7 +86,7 @@ int readSockets(list<int> &sockArr, list<string> buf, int ta){
 
     auto maxSockID = max_element(sockArr.begin(), sockArr.end());
     cout<<"maxSockID = "<<*maxSockID<<", ta = "<<ta<<endl;
-    timeval timeout = setTimeOut(ta,0);  //зададим  структуру времени со значением 1 сек
+    timeval timeout = setTimeOut(ta);  //зададим  структуру времени со значением 1 сек
     fd_set readset;                     //создаём структуру для анализа функцией select
     FD_ZERO(&readset);                  //чистим её
     for(int sock: sockArr){
@@ -114,6 +117,7 @@ int readSockets(list<int> &sockArr, list<string> buf, int ta){
             }else *itBuf = "";
             itBuf++;
         }
+        return selRep;
     }
     return 0;
 }
@@ -139,7 +143,8 @@ int getSocketId(char *ipAddr, int port){
 int read2Sockets(int *sockArr, char **buf, int ta){
     int maxSockID = max(sockArr[0], sockArr[1]);
     //cout<<"maxSockID = "<<maxSockID<<", ta = "<<ta<<endl;
-    timeval timeout = setTimeOut(ta,0);  //зададим  структуру времени со значением 1 сек
+    timeval timeout = setTimeOut(ta);  //зададим  структуру времени со значением 1 сек
+    
     fd_set readset;                     //создаём структуру для анализа функцией select
     FD_ZERO(&readset);                  //чистим её
     for(int i=0; i < 2; i++){
@@ -183,7 +188,7 @@ int getSocketForData(int socketID) {
     send(socketID,"PASV\r\n",strlen("PASV\r\n"),0);
     char buff[BUFFER_SIZE];
     recv(socketID,buff,BUFFER_SIZE,0);
-    cout<<"Server ans:" << buff<<endl; //выводим на экран полученную от сервера строку
+    //cout<<"Server ans:" << buff<<endl; //выводим на экран полученную от сервера строку
     //----- Вытягиваем из этой строки адрес и порт для получения данных
     char *tmp_char;
     tmp_char = strtok(buff,"(");
@@ -195,7 +200,7 @@ int getSocketForData(int socketID) {
     int port = a*256 + b;
     char address[16];
     sprintf(address,"%d.%d.%d.%d",c,d,e,f);
-    cout<<"address="<<address<<endl;
+    //cout<<"address="<<address<<endl;
     return getSocketId(address, port);
 }
 //пересылка файла с клиета на сервер
@@ -213,17 +218,15 @@ int sendFile(string pathFile, int socketID, int socketForFile){
     
     sprintf(buffer,"STOR %s\r\n",fn.c_str());                   //формируем сообщение серверу
     send(socketID,buffer,strlen(buffer),0);                     //посылаем сообщение
-    readServ(socketID, buffer, 1);
-    cout<<"server answer: "<<buffer<<endl;
+    readServ(socketID, buffer, 5000);
+    //cout<<buffer;
     //!!!! Тут дожен быть анализ ответа сервера на предмет подтверждения готовности сервера принять данные
-    
+    int cnt = 0;
     while(!feof(f)){                                            //пока не конец файла, 
-        int qSimb=fread(buffer,1,BUFFER_SIZE-1,f);                    //передаем частями файл (сколько помещается в буфере)
+        int qSimb=fread(buffer,1,BUFFER_SIZE,f);                    //передаем частями файл (сколько помещается в буфере)
         if(qSimb!=0){
           send(socketForFile, buffer, qSimb, 0);         //если считано ненулевое количество байт - передаём их через сокет данных  
-          cout<<"send "<<qSimb<<" byte"<<endl;
-          readServ(socketForFile, buffer, 1);
-          readServ(socketID, buffer, 1);
+          cout<<"send "<<qSimb<<" byte, package №"<<(cnt++)<<endl;
         } 
     }
     return 0;

@@ -7,7 +7,7 @@ using namespace std;
 
 int rcv(int id, char *buf, int port);
 timeval setTimeOut(int s, int us);
-int readServ(int socketID, char *buf, int ta = 5);
+int readServ(int socketID, char *buf, long ta = 5000);
 //void globInit();
 bool isKbInput(string &s);
 //int readSockets(set<int> &clients, fd_set &readset);
